@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1778062560950,
+  "lastUpdate": 1778062783340,
   "repoUrl": "https://github.com/vectorize-io/hindsight",
   "entries": {
     "Hindsight Latency": [
@@ -73,6 +73,80 @@ window.BENCHMARK_DATA = {
           {
             "name": "consolidation duration",
             "value": 33.644,
+            "unit": "s"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "boschi1997@gmail.com",
+            "name": "Nicolò Boschi",
+            "username": "nicoloboschi"
+          },
+          "committer": {
+            "email": "boschi1997@gmail.com",
+            "name": "Nicolò Boschi",
+            "username": "nicoloboschi"
+          },
+          "distinct": true,
+          "id": "1bb78865b6c34ac9573f8900f92f66cc341f9317",
+          "message": "fix(perf): wipe benchmark working dir between latency and throughput publishes\n\ngithub-action-benchmark clones the dashboard repo into a fixed\n./benchmark-data-repository directory and doesn't clean up, so the\nsecond invocation in the same job fails with 'destination path already\nexists'.",
+          "timestamp": "2026-05-06T12:16:58+02:00",
+          "tree_id": "b05d76d8526fddbe9c01bb9a38e3e257067ae146",
+          "url": "https://github.com/vectorize-io/hindsight/commit/1bb78865b6c34ac9573f8900f92f66cc341f9317"
+        },
+        "date": 1778062783097,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "retain duration",
+            "value": 8.874,
+            "unit": "s"
+          },
+          {
+            "name": "recall latency mean",
+            "value": 0.6169,
+            "unit": "s"
+          },
+          {
+            "name": "recall latency p50",
+            "value": 0.6149,
+            "unit": "s"
+          },
+          {
+            "name": "recall latency p95",
+            "value": 0.6813,
+            "unit": "s"
+          },
+          {
+            "name": "recall latency p99",
+            "value": 0.6813,
+            "unit": "s"
+          },
+          {
+            "name": "recall-with-observations latency mean",
+            "value": 0.7406,
+            "unit": "s"
+          },
+          {
+            "name": "recall-with-observations latency p50",
+            "value": 0.6536,
+            "unit": "s"
+          },
+          {
+            "name": "recall-with-observations latency p95",
+            "value": 1.0135,
+            "unit": "s"
+          },
+          {
+            "name": "recall-with-observations latency p99",
+            "value": 1.0135,
+            "unit": "s"
+          },
+          {
+            "name": "consolidation duration",
+            "value": 40.563,
             "unit": "s"
           }
         ]
