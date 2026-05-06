@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Hindsight perf dashboard</title>
+  <title>Hindsight Performance</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body class="bg-gray-50 text-gray-900">
@@ -59,7 +63,7 @@
               ${renderDelta(curr, previous, headline.biggerIsBetter)}
             </div>
             <div class="text-gray-400 text-xs mt-1 mb-2">${headline.label}</div>
-            <div class="chart-container"><canvas id="mini-${idx}"></canvas></div>
+            <div class="chart-container" id="mini-host-${idx}"><canvas id="mini-${idx}"></canvas></div>
           </div>
         `;
       }).join('');
@@ -77,11 +81,16 @@
       SUITES.forEach((suite, idx) => {
         const headline = SUITE_HEADLINE[suite];
         const points = timeSeries(runs, suite, headline.get);
+        const host = document.getElementById('mini-host-' + idx);
+        if (points.length < 2) {
+          host.innerHTML = '<div class="flex items-center justify-center h-full text-xs text-gray-400">need 2+ runs</div>';
+          return;
+        }
         const canvas = document.getElementById('mini-' + idx);
         lineChart(canvas, [makeDataset(headline.label, points, idx)], {
-          yLabel: headline.unit,
-          legend: false,
           unit: headline.unit,
+          legend: false,
+          compact: true,
           onClick: () => { window.location.href = suite + '.html'; },
         });
       });

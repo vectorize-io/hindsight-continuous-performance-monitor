@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Compare runs · Hindsight perf dashboard</title>
+  <title>Compare · Hindsight Performance</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body class="bg-gray-50 text-gray-900">
@@ -74,15 +78,18 @@
 
       const summaryCard = (label, c) => {
         const prLink = c.pr_url
-          ? `<a href="${c.pr_url}" target="_blank" class="text-blue-600 hover:underline">#${c.pr_url.split('/').pop()}</a>`
-          : '<span class="text-gray-400">—</span>';
+          ? `<a href="${c.pr_url}" target="_blank" class="text-indigo-600 hover:underline">#${c.pr_url.split('/').pop()}</a>`
+          : '<span class="text-gray-300">—</span>';
+        const runLink = c.run_url
+          ? `<a href="${c.run_url}" target="_blank" class="text-indigo-600 hover:underline">workflow run ↗</a>`
+          : '<span class="text-gray-300">—</span>';
         return `
-          <div class="bg-white border border-gray-200 rounded-lg p-5 min-w-0">
-            <h3 class="text-xs uppercase tracking-wide text-gray-500 font-semibold m-0 mb-2">${label}</h3>
-            <div class="font-mono text-sm mb-1"><a href="${c.commit_url}" target="_blank" class="text-blue-600 hover:underline">${c.short_sha}</a></div>
+          <div class="bg-white border border-gray-200 rounded-xl p-5 min-w-0">
+            <h3 class="text-[10px] uppercase tracking-[0.08em] text-gray-400 font-semibold m-0 mb-2">${label}</h3>
+            <div class="font-mono text-sm mb-1"><a href="${c.commit_url}" target="_blank" class="text-indigo-600 hover:underline">${c.short_sha}</a></div>
             <div class="text-sm text-gray-700 break-words">${escapeHtml(c.subject ?? '')}</div>
             <div class="text-xs text-gray-500 mt-2">
-              ${fmtDateTime(c.author_date)} · ${escapeHtml(c.author ?? '')} · PR ${prLink}
+              ${fmtDateTime(c.author_date)} · ${escapeHtml(c.author ?? '')} · PR ${prLink} · ${runLink}
             </div>
           </div>
         `;

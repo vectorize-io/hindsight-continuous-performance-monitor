@@ -1,13 +1,21 @@
-/* Tailwind handles 99% of the styling via the Play CDN.
- * This file holds the few rules that are easier as plain CSS:
- *   - chart container heights (Tailwind's h-* arbitrary values work too,
- *     but keeping these here makes Chart.js sizing stable).
- *   - default body font (Tailwind v3 doesn't ship a system stack utility).
- */
+/* Tailwind handles most styling via the Play CDN.
+ * This file pins the font stack and the chart container heights. */
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+html {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-feature-settings: 'cv11', 'ss01', 'ss03', 'cv02';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.chart-container { position: relative; height: 180px; }
-.chart-container.large { height: 360px; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+.font-mono, code, kbd, pre, samp, .mono {
+  font-family: 'JetBrains Mono', 'SF Mono', Menlo, Monaco, Consolas, monospace;
+  font-feature-settings: 'calt', 'liga', 'zero';
+}
+
+.chart-container { position: relative; height: 220px; }
+.chart-container.large { height: 320px; }

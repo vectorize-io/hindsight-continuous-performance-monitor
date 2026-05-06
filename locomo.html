@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>LoComo · Hindsight Performance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <header id="page-header" class="bg-white border-b border-gray-200 px-6 py-3"></header>
+  <main id="main" class="max-w-7xl mx-auto px-6 py-8"></main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+  <script type="module">
+    import {
+      renderHeader, renderLatestBanner, lineChart, makeDataset, movingAverage,
+      fmtNumber, fmtDate, fmtDateTime, deltaPct, renderDelta, escapeHtml,
+      emptyChartPlaceholder,
+    } from './assets/app.js';
+
+    document.getElementById('page-header').innerHTML = renderHeader('locomo');
+    const main = document.getElementById('main');
+
+    const cacheBuster = () => 'ts=' + Date.now();
+
+    async function loadLocomoManifest() {
+      const r = await fetch(`data/locomo-index.json?${cacheBuster()}`);
+      if (!r.ok) throw new Error('Failed to load data/locomo-index.json');
+      return r.json();
+    }
+    async function loadLocomoRun(file) {
+      const r = await fetch(`${file}?${cacheBuster()}`);
+      if (!r.ok) throw new Error('Failed to load ' + file);
+      return r.json();
+    }
+
+    (async () => {
+      let manifest;
+      try { manifest = await loadLocomoManifest(); }
+      catch (e) {
+        main.innerHTML = `<div class="text-center py-16 text-gray-500">No LoComo runs yet (${escapeHtml(e.message)}).</div>`;
+        return;
+      }
+      const entries = manifest.runs ?? [];
+      if (entries.length === 0) {
+        main.innerHTML = '<div class="text-center py-16 text-gray-500">No LoComo runs yet.</div>';
+        return;
+      }
+
+      // Load up to 60 newest runs in parallel
+      const slice = entries.slice(0, 60);
+      const runs = await Promise.all(slice.map(e => loadLocomoRun(e.data_file)));
+
+      const latest = runs[0];
+      const prev = runs[1] ?? null;
+      const currAcc = latest?.overall_accuracy;
+      const prevAcc = prev?.overall_accuracy;
+
+      // Build a synthetic-shaped run object so the shared latest-banner works.
+      // It expects {timestamp, scale, commit, workflow_run}.
+      const bannerRun = {
+        timestamp: latest.timestamp,
+        scale: latest.model_config?.hindsight?.model ?? '—',
+        commit: latest.commit,
+        workflow_run: latest.workflow_run,
+      };
+
+      // Build chart points (oldest → newest), x = run index.
+      const ordered = runs.slice().reverse();
+      const accuracyPoints = ordered.map((r, i) =>
+        r.overall_accuracy != null
+          ? { x: i, y: r.overall_accuracy, run: r }
+          : null
+      ).filter(Boolean);
+
+      // Per-item accuracy for the latest run
+      const latestItems = (latest.item_results ?? [])
+        .map(it => ({ id: it.item_id, accuracy: it.metrics?.accuracy ?? null,
+                      correct: it.metrics?.correct ?? 0, total: it.metrics?.total ?? 0 }))
+        .filter(it => it.accuracy != null)
+        .sort((a, b) => b.accuracy - a.accuracy);
+
+      // Build per-item accuracy over time (multi-line, one line per item).
+      // Skip if too few runs or too many items (cluttered).
+      let itemSeriesHtml = '';
+      let itemSeriesData = null;
+      const itemCount = latestItems.length;
+      if (itemCount > 0 && itemCount <= 12 && ordered.length >= 2) {
+        itemSeriesData = latestItems.map(it => {
+          const points = ordered.map((r, i) => {
+            const ir = (r.item_results ?? []).find(x => x.item_id === it.id);
+            const acc = ir?.metrics?.accuracy;
+            return acc != null ? { x: i, y: acc, run: r } : null;
+          }).filter(Boolean);
+          return { label: it.id, points };
+        });
+        itemSeriesHtml = `
+          <div class="bg-white border border-gray-200 rounded-xl p-5 mt-6 min-w-0">
+            <h3 class="text-[10px] uppercase tracking-[0.08em] text-gray-400 font-semibold m-0 mb-2">
+              Per-conversation accuracy <span class="text-gray-300 normal-case tracking-normal">(%)</span>
+            </h3>
+            <div class="chart-container large"><canvas id="chart-items"></canvas></div>
+          </div>
+        `;
+      }
+
+      const itemsTable = latestItems.length > 0 ? `
+        <div class="bg-white border border-gray-200 rounded-xl p-5 mt-6">
+          <h3 class="text-[10px] uppercase tracking-[0.08em] text-gray-400 font-semibold m-0 mb-3">
+            Latest run · per-conversation accuracy
+          </h3>
+          <div class="overflow-x-auto">
+            <table class="min-w-full text-[13px]">
+              <thead class="bg-gray-50/80 text-[10px] uppercase tracking-[0.08em] text-gray-400">
+                <tr>
+                  <th class="px-3 py-2.5 text-left font-medium">Conversation</th>
+                  <th class="px-3 py-2.5 text-right font-medium">Accuracy</th>
+                  <th class="px-3 py-2.5 text-right font-medium">Correct</th>
+                  <th class="px-3 py-2.5 text-right font-medium">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${latestItems.map(it => `
+                  <tr class="border-t border-gray-100 hover:bg-gray-50/70">
+                    <td class="px-3 py-2.5 font-mono">${escapeHtml(it.id)}</td>
+                    <td class="px-3 py-2.5 text-right font-mono tabular-nums">${fmtNumber(it.accuracy)}%</td>
+                    <td class="px-3 py-2.5 text-right font-mono tabular-nums">${it.correct}</td>
+                    <td class="px-3 py-2.5 text-right font-mono tabular-nums">${it.total}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      ` : '';
+
+      // Runs table
+      const rowsHtml = entries.slice(0, 25).map((entry, idx) => {
+        const next = entries[idx + 1];
+        const compare = next
+          ? `<a class="text-indigo-600 hover:underline" href="compare.html?a=${next.short_sha}&b=${entry.short_sha}">vs prev</a>`
+          : '<span class="text-gray-300">—</span>';
+        const prCell = entry.pr_url
+          ? `<a href="${entry.pr_url}" target="_blank" class="text-indigo-600 hover:underline">#${entry.pr_url.split('/').pop()}</a>`
+          : '<span class="text-gray-300">—</span>';
+        const runCell = entry.run_url
+          ? `<a href="${entry.run_url}" target="_blank" class="text-indigo-600 hover:underline" title="View workflow run">↗</a>`
+          : '<span class="text-gray-300">—</span>';
+        return `
+          <tr class="border-t border-gray-100 hover:bg-gray-50/70 transition-colors">
+            <td class="px-3 py-2.5 whitespace-nowrap text-gray-600">${fmtDate(entry.author_date)}</td>
+            <td class="px-3 py-2.5 font-mono whitespace-nowrap"><a href="${entry.commit_url}" target="_blank" class="text-indigo-600 hover:underline">${entry.short_sha}</a></td>
+            <td class="px-3 py-2.5 max-w-[28rem] truncate" title="${escapeHtml(entry.subject)}">${escapeHtml(entry.subject)}</td>
+            <td class="px-3 py-2.5 whitespace-nowrap">${prCell}</td>
+            <td class="px-3 py-2.5 whitespace-nowrap text-center">${runCell}</td>
+            <td class="px-3 py-2.5 text-right font-mono tabular-nums whitespace-nowrap">${fmtNumber(entry.overall_accuracy)}%</td>
+            <td class="px-3 py-2.5 text-right font-mono tabular-nums whitespace-nowrap text-gray-500">${entry.num_items}</td>
+            <td class="px-3 py-2.5 whitespace-nowrap">${compare}</td>
+          </tr>
+        `;
+      }).join('');
+
+      const runsTable = `
+        <h2 class="text-base font-semibold mt-8 mb-3">Runs</h2>
+        <div class="bg-white border border-gray-200 rounded-xl overflow-x-auto">
+          <table class="min-w-full text-[13px]">
+            <thead class="bg-gray-50/80 text-[10px] uppercase tracking-[0.08em] text-gray-400">
+              <tr>
+                <th class="px-3 py-2.5 text-left font-medium">Date</th>
+                <th class="px-3 py-2.5 text-left font-medium">Commit</th>
+                <th class="px-3 py-2.5 text-left font-medium">Subject</th>
+                <th class="px-3 py-2.5 text-left font-medium">PR</th>
+                <th class="px-3 py-2.5 text-center font-medium">Run</th>
+                <th class="px-3 py-2.5 text-right font-medium">Accuracy</th>
+                <th class="px-3 py-2.5 text-right font-medium">Items</th>
+                <th class="px-3 py-2.5 text-left font-medium"></th>
+              </tr>
+            </thead>
+            <tbody>${rowsHtml}</tbody>
+          </table>
+        </div>
+      `;
+
+      const headlineCard = `
+        <div class="bg-white border border-gray-200 rounded-xl p-5 min-w-0">
+          <h3 class="text-[10px] uppercase tracking-[0.08em] text-gray-400 font-semibold m-0 mb-2">Overall accuracy</h3>
+          <div class="flex items-baseline gap-2 flex-wrap">
+            <span class="text-3xl font-semibold tabular-nums">${fmtNumber(currAcc)}</span>
+            <span class="text-gray-500 text-sm">%</span>
+            ${renderDelta(currAcc, prevAcc, true)}
+          </div>
+          <div class="text-gray-400 text-xs mt-1">
+            ${latest.total_correct ?? '—'} / ${latest.total_questions ?? '—'} correct
+            · ${latest.num_items ?? '—'} conversations
+          </div>
+        </div>
+      `;
+
+      const modelCard = `
+        <div class="bg-white border border-gray-200 rounded-xl p-5 min-w-0 md:col-span-2">
+          <h3 class="text-[10px] uppercase tracking-[0.08em] text-gray-400 font-semibold m-0 mb-2">Model config</h3>
+          <div class="grid grid-cols-3 gap-4 text-[13px]">
+            ${['hindsight', 'answer_generation', 'judge'].map(role => {
+              const cfg = latest.model_config?.[role];
+              return `
+                <div class="min-w-0">
+                  <div class="text-[10px] uppercase tracking-[0.08em] text-gray-400">${role.replace('_', ' ')}</div>
+                  <div class="font-mono text-xs truncate" title="${escapeHtml(cfg?.provider ?? '')}/${escapeHtml(cfg?.model ?? '')}">
+                    ${escapeHtml(cfg?.provider ?? '—')}<span class="text-gray-400">/</span>${escapeHtml(cfg?.model ?? '—')}
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      `;
+
+      // Big accuracy chart (with MA when N≥5)
+      const accuracyChartHtml = accuracyPoints.length < 2 ? `
+        <div class="bg-white border border-gray-200 rounded-xl p-5 mt-6 min-w-0">
+          <h3 class="text-[10px] uppercase tracking-[0.08em] text-gray-400 font-semibold m-0 mb-2">
+            Overall accuracy <span class="text-gray-300 normal-case tracking-normal">(%)</span>
+          </h3>
+          <div class="chart-container large">${emptyChartPlaceholder('accuracy')}</div>
+        </div>
+      ` : `
+        <div class="bg-white border border-gray-200 rounded-xl p-5 mt-6 min-w-0">
+          <h3 class="text-[10px] uppercase tracking-[0.08em] text-gray-400 font-semibold m-0 mb-2">
+            Overall accuracy <span class="text-gray-300 normal-case tracking-normal">(%)</span>
+          </h3>
+          <div class="chart-container large"><canvas id="chart-accuracy"></canvas></div>
+        </div>
+      `;
+
+      main.innerHTML = `
+        ${renderLatestBanner(bannerRun)}
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">${headlineCard}${modelCard}</div>
+        ${accuracyChartHtml}
+        ${itemSeriesHtml}
+        ${itemsTable}
+        ${runsTable}
+      `;
+
+      if (accuracyPoints.length >= 2) {
+        const datasets = [makeDataset('overall', accuracyPoints, 0)];
+        if (accuracyPoints.length >= 5) {
+          datasets.push(makeDataset('5-run MA', movingAverage(accuracyPoints, 5), 0, {
+            borderColor: '#6366f1',
+            borderDash: [6, 4],
+            borderWidth: 1.5,
+            pointRadius: 0,
+            order: -1,
+          }));
+        }
+        lineChart(document.getElementById('chart-accuracy'), datasets, {
+          unit: '%',
+          legend: accuracyPoints.length >= 5,
+          beginAtZero: false,
+        });
+      }
+
+      if (itemSeriesData) {
+        const datasets = itemSeriesData.map((s, j) => makeDataset(s.label, s.points, j));
+        lineChart(document.getElementById('chart-items'), datasets, {
+          unit: '%',
+          legend: true,
+          beginAtZero: false,
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
