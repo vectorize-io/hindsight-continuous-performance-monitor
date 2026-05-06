@@ -1,5 +1,6 @@
 // Shared utilities for the Hindsight perf dashboard.
 // Pure ES module, no build step. Loaded via <script type="module">.
+// Styling via Tailwind Play CDN (loaded in each HTML page).
 
 export const HINDSIGHT_REPO = 'vectorize-io/hindsight';
 export const SUITES = ['retain', 'recall', 'recall-with-observations', 'consolidation'];
@@ -48,7 +49,7 @@ export function getSuite(run, suiteName) {
   return run.suites?.find(s => s.name === suiteName) ?? null;
 }
 
-// Map suite name → list of metrics to track (label, accessor, unit, biggerIsBetter).
+// Map suite name → list of metrics (label, accessor, unit, biggerIsBetter).
 export const SUITE_METRICS = {
   'retain': [
     { key: 'throughput', label: 'Throughput',  unit: 'items/s', biggerIsBetter: true,
@@ -88,7 +89,6 @@ export const SUITE_METRICS = {
   ],
 };
 
-// The "headline" metric shown on the overview card for each suite.
 export const SUITE_HEADLINE = {
   'retain': SUITE_METRICS['retain'][0],
   'recall': SUITE_METRICS['recall'][0],
@@ -97,6 +97,7 @@ export const SUITE_HEADLINE = {
 };
 
 // Build chart points (oldest → newest) for a given suite + metric accessor.
+// x is a numeric ms timestamp so Chart.js can plot without re-parsing strings.
 export function timeSeries(runs, suiteName, accessor) {
   return runs.slice().reverse()
     .map(run => {
@@ -104,7 +105,8 @@ export function timeSeries(runs, suiteName, accessor) {
       if (!suite || !suite.success) return null;
       const value = accessor(suite);
       if (value == null) return null;
-      return { x: run.commit?.author_date ?? run.timestamp, y: value, run };
+      const iso = run.commit?.author_date ?? run.timestamp;
+      return { x: new Date(iso).getTime(), y: value, run };
     })
     .filter(Boolean);
 }
@@ -135,14 +137,21 @@ export function deltaPct(curr, prev) {
   return ((curr - prev) / prev) * 100;
 }
 
-// Render a delta as a coloured pill. biggerIsBetter inverts the "good/bad" sense.
+// Render a delta as a coloured Tailwind pill. biggerIsBetter inverts the
+// good/bad sense for metrics where smaller is better.
 export function renderDelta(curr, prev, biggerIsBetter) {
   const d = deltaPct(curr, prev);
-  if (d == null) return '<span class="delta flat">—</span>';
+  if (d == null) {
+    return '<span class="text-xs font-medium px-2 py-0.5 rounded bg-gray-100 text-gray-500 tabular-nums">—</span>';
+  }
   const sign = d >= 0 ? '+' : '';
-  const cls = Math.abs(d) < 0.5 ? 'flat'
-    : (d > 0) === biggerIsBetter ? 'good' : 'bad';
-  return `<span class="delta ${cls}">${sign}${d.toFixed(1)}%</span>`;
+  let cls = 'bg-gray-100 text-gray-500';
+  if (Math.abs(d) >= 0.5) {
+    cls = (d > 0) === biggerIsBetter
+      ? 'bg-emerald-100 text-emerald-700'
+      : 'bg-red-100 text-red-700';
+  }
+  return `<span class="text-xs font-medium px-2 py-0.5 rounded tabular-nums ${cls}">${sign}${d.toFixed(1)}%</span>`;
 }
 
 // ---------------------------------------------------------------------------
@@ -158,11 +167,18 @@ export function renderHeader(activePage = '') {
     { href: 'consolidation.html',               label: 'Consolidation', id: 'consolidation' },
     { href: 'compare.html',                     label: 'Compare',      id: 'compare' },
   ];
+  const link = (p) => {
+    const base = 'text-sm px-2 py-1 rounded no-underline transition-colors';
+    const cls = p.id === activePage
+      ? 'text-blue-700 bg-blue-50'
+      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100';
+    return `<a href="${p.href}" class="${base} ${cls}">${p.label}</a>`;
+  };
   return `
-    <div class="header-inner">
-      <h1>Hindsight perf dashboard</h1>
-      <nav>
-        ${pages.map(p => `<a href="${p.href}" class="${p.id === activePage ? 'active' : ''}">${p.label}</a>`).join('')}
+    <div class="max-w-7xl mx-auto flex items-center gap-6 flex-wrap">
+      <h1 class="text-base font-semibold m-0">Hindsight perf dashboard</h1>
+      <nav class="flex gap-1 flex-wrap">
+        ${pages.map(link).join('')}
       </nav>
     </div>
   `;
@@ -171,32 +187,22 @@ export function renderHeader(activePage = '') {
 export function renderLatestBanner(run) {
   if (!run) return '';
   const c = run.commit ?? {};
-  const prLink = c.pr_url ? `<a href="${c.pr_url}" target="_blank">#${c.pr_number}</a>` : '—';
+  const prLink = c.pr_url
+    ? `<a href="${c.pr_url}" target="_blank" class="text-blue-600 hover:underline">#${c.pr_number}</a>`
+    : '<span class="text-gray-400">—</span>';
+  const cell = (label, value) => `
+    <div class="min-w-0">
+      <div class="text-[11px] uppercase tracking-wide text-gray-500 font-medium">${label}</div>
+      <div class="text-sm truncate">${value}</div>
+    </div>
+  `;
   return `
-    <div class="latest-banner">
-      <div>
-        <div class="label">Latest run</div>
-        <div class="value">${fmtDateTime(run.timestamp)}</div>
-      </div>
-      <div>
-        <div class="label">Commit</div>
-        <div class="value mono">
-          <a href="${c.url ?? '#'}" target="_blank">${c.short_sha ?? '—'}</a>
-          <span class="muted">${c.author ? '· ' + c.author : ''}</span>
-        </div>
-      </div>
-      <div>
-        <div class="label">Subject</div>
-        <div class="value">${escapeHtml(c.subject ?? '—')}</div>
-      </div>
-      <div>
-        <div class="label">PR</div>
-        <div class="value">${prLink}</div>
-      </div>
-      <div>
-        <div class="label">Scale</div>
-        <div class="value">${run.scale ?? '—'}</div>
-      </div>
+    <div class="bg-white border border-gray-200 rounded-lg px-5 py-3 mb-6 grid grid-cols-2 md:grid-cols-5 gap-4">
+      ${cell('Latest run', fmtDateTime(run.timestamp))}
+      ${cell('Commit', `<a href="${c.url ?? '#'}" target="_blank" class="font-mono text-blue-600 hover:underline">${c.short_sha ?? '—'}</a> <span class="text-gray-400">${c.author ? '· ' + escapeHtml(c.author) : ''}</span>`)}
+      ${cell('Subject', `<span title="${escapeHtml(c.subject ?? '')}">${escapeHtml(c.subject ?? '—')}</span>`)}
+      ${cell('PR', prLink)}
+      ${cell('Scale', escapeHtml(run.scale ?? '—'))}
     </div>
   `;
 }
@@ -220,7 +226,6 @@ export function lineChart(canvas, datasets, opts = {}) {
     options: {
       responsive: true,
       maintainAspectRatio: false,
-      parsing: false,
       interaction: { mode: 'nearest', intersect: false },
       scales: {
         x: {
@@ -271,6 +276,7 @@ export function makeDataset(label, points, colorIdx = 0) {
     borderColor: color,
     backgroundColor: color + '22',
     fill: false,
+    spanGaps: true,
   };
 }
 
@@ -283,8 +289,8 @@ export function renderRunsTable(manifestEntries, runsByFile, suiteName = null) {
     const run = runsByFile[entry.data_file];
     const prevEntry = manifestEntries[idx + 1];
     const compareLink = prevEntry
-      ? `<a href="compare.html?a=${prevEntry.short_sha}&b=${entry.short_sha}">vs prev</a>`
-      : '<span class="muted">—</span>';
+      ? `<a class="text-blue-600 hover:underline" href="compare.html?a=${prevEntry.short_sha}&b=${entry.short_sha}">vs prev</a>`
+      : '<span class="text-gray-400">—</span>';
 
     let metricCells = '';
     if (suiteName && run) {
@@ -292,50 +298,50 @@ export function renderRunsTable(manifestEntries, runsByFile, suiteName = null) {
       const metrics = SUITE_METRICS[suiteName] ?? [];
       metricCells = metrics.map(m => {
         const v = suite ? m.get(suite) : null;
-        return `<td class="num mono">${fmtNumber(v)}</td>`;
+        return `<td class="px-3 py-2 text-right font-mono tabular-nums whitespace-nowrap">${fmtNumber(v)}</td>`;
       }).join('');
     }
 
     const status = run?.suites?.every(s => s.success)
-      ? '<span class="success-pill">pass</span>'
-      : '<span class="failed-pill">fail</span>';
+      ? '<span class="inline-block px-2 py-0.5 rounded text-xs font-medium bg-emerald-100 text-emerald-700">pass</span>'
+      : '<span class="inline-block px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-700">fail</span>';
 
     const prCell = entry.pr_url
-      ? `<a href="${entry.pr_url}" target="_blank">#${entry.pr_url.split('/').pop()}</a>`
-      : '<span class="muted">—</span>';
+      ? `<a href="${entry.pr_url}" target="_blank" class="text-blue-600 hover:underline">#${entry.pr_url.split('/').pop()}</a>`
+      : '<span class="text-gray-400">—</span>';
 
     return `
-      <tr>
-        <td>${fmtDate(entry.author_date)}</td>
-        <td class="mono"><a href="${entry.commit_url}" target="_blank">${entry.short_sha}</a></td>
-        <td class="subject" title="${escapeHtml(entry.subject)}">${escapeHtml(entry.subject)}</td>
-        <td>${prCell}</td>
-        <td>${entry.scale ?? '—'}</td>
-        <td>${status}</td>
+      <tr class="border-t border-gray-100 hover:bg-gray-50">
+        <td class="px-3 py-2 whitespace-nowrap">${fmtDate(entry.author_date)}</td>
+        <td class="px-3 py-2 font-mono whitespace-nowrap"><a href="${entry.commit_url}" target="_blank" class="text-blue-600 hover:underline">${entry.short_sha}</a></td>
+        <td class="px-3 py-2 max-w-[28rem] truncate" title="${escapeHtml(entry.subject)}">${escapeHtml(entry.subject)}</td>
+        <td class="px-3 py-2 whitespace-nowrap">${prCell}</td>
+        <td class="px-3 py-2 whitespace-nowrap">${escapeHtml(entry.scale ?? '—')}</td>
+        <td class="px-3 py-2 whitespace-nowrap">${status}</td>
         ${metricCells}
-        <td>${compareLink}</td>
+        <td class="px-3 py-2 whitespace-nowrap">${compareLink}</td>
       </tr>
     `;
   }).join('');
 
   const metricHeaders = suiteName
     ? (SUITE_METRICS[suiteName] ?? []).map(m =>
-        `<th class="num">${m.label}<br><span class="muted" style="font-weight:400">${m.unit}</span></th>`).join('')
+        `<th class="px-3 py-2 text-right text-xs font-medium uppercase tracking-wide text-gray-500">${m.label}<br><span class="text-gray-400 font-normal normal-case tracking-normal">${m.unit}</span></th>`).join('')
     : '';
 
   return `
-    <div class="runs-table-wrap">
-      <table>
-        <thead>
+    <div class="bg-white border border-gray-200 rounded-lg overflow-x-auto">
+      <table class="min-w-full text-sm">
+        <thead class="bg-gray-50 text-xs uppercase tracking-wide text-gray-500">
           <tr>
-            <th>Date</th>
-            <th>Commit</th>
-            <th>Subject</th>
-            <th>PR</th>
-            <th>Scale</th>
-            <th>Status</th>
+            <th class="px-3 py-2 text-left font-medium">Date</th>
+            <th class="px-3 py-2 text-left font-medium">Commit</th>
+            <th class="px-3 py-2 text-left font-medium">Subject</th>
+            <th class="px-3 py-2 text-left font-medium">PR</th>
+            <th class="px-3 py-2 text-left font-medium">Scale</th>
+            <th class="px-3 py-2 text-left font-medium">Status</th>
             ${metricHeaders}
-            <th></th>
+            <th class="px-3 py-2 text-left font-medium"></th>
           </tr>
         </thead>
         <tbody>${rows}</tbody>
@@ -351,13 +357,13 @@ export function renderRunsTable(manifestEntries, runsByFile, suiteName = null) {
 export async function renderSuitePage(suiteName, container) {
   const { manifest, runs } = await loadRecentRuns(60);
   if (runs.length === 0) {
-    container.innerHTML = '<div class="empty-state">No runs yet.</div>';
+    container.innerHTML = '<div class="text-center py-16 text-gray-500">No runs yet.</div>';
     return;
   }
 
   const metrics = SUITE_METRICS[suiteName];
   if (!metrics) {
-    container.innerHTML = `<div class="empty-state">Unknown suite ${suiteName}</div>`;
+    container.innerHTML = `<div class="text-center py-16 text-gray-500">Unknown suite ${escapeHtml(suiteName)}</div>`;
     return;
   }
 
@@ -366,16 +372,16 @@ export async function renderSuitePage(suiteName, container) {
   const latestSuite = getSuite(latest, suiteName);
   const prevSuite = prev ? getSuite(prev, suiteName) : null;
 
-  // Headline metric cards
+  // Metric summary cards
   const cardsHtml = metrics.map(m => {
     const curr = latestSuite ? m.get(latestSuite) : null;
     const previous = prevSuite ? m.get(prevSuite) : null;
     return `
-      <div class="card">
-        <div class="card-header"><h3>${m.label}</h3></div>
-        <div class="metric-row">
-          <span class="metric">${fmtNumber(curr)}</span>
-          <span class="metric-unit">${m.unit}</span>
+      <div class="bg-white border border-gray-200 rounded-lg p-5 min-w-0">
+        <h3 class="text-xs uppercase tracking-wide text-gray-500 font-semibold m-0 mb-2">${m.label}</h3>
+        <div class="flex items-baseline gap-2 flex-wrap">
+          <span class="text-3xl font-semibold tabular-nums">${fmtNumber(curr)}</span>
+          <span class="text-gray-500 text-sm">${m.unit}</span>
           ${renderDelta(curr, previous, m.biggerIsBetter)}
         </div>
       </div>
@@ -384,8 +390,8 @@ export async function renderSuitePage(suiteName, container) {
 
   // Charts: one per metric, oldest → newest
   const chartsHtml = metrics.map((m, i) => `
-    <div class="card">
-      <div class="card-header"><h3>${m.label} <span class="muted">(${m.unit})</span></h3></div>
+    <div class="bg-white border border-gray-200 rounded-lg p-5 min-w-0">
+      <h3 class="text-xs uppercase tracking-wide text-gray-500 font-semibold m-0 mb-2">${m.label} <span class="text-gray-400 normal-case tracking-normal">(${m.unit})</span></h3>
       <div class="chart-container large"><canvas id="chart-${i}"></canvas></div>
     </div>
   `).join('');
@@ -396,21 +402,31 @@ export async function renderSuitePage(suiteName, container) {
     const phases = Object.entries(latestSuite.recall.phase_timings)
       .sort(([, a], [, b]) => b.mean - a.mean);
     phasesHtml = `
-      <div class="card" style="margin-top:1.5rem">
-        <div class="card-header"><h3>Latest run · phase breakdown</h3></div>
-        <table>
-          <thead><tr><th>Phase</th><th class="num">Mean</th><th class="num">p50</th><th class="num">p95</th><th class="num">p99</th></tr></thead>
-          <tbody>
-            ${phases.map(([name, ps]) => `
+      <div class="bg-white border border-gray-200 rounded-lg p-5 mt-6">
+        <h3 class="text-xs uppercase tracking-wide text-gray-500 font-semibold m-0 mb-3">Latest run · phase breakdown</h3>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm">
+            <thead class="bg-gray-50 text-xs uppercase tracking-wide text-gray-500">
               <tr>
-                <td class="mono">${escapeHtml(name)}</td>
-                <td class="num mono">${fmtNumber(ps.mean)}</td>
-                <td class="num mono">${fmtNumber(ps.p50)}</td>
-                <td class="num mono">${fmtNumber(ps.p95)}</td>
-                <td class="num mono">${fmtNumber(ps.p99)}</td>
-              </tr>`).join('')}
-          </tbody>
-        </table>
+                <th class="px-3 py-2 text-left font-medium">Phase</th>
+                <th class="px-3 py-2 text-right font-medium">Mean</th>
+                <th class="px-3 py-2 text-right font-medium">p50</th>
+                <th class="px-3 py-2 text-right font-medium">p95</th>
+                <th class="px-3 py-2 text-right font-medium">p99</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${phases.map(([name, ps]) => `
+                <tr class="border-t border-gray-100">
+                  <td class="px-3 py-2 font-mono">${escapeHtml(name)}</td>
+                  <td class="px-3 py-2 text-right font-mono tabular-nums">${fmtNumber(ps.mean)}</td>
+                  <td class="px-3 py-2 text-right font-mono tabular-nums">${fmtNumber(ps.p50)}</td>
+                  <td class="px-3 py-2 text-right font-mono tabular-nums">${fmtNumber(ps.p95)}</td>
+                  <td class="px-3 py-2 text-right font-mono tabular-nums">${fmtNumber(ps.p99)}</td>
+                </tr>`).join('')}
+            </tbody>
+          </table>
+        </div>
       </div>
     `;
   }
@@ -421,16 +437,18 @@ export async function renderSuitePage(suiteName, container) {
     runsByFile[entry.data_file] = runs[i];
   });
 
+  // Pick a card-grid column count based on number of metrics
+  const cardCols = metrics.length >= 4 ? 'lg:grid-cols-4' : metrics.length === 3 ? 'lg:grid-cols-3' : 'lg:grid-cols-2';
+
   container.innerHTML = `
     ${renderLatestBanner(latest)}
-    <div class="grid grid-${Math.min(metrics.length, 4)}">${cardsHtml}</div>
-    <div class="grid" style="margin-top:1.5rem">${chartsHtml}</div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 ${cardCols} gap-6">${cardsHtml}</div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">${chartsHtml}</div>
     ${phasesHtml}
-    <h2 style="margin-top:2rem">Runs</h2>
+    <h2 class="text-base font-semibold mt-8 mb-3">Runs</h2>
     ${renderRunsTable(manifest.runs.slice(0, runs.length), runsByFile, suiteName)}
   `;
 
-  // Render charts now that canvases are in the DOM
   metrics.forEach((m, i) => {
     const canvas = document.getElementById(`chart-${i}`);
     const points = timeSeries(runs, suiteName, m.get);

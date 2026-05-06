@@ -4,11 +4,12 @@
   <meta charset="utf-8">
   <title>Compare runs · Hindsight perf dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
-  <header id="page-header"></header>
-  <main id="main"></main>
+<body class="bg-gray-50 text-gray-900">
+  <header id="page-header" class="bg-white border-b border-gray-200 px-6 py-3"></header>
+  <main id="main" class="max-w-7xl mx-auto px-6 py-8"></main>
 
   <script type="module">
     import {
@@ -29,33 +30,34 @@
       try {
         manifest = await loadManifest();
       } catch (e) {
-        main.innerHTML = `<div class="empty-state">Failed to load data: ${escapeHtml(e.message)}</div>`;
+        main.innerHTML = `<div class="text-center py-16 text-gray-500">Failed to load data: ${escapeHtml(e.message)}</div>`;
         return;
       }
       const runs = manifest.runs ?? [];
       if (runs.length < 2) {
-        main.innerHTML = '<div class="empty-state">Need at least 2 runs to compare.</div>';
+        main.innerHTML = '<div class="text-center py-16 text-gray-500">Need at least 2 runs to compare.</div>';
         return;
       }
 
-      // Resolve a/b: if not provided, default to (second-newest, newest).
       const findEntry = sha => runs.find(r => r.short_sha === sha) ?? null;
       const entryA = (aSha && findEntry(aSha)) || runs[1];
       const entryB = (bSha && findEntry(bSha)) || runs[0];
 
-      // Build the selector
       const optionsHtml = runs.map(r =>
-        `<option value="${r.short_sha}">${fmtDate(r.author_date)} · ${r.short_sha} · ${escapeHtml(r.subject ?? '').slice(0, 60)}</option>`
+        `<option value="${r.short_sha}">${fmtDate(r.author_date)} · ${r.short_sha} · ${escapeHtml((r.subject ?? '').slice(0, 60))}</option>`
       ).join('');
 
       const githubCompare = `https://github.com/${HINDSIGHT_REPO}/compare/${entryA.sha}...${entryB.sha}`;
 
+      const selectCls = 'px-2 py-1 text-sm border border-gray-300 rounded bg-white max-w-xs truncate';
+      const labelCls = 'text-xs uppercase tracking-wide text-gray-500 font-medium block mb-1';
+
       main.innerHTML = `
-        <div class="compare-form">
-          <label>Base <select id="select-a">${optionsHtml}</select></label>
-          <label>Head <select id="select-b">${optionsHtml}</select></label>
-          <button id="apply">Apply</button>
-          <a href="${githubCompare}" target="_blank" style="margin-left:auto">GitHub diff →</a>
+        <div class="bg-white border border-gray-200 rounded-lg p-4 mb-6 flex flex-wrap items-end gap-4">
+          <div><span class="${labelCls}">Base</span><select id="select-a" class="${selectCls}">${optionsHtml}</select></div>
+          <div><span class="${labelCls}">Head</span><select id="select-b" class="${selectCls}">${optionsHtml}</select></div>
+          <button id="apply" class="px-3 py-1.5 text-sm bg-blue-600 text-white rounded hover:bg-blue-700">Apply</button>
+          <a href="${githubCompare}" target="_blank" class="ml-auto text-sm text-blue-600 hover:underline">GitHub diff →</a>
         </div>
         <div id="compare-content"></div>
       `;
@@ -68,27 +70,24 @@
         location.search = `?a=${a}&b=${b}`;
       });
 
-      // Load the two runs in parallel
       const [runA, runB] = await Promise.all([loadRun(entryA.data_file), loadRun(entryB.data_file)]);
 
-      const summaryCard = (label, entry) => {
-        const c = entry; // manifest entry has all the metadata
-        const prLink = c.pr_url ? `<a href="${c.pr_url}" target="_blank">#${c.pr_url.split('/').pop()}</a>` : '—';
+      const summaryCard = (label, c) => {
+        const prLink = c.pr_url
+          ? `<a href="${c.pr_url}" target="_blank" class="text-blue-600 hover:underline">#${c.pr_url.split('/').pop()}</a>`
+          : '<span class="text-gray-400">—</span>';
         return `
-          <div class="card">
-            <h3>${label}</h3>
-            <div class="metric-row" style="margin-bottom:0.25rem">
-              <span class="mono"><a href="${c.commit_url}" target="_blank">${c.short_sha}</a></span>
-            </div>
-            <div class="muted" style="font-size:0.85rem">${escapeHtml(c.subject ?? '')}</div>
-            <div class="muted" style="font-size:0.8rem;margin-top:0.5rem">
+          <div class="bg-white border border-gray-200 rounded-lg p-5 min-w-0">
+            <h3 class="text-xs uppercase tracking-wide text-gray-500 font-semibold m-0 mb-2">${label}</h3>
+            <div class="font-mono text-sm mb-1"><a href="${c.commit_url}" target="_blank" class="text-blue-600 hover:underline">${c.short_sha}</a></div>
+            <div class="text-sm text-gray-700 break-words">${escapeHtml(c.subject ?? '')}</div>
+            <div class="text-xs text-gray-500 mt-2">
               ${fmtDateTime(c.author_date)} · ${escapeHtml(c.author ?? '')} · PR ${prLink}
             </div>
           </div>
         `;
       };
 
-      // Build per-suite comparison tables
       const suiteSections = SUITES.map(suiteName => {
         const suiteA = getSuite(runA, suiteName);
         const suiteB = getSuite(runB, suiteName);
@@ -99,36 +98,49 @@
           const va = suiteA && suiteA.success ? m.get(suiteA) : null;
           const vb = suiteB && suiteB.success ? m.get(suiteB) : null;
           const d = deltaPct(vb, va);
-          let deltaCell = '<span class="delta flat">—</span>';
+          let deltaCell = '<span class="text-xs font-medium px-2 py-0.5 rounded bg-gray-100 text-gray-500 tabular-nums">—</span>';
           if (d != null) {
             const sign = d >= 0 ? '+' : '';
-            const cls = Math.abs(d) < 0.5 ? 'flat'
-              : (d > 0) === m.biggerIsBetter ? 'good' : 'bad';
-            deltaCell = `<span class="delta ${cls}">${sign}${d.toFixed(1)}%</span>`;
+            let cls = 'bg-gray-100 text-gray-500';
+            if (Math.abs(d) >= 0.5) {
+              cls = (d > 0) === m.biggerIsBetter
+                ? 'bg-emerald-100 text-emerald-700'
+                : 'bg-red-100 text-red-700';
+            }
+            deltaCell = `<span class="text-xs font-medium px-2 py-0.5 rounded tabular-nums ${cls}">${sign}${d.toFixed(1)}%</span>`;
           }
           return `
-            <tr>
-              <td>${m.label} <span class="muted" style="font-size:0.8em">(${m.unit})</span></td>
-              <td class="num mono">${fmtNumber(va)}</td>
-              <td class="num mono">${fmtNumber(vb)}</td>
-              <td class="delta-cell">${deltaCell}</td>
+            <tr class="border-t border-gray-100">
+              <td class="px-3 py-2">${m.label} <span class="text-gray-400 text-xs">(${m.unit})</span></td>
+              <td class="px-3 py-2 text-right font-mono tabular-nums">${fmtNumber(va)}</td>
+              <td class="px-3 py-2 text-right font-mono tabular-nums">${fmtNumber(vb)}</td>
+              <td class="px-3 py-2 text-right">${deltaCell}</td>
             </tr>
           `;
         }).join('');
 
         return `
-          <div class="card" style="margin-top:1.5rem">
-            <h3>${SUITE_LABELS[suiteName]}</h3>
-            <table>
-              <thead><tr><th>Metric</th><th class="num">Base</th><th class="num">Head</th><th class="delta-cell">Δ</th></tr></thead>
-              <tbody>${rows}</tbody>
-            </table>
+          <div class="bg-white border border-gray-200 rounded-lg p-5 mt-6">
+            <h3 class="text-base font-semibold m-0 mb-3">${SUITE_LABELS[suiteName]}</h3>
+            <div class="overflow-x-auto">
+              <table class="min-w-full text-sm">
+                <thead class="bg-gray-50 text-xs uppercase tracking-wide text-gray-500">
+                  <tr>
+                    <th class="px-3 py-2 text-left font-medium">Metric</th>
+                    <th class="px-3 py-2 text-right font-medium">Base</th>
+                    <th class="px-3 py-2 text-right font-medium">Head</th>
+                    <th class="px-3 py-2 text-right font-medium">Δ</th>
+                  </tr>
+                </thead>
+                <tbody>${rows}</tbody>
+              </table>
+            </div>
           </div>
         `;
       }).join('');
 
       document.getElementById('compare-content').innerHTML = `
-        <div class="compare-grid">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           ${summaryCard('Base', entryA)}
           ${summaryCard('Head', entryB)}
         </div>

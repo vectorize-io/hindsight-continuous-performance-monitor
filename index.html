@@ -4,11 +4,12 @@
   <meta charset="utf-8">
   <title>Hindsight perf dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
-  <header id="page-header"></header>
-  <main id="main"></main>
+<body class="bg-gray-50 text-gray-900">
+  <header id="page-header" class="bg-white border-b border-gray-200 px-6 py-3"></header>
+  <main id="main" class="max-w-7xl mx-auto px-6 py-8"></main>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
@@ -28,12 +29,12 @@
       try {
         payload = await loadRecentRuns(60);
       } catch (e) {
-        main.innerHTML = `<div class="empty-state">Failed to load data: ${escapeHtml(e.message)}</div>`;
+        main.innerHTML = `<div class="text-center py-16 text-gray-500">Failed to load data: ${escapeHtml(e.message)}</div>`;
         return;
       }
       const { manifest, runs } = payload;
       if (runs.length === 0) {
-        main.innerHTML = '<div class="empty-state">No perf runs yet — waiting for the first one to land.</div>';
+        main.innerHTML = '<div class="text-center py-16 text-gray-500">No perf runs yet — waiting for the first one to land.</div>';
         return;
       }
 
@@ -46,19 +47,18 @@
         const prevSuite = prev ? getSuite(prev, suite) : null;
         const curr = latestSuite ? headline.get(latestSuite) : null;
         const previous = prevSuite ? headline.get(prevSuite) : null;
-        const pageHref = suite + '.html';
         return `
-          <div class="card">
-            <div class="card-header">
-              <h3>${SUITE_LABELS[suite]}</h3>
-              <a class="details-link" href="${pageHref}">Details →</a>
+          <div class="bg-white border border-gray-200 rounded-lg p-5 min-w-0">
+            <div class="flex items-baseline justify-between mb-2 gap-2">
+              <h3 class="text-xs uppercase tracking-wide text-gray-500 font-semibold m-0 truncate">${SUITE_LABELS[suite]}</h3>
+              <a class="text-xs text-blue-600 hover:underline whitespace-nowrap" href="${suite}.html">Details →</a>
             </div>
-            <div class="metric-row">
-              <span class="metric">${fmtNumber(curr)}</span>
-              <span class="metric-unit">${headline.unit}</span>
+            <div class="flex items-baseline gap-2 flex-wrap">
+              <span class="text-3xl font-semibold tabular-nums">${fmtNumber(curr)}</span>
+              <span class="text-gray-500 text-sm">${headline.unit}</span>
               ${renderDelta(curr, previous, headline.biggerIsBetter)}
             </div>
-            <div class="muted" style="font-size:0.8rem;margin-bottom:0.5rem">${headline.label}</div>
+            <div class="text-gray-400 text-xs mt-1 mb-2">${headline.label}</div>
             <div class="chart-container"><canvas id="mini-${idx}"></canvas></div>
           </div>
         `;
@@ -69,8 +69,8 @@
 
       main.innerHTML = `
         ${renderLatestBanner(latest)}
-        <div class="grid grid-4">${cards}</div>
-        <h2 style="margin-top:2rem">Recent runs</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">${cards}</div>
+        <h2 class="text-base font-semibold mt-8 mb-3">Recent runs</h2>
         ${renderRunsTable(manifest.runs.slice(0, 25), runsByFile)}
       `;
 
