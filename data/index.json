@@ -1,6 +1,18 @@
 {
   "runs": [
     {
+      "sha": "172c57e1c2f787db506cf1bf9fbf9079a2066aae",
+      "short_sha": "172c57e1",
+      "subject": "perf(workflow): publish dashboard on workflow_dispatch too",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-05-06T12:39:30+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/172c57e1c2f787db506cf1bf9fbf9079a2066aae",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1474",
+      "data_file": "data/20260506T104242Z-172c57e1.json",
+      "timestamp": "2026-05-06T10:40:49.493673+00:00",
+      "scale": "small"
+    },
+    {
       "sha": "f05ac4d9a542592d74a35ae2628fefba9b1cc287",
       "short_sha": "f05ac4d9",
       "subject": "feat(perf): replace github-action-benchmark with custom dashboard publisher",
@@ -13,5 +25,5 @@
       "scale": "small"
     }
   ],
-  "updated_at": "2026-05-06T10:38:20Z"
+  "updated_at": "2026-05-06T10:42:42Z"
 }
