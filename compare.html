@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Compare runs · Hindsight perf dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header id="page-header"></header>
+  <main id="main"></main>
+
+  <script type="module">
+    import {
+      loadManifest, loadRun, renderHeader, fmtNumber, fmtDateTime, fmtDate,
+      deltaPct, escapeHtml, SUITES, SUITE_LABELS, SUITE_METRICS, getSuite,
+      HINDSIGHT_REPO,
+    } from './assets/app.js';
+
+    document.getElementById('page-header').innerHTML = renderHeader('compare');
+    const main = document.getElementById('main');
+
+    const params = new URLSearchParams(location.search);
+    const aSha = params.get('a');
+    const bSha = params.get('b');
+
+    (async () => {
+      let manifest;
+      try {
+        manifest = await loadManifest();
+      } catch (e) {
+        main.innerHTML = `<div class="empty-state">Failed to load data: ${escapeHtml(e.message)}</div>`;
+        return;
+      }
+      const runs = manifest.runs ?? [];
+      if (runs.length < 2) {
+        main.innerHTML = '<div class="empty-state">Need at least 2 runs to compare.</div>';
+        return;
+      }
+
+      // Resolve a/b: if not provided, default to (second-newest, newest).
+      const findEntry = sha => runs.find(r => r.short_sha === sha) ?? null;
+      const entryA = (aSha && findEntry(aSha)) || runs[1];
+      const entryB = (bSha && findEntry(bSha)) || runs[0];
+
+      // Build the selector
+      const optionsHtml = runs.map(r =>
+        `<option value="${r.short_sha}">${fmtDate(r.author_date)} · ${r.short_sha} · ${escapeHtml(r.subject ?? '').slice(0, 60)}</option>`
+      ).join('');
+
+      const githubCompare = `https://github.com/${HINDSIGHT_REPO}/compare/${entryA.sha}...${entryB.sha}`;
+
+      main.innerHTML = `
+        <div class="compare-form">
+          <label>Base <select id="select-a">${optionsHtml}</select></label>
+          <label>Head <select id="select-b">${optionsHtml}</select></label>
+          <button id="apply">Apply</button>
+          <a href="${githubCompare}" target="_blank" style="margin-left:auto">GitHub diff →</a>
+        </div>
+        <div id="compare-content"></div>
+      `;
+
+      document.getElementById('select-a').value = entryA.short_sha;
+      document.getElementById('select-b').value = entryB.short_sha;
+      document.getElementById('apply').addEventListener('click', () => {
+        const a = document.getElementById('select-a').value;
+        const b = document.getElementById('select-b').value;
+        location.search = `?a=${a}&b=${b}`;
+      });
+
+      // Load the two runs in parallel
+      const [runA, runB] = await Promise.all([loadRun(entryA.data_file), loadRun(entryB.data_file)]);
+
+      const summaryCard = (label, entry) => {
+        const c = entry; // manifest entry has all the metadata
+        const prLink = c.pr_url ? `<a href="${c.pr_url}" target="_blank">#${c.pr_url.split('/').pop()}</a>` : '—';
+        return `
+          <div class="card">
+            <h3>${label}</h3>
+            <div class="metric-row" style="margin-bottom:0.25rem">
+              <span class="mono"><a href="${c.commit_url}" target="_blank">${c.short_sha}</a></span>
+            </div>
+            <div class="muted" style="font-size:0.85rem">${escapeHtml(c.subject ?? '')}</div>
+            <div class="muted" style="font-size:0.8rem;margin-top:0.5rem">
+              ${fmtDateTime(c.author_date)} · ${escapeHtml(c.author ?? '')} · PR ${prLink}
+            </div>
+          </div>
+        `;
+      };
+
+      // Build per-suite comparison tables
+      const suiteSections = SUITES.map(suiteName => {
+        const suiteA = getSuite(runA, suiteName);
+        const suiteB = getSuite(runB, suiteName);
+        const metrics = SUITE_METRICS[suiteName];
+        if (!metrics) return '';
+
+        const rows = metrics.map(m => {
+          const va = suiteA && suiteA.success ? m.get(suiteA) : null;
+          const vb = suiteB && suiteB.success ? m.get(suiteB) : null;
+          const d = deltaPct(vb, va);
+          let deltaCell = '<span class="delta flat">—</span>';
+          if (d != null) {
+            const sign = d >= 0 ? '+' : '';
+            const cls = Math.abs(d) < 0.5 ? 'flat'
+              : (d > 0) === m.biggerIsBetter ? 'good' : 'bad';
+            deltaCell = `<span class="delta ${cls}">${sign}${d.toFixed(1)}%</span>`;
+          }
+          return `
+            <tr>
+              <td>${m.label} <span class="muted" style="font-size:0.8em">(${m.unit})</span></td>
+              <td class="num mono">${fmtNumber(va)}</td>
+              <td class="num mono">${fmtNumber(vb)}</td>
+              <td class="delta-cell">${deltaCell}</td>
+            </tr>
+          `;
+        }).join('');
+
+        return `
+          <div class="card" style="margin-top:1.5rem">
+            <h3>${SUITE_LABELS[suiteName]}</h3>
+            <table>
+              <thead><tr><th>Metric</th><th class="num">Base</th><th class="num">Head</th><th class="delta-cell">Δ</th></tr></thead>
+              <tbody>${rows}</tbody>
+            </table>
+          </div>
+        `;
+      }).join('');
+
+      document.getElementById('compare-content').innerHTML = `
+        <div class="compare-grid">
+          ${summaryCard('Base', entryA)}
+          ${summaryCard('Head', entryB)}
+        </div>
+        ${suiteSections}
+      `;
+    })();
+  </script>
+</body>
+</html>

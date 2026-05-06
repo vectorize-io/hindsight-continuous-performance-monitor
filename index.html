@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hindsight perf dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header id="page-header"></header>
+  <main id="main"></main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+  <script type="module">
+    import {
+      loadRecentRuns, renderHeader, renderLatestBanner, renderRunsTable,
+      timeSeries, lineChart, makeDataset, fmtNumber, renderDelta,
+      SUITES, SUITE_LABELS, SUITE_HEADLINE, getSuite, escapeHtml,
+    } from './assets/app.js';
+
+    document.getElementById('page-header').innerHTML = renderHeader('overview');
+
+    const main = document.getElementById('main');
+
+    (async () => {
+      let payload;
+      try {
+        payload = await loadRecentRuns(60);
+      } catch (e) {
+        main.innerHTML = `<div class="empty-state">Failed to load data: ${escapeHtml(e.message)}</div>`;
+        return;
+      }
+      const { manifest, runs } = payload;
+      if (runs.length === 0) {
+        main.innerHTML = '<div class="empty-state">No perf runs yet — waiting for the first one to land.</div>';
+        return;
+      }
+
+      const latest = runs[0];
+      const prev = runs[1] ?? null;
+
+      const cards = SUITES.map((suite, idx) => {
+        const headline = SUITE_HEADLINE[suite];
+        const latestSuite = getSuite(latest, suite);
+        const prevSuite = prev ? getSuite(prev, suite) : null;
+        const curr = latestSuite ? headline.get(latestSuite) : null;
+        const previous = prevSuite ? headline.get(prevSuite) : null;
+        const pageHref = suite + '.html';
+        return `
+          <div class="card">
+            <div class="card-header">
+              <h3>${SUITE_LABELS[suite]}</h3>
+              <a class="details-link" href="${pageHref}">Details →</a>
+            </div>
+            <div class="metric-row">
+              <span class="metric">${fmtNumber(curr)}</span>
+              <span class="metric-unit">${headline.unit}</span>
+              ${renderDelta(curr, previous, headline.biggerIsBetter)}
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-bottom:0.5rem">${headline.label}</div>
+            <div class="chart-container"><canvas id="mini-${idx}"></canvas></div>
+          </div>
+        `;
+      }).join('');
+
+      const runsByFile = {};
+      manifest.runs.slice(0, runs.length).forEach((e, i) => { runsByFile[e.data_file] = runs[i]; });
+
+      main.innerHTML = `
+        ${renderLatestBanner(latest)}
+        <div class="grid grid-4">${cards}</div>
+        <h2 style="margin-top:2rem">Recent runs</h2>
+        ${renderRunsTable(manifest.runs.slice(0, 25), runsByFile)}
+      `;
+
+      SUITES.forEach((suite, idx) => {
+        const headline = SUITE_HEADLINE[suite];
+        const points = timeSeries(runs, suite, headline.get);
+        const canvas = document.getElementById('mini-' + idx);
+        lineChart(canvas, [makeDataset(headline.label, points, idx)], {
+          yLabel: headline.unit,
+          legend: false,
+          unit: headline.unit,
+          onClick: () => { window.location.href = suite + '.html'; },
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
