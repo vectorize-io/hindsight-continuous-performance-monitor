@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "fd18de1122b36aca2ac27cf3eab181e50aa0a149",
+      "short_sha": "fd18de11",
+      "subject": "feat(perf): publish workflow run URL and LoComo results to dashboard",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-05-06T15:03:15+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/fd18de1122b36aca2ac27cf3eab181e50aa0a149",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1474",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/25436950333",
+      "data_file": "data/20260506T130619Z-fd18de11.json",
+      "timestamp": "2026-05-06T13:04:22.763362+00:00",
+      "scale": "small"
+    },
+    {
       "sha": "172c57e1c2f787db506cf1bf9fbf9079a2066aae",
       "short_sha": "172c57e1",
       "subject": "perf(workflow): publish dashboard on workflow_dispatch too",
@@ -25,5 +38,5 @@
       "scale": "small"
     }
   ],
-  "updated_at": "2026-05-06T10:42:42Z"
+  "updated_at": "2026-05-06T13:06:19Z"
 }
