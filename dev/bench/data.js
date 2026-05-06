@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1778062783340,
+  "lastUpdate": 1778062784721,
   "repoUrl": "https://github.com/vectorize-io/hindsight",
   "entries": {
     "Hindsight Latency": [
@@ -148,6 +148,52 @@ window.BENCHMARK_DATA = {
             "name": "consolidation duration",
             "value": 40.563,
             "unit": "s"
+          }
+        ]
+      }
+    ],
+    "Hindsight Throughput": [
+      {
+        "commit": {
+          "author": {
+            "email": "boschi1997@gmail.com",
+            "name": "Nicolò Boschi",
+            "username": "nicoloboschi"
+          },
+          "committer": {
+            "email": "boschi1997@gmail.com",
+            "name": "Nicolò Boschi",
+            "username": "nicoloboschi"
+          },
+          "distinct": true,
+          "id": "1bb78865b6c34ac9573f8900f92f66cc341f9317",
+          "message": "fix(perf): wipe benchmark working dir between latency and throughput publishes\n\ngithub-action-benchmark clones the dashboard repo into a fixed\n./benchmark-data-repository directory and doesn't clean up, so the\nsecond invocation in the same job fails with 'destination path already\nexists'.",
+          "timestamp": "2026-05-06T12:16:58+02:00",
+          "tree_id": "b05d76d8526fddbe9c01bb9a38e3e257067ae146",
+          "url": "https://github.com/vectorize-io/hindsight/commit/1bb78865b6c34ac9573f8900f92f66cc341f9317"
+        },
+        "date": 1778062784520,
+        "tool": "customBiggerIsBetter",
+        "benches": [
+          {
+            "name": "retain throughput",
+            "value": 22.54,
+            "unit": "items/s"
+          },
+          {
+            "name": "recall throughput",
+            "value": 6.48,
+            "unit": "queries/s"
+          },
+          {
+            "name": "recall-with-observations throughput",
+            "value": 5.4,
+            "unit": "queries/s"
+          },
+          {
+            "name": "consolidation throughput",
+            "value": 2.47,
+            "unit": "memories/s"
           }
         ]
       }
