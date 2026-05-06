@@ -1,1 +1,17 @@
-{"runs": []}
+{
+  "runs": [
+    {
+      "sha": "f05ac4d9a542592d74a35ae2628fefba9b1cc287",
+      "short_sha": "f05ac4d9",
+      "subject": "feat(perf): replace github-action-benchmark with custom dashboard publisher",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-05-06T12:35:17+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/f05ac4d9a542592d74a35ae2628fefba9b1cc287",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1474",
+      "data_file": "data/20260506T103820Z-f05ac4d9.json",
+      "timestamp": "2026-05-06T10:36:28.873895+00:00",
+      "scale": "small"
+    }
+  ],
+  "updated_at": "2026-05-06T10:38:20Z"
+}
