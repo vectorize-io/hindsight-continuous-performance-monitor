@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "a3465dd1fe8d2627dfd456c5f242db910a3a1f9e",
+      "short_sha": "a3465dd1",
+      "subject": "blog: Your Claude Code Subagents Don't Share What They Learn (#1456)",
+      "author": "Ben",
+      "author_date": "2026-05-06T15:13:19-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/a3465dd1fe8d2627dfd456c5f242db910a3a1f9e",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1456",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/25480759154",
+      "data_file": "data/20260507T074046Z-a3465dd1.json",
+      "timestamp": "2026-05-07T06:56:32.263117+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "efe5ff8494e81a51d098200ddbcd5c1be60048e2",
       "short_sha": "efe5ff84",
       "subject": "feat(perf): publish perf-test results to external dashboard (#1474)",
@@ -51,5 +64,5 @@
       "scale": "small"
     }
   ],
-  "updated_at": "2026-05-06T14:09:01Z"
+  "updated_at": "2026-05-07T07:40:46Z"
 }
