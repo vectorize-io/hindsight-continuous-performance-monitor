@@ -1,0 +1,133 @@
+{
+  "overall_accuracy": 86.13138686131386,
+  "total_correct": 354,
+  "total_questions": 411,
+  "total_invalid": 0,
+  "total_valid": 411,
+  "num_items": 3,
+  "model_config": {
+    "hindsight": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash-lite"
+    },
+    "answer_generation": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash"
+    },
+    "judge": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash-lite"
+    }
+  },
+  "item_results": [
+    {
+      "item_id": "conv-30",
+      "metrics": {
+        "accuracy": 85.18518518518519,
+        "correct": 69,
+        "total": 81,
+        "invalid": 0,
+        "valid_total": 81,
+        "category_stats": {
+          "2": {
+            "correct": 23,
+            "total": 26,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 9,
+            "total": 11,
+            "invalid": 0
+          },
+          "4": {
+            "correct": 37,
+            "total": 44,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 19
+    },
+    {
+      "item_id": "conv-26",
+      "metrics": {
+        "accuracy": 91.44736842105263,
+        "correct": 139,
+        "total": 152,
+        "invalid": 0,
+        "valid_total": 152,
+        "category_stats": {
+          "4": {
+            "correct": 68,
+            "total": 70,
+            "invalid": 0
+          },
+          "2": {
+            "correct": 33,
+            "total": 37,
+            "invalid": 0
+          },
+          "3": {
+            "correct": 10,
+            "total": 13,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 28,
+            "total": 32,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 19
+    },
+    {
+      "item_id": "conv-43",
+      "metrics": {
+        "accuracy": 82.02247191011236,
+        "correct": 146,
+        "total": 178,
+        "invalid": 0,
+        "valid_total": 178,
+        "category_stats": {
+          "4": {
+            "correct": 96,
+            "total": 107,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 25,
+            "total": 31,
+            "invalid": 0
+          },
+          "2": {
+            "correct": 19,
+            "total": 26,
+            "invalid": 0
+          },
+          "3": {
+            "correct": 6,
+            "total": 14,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 29
+    }
+  ],
+  "timestamp": "2026-05-08T10:39:38Z",
+  "commit": {
+    "sha": "da72f5da44ec169cf718d26ccee5fe8a00bd35bd",
+    "short_sha": "da72f5da",
+    "subject": "perf(locomo): scope CI to a 3-conversation curated subset (#1536)",
+    "author": "Nicolò Boschi",
+    "author_date": "2026-05-08T11:45:23+02:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/da72f5da44ec169cf718d26ccee5fe8a00bd35bd",
+    "pr_number": 1536,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/1536"
+  },
+  "workflow_run": {
+    "id": "25548819149",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/25548819149"
+  }
+}
