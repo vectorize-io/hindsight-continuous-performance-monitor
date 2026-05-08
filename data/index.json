@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "da72f5da44ec169cf718d26ccee5fe8a00bd35bd",
+      "short_sha": "da72f5da",
+      "subject": "perf(locomo): scope CI to a 3-conversation curated subset (#1536)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-05-08T11:45:23+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/da72f5da44ec169cf718d26ccee5fe8a00bd35bd",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1536",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/25548819149",
+      "data_file": "data/20260508T102703Z-da72f5da.json",
+      "timestamp": "2026-05-08T09:46:40.071677+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "8c6be6de6c7bf8ad1539f56999e4742b4284cf37",
       "short_sha": "8c6be6de",
       "subject": "blog: n8n Workflows Are Stateless. Hindsight Makes Them Compound. (#1511)",
@@ -40,5 +53,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-05-08T07:12:37Z"
+  "updated_at": "2026-05-08T10:27:03Z"
 }
