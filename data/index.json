@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "6aab6c89dc672363346b14f9e2607e3b2358a7ef",
+      "short_sha": "6aab6c89",
+      "subject": "release(claude-code): v0.6.4",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-05-08T16:54:53+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/6aab6c89dc672363346b14f9e2607e3b2358a7ef",
+      "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/25594312262",
+      "data_file": "data/20260509T070851Z-6aab6c89.json",
+      "timestamp": "2026-05-09T06:40:21.826059+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "da72f5da44ec169cf718d26ccee5fe8a00bd35bd",
       "short_sha": "da72f5da",
       "subject": "perf(locomo): scope CI to a 3-conversation curated subset (#1536)",
@@ -53,5 +66,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-05-08T10:27:03Z"
+  "updated_at": "2026-05-09T07:08:52Z"
 }
