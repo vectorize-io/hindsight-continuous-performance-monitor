@@ -8,6 +8,19 @@
       "author_date": "2026-05-08T16:54:53+02:00",
       "commit_url": "https://github.com/vectorize-io/hindsight/commit/6aab6c89dc672363346b14f9e2607e3b2358a7ef",
       "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/25655316050",
+      "data_file": "data/20260511T074325Z-6aab6c89.json",
+      "timestamp": "2026-05-11T07:02:03.430722+00:00",
+      "scale": "large"
+    },
+    {
+      "sha": "6aab6c89dc672363346b14f9e2607e3b2358a7ef",
+      "short_sha": "6aab6c89",
+      "subject": "release(claude-code): v0.6.4",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-05-08T16:54:53+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/6aab6c89dc672363346b14f9e2607e3b2358a7ef",
+      "pr_url": null,
       "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/25622193532",
       "data_file": "data/20260510T072642Z-6aab6c89.json",
       "timestamp": "2026-05-10T06:49:30.913291+00:00",
@@ -79,5 +92,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-05-10T07:26:42Z"
+  "updated_at": "2026-05-11T07:43:25Z"
 }
