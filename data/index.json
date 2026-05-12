@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "2471f01107d90c2b13410bf929050cd67072d281",
+      "short_sha": "2471f011",
+      "subject": "blog: add category filter to blog landing page (#1580)",
+      "author": "Ben",
+      "author_date": "2026-05-11T16:07:13-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/2471f01107d90c2b13410bf929050cd67072d281",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1580",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/25718450490",
+      "data_file": "data/20260512T073224Z-2471f011.json",
+      "timestamp": "2026-05-12T06:51:51.682054+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "6aab6c89dc672363346b14f9e2607e3b2358a7ef",
       "short_sha": "6aab6c89",
       "subject": "release(claude-code): v0.6.4",
@@ -92,5 +105,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-05-11T07:43:25Z"
+  "updated_at": "2026-05-12T07:32:25Z"
 }
