@@ -1,6 +1,21 @@
 {
   "runs": [
     {
+      "sha": "9533107612f0ab685ec8a0df228bc405ca7d0f70",
+      "short_sha": "95331076",
+      "subject": "security: bump urllib3 to 2.7.0 in integration lockfiles (#1603)",
+      "author": "Derek Bouius",
+      "author_date": "2026-05-12T22:26:24-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/9533107612f0ab685ec8a0df228bc405ca7d0f70",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1603",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/25783476611",
+      "data_file": "data/locomo/20260513T073557Z-95331076.json",
+      "timestamp": "2026-05-13T07:35:57Z",
+      "overall_accuracy": 86.13138686131386,
+      "num_items": 3,
+      "total_questions": 411
+    },
+    {
       "sha": "2471f01107d90c2b13410bf929050cd67072d281",
       "short_sha": "2471f011",
       "subject": "blog: add category filter to blog landing page (#1580)",
@@ -76,5 +91,5 @@
       "total_questions": 411
     }
   ],
-  "updated_at": "2026-05-12T07:43:17Z"
+  "updated_at": "2026-05-13T07:35:58Z"
 }
