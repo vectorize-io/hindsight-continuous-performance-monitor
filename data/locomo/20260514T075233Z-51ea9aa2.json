@@ -1,0 +1,133 @@
+{
+  "overall_accuracy": 86.37469586374696,
+  "total_correct": 355,
+  "total_questions": 411,
+  "total_invalid": 0,
+  "total_valid": 411,
+  "num_items": 3,
+  "model_config": {
+    "hindsight": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash-lite"
+    },
+    "answer_generation": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash"
+    },
+    "judge": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash-lite"
+    }
+  },
+  "item_results": [
+    {
+      "item_id": "conv-30",
+      "metrics": {
+        "accuracy": 88.88888888888889,
+        "correct": 72,
+        "total": 81,
+        "invalid": 0,
+        "valid_total": 81,
+        "category_stats": {
+          "4": {
+            "correct": 39,
+            "total": 44,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 8,
+            "total": 11,
+            "invalid": 0
+          },
+          "2": {
+            "correct": 25,
+            "total": 26,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 19
+    },
+    {
+      "item_id": "conv-26",
+      "metrics": {
+        "accuracy": 87.5,
+        "correct": 133,
+        "total": 152,
+        "invalid": 0,
+        "valid_total": 152,
+        "category_stats": {
+          "1": {
+            "correct": 28,
+            "total": 32,
+            "invalid": 0
+          },
+          "4": {
+            "correct": 62,
+            "total": 70,
+            "invalid": 0
+          },
+          "2": {
+            "correct": 32,
+            "total": 37,
+            "invalid": 0
+          },
+          "3": {
+            "correct": 11,
+            "total": 13,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 19
+    },
+    {
+      "item_id": "conv-43",
+      "metrics": {
+        "accuracy": 84.26966292134831,
+        "correct": 150,
+        "total": 178,
+        "invalid": 0,
+        "valid_total": 178,
+        "category_stats": {
+          "1": {
+            "correct": 25,
+            "total": 31,
+            "invalid": 0
+          },
+          "4": {
+            "correct": 98,
+            "total": 107,
+            "invalid": 0
+          },
+          "3": {
+            "correct": 7,
+            "total": 14,
+            "invalid": 0
+          },
+          "2": {
+            "correct": 20,
+            "total": 26,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 29
+    }
+  ],
+  "timestamp": "2026-05-14T07:52:33Z",
+  "commit": {
+    "sha": "51ea9aa2864bbc77065c763f450691f4311a5a9f",
+    "short_sha": "51ea9aa2",
+    "subject": "fix(cli, control-plane): make retain Event Date / timestamp actually reach the API (#1622)",
+    "author": "Ben",
+    "author_date": "2026-05-13T16:51:21-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/51ea9aa2864bbc77065c763f450691f4311a5a9f",
+    "pr_number": 1622,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/1622"
+  },
+  "workflow_run": {
+    "id": "25846448626",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/25846448626"
+  }
+}
