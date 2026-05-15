@@ -1,6 +1,21 @@
 {
   "runs": [
     {
+      "sha": "f94e840fe8b373ed0ecc4473efe816557aa6e095",
+      "short_sha": "f94e840f",
+      "subject": "docs: attribute 0.6.2 release post to benfrank241 (#1635)",
+      "author": "Ben",
+      "author_date": "2026-05-14T17:07:12-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/f94e840fe8b373ed0ecc4473efe816557aa6e095",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1635",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/25904961814",
+      "data_file": "data/locomo/20260515T080026Z-f94e840f.json",
+      "timestamp": "2026-05-15T08:00:26Z",
+      "overall_accuracy": 85.88807785888078,
+      "num_items": 3,
+      "total_questions": 411
+    },
+    {
       "sha": "51ea9aa2864bbc77065c763f450691f4311a5a9f",
       "short_sha": "51ea9aa2",
       "subject": "fix(cli, control-plane): make retain Event Date / timestamp actually reach the API (#1622)",
@@ -106,5 +121,5 @@
       "total_questions": 411
     }
   ],
-  "updated_at": "2026-05-14T07:52:34Z"
+  "updated_at": "2026-05-15T08:00:28Z"
 }
