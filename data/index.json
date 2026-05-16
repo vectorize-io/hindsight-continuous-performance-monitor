@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "9784f6573a5bcba6ac6fd9dfb70929e5318857ce",
+      "short_sha": "9784f657",
+      "subject": "release(openclaw): v0.7.7",
+      "author": "Ben",
+      "author_date": "2026-05-15T15:11:52-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/9784f6573a5bcba6ac6fd9dfb70929e5318857ce",
+      "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/25955254658",
+      "data_file": "data/20260516T071827Z-9784f657.json",
+      "timestamp": "2026-05-16T06:44:54.340047+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "f94e840fe8b373ed0ecc4473efe816557aa6e095",
       "short_sha": "f94e840f",
       "subject": "docs: attribute 0.6.2 release post to benfrank241 (#1635)",
@@ -144,5 +157,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-05-15T07:34:09Z"
+  "updated_at": "2026-05-16T07:18:27Z"
 }
