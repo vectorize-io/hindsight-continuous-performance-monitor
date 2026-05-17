@@ -8,6 +8,19 @@
       "author_date": "2026-05-15T15:11:52-04:00",
       "commit_url": "https://github.com/vectorize-io/hindsight/commit/9784f6573a5bcba6ac6fd9dfb70929e5318857ce",
       "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/25983938840",
+      "data_file": "data/20260517T072342Z-9784f657.json",
+      "timestamp": "2026-05-17T06:52:25.344172+00:00",
+      "scale": "large"
+    },
+    {
+      "sha": "9784f6573a5bcba6ac6fd9dfb70929e5318857ce",
+      "short_sha": "9784f657",
+      "subject": "release(openclaw): v0.7.7",
+      "author": "Ben",
+      "author_date": "2026-05-15T15:11:52-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/9784f6573a5bcba6ac6fd9dfb70929e5318857ce",
+      "pr_url": null,
       "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/25955254658",
       "data_file": "data/20260516T071827Z-9784f657.json",
       "timestamp": "2026-05-16T06:44:54.340047+00:00",
@@ -157,5 +170,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-05-16T07:18:27Z"
+  "updated_at": "2026-05-17T07:23:42Z"
 }
