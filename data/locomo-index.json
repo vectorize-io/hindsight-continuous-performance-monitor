@@ -8,6 +8,21 @@
       "author_date": "2026-05-15T15:11:52-04:00",
       "commit_url": "https://github.com/vectorize-io/hindsight/commit/9784f6573a5bcba6ac6fd9dfb70929e5318857ce",
       "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/26018976415",
+      "data_file": "data/locomo/20260518T080837Z-9784f657.json",
+      "timestamp": "2026-05-18T08:08:37Z",
+      "overall_accuracy": 87.8345498783455,
+      "num_items": 3,
+      "total_questions": 411
+    },
+    {
+      "sha": "9784f6573a5bcba6ac6fd9dfb70929e5318857ce",
+      "short_sha": "9784f657",
+      "subject": "release(openclaw): v0.7.7",
+      "author": "Ben",
+      "author_date": "2026-05-15T15:11:52-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/9784f6573a5bcba6ac6fd9dfb70929e5318857ce",
+      "pr_url": null,
       "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/25983938840",
       "data_file": "data/locomo/20260517T074614Z-9784f657.json",
       "timestamp": "2026-05-17T07:46:14Z",
@@ -151,5 +166,5 @@
       "total_questions": 411
     }
   ],
-  "updated_at": "2026-05-17T07:46:15Z"
+  "updated_at": "2026-05-18T08:08:38Z"
 }
