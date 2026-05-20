@@ -1,6 +1,21 @@
 {
   "runs": [
     {
+      "sha": "bd86e7ead0dbabdd29397be740e16638f3749073",
+      "short_sha": "bd86e7ea",
+      "subject": "fix(typescript-client): update repository URL to correct repo (#1657)",
+      "author": "Chandler",
+      "author_date": "2026-05-19T13:51:46-07:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/bd86e7ead0dbabdd29397be740e16638f3749073",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1657",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/26146979578",
+      "data_file": "data/locomo/20260520T080119Z-bd86e7ea.json",
+      "timestamp": "2026-05-20T08:01:19Z",
+      "overall_accuracy": 87.59124087591242,
+      "num_items": 3,
+      "total_questions": 411
+    },
+    {
       "sha": "9784f6573a5bcba6ac6fd9dfb70929e5318857ce",
       "short_sha": "9784f657",
       "subject": "release(openclaw): v0.7.7",
@@ -181,5 +196,5 @@
       "total_questions": 411
     }
   ],
-  "updated_at": "2026-05-19T08:01:48Z"
+  "updated_at": "2026-05-20T08:01:20Z"
 }
