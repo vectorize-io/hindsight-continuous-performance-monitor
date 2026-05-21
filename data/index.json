@@ -8,6 +8,19 @@
       "author_date": "2026-05-19T13:51:46-07:00",
       "commit_url": "https://github.com/vectorize-io/hindsight/commit/bd86e7ead0dbabdd29397be740e16638f3749073",
       "pr_url": "https://github.com/vectorize-io/hindsight/pull/1657",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/26211087480",
+      "data_file": "data/20260521T074648Z-bd86e7ea.json",
+      "timestamp": "2026-05-21T07:09:26.713143+00:00",
+      "scale": "large"
+    },
+    {
+      "sha": "bd86e7ead0dbabdd29397be740e16638f3749073",
+      "short_sha": "bd86e7ea",
+      "subject": "fix(typescript-client): update repository URL to correct repo (#1657)",
+      "author": "Chandler",
+      "author_date": "2026-05-19T13:51:46-07:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/bd86e7ead0dbabdd29397be740e16638f3749073",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1657",
       "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/26146979578",
       "data_file": "data/20260520T073558Z-bd86e7ea.json",
       "timestamp": "2026-05-20T07:04:40.623915+00:00",
@@ -209,5 +222,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-05-20T07:35:59Z"
+  "updated_at": "2026-05-21T07:46:48Z"
 }
