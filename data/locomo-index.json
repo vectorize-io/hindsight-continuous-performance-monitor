@@ -8,6 +8,21 @@
       "author_date": "2026-05-19T13:51:46-07:00",
       "commit_url": "https://github.com/vectorize-io/hindsight/commit/bd86e7ead0dbabdd29397be740e16638f3749073",
       "pr_url": "https://github.com/vectorize-io/hindsight/pull/1657",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/26211087480",
+      "data_file": "data/locomo/20260521T075145Z-bd86e7ea.json",
+      "timestamp": "2026-05-21T07:51:45Z",
+      "overall_accuracy": 83.45498783454988,
+      "num_items": 3,
+      "total_questions": 411
+    },
+    {
+      "sha": "bd86e7ead0dbabdd29397be740e16638f3749073",
+      "short_sha": "bd86e7ea",
+      "subject": "fix(typescript-client): update repository URL to correct repo (#1657)",
+      "author": "Chandler",
+      "author_date": "2026-05-19T13:51:46-07:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/bd86e7ead0dbabdd29397be740e16638f3749073",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1657",
       "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/26146979578",
       "data_file": "data/locomo/20260520T080119Z-bd86e7ea.json",
       "timestamp": "2026-05-20T08:01:19Z",
@@ -196,5 +211,5 @@
       "total_questions": 411
     }
   ],
-  "updated_at": "2026-05-20T08:01:20Z"
+  "updated_at": "2026-05-21T07:51:46Z"
 }
