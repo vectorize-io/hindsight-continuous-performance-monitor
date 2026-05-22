@@ -1,6 +1,21 @@
 {
   "runs": [
     {
+      "sha": "7ffe6a104b9c1f80e0472b651a24f39cf884a5a4",
+      "short_sha": "7ffe6a10",
+      "subject": "style: apply ruff format to openai_compatible_llm.py (#1703)",
+      "author": "Ben",
+      "author_date": "2026-05-21T14:36:17-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/7ffe6a104b9c1f80e0472b651a24f39cf884a5a4",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1703",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/26273556559",
+      "data_file": "data/locomo/20260522T080558Z-7ffe6a10.json",
+      "timestamp": "2026-05-22T08:05:58Z",
+      "overall_accuracy": 85.64476885644768,
+      "num_items": 3,
+      "total_questions": 411
+    },
+    {
       "sha": "bd86e7ead0dbabdd29397be740e16638f3749073",
       "short_sha": "bd86e7ea",
       "subject": "fix(typescript-client): update repository URL to correct repo (#1657)",
@@ -211,5 +226,5 @@
       "total_questions": 411
     }
   ],
-  "updated_at": "2026-05-21T07:51:46Z"
+  "updated_at": "2026-05-22T08:05:58Z"
 }
