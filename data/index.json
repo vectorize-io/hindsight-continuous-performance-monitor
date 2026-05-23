@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "f2596e1fe9e43de4ce7c75fd435934a286754d79",
+      "short_sha": "f2596e1f",
+      "subject": "fix(mcp): omit reflect provenance by default (#1665)",
+      "author": "Minghao Xiao",
+      "author_date": "2026-05-22T23:34:11+08:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/f2596e1fe9e43de4ce7c75fd435934a286754d79",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1665",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/26326163018",
+      "data_file": "data/20260523T072322Z-f2596e1f.json",
+      "timestamp": "2026-05-23T06:49:29.671136+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "7ffe6a104b9c1f80e0472b651a24f39cf884a5a4",
       "short_sha": "7ffe6a10",
       "subject": "style: apply ruff format to openai_compatible_llm.py (#1703)",
@@ -235,5 +248,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-05-22T07:42:20Z"
+  "updated_at": "2026-05-23T07:23:22Z"
 }
