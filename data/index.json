@@ -8,6 +8,19 @@
       "author_date": "2026-05-22T23:34:11+08:00",
       "commit_url": "https://github.com/vectorize-io/hindsight/commit/f2596e1fe9e43de4ce7c75fd435934a286754d79",
       "pr_url": "https://github.com/vectorize-io/hindsight/pull/1665",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/26354593253",
+      "data_file": "data/20260524T073500Z-f2596e1f.json",
+      "timestamp": "2026-05-24T07:00:10.425035+00:00",
+      "scale": "large"
+    },
+    {
+      "sha": "f2596e1fe9e43de4ce7c75fd435934a286754d79",
+      "short_sha": "f2596e1f",
+      "subject": "fix(mcp): omit reflect provenance by default (#1665)",
+      "author": "Minghao Xiao",
+      "author_date": "2026-05-22T23:34:11+08:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/f2596e1fe9e43de4ce7c75fd435934a286754d79",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1665",
       "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/26326163018",
       "data_file": "data/20260523T072322Z-f2596e1f.json",
       "timestamp": "2026-05-23T06:49:29.671136+00:00",
@@ -248,5 +261,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-05-23T07:23:22Z"
+  "updated_at": "2026-05-24T07:35:00Z"
 }
