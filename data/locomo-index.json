@@ -8,6 +8,21 @@
       "author_date": "2026-05-22T23:34:11+08:00",
       "commit_url": "https://github.com/vectorize-io/hindsight/commit/f2596e1fe9e43de4ce7c75fd435934a286754d79",
       "pr_url": "https://github.com/vectorize-io/hindsight/pull/1665",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/26388712481",
+      "data_file": "data/locomo/20260525T082113Z-f2596e1f.json",
+      "timestamp": "2026-05-25T08:21:13Z",
+      "overall_accuracy": 86.61800486618006,
+      "num_items": 3,
+      "total_questions": 411
+    },
+    {
+      "sha": "f2596e1fe9e43de4ce7c75fd435934a286754d79",
+      "short_sha": "f2596e1f",
+      "subject": "fix(mcp): omit reflect provenance by default (#1665)",
+      "author": "Minghao Xiao",
+      "author_date": "2026-05-22T23:34:11+08:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/f2596e1fe9e43de4ce7c75fd435934a286754d79",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1665",
       "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/26354593253",
       "data_file": "data/locomo/20260524T075820Z-f2596e1f.json",
       "timestamp": "2026-05-24T07:58:20Z",
@@ -241,5 +256,5 @@
       "total_questions": 411
     }
   ],
-  "updated_at": "2026-05-24T07:58:21Z"
+  "updated_at": "2026-05-25T08:21:14Z"
 }
