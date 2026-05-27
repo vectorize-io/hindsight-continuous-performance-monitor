@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "cc3ba4a37ca546892849332e2205351a3c63aadf",
+      "short_sha": "cc3ba4a3",
+      "subject": "feat(api): async link recompute to fix outgoing-link staleness after deletes (#1772)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-05-27T14:41:05+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/cc3ba4a37ca546892849332e2205351a3c63aadf",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1772",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/26511775979",
+      "data_file": "data/20260527T131229Z-cc3ba4a3.json",
+      "timestamp": "2026-05-27T12:44:25.456941+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "488f428009320bd98ce25d71d36452672e504d8f",
       "short_sha": "488f4280",
       "subject": "docs(config): note litellm-sdk embeddings API key is optional for ambient credentials (#1747)",
@@ -300,5 +313,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-05-27T07:55:28Z"
+  "updated_at": "2026-05-27T13:12:29Z"
 }
