@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "488f428009320bd98ce25d71d36452672e504d8f",
+      "short_sha": "488f4280",
+      "subject": "docs(config): note litellm-sdk embeddings API key is optional for ambient credentials (#1747)",
+      "author": "Evo",
+      "author_date": "2026-05-27T15:14:55+08:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/488f428009320bd98ce25d71d36452672e504d8f",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1747",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/26496787775",
+      "data_file": "data/20260527T075528Z-488f4280.json",
+      "timestamp": "2026-05-27T07:18:14.377779+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "cb037290bb23b80848957448ee2feaed4a67bdb5",
       "short_sha": "cb037290",
       "subject": "fix(ollama): add ollama-cloud provider and fix native API auth for cloud endpoints (#1734)",
@@ -287,5 +300,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-05-26T07:34:17Z"
+  "updated_at": "2026-05-27T07:55:28Z"
 }
