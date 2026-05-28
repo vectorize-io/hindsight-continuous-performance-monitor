@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "78c35253ee974453e96f8027690cfe0671573656",
+      "short_sha": "78c35253",
+      "subject": "docs(blog): OpenClaw agent that remembers your codebase (#1768)",
+      "author": "Ben",
+      "author_date": "2026-05-27T14:37:54-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/78c35253ee974453e96f8027690cfe0671573656",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1768",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/26560287393",
+      "data_file": "data/20260528T075743Z-78c35253.json",
+      "timestamp": "2026-05-28T07:14:04.318327+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "cc3ba4a37ca546892849332e2205351a3c63aadf",
       "short_sha": "cc3ba4a3",
       "subject": "feat(api): async link recompute to fix outgoing-link staleness after deletes (#1772)",
@@ -313,5 +326,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-05-27T13:12:29Z"
+  "updated_at": "2026-05-28T07:57:43Z"
 }
