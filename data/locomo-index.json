@@ -1,6 +1,21 @@
 {
   "runs": [
     {
+      "sha": "bf6b90263be8810d44794e1adb47cd2500b31c6a",
+      "short_sha": "bf6b9026",
+      "subject": "feat(roo-code): add Roo Code integration with MCP + rules (#920)",
+      "author": "Ben",
+      "author_date": "2026-05-28T16:23:09-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/bf6b90263be8810d44794e1adb47cd2500b31c6a",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/920",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/26623563037",
+      "data_file": "data/locomo/20260529T081353Z-bf6b9026.json",
+      "timestamp": "2026-05-29T08:13:53Z",
+      "overall_accuracy": 87.34793187347933,
+      "num_items": 3,
+      "total_questions": 411
+    },
+    {
       "sha": "78c35253ee974453e96f8027690cfe0671573656",
       "short_sha": "78c35253",
       "subject": "docs(blog): OpenClaw agent that remembers your codebase (#1768)",
@@ -316,5 +331,5 @@
       "total_questions": 411
     }
   ],
-  "updated_at": "2026-05-28T08:12:52Z"
+  "updated_at": "2026-05-29T08:13:54Z"
 }

@@ -1,0 +1,133 @@
+{
+  "overall_accuracy": 87.34793187347933,
+  "total_correct": 359,
+  "total_questions": 411,
+  "total_invalid": 0,
+  "total_valid": 411,
+  "num_items": 3,
+  "model_config": {
+    "hindsight": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash-lite"
+    },
+    "answer_generation": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash"
+    },
+    "judge": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash-lite"
+    }
+  },
+  "item_results": [
+    {
+      "item_id": "conv-30",
+      "metrics": {
+        "accuracy": 91.35802469135803,
+        "correct": 74,
+        "total": 81,
+        "invalid": 0,
+        "valid_total": 81,
+        "category_stats": {
+          "2": {
+            "correct": 24,
+            "total": 26,
+            "invalid": 0
+          },
+          "4": {
+            "correct": 40,
+            "total": 44,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 10,
+            "total": 11,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 19
+    },
+    {
+      "item_id": "conv-26",
+      "metrics": {
+        "accuracy": 91.44736842105263,
+        "correct": 139,
+        "total": 152,
+        "invalid": 0,
+        "valid_total": 152,
+        "category_stats": {
+          "4": {
+            "correct": 66,
+            "total": 70,
+            "invalid": 0
+          },
+          "2": {
+            "correct": 33,
+            "total": 37,
+            "invalid": 0
+          },
+          "3": {
+            "correct": 11,
+            "total": 13,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 29,
+            "total": 32,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 19
+    },
+    {
+      "item_id": "conv-43",
+      "metrics": {
+        "accuracy": 82.02247191011236,
+        "correct": 146,
+        "total": 178,
+        "invalid": 0,
+        "valid_total": 178,
+        "category_stats": {
+          "2": {
+            "correct": 20,
+            "total": 26,
+            "invalid": 0
+          },
+          "4": {
+            "correct": 98,
+            "total": 107,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 25,
+            "total": 31,
+            "invalid": 0
+          },
+          "3": {
+            "correct": 3,
+            "total": 14,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 29
+    }
+  ],
+  "timestamp": "2026-05-29T08:13:53Z",
+  "commit": {
+    "sha": "bf6b90263be8810d44794e1adb47cd2500b31c6a",
+    "short_sha": "bf6b9026",
+    "subject": "feat(roo-code): add Roo Code integration with MCP + rules (#920)",
+    "author": "Ben",
+    "author_date": "2026-05-28T16:23:09-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/bf6b90263be8810d44794e1adb47cd2500b31c6a",
+    "pr_number": 920,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/920"
+  },
+  "workflow_run": {
+    "id": "26623563037",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/26623563037"
+  }
+}
