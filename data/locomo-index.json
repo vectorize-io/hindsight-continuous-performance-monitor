@@ -1,6 +1,21 @@
 {
   "runs": [
     {
+      "sha": "3e99a3f490d1ce1baf7e60c87245824991705eb8",
+      "short_sha": "3e99a3f4",
+      "subject": "fix(consolidation): scope-locked parallel dispatch (alternative to #1843) (#1853)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-05-29T17:45:52+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/3e99a3f490d1ce1baf7e60c87245824991705eb8",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1853",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/26677390873",
+      "data_file": "data/locomo/20260530T075216Z-3e99a3f4.json",
+      "timestamp": "2026-05-30T07:52:16Z",
+      "overall_accuracy": 88.32116788321169,
+      "num_items": 3,
+      "total_questions": 411
+    },
+    {
       "sha": "bf6b90263be8810d44794e1adb47cd2500b31c6a",
       "short_sha": "bf6b9026",
       "subject": "feat(roo-code): add Roo Code integration with MCP + rules (#920)",
@@ -331,5 +346,5 @@
       "total_questions": 411
     }
   ],
-  "updated_at": "2026-05-29T08:13:54Z"
+  "updated_at": "2026-05-30T07:52:17Z"
 }
