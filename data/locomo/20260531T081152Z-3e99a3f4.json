@@ -1,0 +1,133 @@
+{
+  "overall_accuracy": 88.56447688564477,
+  "total_correct": 364,
+  "total_questions": 411,
+  "total_invalid": 0,
+  "total_valid": 411,
+  "num_items": 3,
+  "model_config": {
+    "hindsight": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash-lite"
+    },
+    "answer_generation": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash"
+    },
+    "judge": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash-lite"
+    }
+  },
+  "item_results": [
+    {
+      "item_id": "conv-30",
+      "metrics": {
+        "accuracy": 93.82716049382715,
+        "correct": 76,
+        "total": 81,
+        "invalid": 0,
+        "valid_total": 81,
+        "category_stats": {
+          "2": {
+            "correct": 25,
+            "total": 26,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 11,
+            "total": 11,
+            "invalid": 0
+          },
+          "4": {
+            "correct": 40,
+            "total": 44,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 19
+    },
+    {
+      "item_id": "conv-26",
+      "metrics": {
+        "accuracy": 89.47368421052632,
+        "correct": 136,
+        "total": 152,
+        "invalid": 0,
+        "valid_total": 152,
+        "category_stats": {
+          "4": {
+            "correct": 66,
+            "total": 70,
+            "invalid": 0
+          },
+          "2": {
+            "correct": 32,
+            "total": 37,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 27,
+            "total": 32,
+            "invalid": 0
+          },
+          "3": {
+            "correct": 11,
+            "total": 13,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 19
+    },
+    {
+      "item_id": "conv-43",
+      "metrics": {
+        "accuracy": 85.39325842696628,
+        "correct": 152,
+        "total": 178,
+        "invalid": 0,
+        "valid_total": 178,
+        "category_stats": {
+          "4": {
+            "correct": 100,
+            "total": 107,
+            "invalid": 0
+          },
+          "3": {
+            "correct": 8,
+            "total": 14,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 26,
+            "total": 31,
+            "invalid": 0
+          },
+          "2": {
+            "correct": 18,
+            "total": 26,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 29
+    }
+  ],
+  "timestamp": "2026-05-31T08:11:52Z",
+  "commit": {
+    "sha": "3e99a3f490d1ce1baf7e60c87245824991705eb8",
+    "short_sha": "3e99a3f4",
+    "subject": "fix(consolidation): scope-locked parallel dispatch (alternative to #1843) (#1853)",
+    "author": "Nicolò Boschi",
+    "author_date": "2026-05-29T17:45:52+02:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/3e99a3f490d1ce1baf7e60c87245824991705eb8",
+    "pr_number": 1853,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/1853"
+  },
+  "workflow_run": {
+    "id": "26706182797",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/26706182797"
+  }
+}
