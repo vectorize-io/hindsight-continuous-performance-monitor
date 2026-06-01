@@ -8,6 +8,21 @@
       "author_date": "2026-05-29T17:45:52+02:00",
       "commit_url": "https://github.com/vectorize-io/hindsight/commit/3e99a3f490d1ce1baf7e60c87245824991705eb8",
       "pr_url": "https://github.com/vectorize-io/hindsight/pull/1853",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/26741491300",
+      "data_file": "data/locomo/20260601T082836Z-3e99a3f4.json",
+      "timestamp": "2026-06-01T08:28:36Z",
+      "overall_accuracy": 87.34793187347933,
+      "num_items": 3,
+      "total_questions": 411
+    },
+    {
+      "sha": "3e99a3f490d1ce1baf7e60c87245824991705eb8",
+      "short_sha": "3e99a3f4",
+      "subject": "fix(consolidation): scope-locked parallel dispatch (alternative to #1843) (#1853)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-05-29T17:45:52+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/3e99a3f490d1ce1baf7e60c87245824991705eb8",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1853",
       "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/26706182797",
       "data_file": "data/locomo/20260531T081152Z-3e99a3f4.json",
       "timestamp": "2026-05-31T08:11:52Z",
@@ -361,5 +376,5 @@
       "total_questions": 411
     }
   ],
-  "updated_at": "2026-05-31T08:11:53Z"
+  "updated_at": "2026-06-01T08:28:37Z"
 }
