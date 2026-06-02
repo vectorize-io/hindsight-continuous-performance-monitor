@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-06-02T10:31:30.164447+00:00",
+  "scale": "large",
+  "git_sha": "99c7367",
+  "suites": [
+    {
+      "name": "graph-maintenance",
+      "duration_seconds": 36.183,
+      "success": true,
+      "error": null,
+      "retain": null,
+      "recall": null,
+      "consolidation": null,
+      "graph_maintenance": {
+        "bank_size": 15000,
+        "deleted_units": 1500,
+        "victims_enqueued": 12838,
+        "relink_units_processed": 12838,
+        "relink_links_added": 885177,
+        "orphan_entities_pruned": 0,
+        "stale_cooccurrences_pruned": 148,
+        "total_duration_seconds": 36.183,
+        "throughput_units_per_sec": 354.8,
+        "ms_per_victim": 2.82,
+        "semantic_ann_seconds": 13.407,
+        "semantic_ann_calls": 257,
+        "temporal_seconds": 1.729,
+        "temporal_calls": 257
+      }
+    }
+  ],
+  "commit": {
+    "sha": "99c7367fc0df3df87850e715a4e869238bf13530",
+    "short_sha": "99c7367f",
+    "subject": "perf(graph-maintenance): cast ANN seed embeddings once + add perf suite (#1919) (#1924)",
+    "author": "Nicolò Boschi",
+    "author_date": "2026-06-02T12:30:18+02:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/99c7367fc0df3df87850e715a4e869238bf13530",
+    "pr_number": 1924,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/1924"
+  },
+  "workflow_run": {
+    "id": "26814020465",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/26814020465"
+  }
+}

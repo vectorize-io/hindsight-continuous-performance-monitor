@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "99c7367fc0df3df87850e715a4e869238bf13530",
+      "short_sha": "99c7367f",
+      "subject": "perf(graph-maintenance): cast ANN seed embeddings once + add perf suite (#1919) (#1924)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-06-02T12:30:18+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/99c7367fc0df3df87850e715a4e869238bf13530",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1924",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/26814020465",
+      "data_file": "data/20260602T104227Z-99c7367f.json",
+      "timestamp": "2026-06-02T10:31:30.164447+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "e4b50f8054a6113050defe5fbd6450358193f05c",
       "short_sha": "e4b50f80",
       "subject": "blog: Building a Hermes Coding Assistant on Windows That Remembers Your Codebase (#1912)",
@@ -391,5 +404,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-06-02T08:06:12Z"
+  "updated_at": "2026-06-02T10:42:27Z"
 }
