@@ -1,6 +1,21 @@
 {
   "runs": [
     {
+      "sha": "e4b50f8054a6113050defe5fbd6450358193f05c",
+      "short_sha": "e4b50f80",
+      "subject": "blog: Building a Hermes Coding Assistant on Windows That Remembers Your Codebase (#1912)",
+      "author": "Ben",
+      "author_date": "2026-06-01T16:11:21-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/e4b50f8054a6113050defe5fbd6450358193f05c",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1912",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/26805170992",
+      "data_file": "data/locomo/20260602T083020Z-e4b50f80.json",
+      "timestamp": "2026-06-02T08:30:20Z",
+      "overall_accuracy": 87.10462287104623,
+      "num_items": 3,
+      "total_questions": 411
+    },
+    {
       "sha": "3e99a3f490d1ce1baf7e60c87245824991705eb8",
       "short_sha": "3e99a3f4",
       "subject": "fix(consolidation): scope-locked parallel dispatch (alternative to #1843) (#1853)",
@@ -376,5 +391,5 @@
       "total_questions": 411
     }
   ],
-  "updated_at": "2026-06-01T08:28:37Z"
+  "updated_at": "2026-06-02T08:30:21Z"
 }
