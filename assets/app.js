@@ -3,13 +3,14 @@
 // Styling via Tailwind Play CDN (loaded in each HTML page).
 
 export const HINDSIGHT_REPO = 'vectorize-io/hindsight';
-export const SUITES = ['retain', 'recall', 'recall-with-observations', 'consolidation'];
+export const SUITES = ['retain', 'recall', 'recall-with-observations', 'consolidation', 'graph-maintenance'];
 
 export const SUITE_LABELS = {
   'retain': 'Retain',
   'recall': 'Recall',
   'recall-with-observations': 'Recall (with observations)',
   'consolidation': 'Consolidation',
+  'graph-maintenance': 'Graph Maintenance',
 };
 
 // ---------------------------------------------------------------------------
@@ -87,6 +88,19 @@ export const SUITE_METRICS = {
     { key: 'duration',   label: 'Duration',     unit: 's',          biggerIsBetter: false,
       get: s => s.consolidation?.total_duration_seconds },
   ],
+  // Background relink after deletes. Headlined by per-victim latency since the
+  // suite's point (#1919) is that maintenance should be cheap per unit; the
+  // semantic-ANN probe time is the metric that regressed and got fixed.
+  'graph-maintenance': [
+    { key: 'ms_per_victim',   label: 'Latency / victim', unit: 'ms',        biggerIsBetter: false,
+      get: s => s.graph_maintenance?.ms_per_victim },
+    { key: 'semantic_ann',    label: 'Semantic ANN',     unit: 's',         biggerIsBetter: false,
+      get: s => s.graph_maintenance?.semantic_ann_seconds },
+    { key: 'throughput',      label: 'Throughput',       unit: 'victims/s', biggerIsBetter: true,
+      get: s => s.graph_maintenance?.throughput_units_per_sec },
+    { key: 'duration',        label: 'Duration',         unit: 's',         biggerIsBetter: false,
+      get: s => s.graph_maintenance?.total_duration_seconds },
+  ],
 };
 
 export const SUITE_HEADLINE = {
@@ -94,6 +108,7 @@ export const SUITE_HEADLINE = {
   'recall': SUITE_METRICS['recall'][0],
   'recall-with-observations': SUITE_METRICS['recall-with-observations'][0],
   'consolidation': SUITE_METRICS['consolidation'][0],
+  'graph-maintenance': SUITE_METRICS['graph-maintenance'][0],
 };
 
 // Per-suite chart layout: each entry becomes one chart on the detail page.
@@ -133,6 +148,21 @@ export const SUITE_CHARTS = {
       series: [{ label: 'memories/s', get: s => s.consolidation?.throughput_memories_per_sec }] },
     { title: 'Duration', unit: 's', biggerIsBetter: false,
       series: [{ label: 'duration', get: s => s.consolidation?.total_duration_seconds }] },
+  ],
+  'graph-maintenance': [
+    { title: 'Latency / victim', unit: 'ms', biggerIsBetter: false,
+      series: [{ label: 'ms/victim', get: s => s.graph_maintenance?.ms_per_victim }] },
+    // Probe breakdown — the #1919 regression lived in the semantic-ANN relink;
+    // plotting it next to the (negligible) temporal probe makes that obvious.
+    { title: 'Relink probe time', unit: 's', biggerIsBetter: false,
+      series: [
+        { label: 'semantic ANN', get: s => s.graph_maintenance?.semantic_ann_seconds },
+        { label: 'temporal',     get: s => s.graph_maintenance?.temporal_seconds },
+      ] },
+    { title: 'Throughput', unit: 'victims/s', biggerIsBetter: true,
+      series: [{ label: 'victims/s', get: s => s.graph_maintenance?.throughput_units_per_sec }] },
+    { title: 'Duration', unit: 's', biggerIsBetter: false,
+      series: [{ label: 'duration', get: s => s.graph_maintenance?.total_duration_seconds }] },
   ],
 };
 
@@ -225,6 +255,7 @@ export function renderHeader(activePage = '') {
     { href: 'recall.html',                      label: 'Recall',        id: 'recall' },
     { href: 'recall-with-observations.html',    label: 'Recall + obs',  id: 'recall-with-observations' },
     { href: 'consolidation.html',               label: 'Consolidation', id: 'consolidation' },
+    { href: 'graph-maintenance.html',           label: 'Graph Maint',   id: 'graph-maintenance' },
     { href: 'locomo.html',                      label: 'LoComo',        id: 'locomo' },
     { href: 'compare.html',                     label: 'Compare',       id: 'compare' },
   ];
