@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-06-03T16:58:26.665540+00:00",
+  "overall_duplication_rate": 0.29015544041450775,
+  "duplication_threshold": 0.97,
+  "total_observations": 772,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1677,
+      "facts_consolidated": 1677,
+      "facts_covered": 1491,
+      "facts_skipped": 186,
+      "observations": 772,
+      "avg_sources_per_obs": 2.3,
+      "exact_duplicate_groups": 20,
+      "exact_redundant": 22,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 126,
+          "redundant_observations": 224,
+          "duplication_rate": 0.29015544041450775
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 181,
+          "redundant_observations": 390,
+          "duplication_rate": 0.5051813471502591
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 772,
+    "total_exact_redundant": 22,
+    "overall_duplication_rate": 0.29015544041450775,
+    "overall_exact_rate": 0.02849740932642487,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 224
+      },
+      "0.92": {
+        "redundant_observations": 390
+      }
+    }
+  },
+  "commit": {
+    "sha": "613a699e9fee2b2c42bf1cd75b2e2c112477530c",
+    "short_sha": "613a699e",
+    "subject": "fix(consolidation): eliminate duplicate observations via interleave dedup recall (#1907)",
+    "author": "Nicolò Boschi",
+    "author_date": "2026-06-03T17:37:57+02:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/613a699e9fee2b2c42bf1cd75b2e2c112477530c",
+    "pr_number": 1907,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/1907"
+  },
+  "workflow_run": {
+    "id": "26895639741",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/26895639741"
+  }
+}
