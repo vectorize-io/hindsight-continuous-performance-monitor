@@ -257,6 +257,7 @@ export function renderHeader(activePage = '') {
     { href: 'consolidation.html',               label: 'Consolidation', id: 'consolidation' },
     { href: 'graph-maintenance.html',           label: 'Graph Maint',   id: 'graph-maintenance' },
     { href: 'locomo.html',                      label: 'LoComo',        id: 'locomo' },
+    { href: 'obs.html',                         label: 'Obs Dedup',     id: 'obs' },
     { href: 'compare.html',                     label: 'Compare',       id: 'compare' },
   ];
   const link = (p) => {

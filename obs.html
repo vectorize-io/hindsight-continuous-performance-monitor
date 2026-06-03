@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Obs Dedup · Hindsight Performance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <header id="page-header" class="bg-white border-b border-gray-200 px-6 py-3"></header>
+  <main id="main" class="max-w-7xl mx-auto px-6 py-8"></main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+  <script type="module">
+    import {
+      renderHeader, renderLatestBanner, lineChart, makeDataset, movingAverage,
+      fmtNumber, fmtDate, renderDelta, escapeHtml, emptyChartPlaceholder,
+    } from './assets/app.js';
+
+    document.getElementById('page-header').innerHTML = renderHeader('obs');
+    const main = document.getElementById('main');
+
+    const cacheBuster = () => 'ts=' + Date.now();
+    // Duplication rate is stored as a fraction (0.04 = 4%); the dashboard shows percent.
+    const pct = (rate) => (rate == null ? null : rate * 100);
+
+    async function loadObsManifest() {
+      const r = await fetch(`data/obs-index.json?${cacheBuster()}`);
+      if (!r.ok) throw new Error('Failed to load data/obs-index.json');
+      return r.json();
+    }
+    async function loadObsRun(file) {
+      const r = await fetch(`${file}?${cacheBuster()}`);
+      if (!r.ok) throw new Error('Failed to load ' + file);
+      return r.json();
+    }
+
+    const docDupRate = (doc, threshold) => {
+      const near = (doc.near ?? []).find(m => Math.abs(m.threshold - threshold) < 1e-9);
+      return near ? near.duplication_rate : null;
+    };
+
+    (async () => {
+      let manifest;
+      try { manifest = await loadObsManifest(); }
+      catch (e) {
+        main.innerHTML = `<div class="text-center py-16 text-gray-500">No obs-dedup runs yet (${escapeHtml(e.message)}).</div>`;
+        return;
+      }
+      const entries = manifest.runs ?? [];
+      if (entries.length === 0) {
+        main.innerHTML = '<div class="text-center py-16 text-gray-500">No obs-dedup runs yet.</div>';
+        return;
+      }
+
+      const slice = entries.slice(0, 60);
+      const runs = await Promise.all(slice.map(e => loadObsRun(e.data_file)));
+
+      const latest = runs[0];
+      const prev = runs[1] ?? null;
+      const threshold = latest.duplication_threshold ?? 0.97;
+      const currDup = pct(latest.overall_duplication_rate);
+      const prevDup = prev ? pct(prev.overall_duplication_rate) : null;
+
+      const bannerRun = {
+        timestamp: latest.timestamp,
+        scale: latest.config?.llm_model ?? '—',
+        commit: latest.commit,
+        workflow_run: latest.workflow_run,
+      };
+
+      // Trend points (oldest → newest), x = run index, y = dup rate %.
+      const ordered = runs.slice().reverse();
+      const dupPoints = ordered
+        .map((r, i) => (r.overall_duplication_rate != null ? { x: i, y: pct(r.overall_duplication_rate), run: r } : null))
+        .filter(Boolean);
+
+      // Per-document rows for the latest run.
+      const docs = (latest.documents ?? []).slice().sort((a, b) =>
+        (docDupRate(b, threshold) ?? 0) - (docDupRate(a, threshold) ?? 0));
+
+      const headlineCard = `
+        <div class="bg-white border border-gray-200 rounded-xl p-5 min-w-0">
+          <h3 class="text-[10px] uppercase tracking-[0.08em] text-gray-400 font-semibold m-0 mb-2">
+            Duplication rate <span class="text-gray-300 normal-case tracking-normal">(@${threshold}, lower is better)</span>
+          </h3>
+          <div class="flex items-baseline gap-2 flex-wrap">
+            <span class="text-3xl font-semibold tabular-nums">${fmtNumber(currDup)}</span>
+            <span class="text-gray-500 text-sm">%</span>
+            ${renderDelta(currDup, prevDup, false)}
+          </div>
+          <div class="text-gray-400 text-xs mt-1">
+            ${latest.aggregate?.by_threshold?.[String(threshold)]?.redundant_observations ?? '—'} redundant
+            · ${latest.total_observations ?? '—'} observations
+            · ${latest.aggregate?.total_exact_redundant ?? 0} exact dups
+          </div>
+        </div>
+      `;
+
+      const configCard = `
+        <div class="bg-white border border-gray-200 rounded-xl p-5 min-w-0 md:col-span-2">
+          <h3 class="text-[10px] uppercase tracking-[0.08em] text-gray-400 font-semibold m-0 mb-2">Config</h3>
+          <div class="grid grid-cols-3 gap-4 text-[13px]">
+            <div class="min-w-0">
+              <div class="text-[10px] uppercase tracking-[0.08em] text-gray-400">consolidation LLM</div>
+              <div class="font-mono text-xs truncate" title="${escapeHtml(latest.config?.llm_provider ?? '')}/${escapeHtml(latest.config?.llm_model ?? '')}">
+                ${escapeHtml(latest.config?.llm_provider ?? '—')}<span class="text-gray-400">/</span>${escapeHtml(latest.config?.llm_model ?? '—')}
+              </div>
+            </div>
+            <div class="min-w-0">
+              <div class="text-[10px] uppercase tracking-[0.08em] text-gray-400">embedding</div>
+              <div class="font-mono text-xs truncate" title="${escapeHtml(latest.config?.embedding_model ?? '')}">${escapeHtml(latest.config?.embedding_model ?? '—')}</div>
+            </div>
+            <div class="min-w-0">
+              <div class="text-[10px] uppercase tracking-[0.08em] text-gray-400">fraction</div>
+              <div class="font-mono text-xs">${latest.config?.fraction ?? '—'}</div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      const dupChartHtml = dupPoints.length < 2 ? `
+        <div class="bg-white border border-gray-200 rounded-xl p-5 mt-6 min-w-0">
+          <h3 class="text-[10px] uppercase tracking-[0.08em] text-gray-400 font-semibold m-0 mb-2">
+            Duplication rate <span class="text-gray-300 normal-case tracking-normal">(%)</span>
+          </h3>
+          <div class="chart-container large">${emptyChartPlaceholder('duplication rate')}</div>
+        </div>
+      ` : `
+        <div class="bg-white border border-gray-200 rounded-xl p-5 mt-6 min-w-0">
+          <h3 class="text-[10px] uppercase tracking-[0.08em] text-gray-400 font-semibold m-0 mb-2">
+            Duplication rate <span class="text-gray-300 normal-case tracking-normal">(%)</span>
+          </h3>
+          <div class="chart-container large"><canvas id="chart-dup"></canvas></div>
+        </div>
+      `;
+
+      const docsTable = docs.length > 0 ? `
+        <div class="bg-white border border-gray-200 rounded-xl p-5 mt-6">
+          <h3 class="text-[10px] uppercase tracking-[0.08em] text-gray-400 font-semibold m-0 mb-3">
+            Latest run · per-document
+          </h3>
+          <div class="overflow-x-auto">
+            <table class="min-w-full text-[13px]">
+              <thead class="bg-gray-50/80 text-[10px] uppercase tracking-[0.08em] text-gray-400">
+                <tr>
+                  <th class="px-3 py-2.5 text-left font-medium">Document</th>
+                  <th class="px-3 py-2.5 text-right font-medium">Dup rate @${threshold}</th>
+                  <th class="px-3 py-2.5 text-right font-medium">Exact dups</th>
+                  <th class="px-3 py-2.5 text-right font-medium">Observations</th>
+                  <th class="px-3 py-2.5 text-right font-medium">Coverage</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${docs.map(d => {
+                  const rate = docDupRate(d, threshold);
+                  const cov = d.facts ? (100 * d.facts_covered / d.facts) : null;
+                  return `
+                    <tr class="border-t border-gray-100 hover:bg-gray-50/70">
+                      <td class="px-3 py-2.5 font-mono">${escapeHtml(d.name)}</td>
+                      <td class="px-3 py-2.5 text-right font-mono tabular-nums">${rate == null ? '—' : fmtNumber(rate * 100) + '%'}</td>
+                      <td class="px-3 py-2.5 text-right font-mono tabular-nums">${d.exact_redundant ?? 0}</td>
+                      <td class="px-3 py-2.5 text-right font-mono tabular-nums">${d.observations ?? '—'}</td>
+                      <td class="px-3 py-2.5 text-right font-mono tabular-nums">${cov == null ? '—' : fmtNumber(cov) + '%'}</td>
+                    </tr>
+                  `;
+                }).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      ` : '';
+
+      const rowsHtml = entries.slice(0, 25).map((entry, idx) => {
+        const next = entries[idx + 1];
+        const compare = next
+          ? `<a class="text-indigo-600 hover:underline" href="compare.html?a=${next.short_sha}&b=${entry.short_sha}">vs prev</a>`
+          : '<span class="text-gray-300">—</span>';
+        const prCell = entry.pr_url
+          ? `<a href="${entry.pr_url}" target="_blank" class="text-indigo-600 hover:underline">#${entry.pr_url.split('/').pop()}</a>`
+          : '<span class="text-gray-300">—</span>';
+        const runCell = entry.run_url
+          ? `<a href="${entry.run_url}" target="_blank" class="text-indigo-600 hover:underline" title="View workflow run">↗</a>`
+          : '<span class="text-gray-300">—</span>';
+        return `
+          <tr class="border-t border-gray-100 hover:bg-gray-50/70 transition-colors">
+            <td class="px-3 py-2.5 whitespace-nowrap text-gray-600">${fmtDate(entry.author_date)}</td>
+            <td class="px-3 py-2.5 font-mono whitespace-nowrap"><a href="${entry.commit_url}" target="_blank" class="text-indigo-600 hover:underline">${entry.short_sha}</a></td>
+            <td class="px-3 py-2.5 max-w-[28rem] truncate" title="${escapeHtml(entry.subject)}">${escapeHtml(entry.subject)}</td>
+            <td class="px-3 py-2.5 whitespace-nowrap">${prCell}</td>
+            <td class="px-3 py-2.5 whitespace-nowrap text-center">${runCell}</td>
+            <td class="px-3 py-2.5 text-right font-mono tabular-nums whitespace-nowrap">${fmtNumber(pct(entry.overall_duplication_rate))}%</td>
+            <td class="px-3 py-2.5 text-right font-mono tabular-nums whitespace-nowrap text-gray-500">${entry.total_observations ?? '—'}</td>
+            <td class="px-3 py-2.5 whitespace-nowrap">${compare}</td>
+          </tr>
+        `;
+      }).join('');
+
+      const runsTable = `
+        <h2 class="text-base font-semibold mt-8 mb-3">Runs</h2>
+        <div class="bg-white border border-gray-200 rounded-xl overflow-x-auto">
+          <table class="min-w-full text-[13px]">
+            <thead class="bg-gray-50/80 text-[10px] uppercase tracking-[0.08em] text-gray-400">
+              <tr>
+                <th class="px-3 py-2.5 text-left font-medium">Date</th>
+                <th class="px-3 py-2.5 text-left font-medium">Commit</th>
+                <th class="px-3 py-2.5 text-left font-medium">Subject</th>
+                <th class="px-3 py-2.5 text-left font-medium">PR</th>
+                <th class="px-3 py-2.5 text-center font-medium">Run</th>
+                <th class="px-3 py-2.5 text-right font-medium">Dup rate</th>
+                <th class="px-3 py-2.5 text-right font-medium">Obs</th>
+                <th class="px-3 py-2.5 text-left font-medium"></th>
+              </tr>
+            </thead>
+            <tbody>${rowsHtml}</tbody>
+          </table>
+        </div>
+      `;
+
+      main.innerHTML = `
+        ${renderLatestBanner(bannerRun)}
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">${headlineCard}${configCard}</div>
+        ${dupChartHtml}
+        ${docsTable}
+        ${runsTable}
+      `;
+
+      if (dupPoints.length >= 2) {
+        const datasets = [makeDataset('duplication rate', dupPoints, 0)];
+        if (dupPoints.length >= 5) {
+          datasets.push(makeDataset('5-run MA', movingAverage(dupPoints, 5), 0, {
+            borderColor: '#6366f1',
+            borderDash: [6, 4],
+            borderWidth: 1.5,
+            pointRadius: 0,
+            order: -1,
+          }));
+        }
+        lineChart(document.getElementById('chart-dup'), datasets, {
+          unit: '%',
+          legend: dupPoints.length >= 5,
+          beginAtZero: true,
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
