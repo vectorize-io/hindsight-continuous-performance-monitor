@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "24d6c2a43b81fb7f74cfb31bc0ed9fa40667c515",
+      "short_sha": "24d6c2a4",
+      "subject": "blog: Using Entity Labels to Automatically Tag Memories in Hindsight (#1935)",
+      "author": "Ben",
+      "author_date": "2026-06-02T15:13:41-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/24d6c2a43b81fb7f74cfb31bc0ed9fa40667c515",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1935",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/26870367013",
+      "data_file": "data/20260603T080343Z-24d6c2a4.json",
+      "timestamp": "2026-06-03T07:35:09.828060+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "99c7367fc0df3df87850e715a4e869238bf13530",
       "short_sha": "99c7367f",
       "subject": "perf(graph-maintenance): cast ANN seed embeddings once + add perf suite (#1919) (#1924)",
@@ -404,5 +417,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-06-02T10:42:27Z"
+  "updated_at": "2026-06-03T08:03:44Z"
 }
