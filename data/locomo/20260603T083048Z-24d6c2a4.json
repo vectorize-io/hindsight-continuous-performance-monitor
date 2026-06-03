@@ -1,0 +1,133 @@
+{
+  "overall_accuracy": 89.05109489051095,
+  "total_correct": 366,
+  "total_questions": 411,
+  "total_invalid": 0,
+  "total_valid": 411,
+  "num_items": 3,
+  "model_config": {
+    "hindsight": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash-lite"
+    },
+    "answer_generation": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash"
+    },
+    "judge": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash-lite"
+    }
+  },
+  "item_results": [
+    {
+      "item_id": "conv-30",
+      "metrics": {
+        "accuracy": 91.35802469135803,
+        "correct": 74,
+        "total": 81,
+        "invalid": 0,
+        "valid_total": 81,
+        "category_stats": {
+          "4": {
+            "correct": 40,
+            "total": 44,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 9,
+            "total": 11,
+            "invalid": 0
+          },
+          "2": {
+            "correct": 25,
+            "total": 26,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 19
+    },
+    {
+      "item_id": "conv-26",
+      "metrics": {
+        "accuracy": 92.76315789473685,
+        "correct": 141,
+        "total": 152,
+        "invalid": 0,
+        "valid_total": 152,
+        "category_stats": {
+          "2": {
+            "correct": 32,
+            "total": 37,
+            "invalid": 0
+          },
+          "3": {
+            "correct": 11,
+            "total": 13,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 31,
+            "total": 32,
+            "invalid": 0
+          },
+          "4": {
+            "correct": 67,
+            "total": 70,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 19
+    },
+    {
+      "item_id": "conv-43",
+      "metrics": {
+        "accuracy": 84.8314606741573,
+        "correct": 151,
+        "total": 178,
+        "invalid": 0,
+        "valid_total": 178,
+        "category_stats": {
+          "4": {
+            "correct": 98,
+            "total": 107,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 26,
+            "total": 31,
+            "invalid": 0
+          },
+          "2": {
+            "correct": 20,
+            "total": 26,
+            "invalid": 0
+          },
+          "3": {
+            "correct": 7,
+            "total": 14,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 29
+    }
+  ],
+  "timestamp": "2026-06-03T08:30:48Z",
+  "commit": {
+    "sha": "24d6c2a43b81fb7f74cfb31bc0ed9fa40667c515",
+    "short_sha": "24d6c2a4",
+    "subject": "blog: Using Entity Labels to Automatically Tag Memories in Hindsight (#1935)",
+    "author": "Ben",
+    "author_date": "2026-06-02T15:13:41-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/24d6c2a43b81fb7f74cfb31bc0ed9fa40667c515",
+    "pr_number": 1935,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/1935"
+  },
+  "workflow_run": {
+    "id": "26870367013",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/26870367013"
+  }
+}

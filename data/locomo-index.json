@@ -1,6 +1,21 @@
 {
   "runs": [
     {
+      "sha": "24d6c2a43b81fb7f74cfb31bc0ed9fa40667c515",
+      "short_sha": "24d6c2a4",
+      "subject": "blog: Using Entity Labels to Automatically Tag Memories in Hindsight (#1935)",
+      "author": "Ben",
+      "author_date": "2026-06-02T15:13:41-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/24d6c2a43b81fb7f74cfb31bc0ed9fa40667c515",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1935",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/26870367013",
+      "data_file": "data/locomo/20260603T083048Z-24d6c2a4.json",
+      "timestamp": "2026-06-03T08:30:48Z",
+      "overall_accuracy": 89.05109489051095,
+      "num_items": 3,
+      "total_questions": 411
+    },
+    {
       "sha": "e4b50f8054a6113050defe5fbd6450358193f05c",
       "short_sha": "e4b50f80",
       "subject": "blog: Building a Hermes Coding Assistant on Windows That Remembers Your Codebase (#1912)",
@@ -391,5 +406,5 @@
       "total_questions": 411
     }
   ],
-  "updated_at": "2026-06-02T08:30:21Z"
+  "updated_at": "2026-06-03T08:30:49Z"
 }
