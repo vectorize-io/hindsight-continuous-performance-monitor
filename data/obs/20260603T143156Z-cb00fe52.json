@@ -1,0 +1,68 @@
+{
+  "timestamp": "2026-06-03T14:30:10.753623+00:00",
+  "overall_duplication_rate": 0.0,
+  "duplication_threshold": 0.97,
+  "total_observations": 11,
+  "config": {
+    "llm_provider": "gemini",
+    "llm_model": "gemini-2.5-flash",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "herb_garden.txt",
+      "facts": 12,
+      "facts_consolidated": 12,
+      "facts_covered": 12,
+      "facts_skipped": 0,
+      "observations": 11,
+      "avg_sources_per_obs": 1.1,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 0,
+          "redundant_observations": 0,
+          "duplication_rate": 0.0
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 0,
+          "redundant_observations": 0,
+          "duplication_rate": 0.0
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 11,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.0,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 0
+      },
+      "0.92": {
+        "redundant_observations": 0
+      }
+    }
+  },
+  "commit": {
+    "sha": "cb00fe5288ac224f2025455fad069f2140173450",
+    "short_sha": "cb00fe52",
+    "subject": "bench(obs): publish duplication-rate to the perf dashboard + English dataset",
+    "author": "Nicolò Boschi",
+    "author_date": "2026-06-03T16:31:14+02:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/cb00fe5288ac224f2025455fad069f2140173450",
+    "pr_number": 1907,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/1907"
+  },
+  "workflow_run": null
+}

@@ -1,0 +1,19 @@
+{
+  "runs": [
+    {
+      "sha": "cb00fe5288ac224f2025455fad069f2140173450",
+      "short_sha": "cb00fe52",
+      "subject": "bench(obs): publish duplication-rate to the perf dashboard + English dataset",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-06-03T16:31:14+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/cb00fe5288ac224f2025455fad069f2140173450",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1907",
+      "run_url": null,
+      "data_file": "data/obs/20260603T143156Z-cb00fe52.json",
+      "timestamp": "2026-06-03T14:30:10.753623+00:00",
+      "overall_duplication_rate": 0.0,
+      "total_observations": 11
+    }
+  ],
+  "updated_at": "2026-06-03T14:31:56Z"
+}
