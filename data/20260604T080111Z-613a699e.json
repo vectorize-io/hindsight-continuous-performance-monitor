@@ -1,0 +1,309 @@
+{
+  "timestamp": "2026-06-04T07:29:47.766315+00:00",
+  "scale": "large",
+  "git_sha": "613a699",
+  "suites": [
+    {
+      "name": "retain",
+      "duration_seconds": 256.183,
+      "success": true,
+      "error": null,
+      "retain": {
+        "total_items": 5000,
+        "total_duration_seconds": 256.183,
+        "throughput_items_per_sec": 19.52
+      },
+      "recall": null,
+      "consolidation": null,
+      "graph_maintenance": null
+    },
+    {
+      "name": "recall",
+      "duration_seconds": 439.385,
+      "success": true,
+      "error": null,
+      "retain": null,
+      "recall": {
+        "bank_size": 5000,
+        "concurrency": 16,
+        "latency": {
+          "p50": 4.533316955000032,
+          "p95": 5.485514419999959,
+          "p99": 5.642056088000004,
+          "mean": 4.393852083060003,
+          "min": 1.1372952460000079,
+          "max": 5.642056088000004,
+          "count": 100
+        },
+        "throughput_queries_per_sec": 3.64,
+        "phase_timings": {
+          "generate_query_embedding": {
+            "p50": 1.2905316352844238,
+            "p95": 2.160513401031494,
+            "p99": 2.1846938133239746,
+            "mean": 1.2781979203224183,
+            "min": 0.08884191513061523,
+            "max": 2.1846938133239746,
+            "count": 100
+          },
+          "parallel_retrieval": {
+            "p50": 2.9821794033050537,
+            "p95": 4.439038276672363,
+            "p99": 4.8390793800354,
+            "mean": 3.0214691233634947,
+            "min": 0.7534933090209961,
+            "max": 4.8390793800354,
+            "count": 100
+          },
+          "retrieval_semantic": {
+            "p50": 0.8769704103469849,
+            "p95": 1.3571845293045044,
+            "p99": 1.5063263177871704,
+            "mean": 0.856015819311142,
+            "min": 0.19157028198242188,
+            "max": 1.5063263177871704,
+            "count": 100
+          },
+          "retrieval_bm25": {
+            "p50": 0.8769704103469849,
+            "p95": 1.3571845293045044,
+            "p99": 1.5063263177871704,
+            "mean": 0.856015819311142,
+            "min": 0.19157028198242188,
+            "max": 1.5063263177871704,
+            "count": 100
+          },
+          "retrieval_graph": {
+            "p50": 0.6711366176605225,
+            "p95": 1.6098589897155762,
+            "p99": 1.8873953819274902,
+            "mean": 0.8367919588088989,
+            "min": 0.07230138778686523,
+            "max": 1.8873953819274902,
+            "count": 100
+          },
+          "retrieval_temporal_extraction": {
+            "p50": 0.11009550094604492,
+            "p95": 0.35890936851501465,
+            "p99": 0.4507317543029785,
+            "mean": 0.12885080099105836,
+            "min": 0.08234453201293945,
+            "max": 0.4507317543029785,
+            "count": 100
+          },
+          "rrf_merge": {
+            "p50": 0.0030341148376464844,
+            "p95": 0.004951000213623047,
+            "p99": 0.3116745948791504,
+            "mean": 0.006281800270080566,
+            "min": 0.0023005008697509766,
+            "max": 0.3116745948791504,
+            "count": 100
+          },
+          "reranking": {
+            "p50": 0.0003788471221923828,
+            "p95": 0.0006668567657470703,
+            "p99": 0.0010280609130859375,
+            "mean": 0.00041974544525146484,
+            "min": 0.00032591819763183594,
+            "max": 0.0010280609130859375,
+            "count": 100
+          },
+          "token_filtering": {
+            "p50": 0.002872467041015625,
+            "p95": 0.003779172897338867,
+            "p99": 0.005084037780761719,
+            "mean": 0.002989213466644287,
+            "min": 0.002691984176635742,
+            "max": 0.005084037780761719,
+            "count": 100
+          },
+          "retrieval_temporal": {
+            "p50": 0.14475035667419434,
+            "p95": 0.39528346061706543,
+            "p99": 0.39528346061706543,
+            "mean": 0.14032886425654092,
+            "min": 0.03356194496154785,
+            "max": 0.39528346061706543,
+            "count": 12
+          }
+        }
+      },
+      "consolidation": null,
+      "graph_maintenance": null
+    },
+    {
+      "name": "recall-with-observations",
+      "duration_seconds": 626.464,
+      "success": true,
+      "error": null,
+      "retain": null,
+      "recall": {
+        "bank_size": 5000,
+        "concurrency": 16,
+        "latency": {
+          "p50": 6.557399517000022,
+          "p95": 7.390124964999927,
+          "p99": 7.512013118000027,
+          "mean": 6.264637484869992,
+          "min": 1.402780645000007,
+          "max": 7.512013118000027,
+          "count": 100
+        },
+        "throughput_queries_per_sec": 2.55,
+        "phase_timings": {
+          "generate_query_embedding": {
+            "p50": 1.2885963916778564,
+            "p95": 2.1554198265075684,
+            "p99": 2.20967698097229,
+            "mean": 1.2747025799751281,
+            "min": 0.09295344352722168,
+            "max": 2.20967698097229,
+            "count": 100
+          },
+          "parallel_retrieval": {
+            "p50": 4.944501638412476,
+            "p95": 6.522919416427612,
+            "p99": 7.0990002155303955,
+            "mean": 4.84999046087265,
+            "min": 0.9204826354980469,
+            "max": 7.0990002155303955,
+            "count": 100
+          },
+          "retrieval_semantic": {
+            "p50": 1.249812364578247,
+            "p95": 1.719826579093933,
+            "p99": 1.789629578590393,
+            "mean": 1.213081430196762,
+            "min": 0.24745714664459229,
+            "max": 1.789629578590393,
+            "count": 100
+          },
+          "retrieval_bm25": {
+            "p50": 1.249812364578247,
+            "p95": 1.719826579093933,
+            "p99": 1.789629578590393,
+            "mean": 1.213081430196762,
+            "min": 0.24745714664459229,
+            "max": 1.789629578590393,
+            "count": 100
+          },
+          "retrieval_graph": {
+            "p50": 1.6901156902313232,
+            "p95": 2.96917986869812,
+            "p99": 3.115251064300537,
+            "mean": 1.708029532432556,
+            "min": 0.22695088386535645,
+            "max": 3.115251064300537,
+            "count": 100
+          },
+          "retrieval_temporal_extraction": {
+            "p50": 0.10980081558227539,
+            "p95": 0.36330246925354004,
+            "p99": 0.42354416847229004,
+            "mean": 0.1285965061187744,
+            "min": 0.0824897289276123,
+            "max": 0.42354416847229004,
+            "count": 100
+          },
+          "rrf_merge": {
+            "p50": 0.006274223327636719,
+            "p95": 0.007900238037109375,
+            "p99": 0.32180118560791016,
+            "mean": 0.012670683860778808,
+            "min": 0.005078554153442383,
+            "max": 0.32180118560791016,
+            "count": 100
+          },
+          "reranking": {
+            "p50": 0.0007505416870117188,
+            "p95": 0.0015766620635986328,
+            "p99": 0.001844644546508789,
+            "mean": 0.0008308625221252441,
+            "min": 0.0005068778991699219,
+            "max": 0.001844644546508789,
+            "count": 100
+          },
+          "token_filtering": {
+            "p50": 0.0028924942016601562,
+            "p95": 0.003654956817626953,
+            "p99": 0.0039746761322021484,
+            "mean": 0.0029654574394226076,
+            "min": 0.002794027328491211,
+            "max": 0.0039746761322021484,
+            "count": 100
+          },
+          "retrieval_temporal": {
+            "p50": 0.08135461807250977,
+            "p95": 0.5089142322540283,
+            "p99": 0.5089142322540283,
+            "mean": 0.14651906490325928,
+            "min": 0.009692668914794922,
+            "max": 0.5089142322540283,
+            "count": 12
+          }
+        }
+      },
+      "consolidation": null,
+      "graph_maintenance": null
+    },
+    {
+      "name": "consolidation",
+      "duration_seconds": 24.394,
+      "success": true,
+      "error": null,
+      "retain": null,
+      "recall": null,
+      "consolidation": {
+        "total_items": 5000,
+        "memories_processed": 100,
+        "observations_created": 100,
+        "observations_updated": 0,
+        "observations_merged": 0,
+        "skipped": 0,
+        "total_duration_seconds": 24.394,
+        "throughput_memories_per_sec": 4.1
+      },
+      "graph_maintenance": null
+    },
+    {
+      "name": "graph-maintenance",
+      "duration_seconds": 38.683,
+      "success": true,
+      "error": null,
+      "retain": null,
+      "recall": null,
+      "consolidation": null,
+      "graph_maintenance": {
+        "bank_size": 15000,
+        "deleted_units": 1500,
+        "victims_enqueued": 12795,
+        "relink_units_processed": 12795,
+        "relink_links_added": 882404,
+        "orphan_entities_pruned": 0,
+        "stale_cooccurrences_pruned": 194,
+        "total_duration_seconds": 38.683,
+        "throughput_units_per_sec": 330.76,
+        "ms_per_victim": 3.02,
+        "semantic_ann_seconds": 15.015,
+        "semantic_ann_calls": 256,
+        "temporal_seconds": 1.537,
+        "temporal_calls": 256
+      }
+    }
+  ],
+  "commit": {
+    "sha": "613a699e9fee2b2c42bf1cd75b2e2c112477530c",
+    "short_sha": "613a699e",
+    "subject": "fix(consolidation): eliminate duplicate observations via interleave dedup recall (#1907)",
+    "author": "Nicolò Boschi",
+    "author_date": "2026-06-03T17:37:57+02:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/613a699e9fee2b2c42bf1cd75b2e2c112477530c",
+    "pr_number": 1907,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/1907"
+  },
+  "workflow_run": {
+    "id": "26937455730",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/26937455730"
+  }
+}
