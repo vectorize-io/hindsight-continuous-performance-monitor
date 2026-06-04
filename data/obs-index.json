@@ -8,6 +8,20 @@
       "author_date": "2026-06-03T17:37:57+02:00",
       "commit_url": "https://github.com/vectorize-io/hindsight/commit/613a699e9fee2b2c42bf1cd75b2e2c112477530c",
       "pr_url": "https://github.com/vectorize-io/hindsight/pull/1907",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/26937455730",
+      "data_file": "data/obs/20260604T081303Z-613a699e.json",
+      "timestamp": "2026-06-04T08:12:58.505112+00:00",
+      "overall_duplication_rate": 0.3034134007585335,
+      "total_observations": 791
+    },
+    {
+      "sha": "613a699e9fee2b2c42bf1cd75b2e2c112477530c",
+      "short_sha": "613a699e",
+      "subject": "fix(consolidation): eliminate duplicate observations via interleave dedup recall (#1907)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-06-03T17:37:57+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/613a699e9fee2b2c42bf1cd75b2e2c112477530c",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1907",
       "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/26895639741",
       "data_file": "data/obs/20260603T165830Z-613a699e.json",
       "timestamp": "2026-06-03T16:58:26.665540+00:00",
@@ -29,5 +43,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-06-03T16:58:31Z"
+  "updated_at": "2026-06-04T08:13:04Z"
 }
