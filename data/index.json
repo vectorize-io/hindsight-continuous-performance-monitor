@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "276be58fbe4f9398a63d399e8f3d8f6f363cd532",
+      "short_sha": "276be58f",
+      "subject": "ci(obs): enable consolidation dedup (0.97) in the observation benchmark",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-06-05T10:26:12+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/276be58fbe4f9398a63d399e8f3d8f6f363cd532",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1998",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/27004234810",
+      "data_file": "data/20260605T082804Z-276be58f.json",
+      "timestamp": "2026-06-05T08:27:23.430449+00:00",
+      "scale": "tiny"
+    },
+    {
       "sha": "d826d648d8af4d7a20521aac9d75433dbacb5e69",
       "short_sha": "d826d648",
       "subject": "release(llamaindex): v0.1.5",
@@ -456,5 +469,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-06-05T07:53:27Z"
+  "updated_at": "2026-06-05T08:28:04Z"
 }
