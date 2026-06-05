@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "d826d648d8af4d7a20521aac9d75433dbacb5e69",
+      "short_sha": "d826d648",
+      "subject": "release(llamaindex): v0.1.5",
+      "author": "Ben",
+      "author_date": "2026-06-04T15:02:10-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/d826d648d8af4d7a20521aac9d75433dbacb5e69",
+      "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/27001374197",
+      "data_file": "data/20260605T075326Z-d826d648.json",
+      "timestamp": "2026-06-05T07:24:14.610738+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "613a699e9fee2b2c42bf1cd75b2e2c112477530c",
       "short_sha": "613a699e",
       "subject": "fix(consolidation): eliminate duplicate observations via interleave dedup recall (#1907)",
@@ -443,5 +456,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-06-04T08:01:12Z"
+  "updated_at": "2026-06-05T07:53:27Z"
 }
