@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-06-06T07:42:21.619154+00:00",
+  "overall_duplication_rate": 0.0210016155088853,
+  "duplication_threshold": 0.97,
+  "total_observations": 619,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1697,
+      "facts_consolidated": 1697,
+      "facts_covered": 1455,
+      "facts_skipped": 242,
+      "observations": 619,
+      "avg_sources_per_obs": 2.6,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 12,
+          "redundant_observations": 13,
+          "duplication_rate": 0.0210016155088853
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 114,
+          "redundant_observations": 185,
+          "duplication_rate": 0.2988691437802908
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 619,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.0210016155088853,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 13
+      },
+      "0.92": {
+        "redundant_observations": 185
+      }
+    }
+  },
+  "commit": {
+    "sha": "b708302187a4abf153b88bcfe1db4007d453f8ba",
+    "short_sha": "b7083021",
+    "subject": "feat(integrations): add Superagent safety middleware (#1128)",
+    "author": "DK09876",
+    "author_date": "2026-06-05T13:45:34-07:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/b708302187a4abf153b88bcfe1db4007d453f8ba",
+    "pr_number": 1128,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/1128"
+  },
+  "workflow_run": {
+    "id": "27055579765",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/27055579765"
+  }
+}
