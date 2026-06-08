@@ -8,6 +8,20 @@
       "author_date": "2026-06-05T13:45:34-07:00",
       "commit_url": "https://github.com/vectorize-io/hindsight/commit/b708302187a4abf153b88bcfe1db4007d453f8ba",
       "pr_url": "https://github.com/vectorize-io/hindsight/pull/1128",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/27122595426",
+      "data_file": "data/obs/20260608T081234Z-b7083021.json",
+      "timestamp": "2026-06-08T08:12:31.259286+00:00",
+      "overall_duplication_rate": 0.01437699680511182,
+      "total_observations": 626
+    },
+    {
+      "sha": "b708302187a4abf153b88bcfe1db4007d453f8ba",
+      "short_sha": "b7083021",
+      "subject": "feat(integrations): add Superagent safety middleware (#1128)",
+      "author": "DK09876",
+      "author_date": "2026-06-05T13:45:34-07:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/b708302187a4abf153b88bcfe1db4007d453f8ba",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1128",
       "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/27085886169",
       "data_file": "data/obs/20260607T075246Z-b7083021.json",
       "timestamp": "2026-06-07T07:52:44.257377+00:00",
@@ -99,5 +113,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-06-07T07:52:47Z"
+  "updated_at": "2026-06-08T08:12:35Z"
 }
