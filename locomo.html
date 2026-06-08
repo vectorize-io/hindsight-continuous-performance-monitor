@@ -19,8 +19,8 @@
   <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
   <script type="module">
     import {
-      renderHeader, renderLatestBanner, lineChart, makeDataset, movingAverage,
-      fmtNumber, fmtDate, fmtDateTime, deltaPct, renderDelta, escapeHtml,
+      renderHeader, renderPageHeading, renderLatestBanner, lineChart, makeDataset, movingAverage,
+      fmtNumber, fmtDate, fmtDateTime, deltaPct, renderDelta, median, runsSummary, escapeHtml,
       emptyChartPlaceholder,
     } from './assets/app.js';
 
@@ -58,9 +58,11 @@
       const runs = await Promise.all(slice.map(e => loadLocomoRun(e.data_file)));
 
       const latest = runs[0];
-      const prev = runs[1] ?? null;
       const currAcc = latest?.overall_accuracy;
-      const prevAcc = prev?.overall_accuracy;
+      // Noise-robust baseline: median of prior runs rather than just the last one.
+      const priorAcc = runs.slice(1).map(r => r.overall_accuracy);
+      const baselineAcc = median(priorAcc);
+      const priorN = priorAcc.filter(v => v != null).length;
 
       // Build a synthetic-shaped run object so the shared latest-banner works.
       // It expects {timestamp, scale, commit, workflow_run}.
@@ -154,7 +156,7 @@
           : '<span class="text-gray-300">—</span>';
         return `
           <tr class="border-t border-gray-100 hover:bg-gray-50/70 transition-colors">
-            <td class="px-3 py-2.5 whitespace-nowrap text-gray-600">${fmtDate(entry.author_date)}</td>
+            <td class="px-3 py-2.5 whitespace-nowrap text-gray-600" title="Run executed ${fmtDateTime(entry.timestamp)} · commit authored ${fmtDate(entry.author_date)}">${fmtDate(entry.timestamp)}</td>
             <td class="px-3 py-2.5 font-mono whitespace-nowrap"><a href="${entry.commit_url}" target="_blank" class="text-indigo-600 hover:underline">${entry.short_sha}</a></td>
             <td class="px-3 py-2.5 max-w-[28rem] truncate" title="${escapeHtml(entry.subject)}">${escapeHtml(entry.subject)}</td>
             <td class="px-3 py-2.5 whitespace-nowrap">${prCell}</td>
@@ -193,11 +195,12 @@
           <div class="flex items-baseline gap-2 flex-wrap">
             <span class="text-3xl font-semibold tabular-nums">${fmtNumber(currAcc)}</span>
             <span class="text-gray-500 text-sm">%</span>
-            ${renderDelta(currAcc, prevAcc, true)}
+            ${renderDelta(currAcc, baselineAcc, true)}
           </div>
           <div class="text-gray-400 text-xs mt-1">
             ${latest.total_correct ?? '—'} / ${latest.total_questions ?? '—'} correct
             · ${latest.num_items ?? '—'} conversations
+            · ${priorN > 0 ? `vs median of prior ${priorN} run${priorN === 1 ? '' : 's'}` : 'no prior runs'}
           </div>
         </div>
       `;
@@ -239,6 +242,7 @@
       `;
 
       main.innerHTML = `
+        ${renderPageHeading('LoComo · detail', `Answer accuracy on the LoComo benchmark · ${runsSummary(slice, null, 0)}`)}
         ${renderLatestBanner(bannerRun)}
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">${headlineCard}${modelCard}</div>
         ${accuracyChartHtml}

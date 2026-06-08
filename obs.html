@@ -19,8 +19,8 @@
   <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
   <script type="module">
     import {
-      renderHeader, renderLatestBanner, lineChart, makeDataset, movingAverage,
-      fmtNumber, fmtDate, renderDelta, escapeHtml, emptyChartPlaceholder,
+      renderHeader, renderPageHeading, renderLatestBanner, lineChart, makeDataset, movingAverage,
+      fmtNumber, fmtDate, fmtDateTime, renderDelta, median, runsSummary, escapeHtml, emptyChartPlaceholder,
     } from './assets/app.js';
 
     document.getElementById('page-header').innerHTML = renderHeader('obs');
@@ -63,10 +63,12 @@
       const runs = await Promise.all(slice.map(e => loadObsRun(e.data_file)));
 
       const latest = runs[0];
-      const prev = runs[1] ?? null;
       const threshold = latest.duplication_threshold ?? 0.97;
       const currDup = pct(latest.overall_duplication_rate);
-      const prevDup = prev ? pct(prev.overall_duplication_rate) : null;
+      // Noise-robust baseline: median of prior runs rather than just the last one.
+      const priorDup = runs.slice(1).map(r => pct(r.overall_duplication_rate));
+      const baselineDup = median(priorDup);
+      const priorN = priorDup.filter(v => v != null).length;
 
       const bannerRun = {
         timestamp: latest.timestamp,
@@ -93,12 +95,13 @@
           <div class="flex items-baseline gap-2 flex-wrap">
             <span class="text-3xl font-semibold tabular-nums">${fmtNumber(currDup)}</span>
             <span class="text-gray-500 text-sm">%</span>
-            ${renderDelta(currDup, prevDup, false)}
+            ${renderDelta(currDup, baselineDup, false)}
           </div>
           <div class="text-gray-400 text-xs mt-1">
             ${latest.aggregate?.by_threshold?.[String(threshold)]?.redundant_observations ?? '—'} redundant
             · ${latest.total_observations ?? '—'} observations
             · ${latest.aggregate?.total_exact_redundant ?? 0} exact dups
+            · ${priorN > 0 ? `vs median of prior ${priorN} run${priorN === 1 ? '' : 's'}` : 'no prior runs'}
           </div>
         </div>
       `;
@@ -190,7 +193,7 @@
           : '<span class="text-gray-300">—</span>';
         return `
           <tr class="border-t border-gray-100 hover:bg-gray-50/70 transition-colors">
-            <td class="px-3 py-2.5 whitespace-nowrap text-gray-600">${fmtDate(entry.author_date)}</td>
+            <td class="px-3 py-2.5 whitespace-nowrap text-gray-600" title="Run executed ${fmtDateTime(entry.timestamp)} · commit authored ${fmtDate(entry.author_date)}">${fmtDate(entry.timestamp)}</td>
             <td class="px-3 py-2.5 font-mono whitespace-nowrap"><a href="${entry.commit_url}" target="_blank" class="text-indigo-600 hover:underline">${entry.short_sha}</a></td>
             <td class="px-3 py-2.5 max-w-[28rem] truncate" title="${escapeHtml(entry.subject)}">${escapeHtml(entry.subject)}</td>
             <td class="px-3 py-2.5 whitespace-nowrap">${prCell}</td>
@@ -224,6 +227,7 @@
       `;
 
       main.innerHTML = `
+        ${renderPageHeading('Obs Dedup · detail', `Observation duplication rate @${threshold} · ${runsSummary(slice, null, 0)}`)}
         ${renderLatestBanner(bannerRun)}
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">${headlineCard}${configCard}</div>
         ${dupChartHtml}

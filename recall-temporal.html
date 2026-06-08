@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Recall (temporal) · Hindsight Performance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <header id="page-header" class="bg-white border-b border-gray-200 px-6 py-3"></header>
+  <main id="main" class="max-w-7xl mx-auto px-6 py-8"></main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+  <script type="module">
+    import { renderHeader, renderSuitePage } from './assets/app.js';
+    document.getElementById('page-header').innerHTML = renderHeader('recall-temporal');
+    renderSuitePage('recall-temporal', document.getElementById('main'));
+  </script>
+</body>
+</html>

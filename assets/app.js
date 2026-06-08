@@ -3,12 +3,14 @@
 // Styling via Tailwind Play CDN (loaded in each HTML page).
 
 export const HINDSIGHT_REPO = 'vectorize-io/hindsight';
-export const SUITES = ['retain', 'recall', 'recall-with-observations', 'consolidation', 'graph-maintenance'];
+export const DASHBOARD_REPO = 'vectorize-io/hindsight-continuous-performance-monitor';
+export const SUITES = ['retain', 'recall', 'recall-with-observations', 'recall-temporal', 'consolidation', 'graph-maintenance'];
 
 export const SUITE_LABELS = {
   'retain': 'Retain',
   'recall': 'Recall',
   'recall-with-observations': 'Recall (with observations)',
+  'recall-temporal': 'Recall (temporal)',
   'consolidation': 'Consolidation',
   'graph-maintenance': 'Graph Maintenance',
 };
@@ -82,6 +84,21 @@ export const SUITE_METRICS = {
     { key: 'throughput', label: 'Throughput',   unit: 'queries/s', biggerIsBetter: true,
       get: s => s.recall?.throughput_queries_per_sec },
   ],
+  // Recall run that forces the temporal retrieval arm (dense temporal zone).
+  // Headlined by the temporal entry-point scan time — the path #1958/#1983
+  // targeted — rather than overall recall latency.
+  'recall-temporal': [
+    { key: 'temporal_p95',  label: 'Temporal p95',  unit: 's',         biggerIsBetter: false,
+      get: s => s.recall?.phase_timings?.retrieval_temporal?.p95 },
+    { key: 'temporal_mean', label: 'Temporal mean', unit: 's',         biggerIsBetter: false,
+      get: s => s.recall?.phase_timings?.retrieval_temporal?.mean },
+    { key: 'p95',           label: 'p95 latency',   unit: 's',         biggerIsBetter: false,
+      get: s => s.recall?.latency?.p95 },
+    { key: 'mean',          label: 'Mean latency',  unit: 's',         biggerIsBetter: false,
+      get: s => s.recall?.latency?.mean },
+    { key: 'throughput',    label: 'Throughput',    unit: 'queries/s', biggerIsBetter: true,
+      get: s => s.recall?.throughput_queries_per_sec },
+  ],
   'consolidation': [
     { key: 'throughput', label: 'Throughput',   unit: 'memories/s', biggerIsBetter: true,
       get: s => s.consolidation?.throughput_memories_per_sec },
@@ -107,6 +124,7 @@ export const SUITE_HEADLINE = {
   'retain': SUITE_METRICS['retain'][0],
   'recall': SUITE_METRICS['recall'][0],
   'recall-with-observations': SUITE_METRICS['recall-with-observations'][0],
+  'recall-temporal': SUITE_METRICS['recall-temporal'][0],
   'consolidation': SUITE_METRICS['consolidation'][0],
   'graph-maintenance': SUITE_METRICS['graph-maintenance'][0],
 };
@@ -134,6 +152,25 @@ export const SUITE_CHARTS = {
   ],
   'recall-with-observations': [
     { title: 'Latency', unit: 's', biggerIsBetter: false,
+      series: [
+        { label: 'p99',  get: s => s.recall?.latency?.p99 },
+        { label: 'p95',  get: s => s.recall?.latency?.p95 },
+        { label: 'mean', get: s => s.recall?.latency?.mean },
+        { label: 'p50',  get: s => s.recall?.latency?.p50 },
+      ] },
+    { title: 'Throughput', unit: 'queries/s', biggerIsBetter: true,
+      series: [{ label: 'queries/s', get: s => s.recall?.throughput_queries_per_sec }] },
+  ],
+  'recall-temporal': [
+    // The temporal entry-point scan is the headline — plot it next to the
+    // (cheap) temporal-extraction phase so a regression in the scan stands out.
+    { title: 'Temporal retrieval', unit: 's', biggerIsBetter: false,
+      series: [
+        { label: 'temporal p95',    get: s => s.recall?.phase_timings?.retrieval_temporal?.p95 },
+        { label: 'temporal mean',   get: s => s.recall?.phase_timings?.retrieval_temporal?.mean },
+        { label: 'extraction mean', get: s => s.recall?.phase_timings?.retrieval_temporal_extraction?.mean },
+      ] },
+    { title: 'Overall latency', unit: 's', biggerIsBetter: false,
       series: [
         { label: 'p99',  get: s => s.recall?.latency?.p99 },
         { label: 'p95',  get: s => s.recall?.latency?.p95 },
@@ -212,6 +249,23 @@ export function fmtDateTime(iso) {
   return new Date(iso).toLocaleString();
 }
 
+// "May 6 → Jun 8" style compact range; collapses to a single date if equal.
+export function fmtDateRange(isoA, isoB) {
+  const opts = { month: 'short', day: 'numeric' };
+  const a = isoA ? new Date(isoA).toLocaleDateString(undefined, opts) : '—';
+  const b = isoB ? new Date(isoB).toLocaleDateString(undefined, opts) : '—';
+  return a === b ? a : `${a} → ${b}`;
+}
+
+// Median of a numeric list, ignoring null/NaN. Used as a noise-robust
+// baseline for deltas instead of the single previous run.
+export function median(values) {
+  const v = values.filter(x => x != null && !Number.isNaN(x)).slice().sort((a, b) => a - b);
+  if (!v.length) return null;
+  const m = Math.floor(v.length / 2);
+  return v.length % 2 ? v[m] : (v[m - 1] + v[m]) / 2;
+}
+
 export function fmtNumber(n, digits = 3) {
   if (n == null || Number.isNaN(n)) return '—';
   if (Math.abs(n) >= 100) return n.toFixed(1);
@@ -248,47 +302,102 @@ export function renderDelta(curr, prev, biggerIsBetter) {
 export const HINDSIGHT_PERF_WORKFLOW_URL =
   `https://github.com/${HINDSIGHT_REPO}/actions/workflows/perf-test.yml`;
 
+const GH_ICON = `<svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" class="shrink-0">
+  <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/>
+</svg>`;
+
 export function renderHeader(activePage = '') {
-  const pages = [
-    { href: 'index.html',                       label: 'Overview',      id: 'overview' },
-    { href: 'retain.html',                      label: 'Retain',        id: 'retain' },
-    { href: 'recall.html',                      label: 'Recall',        id: 'recall' },
-    { href: 'recall-with-observations.html',    label: 'Recall + obs',  id: 'recall-with-observations' },
-    { href: 'consolidation.html',               label: 'Consolidation', id: 'consolidation' },
-    { href: 'graph-maintenance.html',           label: 'Graph Maint',   id: 'graph-maintenance' },
-    { href: 'locomo.html',                      label: 'LoComo',        id: 'locomo' },
-    { href: 'obs.html',                         label: 'Obs Dedup',     id: 'obs' },
-    { href: 'compare.html',                     label: 'Compare',       id: 'compare' },
+  // "meta" = cross-cutting views (all suites at once / arbitrary comparison);
+  // "suite" = a single specific benchmark. They're styled differently so the
+  // nav makes that distinction obvious at a glance.
+  const metaPages = [
+    { href: 'index.html',   label: 'Overview', id: 'overview' },
+    { href: 'compare.html', label: 'Compare',  id: 'compare'  },
   ];
-  const link = (p) => {
+  const suitePages = [
+    { href: 'retain.html',                   label: 'Retain',        id: 'retain' },
+    { href: 'recall.html',                   label: 'Recall',        id: 'recall' },
+    { href: 'recall-with-observations.html', label: 'Recall + obs',  id: 'recall-with-observations' },
+    { href: 'recall-temporal.html',          label: 'Recall + temporal', id: 'recall-temporal' },
+    { href: 'consolidation.html',            label: 'Consolidation', id: 'consolidation' },
+    { href: 'graph-maintenance.html',        label: 'Graph Maint',   id: 'graph-maintenance' },
+    { href: 'locomo.html',                   label: 'LoComo',        id: 'locomo' },
+    { href: 'obs.html',                      label: 'Obs Dedup',     id: 'obs' },
+  ];
+  // Meta links read as distinct "pills" (bordered, slightly bolder); suite
+  // links are lighter plain tabs. Active state is indigo in both.
+  const metaLink = (p) => {
+    const base = 'text-sm px-3 py-1.5 rounded-md no-underline transition-colors font-medium ring-1';
+    const cls = p.id === activePage
+      ? 'text-indigo-700 bg-indigo-50 ring-indigo-200'
+      : 'text-gray-700 ring-gray-200 hover:bg-gray-100 hover:text-gray-900';
+    return `<a href="${p.href}" class="${base} ${cls}">${p.label}</a>`;
+  };
+  const suiteLink = (p) => {
     const base = 'text-sm px-2.5 py-1.5 rounded-md no-underline transition-colors';
     const cls = p.id === activePage
       ? 'text-indigo-700 bg-indigo-50 font-medium'
       : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100';
     return `<a href="${p.href}" class="${base} ${cls}">${p.label}</a>`;
   };
+  const extLink = (href, label) =>
+    `<a href="${href}" target="_blank" rel="noopener"
+        class="text-xs text-gray-500 hover:text-gray-900 inline-flex items-center gap-1.5 no-underline">${label}</a>`;
   return `
-    <div class="max-w-7xl mx-auto flex items-center gap-6 flex-wrap">
-      <a href="index.html" class="flex items-center gap-2 no-underline text-gray-900">
-        <span class="inline-block w-2 h-2 rounded-full bg-indigo-500"></span>
-        <h1 class="text-[15px] font-semibold tracking-tight m-0">Hindsight Performance</h1>
-      </a>
-      <nav class="flex gap-0.5 flex-wrap">
-        ${pages.map(link).join('')}
-      </nav>
-      <div class="ml-auto flex items-center gap-3">
-        <a href="${HINDSIGHT_PERF_WORKFLOW_URL}" target="_blank"
-           class="text-xs text-gray-500 hover:text-gray-900 inline-flex items-center gap-1.5 no-underline">
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-            <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/>
-          </svg>
-          Workflow runs
+    <div class="max-w-7xl mx-auto flex flex-col gap-2.5">
+      <div class="flex items-center justify-between gap-4">
+        <a href="index.html" class="flex items-center gap-2 no-underline text-gray-900 shrink-0">
+          <span class="inline-block w-2 h-2 rounded-full bg-indigo-500"></span>
+          <h1 class="text-[15px] font-semibold tracking-tight m-0">Hindsight Performance</h1>
         </a>
-        <a href="https://github.com/${HINDSIGHT_REPO}" target="_blank"
-           class="text-xs text-gray-500 hover:text-gray-900 no-underline">${HINDSIGHT_REPO}</a>
+        <div class="flex items-center gap-x-4 gap-y-1 flex-wrap justify-end">
+          ${extLink(HINDSIGHT_PERF_WORKFLOW_URL, 'Workflow runs')}
+          ${extLink(`https://github.com/${HINDSIGHT_REPO}`, `${GH_ICON}hindsight`)}
+          ${extLink(`https://github.com/${DASHBOARD_REPO}`, `${GH_ICON}dashboard source`)}
+        </div>
       </div>
+      <nav class="flex items-center gap-1.5 flex-wrap border-t border-gray-100 pt-2">
+        <div class="flex gap-1.5">${metaPages.map(metaLink).join('')}</div>
+        <span class="w-px h-5 bg-gray-200 mx-1 self-center" aria-hidden="true"></span>
+        <span class="text-[10px] uppercase tracking-[0.08em] text-gray-400 font-medium self-center mr-0.5">Suites</span>
+        <div class="flex gap-0.5 flex-wrap">${suitePages.map(suiteLink).join('')}</div>
+      </nav>
     </div>
   `;
+}
+
+// Page-level heading block. Keeps the Overview and the per-suite detail
+// pages visually distinct (different title + subtitle) while sharing one
+// look so they read as part of the same dashboard. `subtitle` may be HTML.
+export function renderPageHeading(title, subtitle = '') {
+  return `
+    <div class="mb-5">
+      <h1 class="text-xl font-semibold tracking-tight text-gray-900 m-0">${escapeHtml(title)}</h1>
+      ${subtitle ? `<p class="text-sm text-gray-500 mt-1 m-0">${subtitle}</p>` : ''}
+    </div>
+  `;
+}
+
+// Restrict a run list to a single benchmark scale so trends/deltas compare
+// like-with-like (mixing e.g. tiny + large runs produces meaningless jumps).
+// Returns { runs, scale, hidden } — `hidden` is how many were dropped.
+export function filterByScale(runs, scale) {
+  if (!scale) return { runs, scale: null, hidden: 0 };
+  const kept = runs.filter(r => (r.scale ?? null) === scale);
+  return { runs: kept, scale, hidden: runs.length - kept.length };
+}
+
+// One-line summary of what a chart/card set is actually plotting:
+// "12 large-scale runs · May 30 → Jun 8 · 2 other-scale runs hidden".
+export function runsSummary(shownRuns, scale, hidden) {
+  if (!shownRuns.length) return 'No runs to show';
+  const stamps = shownRuns.map(r => r.timestamp).filter(Boolean).sort();
+  const range = fmtDateRange(stamps[0], stamps[stamps.length - 1]);
+  const n = shownRuns.length;
+  const scaleStr = scale ? `${escapeHtml(scale)}-scale ` : '';
+  const parts = [`${n} ${scaleStr}run${n === 1 ? '' : 's'}`, range];
+  if (hidden > 0) parts.push(`${hidden} other-scale run${hidden === 1 ? '' : 's'} hidden`);
+  return parts.join(' · ');
 }
 
 export function renderLatestBanner(run) {
@@ -523,7 +632,7 @@ export function renderRunsTable(manifestEntries, runsByFile, suiteName = null) {
 
     return `
       <tr class="border-t border-gray-100 hover:bg-gray-50/70 transition-colors">
-        <td class="px-3 py-2.5 whitespace-nowrap text-gray-600">${fmtDate(entry.author_date)}</td>
+        <td class="px-3 py-2.5 whitespace-nowrap text-gray-600" title="Run executed ${fmtDateTime(entry.timestamp)} · commit authored ${fmtDate(entry.author_date)}">${fmtDate(entry.timestamp)}</td>
         <td class="px-3 py-2.5 font-mono whitespace-nowrap"><a href="${entry.commit_url}" target="_blank" class="text-indigo-600 hover:underline">${entry.short_sha}</a></td>
         <td class="px-3 py-2.5 max-w-[28rem] truncate" title="${escapeHtml(entry.subject)}">${escapeHtml(entry.subject)}</td>
         <td class="px-3 py-2.5 whitespace-nowrap">${prCell}</td>
@@ -581,22 +690,27 @@ export async function renderSuitePage(suiteName, container) {
   }
 
   const latest = runs[0];
-  const prev = runs[1] ?? null;
   const latestSuite = getSuite(latest, suiteName);
-  const prevSuite = prev ? getSuite(prev, suiteName) : null;
 
-  // Metric summary cards
+  // Compare like-with-like: restrict trends/deltas to the latest run's scale.
+  const { runs: scaled, scale, hidden } = filterByScale(runs, latest.scale);
+
+  // Metric summary cards — delta is vs the median of the prior same-scale
+  // runs (noise-robust) rather than the single previous run.
   const cardsHtml = metrics.map(m => {
     const curr = latestSuite ? m.get(latestSuite) : null;
-    const previous = prevSuite ? m.get(prevSuite) : null;
+    const histPts = timeSeries(scaled.slice(1), suiteName, m.get);
+    const baseline = median(histPts.map(p => p.y));
+    const n = histPts.length;
     return `
       <div class="bg-white border border-gray-200 rounded-lg p-5 min-w-0">
         <h3 class="text-xs uppercase tracking-wide text-gray-500 font-semibold m-0 mb-2">${m.label}</h3>
         <div class="flex items-baseline gap-2 flex-wrap">
           <span class="text-3xl font-semibold tabular-nums">${fmtNumber(curr)}</span>
           <span class="text-gray-500 text-sm">${m.unit}</span>
-          ${renderDelta(curr, previous, m.biggerIsBetter)}
+          ${renderDelta(curr, baseline, m.biggerIsBetter)}
         </div>
+        <div class="text-[11px] text-gray-400 mt-1">${n > 0 ? `vs median of prior ${n} run${n === 1 ? '' : 's'}` : 'no prior runs'}</div>
       </div>
     `;
   }).join('');
@@ -655,6 +769,7 @@ export async function renderSuitePage(suiteName, container) {
   const cardCols = metrics.length >= 4 ? 'lg:grid-cols-4' : metrics.length === 3 ? 'lg:grid-cols-3' : 'lg:grid-cols-2';
 
   container.innerHTML = `
+    ${renderPageHeading(`${SUITE_LABELS[suiteName] ?? suiteName} · detail`, runsSummary(scaled, scale, hidden))}
     ${renderLatestBanner(latest)}
     <div class="grid grid-cols-1 sm:grid-cols-2 ${cardCols} gap-6">${cardsHtml}</div>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">${chartsHtml}</div>
@@ -664,7 +779,7 @@ export async function renderSuitePage(suiteName, container) {
   `;
 
   charts.forEach((chart, i) => {
-    const seriesPoints = chart.series.map(s => timeSeries(runs, suiteName, s.get));
+    const seriesPoints = chart.series.map(s => timeSeries(scaled, suiteName, s.get));
     const maxPoints = Math.max(...seriesPoints.map(p => p.length));
     if (maxPoints < 2) {
       const host = document.getElementById(`chart-host-${i}`);

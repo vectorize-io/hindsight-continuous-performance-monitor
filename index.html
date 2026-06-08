@@ -19,8 +19,9 @@
   <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
   <script type="module">
     import {
-      loadRecentRuns, renderHeader, renderLatestBanner, renderRunsTable,
-      timeSeries, lineChart, makeDataset, fmtNumber, renderDelta,
+      loadRecentRuns, renderHeader, renderPageHeading, renderLatestBanner, renderRunsTable,
+      timeSeries, lineChart, makeDataset, fmtNumber, renderDelta, median,
+      filterByScale, runsSummary,
       SUITES, SUITE_LABELS, SUITE_HEADLINE, getSuite, escapeHtml,
     } from './assets/app.js';
 
@@ -43,14 +44,17 @@
       }
 
       const latest = runs[0];
-      const prev = runs[1] ?? null;
+      // Compare like-with-like: charts + deltas use only the latest run's scale.
+      const { runs: scaled, scale, hidden } = filterByScale(runs, latest.scale);
 
       const cards = SUITES.map((suite, idx) => {
         const headline = SUITE_HEADLINE[suite];
         const latestSuite = getSuite(latest, suite);
-        const prevSuite = prev ? getSuite(prev, suite) : null;
         const curr = latestSuite ? headline.get(latestSuite) : null;
-        const previous = prevSuite ? headline.get(prevSuite) : null;
+        const histPts = timeSeries(scaled.slice(1), suite, headline.get);
+        const baseline = median(histPts.map(p => p.y));
+        const n = histPts.length;
+        const points = timeSeries(scaled, suite, headline.get);
         return `
           <div class="bg-white border border-gray-200 rounded-lg p-5 min-w-0">
             <div class="flex items-baseline justify-between mb-2 gap-2">
@@ -60,10 +64,11 @@
             <div class="flex items-baseline gap-2 flex-wrap">
               <span class="text-3xl font-semibold tabular-nums">${fmtNumber(curr)}</span>
               <span class="text-gray-500 text-sm">${headline.unit}</span>
-              ${renderDelta(curr, previous, headline.biggerIsBetter)}
+              ${renderDelta(curr, baseline, headline.biggerIsBetter)}
             </div>
-            <div class="text-gray-400 text-xs mt-1 mb-2">${headline.label}</div>
+            <div class="text-gray-400 text-xs mt-1 mb-2">${headline.label} · ${n > 0 ? `vs median of prior ${n} run${n === 1 ? '' : 's'}` : 'no prior runs'}</div>
             <div class="chart-container" id="mini-host-${idx}"><canvas id="mini-${idx}"></canvas></div>
+            <div class="text-[11px] text-gray-400 mt-1 text-right">${points.length} data point${points.length === 1 ? '' : 's'}</div>
           </div>
         `;
       }).join('');
@@ -72,15 +77,16 @@
       manifest.runs.slice(0, runs.length).forEach((e, i) => { runsByFile[e.data_file] = runs[i]; });
 
       main.innerHTML = `
+        ${renderPageHeading('Overview · all suites', `Headline metric per suite, trend vs median · ${runsSummary(scaled, scale, hidden)}`)}
         ${renderLatestBanner(latest)}
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">${cards}</div>
-        <h2 class="text-base font-semibold mt-8 mb-3">Recent runs</h2>
+        <h2 class="text-base font-semibold mt-8 mb-3">Recent runs <span class="text-gray-400 text-sm font-normal">· all scales</span></h2>
         ${renderRunsTable(manifest.runs.slice(0, 25), runsByFile)}
       `;
 
       SUITES.forEach((suite, idx) => {
         const headline = SUITE_HEADLINE[suite];
-        const points = timeSeries(runs, suite, headline.get);
+        const points = timeSeries(scaled, suite, headline.get);
         const host = document.getElementById('mini-host-' + idx);
         if (points.length < 2) {
           host.innerHTML = '<div class="flex items-center justify-center h-full text-xs text-gray-400">need 2+ runs</div>';
