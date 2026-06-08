@@ -8,6 +8,21 @@
       "author_date": "2026-06-05T13:45:34-07:00",
       "commit_url": "https://github.com/vectorize-io/hindsight/commit/b708302187a4abf153b88bcfe1db4007d453f8ba",
       "pr_url": "https://github.com/vectorize-io/hindsight/pull/1128",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/27122595426",
+      "data_file": "data/locomo/20260608T080346Z-b7083021.json",
+      "timestamp": "2026-06-08T08:03:46Z",
+      "overall_accuracy": 87.34793187347933,
+      "num_items": 3,
+      "total_questions": 411
+    },
+    {
+      "sha": "b708302187a4abf153b88bcfe1db4007d453f8ba",
+      "short_sha": "b7083021",
+      "subject": "feat(integrations): add Superagent safety middleware (#1128)",
+      "author": "DK09876",
+      "author_date": "2026-06-05T13:45:34-07:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/b708302187a4abf153b88bcfe1db4007d453f8ba",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/1128",
       "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/27085886169",
       "data_file": "data/locomo/20260607T075442Z-b7083021.json",
       "timestamp": "2026-06-07T07:54:42Z",
@@ -466,5 +481,5 @@
       "total_questions": 411
     }
   ],
-  "updated_at": "2026-06-07T07:54:42Z"
+  "updated_at": "2026-06-08T08:03:47Z"
 }
