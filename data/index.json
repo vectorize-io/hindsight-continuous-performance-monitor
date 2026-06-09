@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "9ea1ef164a2632ebdf44f67e29ae21d0e252f09f",
+      "short_sha": "9ea1ef16",
+      "subject": "release(obsidian): v0.1.0",
+      "author": "Ben",
+      "author_date": "2026-06-08T16:45:22-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/9ea1ef164a2632ebdf44f67e29ae21d0e252f09f",
+      "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/27189774460",
+      "data_file": "data/20260609T074228Z-9ea1ef16.json",
+      "timestamp": "2026-06-09T07:09:14.867836+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "b708302187a4abf153b88bcfe1db4007d453f8ba",
       "short_sha": "b7083021",
       "subject": "feat(integrations): add Superagent safety middleware (#1128)",
@@ -495,5 +508,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-06-08T08:01:14Z"
+  "updated_at": "2026-06-09T07:42:28Z"
 }
