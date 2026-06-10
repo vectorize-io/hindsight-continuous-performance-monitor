@@ -1,0 +1,133 @@
+{
+  "overall_accuracy": 87.34793187347933,
+  "total_correct": 359,
+  "total_questions": 411,
+  "total_invalid": 0,
+  "total_valid": 411,
+  "num_items": 3,
+  "model_config": {
+    "hindsight": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash-lite"
+    },
+    "answer_generation": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash"
+    },
+    "judge": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash-lite"
+    }
+  },
+  "item_results": [
+    {
+      "item_id": "conv-30",
+      "metrics": {
+        "accuracy": 88.88888888888889,
+        "correct": 72,
+        "total": 81,
+        "invalid": 0,
+        "valid_total": 81,
+        "category_stats": {
+          "2": {
+            "correct": 24,
+            "total": 26,
+            "invalid": 0
+          },
+          "4": {
+            "correct": 38,
+            "total": 44,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 10,
+            "total": 11,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 19
+    },
+    {
+      "item_id": "conv-26",
+      "metrics": {
+        "accuracy": 91.44736842105263,
+        "correct": 139,
+        "total": 152,
+        "invalid": 0,
+        "valid_total": 152,
+        "category_stats": {
+          "4": {
+            "correct": 66,
+            "total": 70,
+            "invalid": 0
+          },
+          "2": {
+            "correct": 34,
+            "total": 37,
+            "invalid": 0
+          },
+          "3": {
+            "correct": 11,
+            "total": 13,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 28,
+            "total": 32,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 19
+    },
+    {
+      "item_id": "conv-43",
+      "metrics": {
+        "accuracy": 83.14606741573034,
+        "correct": 148,
+        "total": 178,
+        "invalid": 0,
+        "valid_total": 178,
+        "category_stats": {
+          "4": {
+            "correct": 98,
+            "total": 107,
+            "invalid": 0
+          },
+          "2": {
+            "correct": 19,
+            "total": 26,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 25,
+            "total": 31,
+            "invalid": 0
+          },
+          "3": {
+            "correct": 6,
+            "total": 14,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 29
+    }
+  ],
+  "timestamp": "2026-06-10T07:58:33Z",
+  "commit": {
+    "sha": "96910071c9a6bd78d964a403a48217b83cd4bcdf",
+    "short_sha": "96910071",
+    "subject": "fix(ci): npm provenance 409 guard + add Obsidian MIT LICENSE (#2094)",
+    "author": "Ben",
+    "author_date": "2026-06-09T16:26:40-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/96910071c9a6bd78d964a403a48217b83cd4bcdf",
+    "pr_number": 2094,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/2094"
+  },
+  "workflow_run": {
+    "id": "27260020846",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/27260020846"
+  }
+}
