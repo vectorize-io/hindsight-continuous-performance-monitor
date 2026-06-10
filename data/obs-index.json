@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "96910071c9a6bd78d964a403a48217b83cd4bcdf",
+      "short_sha": "96910071",
+      "subject": "fix(ci): npm provenance 409 guard + add Obsidian MIT LICENSE (#2094)",
+      "author": "Ben",
+      "author_date": "2026-06-09T16:26:40-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/96910071c9a6bd78d964a403a48217b83cd4bcdf",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2094",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/27260020846",
+      "data_file": "data/obs/20260610T080843Z-96910071.json",
+      "timestamp": "2026-06-10T08:08:40.507096+00:00",
+      "overall_duplication_rate": 0.013595166163141994,
+      "total_observations": 662
+    },
+    {
       "sha": "9ea1ef164a2632ebdf44f67e29ae21d0e252f09f",
       "short_sha": "9ea1ef16",
       "subject": "release(obsidian): v0.1.0",
@@ -127,5 +141,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-06-09T07:56:01Z"
+  "updated_at": "2026-06-10T08:08:44Z"
 }
