@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "a1228ec3a77d19c2f551aa48abb457d2b462397b",
+      "short_sha": "a1228ec3",
+      "subject": "release(haystack): v0.1.1",
+      "author": "DK09876",
+      "author_date": "2026-06-10T15:45:45-07:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/a1228ec3a77d19c2f551aa48abb457d2b462397b",
+      "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/27331142228",
+      "data_file": "data/obs/20260611T081549Z-a1228ec3.json",
+      "timestamp": "2026-06-11T08:15:47.155928+00:00",
+      "overall_duplication_rate": 0.015384615384615385,
+      "total_observations": 650
+    },
+    {
       "sha": "96910071c9a6bd78d964a403a48217b83cd4bcdf",
       "short_sha": "96910071",
       "subject": "fix(ci): npm provenance 409 guard + add Obsidian MIT LICENSE (#2094)",
@@ -141,5 +155,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-06-10T08:08:44Z"
+  "updated_at": "2026-06-11T08:15:50Z"
 }
