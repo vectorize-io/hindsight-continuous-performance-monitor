@@ -1,0 +1,133 @@
+{
+  "overall_accuracy": 87.10462287104623,
+  "total_correct": 358,
+  "total_questions": 411,
+  "total_invalid": 0,
+  "total_valid": 411,
+  "num_items": 3,
+  "model_config": {
+    "hindsight": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash-lite"
+    },
+    "answer_generation": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash"
+    },
+    "judge": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash-lite"
+    }
+  },
+  "item_results": [
+    {
+      "item_id": "conv-26",
+      "metrics": {
+        "accuracy": 89.47368421052632,
+        "correct": 136,
+        "total": 152,
+        "invalid": 0,
+        "valid_total": 152,
+        "category_stats": {
+          "1": {
+            "correct": 27,
+            "total": 32,
+            "invalid": 0
+          },
+          "4": {
+            "correct": 64,
+            "total": 70,
+            "invalid": 0
+          },
+          "2": {
+            "correct": 33,
+            "total": 37,
+            "invalid": 0
+          },
+          "3": {
+            "correct": 12,
+            "total": 13,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 19
+    },
+    {
+      "item_id": "conv-30",
+      "metrics": {
+        "accuracy": 91.35802469135803,
+        "correct": 74,
+        "total": 81,
+        "invalid": 0,
+        "valid_total": 81,
+        "category_stats": {
+          "4": {
+            "correct": 40,
+            "total": 44,
+            "invalid": 0
+          },
+          "2": {
+            "correct": 25,
+            "total": 26,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 9,
+            "total": 11,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 19
+    },
+    {
+      "item_id": "conv-43",
+      "metrics": {
+        "accuracy": 83.14606741573034,
+        "correct": 148,
+        "total": 178,
+        "invalid": 0,
+        "valid_total": 178,
+        "category_stats": {
+          "4": {
+            "correct": 97,
+            "total": 107,
+            "invalid": 0
+          },
+          "2": {
+            "correct": 19,
+            "total": 26,
+            "invalid": 0
+          },
+          "3": {
+            "correct": 5,
+            "total": 14,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 27,
+            "total": 31,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 29
+    }
+  ],
+  "timestamp": "2026-06-12T08:06:49Z",
+  "commit": {
+    "sha": "87448b1616f0546f601446689ce71a0ff4702bea",
+    "short_sha": "87448b16",
+    "subject": "fix(webhook) missing fields in payload",
+    "author": "Chris Latimer",
+    "author_date": "2026-06-12T00:14:47-06:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/87448b1616f0546f601446689ce71a0ff4702bea",
+    "pr_number": 2164,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/2164"
+  },
+  "workflow_run": {
+    "id": "27401394076",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/27401394076"
+  }
+}
