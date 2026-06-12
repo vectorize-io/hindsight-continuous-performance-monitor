@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "87448b1616f0546f601446689ce71a0ff4702bea",
+      "short_sha": "87448b16",
+      "subject": "fix(webhook) missing fields in payload",
+      "author": "Chris Latimer",
+      "author_date": "2026-06-12T00:14:47-06:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/87448b1616f0546f601446689ce71a0ff4702bea",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2164",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/27401394076",
+      "data_file": "data/obs/20260612T081133Z-87448b16.json",
+      "timestamp": "2026-06-12T08:11:29.536316+00:00",
+      "overall_duplication_rate": 0.007692307692307693,
+      "total_observations": 650
+    },
+    {
       "sha": "a1228ec3a77d19c2f551aa48abb457d2b462397b",
       "short_sha": "a1228ec3",
       "subject": "release(haystack): v0.1.1",
@@ -155,5 +169,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-06-11T08:15:50Z"
+  "updated_at": "2026-06-12T08:11:33Z"
 }
