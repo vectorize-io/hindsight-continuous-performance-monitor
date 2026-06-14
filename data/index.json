@@ -8,6 +8,19 @@
       "author_date": "2026-06-12T15:17:38-04:00",
       "commit_url": "https://github.com/vectorize-io/hindsight/commit/42e72601f420e9c4a9070e82a401f4efe311afae",
       "pr_url": "https://github.com/vectorize-io/hindsight/pull/2171",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/27491913092",
+      "data_file": "data/20260614T080204Z-42e72601.json",
+      "timestamp": "2026-06-14T07:28:44.358464+00:00",
+      "scale": "large"
+    },
+    {
+      "sha": "42e72601f420e9c4a9070e82a401f4efe311afae",
+      "short_sha": "42e72601",
+      "subject": "blog: Cursor persistent memory (editor + CLI in one post) (#2171)",
+      "author": "Ben",
+      "author_date": "2026-06-12T15:17:38-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/42e72601f420e9c4a9070e82a401f4efe311afae",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2171",
       "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/27459996247",
       "data_file": "data/20260613T075133Z-42e72601.json",
       "timestamp": "2026-06-13T07:15:11.495623+00:00",
@@ -547,5 +560,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-06-13T07:51:34Z"
+  "updated_at": "2026-06-14T08:02:04Z"
 }
