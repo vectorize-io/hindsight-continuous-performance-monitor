@@ -1,0 +1,133 @@
+{
+  "overall_accuracy": 86.86131386861314,
+  "total_correct": 357,
+  "total_questions": 411,
+  "total_invalid": 0,
+  "total_valid": 411,
+  "num_items": 3,
+  "model_config": {
+    "hindsight": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash-lite"
+    },
+    "answer_generation": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash"
+    },
+    "judge": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash-lite"
+    }
+  },
+  "item_results": [
+    {
+      "item_id": "conv-26",
+      "metrics": {
+        "accuracy": 87.5,
+        "correct": 133,
+        "total": 152,
+        "invalid": 0,
+        "valid_total": 152,
+        "category_stats": {
+          "4": {
+            "correct": 61,
+            "total": 70,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 29,
+            "total": 32,
+            "invalid": 0
+          },
+          "2": {
+            "correct": 32,
+            "total": 37,
+            "invalid": 0
+          },
+          "3": {
+            "correct": 11,
+            "total": 13,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 19
+    },
+    {
+      "item_id": "conv-30",
+      "metrics": {
+        "accuracy": 91.35802469135803,
+        "correct": 74,
+        "total": 81,
+        "invalid": 0,
+        "valid_total": 81,
+        "category_stats": {
+          "2": {
+            "correct": 25,
+            "total": 26,
+            "invalid": 0
+          },
+          "4": {
+            "correct": 39,
+            "total": 44,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 10,
+            "total": 11,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 19
+    },
+    {
+      "item_id": "conv-43",
+      "metrics": {
+        "accuracy": 84.26966292134831,
+        "correct": 150,
+        "total": 178,
+        "invalid": 0,
+        "valid_total": 178,
+        "category_stats": {
+          "4": {
+            "correct": 96,
+            "total": 107,
+            "invalid": 0
+          },
+          "2": {
+            "correct": 20,
+            "total": 26,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 29,
+            "total": 31,
+            "invalid": 0
+          },
+          "3": {
+            "correct": 5,
+            "total": 14,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 29
+    }
+  ],
+  "timestamp": "2026-06-15T08:23:55Z",
+  "commit": {
+    "sha": "42e72601f420e9c4a9070e82a401f4efe311afae",
+    "short_sha": "42e72601",
+    "subject": "blog: Cursor persistent memory (editor + CLI in one post) (#2171)",
+    "author": "Ben",
+    "author_date": "2026-06-12T15:17:38-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/42e72601f420e9c4a9070e82a401f4efe311afae",
+    "pr_number": 2171,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/2171"
+  },
+  "workflow_run": {
+    "id": "27531650375",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/27531650375"
+  }
+}
