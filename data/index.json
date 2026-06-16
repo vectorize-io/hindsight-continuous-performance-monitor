@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "c05ab9103f16350fe868d9c5b29eac25dd4e7b8e",
+      "short_sha": "c05ab910",
+      "subject": "feat(continue): add Continue.dev integration via HTTP context provider (#2213)",
+      "author": "DK09876",
+      "author_date": "2026-06-15T14:38:39-07:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/c05ab9103f16350fe868d9c5b29eac25dd4e7b8e",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2213",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/27602433626",
+      "data_file": "data/20260616T082510Z-c05ab910.json",
+      "timestamp": "2026-06-16T07:51:41.323690+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "42e72601f420e9c4a9070e82a401f4efe311afae",
       "short_sha": "42e72601",
       "subject": "blog: Cursor persistent memory (editor + CLI in one post) (#2171)",
@@ -573,5 +586,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-06-15T08:20:42Z"
+  "updated_at": "2026-06-16T08:25:10Z"
 }
