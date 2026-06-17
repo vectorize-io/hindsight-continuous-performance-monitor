@@ -1,6 +1,21 @@
 {
   "runs": [
     {
+      "sha": "cf3bcee89c2c5fd2a1ea292b24f746ff12a308b7",
+      "short_sha": "cf3bcee8",
+      "subject": "chore(control-plane): format bank-selector.tsx (lint drift from #2212) (#2250)",
+      "author": "DK09876",
+      "author_date": "2026-06-16T18:34:11-07:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/cf3bcee89c2c5fd2a1ea292b24f746ff12a308b7",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2250",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/27673484645",
+      "data_file": "data/locomo/20260617T082151Z-cf3bcee8.json",
+      "timestamp": "2026-06-17T08:21:51Z",
+      "overall_accuracy": 87.34793187347933,
+      "num_items": 3,
+      "total_questions": 411
+    },
+    {
       "sha": "c05ab9103f16350fe868d9c5b29eac25dd4e7b8e",
       "short_sha": "c05ab910",
       "subject": "feat(continue): add Continue.dev integration via HTTP context provider (#2213)",
@@ -601,5 +616,5 @@
       "total_questions": 411
     }
   ],
-  "updated_at": "2026-06-16T08:25:29Z"
+  "updated_at": "2026-06-17T08:21:52Z"
 }
