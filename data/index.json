@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "65862c4feff61a4c2d03c3d1210b1f3a68683143",
+      "short_sha": "65862c4f",
+      "subject": "feat(openhands): add OpenHands integration (native MCP config + recall/retain rule) (#2276)",
+      "author": "DK09876",
+      "author_date": "2026-06-17T12:46:20-07:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/65862c4feff61a4c2d03c3d1210b1f3a68683143",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2276",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/27743923819",
+      "data_file": "data/20260618T080720Z-65862c4f.json",
+      "timestamp": "2026-06-18T07:34:30.714708+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "cf3bcee89c2c5fd2a1ea292b24f746ff12a308b7",
       "short_sha": "cf3bcee8",
       "subject": "chore(control-plane): format bank-selector.tsx (lint drift from #2212) (#2250)",
@@ -599,5 +612,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-06-17T08:15:23Z"
+  "updated_at": "2026-06-18T08:07:20Z"
 }
