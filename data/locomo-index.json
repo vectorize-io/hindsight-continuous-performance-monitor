@@ -1,6 +1,21 @@
 {
   "runs": [
     {
+      "sha": "aab70320717e5146f9ab9c086381b5d052050712",
+      "short_sha": "aab70320",
+      "subject": "feat(aider): add Aider integration (session-bracketing memory wrapper) (#2297)",
+      "author": "DK09876",
+      "author_date": "2026-06-18T13:52:38-07:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/aab70320717e5146f9ab9c086381b5d052050712",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2297",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/27812557263",
+      "data_file": "data/locomo/20260619T082443Z-aab70320.json",
+      "timestamp": "2026-06-19T08:24:43Z",
+      "overall_accuracy": 87.10462287104623,
+      "num_items": 3,
+      "total_questions": 411
+    },
+    {
       "sha": "65862c4feff61a4c2d03c3d1210b1f3a68683143",
       "short_sha": "65862c4f",
       "subject": "feat(openhands): add OpenHands integration (native MCP config + recall/retain rule) (#2276)",
@@ -631,5 +646,5 @@
       "total_questions": 411
     }
   ],
-  "updated_at": "2026-06-18T08:04:48Z"
+  "updated_at": "2026-06-19T08:24:44Z"
 }
