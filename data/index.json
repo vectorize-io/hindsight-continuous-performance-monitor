@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "ee81c65e4b9a550ca007bba238de8b51657d013b",
+      "short_sha": "ee81c65e",
+      "subject": "blog(openhands): OpenHands persistent memory via native MCP (#2316)",
+      "author": "Ben",
+      "author_date": "2026-06-19T10:30:22-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/ee81c65e4b9a550ca007bba238de8b51657d013b",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2316",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/27863909966",
+      "data_file": "data/20260620T075045Z-ee81c65e.json",
+      "timestamp": "2026-06-20T07:16:40.783881+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "aab70320717e5146f9ab9c086381b5d052050712",
       "short_sha": "aab70320",
       "subject": "feat(aider): add Aider integration (session-bracketing memory wrapper) (#2297)",
@@ -625,5 +638,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-06-19T08:19:04Z"
+  "updated_at": "2026-06-20T07:50:45Z"
 }
