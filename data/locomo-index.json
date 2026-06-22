@@ -8,6 +8,21 @@
       "author_date": "2026-06-19T10:30:22-04:00",
       "commit_url": "https://github.com/vectorize-io/hindsight/commit/ee81c65e4b9a550ca007bba238de8b51657d013b",
       "pr_url": "https://github.com/vectorize-io/hindsight/pull/2316",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/27937543825",
+      "data_file": "data/locomo/20260622T082436Z-ee81c65e.json",
+      "timestamp": "2026-06-22T08:24:36Z",
+      "overall_accuracy": 86.37469586374696,
+      "num_items": 3,
+      "total_questions": 411
+    },
+    {
+      "sha": "ee81c65e4b9a550ca007bba238de8b51657d013b",
+      "short_sha": "ee81c65e",
+      "subject": "blog(openhands): OpenHands persistent memory via native MCP (#2316)",
+      "author": "Ben",
+      "author_date": "2026-06-19T10:30:22-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/ee81c65e4b9a550ca007bba238de8b51657d013b",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2316",
       "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/27897305788",
       "data_file": "data/locomo/20260621T080731Z-ee81c65e.json",
       "timestamp": "2026-06-21T08:07:31Z",
@@ -676,5 +691,5 @@
       "total_questions": 411
     }
   ],
-  "updated_at": "2026-06-21T08:07:32Z"
+  "updated_at": "2026-06-22T08:24:38Z"
 }
