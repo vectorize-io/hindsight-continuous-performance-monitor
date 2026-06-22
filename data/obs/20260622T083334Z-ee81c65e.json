@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-06-22T08:33:30.765575+00:00",
+  "overall_duplication_rate": 0.011235955056179775,
+  "duplication_threshold": 0.97,
+  "total_observations": 623,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1880,
+      "facts_consolidated": 1880,
+      "facts_covered": 1558,
+      "facts_skipped": 322,
+      "observations": 623,
+      "avg_sources_per_obs": 2.9,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 7,
+          "redundant_observations": 7,
+          "duplication_rate": 0.011235955056179775
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 126,
+          "redundant_observations": 185,
+          "duplication_rate": 0.2969502407704655
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 623,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.011235955056179775,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 7
+      },
+      "0.92": {
+        "redundant_observations": 185
+      }
+    }
+  },
+  "commit": {
+    "sha": "ee81c65e4b9a550ca007bba238de8b51657d013b",
+    "short_sha": "ee81c65e",
+    "subject": "blog(openhands): OpenHands persistent memory via native MCP (#2316)",
+    "author": "Ben",
+    "author_date": "2026-06-19T10:30:22-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/ee81c65e4b9a550ca007bba238de8b51657d013b",
+    "pr_number": 2316,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/2316"
+  },
+  "workflow_run": {
+    "id": "27937543825",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/27937543825"
+  }
+}
