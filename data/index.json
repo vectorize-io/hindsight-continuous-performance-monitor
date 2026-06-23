@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "dcabd76911134724ed8ec68c1a657b91faf8cc8b",
+      "short_sha": "dcabd769",
+      "subject": "blog(hermes): Hindsight as one-click desktop memory provider (#2350)",
+      "author": "Ben",
+      "author_date": "2026-06-22T10:59:52-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/dcabd76911134724ed8ec68c1a657b91faf8cc8b",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2350",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/28008654765",
+      "data_file": "data/20260623T074228Z-dcabd769.json",
+      "timestamp": "2026-06-23T07:09:28.446536+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "ee81c65e4b9a550ca007bba238de8b51657d013b",
       "short_sha": "ee81c65e",
       "subject": "blog(openhands): OpenHands persistent memory via native MCP (#2316)",
@@ -664,5 +677,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-06-22T08:21:49Z"
+  "updated_at": "2026-06-23T07:42:28Z"
 }
