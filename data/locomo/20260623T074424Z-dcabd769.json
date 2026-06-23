@@ -1,0 +1,133 @@
+{
+  "overall_accuracy": 88.32116788321169,
+  "total_correct": 363,
+  "total_questions": 411,
+  "total_invalid": 0,
+  "total_valid": 411,
+  "num_items": 3,
+  "model_config": {
+    "hindsight": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash-lite"
+    },
+    "answer_generation": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash"
+    },
+    "judge": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash-lite"
+    }
+  },
+  "item_results": [
+    {
+      "item_id": "conv-30",
+      "metrics": {
+        "accuracy": 87.65432098765432,
+        "correct": 71,
+        "total": 81,
+        "invalid": 0,
+        "valid_total": 81,
+        "category_stats": {
+          "2": {
+            "correct": 22,
+            "total": 26,
+            "invalid": 0
+          },
+          "4": {
+            "correct": 39,
+            "total": 44,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 10,
+            "total": 11,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 19
+    },
+    {
+      "item_id": "conv-26",
+      "metrics": {
+        "accuracy": 91.44736842105263,
+        "correct": 139,
+        "total": 152,
+        "invalid": 0,
+        "valid_total": 152,
+        "category_stats": {
+          "2": {
+            "correct": 34,
+            "total": 37,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 28,
+            "total": 32,
+            "invalid": 0
+          },
+          "4": {
+            "correct": 66,
+            "total": 70,
+            "invalid": 0
+          },
+          "3": {
+            "correct": 11,
+            "total": 13,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 19
+    },
+    {
+      "item_id": "conv-43",
+      "metrics": {
+        "accuracy": 85.95505617977528,
+        "correct": 153,
+        "total": 178,
+        "invalid": 0,
+        "valid_total": 178,
+        "category_stats": {
+          "4": {
+            "correct": 101,
+            "total": 107,
+            "invalid": 0
+          },
+          "2": {
+            "correct": 22,
+            "total": 26,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 25,
+            "total": 31,
+            "invalid": 0
+          },
+          "3": {
+            "correct": 5,
+            "total": 14,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 29
+    }
+  ],
+  "timestamp": "2026-06-23T07:44:24Z",
+  "commit": {
+    "sha": "dcabd76911134724ed8ec68c1a657b91faf8cc8b",
+    "short_sha": "dcabd769",
+    "subject": "blog(hermes): Hindsight as one-click desktop memory provider (#2350)",
+    "author": "Ben",
+    "author_date": "2026-06-22T10:59:52-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/dcabd76911134724ed8ec68c1a657b91faf8cc8b",
+    "pr_number": 2350,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/2350"
+  },
+  "workflow_run": {
+    "id": "28008654765",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/28008654765"
+  }
+}
