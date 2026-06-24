@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "91bf32842e3e4e2efb5d4b4c786fb46872794e07",
+      "short_sha": "91bf3284",
+      "subject": "feat(github-copilot): add GitHub Copilot (VS Code) integration via MCP (#2299)",
+      "author": "DK09876",
+      "author_date": "2026-06-23T16:39:12-07:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/91bf32842e3e4e2efb5d4b4c786fb46872794e07",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2299",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/28081301637",
+      "data_file": "data/20260624T074153Z-91bf3284.json",
+      "timestamp": "2026-06-24T07:06:55.718973+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "dcabd76911134724ed8ec68c1a657b91faf8cc8b",
       "short_sha": "dcabd769",
       "subject": "blog(hermes): Hindsight as one-click desktop memory provider (#2350)",
@@ -677,5 +690,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-06-23T07:42:28Z"
+  "updated_at": "2026-06-24T07:41:53Z"
 }
