@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "9dafadc7eb562dc1edce1fa1ec25f69ea83ff65d",
+      "short_sha": "9dafadc7",
+      "subject": "release(eve): v0.1.0",
+      "author": "Ben",
+      "author_date": "2026-06-24T14:51:08-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/9dafadc7eb562dc1edce1fa1ec25f69ea83ff65d",
+      "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/28152928482",
+      "data_file": "data/20260625T074031Z-9dafadc7.json",
+      "timestamp": "2026-06-25T07:06:51.508243+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "91bf32842e3e4e2efb5d4b4c786fb46872794e07",
       "short_sha": "91bf3284",
       "subject": "feat(github-copilot): add GitHub Copilot (VS Code) integration via MCP (#2299)",
@@ -690,5 +703,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-06-24T07:41:53Z"
+  "updated_at": "2026-06-25T07:40:32Z"
 }
