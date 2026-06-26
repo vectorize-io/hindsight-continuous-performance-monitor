@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "2452f72e750a9979028f81c5cbe067278c725a55",
+      "short_sha": "2452f72e",
+      "subject": "Blog: Zapier persistent memory (#2408)",
+      "author": "Ben",
+      "author_date": "2026-06-25T14:50:15-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/2452f72e750a9979028f81c5cbe067278c725a55",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2408",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/28223038762",
+      "data_file": "data/20260626T073926Z-2452f72e.json",
+      "timestamp": "2026-06-26T07:12:38.379738+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "9dafadc7eb562dc1edce1fa1ec25f69ea83ff65d",
       "short_sha": "9dafadc7",
       "subject": "release(eve): v0.1.0",
@@ -703,5 +716,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-06-25T07:40:32Z"
+  "updated_at": "2026-06-26T07:39:27Z"
 }
