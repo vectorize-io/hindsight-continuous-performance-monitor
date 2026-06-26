@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-06-26T07:55:11.894323+00:00",
+  "overall_duplication_rate": 0.022970903522205207,
+  "duplication_threshold": 0.97,
+  "total_observations": 653,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1905,
+      "facts_consolidated": 1905,
+      "facts_covered": 1598,
+      "facts_skipped": 307,
+      "observations": 653,
+      "avg_sources_per_obs": 2.8,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 15,
+          "redundant_observations": 15,
+          "duplication_rate": 0.022970903522205207
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 128,
+          "redundant_observations": 207,
+          "duplication_rate": 0.3169984686064318
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 653,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.022970903522205207,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 15
+      },
+      "0.92": {
+        "redundant_observations": 207
+      }
+    }
+  },
+  "commit": {
+    "sha": "2452f72e750a9979028f81c5cbe067278c725a55",
+    "short_sha": "2452f72e",
+    "subject": "Blog: Zapier persistent memory (#2408)",
+    "author": "Ben",
+    "author_date": "2026-06-25T14:50:15-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/2452f72e750a9979028f81c5cbe067278c725a55",
+    "pr_number": 2408,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/2408"
+  },
+  "workflow_run": {
+    "id": "28223038762",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/28223038762"
+  }
+}
