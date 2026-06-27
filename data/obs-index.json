@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "a0af096081a7032c2d9761b95e684ee553d236db",
+      "short_sha": "a0af0960",
+      "subject": "fix(aider,openhands): close client on exit + OpenHands Docker MCP docs (#2417)",
+      "author": "DK09876",
+      "author_date": "2026-06-26T17:27:59-07:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/a0af096081a7032c2d9761b95e684ee553d236db",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2417",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/28281843413",
+      "data_file": "data/obs/20260627T073743Z-a0af0960.json",
+      "timestamp": "2026-06-27T07:37:39.779267+00:00",
+      "overall_duplication_rate": 0.022108843537414966,
+      "total_observations": 588
+    },
+    {
       "sha": "2452f72e750a9979028f81c5cbe067278c725a55",
       "short_sha": "2452f72e",
       "subject": "Blog: Zapier persistent memory (#2408)",
@@ -365,5 +379,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-06-26T07:55:15Z"
+  "updated_at": "2026-06-27T07:37:43Z"
 }
