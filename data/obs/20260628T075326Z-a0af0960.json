@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-06-28T07:53:20.636454+00:00",
+  "overall_duplication_rate": 0.012345679012345678,
+  "duplication_threshold": 0.97,
+  "total_observations": 648,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1895,
+      "facts_consolidated": 1895,
+      "facts_covered": 1564,
+      "facts_skipped": 331,
+      "observations": 648,
+      "avg_sources_per_obs": 2.7,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 8,
+          "redundant_observations": 8,
+          "duplication_rate": 0.012345679012345678
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 131,
+          "redundant_observations": 213,
+          "duplication_rate": 0.3287037037037037
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 648,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.012345679012345678,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 8
+      },
+      "0.92": {
+        "redundant_observations": 213
+      }
+    }
+  },
+  "commit": {
+    "sha": "a0af096081a7032c2d9761b95e684ee553d236db",
+    "short_sha": "a0af0960",
+    "subject": "fix(aider,openhands): close client on exit + OpenHands Docker MCP docs (#2417)",
+    "author": "DK09876",
+    "author_date": "2026-06-26T17:27:59-07:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/a0af096081a7032c2d9761b95e684ee553d236db",
+    "pr_number": 2417,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/2417"
+  },
+  "workflow_run": {
+    "id": "28314810349",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/28314810349"
+  }
+}
