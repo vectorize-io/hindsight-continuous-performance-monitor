@@ -8,6 +8,19 @@
       "author_date": "2026-06-26T17:27:59-07:00",
       "commit_url": "https://github.com/vectorize-io/hindsight/commit/a0af096081a7032c2d9761b95e684ee553d236db",
       "pr_url": "https://github.com/vectorize-io/hindsight/pull/2417",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/28355854065",
+      "data_file": "data/20260629T080346Z-a0af0960.json",
+      "timestamp": "2026-06-29T07:30:40.979201+00:00",
+      "scale": "large"
+    },
+    {
+      "sha": "a0af096081a7032c2d9761b95e684ee553d236db",
+      "short_sha": "a0af0960",
+      "subject": "fix(aider,openhands): close client on exit + OpenHands Docker MCP docs (#2417)",
+      "author": "DK09876",
+      "author_date": "2026-06-26T17:27:59-07:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/a0af096081a7032c2d9761b95e684ee553d236db",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2417",
       "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/28314810349",
       "data_file": "data/20260628T074929Z-a0af0960.json",
       "timestamp": "2026-06-28T07:14:53.769853+00:00",
@@ -742,5 +755,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-06-28T07:49:29Z"
+  "updated_at": "2026-06-29T08:03:47Z"
 }
