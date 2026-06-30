@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "74bdfc9475962b7d38b90e02ad6bda5fc80a8725",
+      "short_sha": "74bdfc94",
+      "subject": "Blog: Entity resolution in agent memory (#2424)",
+      "author": "Ben",
+      "author_date": "2026-06-29T14:22:04-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/74bdfc9475962b7d38b90e02ad6bda5fc80a8725",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2424",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/28426816007",
+      "data_file": "data/20260630T074327Z-74bdfc94.json",
+      "timestamp": "2026-06-30T07:10:04.381550+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "a0af096081a7032c2d9761b95e684ee553d236db",
       "short_sha": "a0af0960",
       "subject": "fix(aider,openhands): close client on exit + OpenHands Docker MCP docs (#2417)",
@@ -755,5 +768,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-06-29T08:03:47Z"
+  "updated_at": "2026-06-30T07:43:28Z"
 }
