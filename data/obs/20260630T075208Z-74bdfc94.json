@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-06-30T07:52:05.097824+00:00",
+  "overall_duplication_rate": 0.01746031746031746,
+  "duplication_threshold": 0.97,
+  "total_observations": 630,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1833,
+      "facts_consolidated": 1833,
+      "facts_covered": 1564,
+      "facts_skipped": 269,
+      "observations": 630,
+      "avg_sources_per_obs": 2.8,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 10,
+          "redundant_observations": 11,
+          "duplication_rate": 0.01746031746031746
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 117,
+          "redundant_observations": 191,
+          "duplication_rate": 0.30317460317460315
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 630,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.01746031746031746,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 11
+      },
+      "0.92": {
+        "redundant_observations": 191
+      }
+    }
+  },
+  "commit": {
+    "sha": "74bdfc9475962b7d38b90e02ad6bda5fc80a8725",
+    "short_sha": "74bdfc94",
+    "subject": "Blog: Entity resolution in agent memory (#2424)",
+    "author": "Ben",
+    "author_date": "2026-06-29T14:22:04-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/74bdfc9475962b7d38b90e02ad6bda5fc80a8725",
+    "pr_number": 2424,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/2424"
+  },
+  "workflow_run": {
+    "id": "28426816007",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/28426816007"
+  }
+}
