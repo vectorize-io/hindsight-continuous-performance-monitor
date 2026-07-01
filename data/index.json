@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "4c307ce4e7a03db27eaf423264a611c6f9b37edb",
+      "short_sha": "4c307ce4",
+      "subject": "release(openhands): v0.1.1",
+      "author": "DK09876",
+      "author_date": "2026-06-30T07:38:51-07:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/4c307ce4e7a03db27eaf423264a611c6f9b37edb",
+      "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/28500684140",
+      "data_file": "data/20260701T075956Z-4c307ce4.json",
+      "timestamp": "2026-07-01T07:24:42.498093+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "74bdfc9475962b7d38b90e02ad6bda5fc80a8725",
       "short_sha": "74bdfc94",
       "subject": "Blog: Entity resolution in agent memory (#2424)",
@@ -768,5 +781,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-06-30T07:43:28Z"
+  "updated_at": "2026-07-01T07:59:57Z"
 }
