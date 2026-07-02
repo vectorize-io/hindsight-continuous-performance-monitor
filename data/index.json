@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "265192e509cd54f7d40c1c78ad78560d10dc8494",
+      "short_sha": "265192e5",
+      "subject": "docs: restore audio in v0.8.4 release-notes video",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-07-01T14:26:54+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/265192e509cd54f7d40c1c78ad78560d10dc8494",
+      "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/28571701157",
+      "data_file": "data/20260702T074919Z-265192e5.json",
+      "timestamp": "2026-07-02T07:04:07.192465+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "4c307ce4e7a03db27eaf423264a611c6f9b37edb",
       "short_sha": "4c307ce4",
       "subject": "release(openhands): v0.1.1",
@@ -781,5 +794,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-07-01T07:59:57Z"
+  "updated_at": "2026-07-02T07:49:20Z"
 }
