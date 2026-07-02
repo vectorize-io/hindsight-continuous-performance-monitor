@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-07-02T07:42:43.597867+00:00",
+  "overall_duplication_rate": 0.018575851393188854,
+  "duplication_threshold": 0.97,
+  "total_observations": 646,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1755,
+      "facts_consolidated": 1755,
+      "facts_covered": 1510,
+      "facts_skipped": 245,
+      "observations": 646,
+      "avg_sources_per_obs": 2.8,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 12,
+          "redundant_observations": 12,
+          "duplication_rate": 0.018575851393188854
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 128,
+          "redundant_observations": 198,
+          "duplication_rate": 0.3065015479876161
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 646,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.018575851393188854,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 12
+      },
+      "0.92": {
+        "redundant_observations": 198
+      }
+    }
+  },
+  "commit": {
+    "sha": "265192e509cd54f7d40c1c78ad78560d10dc8494",
+    "short_sha": "265192e5",
+    "subject": "docs: restore audio in v0.8.4 release-notes video",
+    "author": "Nicolò Boschi",
+    "author_date": "2026-07-01T14:26:54+02:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/265192e509cd54f7d40c1c78ad78560d10dc8494",
+    "pr_number": null,
+    "pr_url": null
+  },
+  "workflow_run": {
+    "id": "28571701157",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/28571701157"
+  }
+}
