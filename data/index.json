@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "ba158c9cdbc577e72f7b22a4608f97cad66972b7",
+      "short_sha": "ba158c9c",
+      "subject": "Add Devin Desktop blog cover image (#2524)",
+      "author": "Ben",
+      "author_date": "2026-07-02T14:45:05-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/ba158c9cdbc577e72f7b22a4608f97cad66972b7",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2524",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/28644131805",
+      "data_file": "data/20260703T074437Z-ba158c9c.json",
+      "timestamp": "2026-07-03T07:00:07.555202+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "265192e509cd54f7d40c1c78ad78560d10dc8494",
       "short_sha": "265192e5",
       "subject": "docs: restore audio in v0.8.4 release-notes video",
@@ -794,5 +807,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-07-02T07:49:20Z"
+  "updated_at": "2026-07-03T07:44:37Z"
 }
