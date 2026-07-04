@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "016b5f03639eb44f9f54ce1fd624d0f4792aac46",
+      "short_sha": "016b5f03",
+      "subject": "release(eve): v0.2.0",
+      "author": "Ben",
+      "author_date": "2026-07-03T11:06:47-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/016b5f03639eb44f9f54ce1fd624d0f4792aac46",
+      "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/28698359550",
+      "data_file": "data/20260704T074330Z-016b5f03.json",
+      "timestamp": "2026-07-04T06:56:26.647406+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "ba158c9cdbc577e72f7b22a4608f97cad66972b7",
       "short_sha": "ba158c9c",
       "subject": "Add Devin Desktop blog cover image (#2524)",
@@ -807,5 +820,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-07-03T07:44:37Z"
+  "updated_at": "2026-07-04T07:43:31Z"
 }
