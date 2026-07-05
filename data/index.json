@@ -8,6 +8,19 @@
       "author_date": "2026-07-03T11:06:47-04:00",
       "commit_url": "https://github.com/vectorize-io/hindsight/commit/016b5f03639eb44f9f54ce1fd624d0f4792aac46",
       "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/28732717581",
+      "data_file": "data/20260705T074739Z-016b5f03.json",
+      "timestamp": "2026-07-05T07:01:26.942806+00:00",
+      "scale": "large"
+    },
+    {
+      "sha": "016b5f03639eb44f9f54ce1fd624d0f4792aac46",
+      "short_sha": "016b5f03",
+      "subject": "release(eve): v0.2.0",
+      "author": "Ben",
+      "author_date": "2026-07-03T11:06:47-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/016b5f03639eb44f9f54ce1fd624d0f4792aac46",
+      "pr_url": null,
       "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/28698359550",
       "data_file": "data/20260704T074330Z-016b5f03.json",
       "timestamp": "2026-07-04T06:56:26.647406+00:00",
@@ -820,5 +833,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-07-04T07:43:31Z"
+  "updated_at": "2026-07-05T07:47:40Z"
 }
