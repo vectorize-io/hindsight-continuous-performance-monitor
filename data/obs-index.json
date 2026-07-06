@@ -8,6 +8,20 @@
       "author_date": "2026-07-03T11:06:47-04:00",
       "commit_url": "https://github.com/vectorize-io/hindsight/commit/016b5f03639eb44f9f54ce1fd624d0f4792aac46",
       "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/28774866013",
+      "data_file": "data/obs/20260706T080607Z-016b5f03.json",
+      "timestamp": "2026-07-06T08:06:04.784493+00:00",
+      "overall_duplication_rate": 0.009433962264150943,
+      "total_observations": 636
+    },
+    {
+      "sha": "016b5f03639eb44f9f54ce1fd624d0f4792aac46",
+      "short_sha": "016b5f03",
+      "subject": "release(eve): v0.2.0",
+      "author": "Ben",
+      "author_date": "2026-07-03T11:06:47-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/016b5f03639eb44f9f54ce1fd624d0f4792aac46",
+      "pr_url": null,
       "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/28732717581",
       "data_file": "data/obs/20260705T073714Z-016b5f03.json",
       "timestamp": "2026-07-05T07:37:11.728384+00:00",
@@ -491,5 +505,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-07-05T07:37:15Z"
+  "updated_at": "2026-07-06T08:06:08Z"
 }
