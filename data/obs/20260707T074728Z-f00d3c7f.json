@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-07-07T07:47:25.388093+00:00",
+  "overall_duplication_rate": 0.015625,
+  "duplication_threshold": 0.97,
+  "total_observations": 640,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1695,
+      "facts_consolidated": 1695,
+      "facts_covered": 1529,
+      "facts_skipped": 166,
+      "observations": 640,
+      "avg_sources_per_obs": 2.7,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 10,
+          "redundant_observations": 10,
+          "duplication_rate": 0.015625
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 121,
+          "redundant_observations": 183,
+          "duplication_rate": 0.2859375
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 640,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.015625,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 10
+      },
+      "0.92": {
+        "redundant_observations": 183
+      }
+    }
+  },
+  "commit": {
+    "sha": "f00d3c7f666e560bb051c51fba3977b38885f46a",
+    "short_sha": "f00d3c7f",
+    "subject": "Blog: Eve automatic memory (hindsight-eve v0.2.0) (#2584)",
+    "author": "Ben",
+    "author_date": "2026-07-06T14:57:48-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/f00d3c7f666e560bb051c51fba3977b38885f46a",
+    "pr_number": 2584,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/2584"
+  },
+  "workflow_run": {
+    "id": "28848036442",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/28848036442"
+  }
+}

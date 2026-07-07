@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "f00d3c7f666e560bb051c51fba3977b38885f46a",
+      "short_sha": "f00d3c7f",
+      "subject": "Blog: Eve automatic memory (hindsight-eve v0.2.0) (#2584)",
+      "author": "Ben",
+      "author_date": "2026-07-06T14:57:48-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/f00d3c7f666e560bb051c51fba3977b38885f46a",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2584",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/28848036442",
+      "data_file": "data/obs/20260707T074728Z-f00d3c7f.json",
+      "timestamp": "2026-07-07T07:47:25.388093+00:00",
+      "overall_duplication_rate": 0.015625,
+      "total_observations": 640
+    },
+    {
       "sha": "016b5f03639eb44f9f54ce1fd624d0f4792aac46",
       "short_sha": "016b5f03",
       "subject": "release(eve): v0.2.0",
@@ -505,5 +519,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-07-06T08:06:08Z"
+  "updated_at": "2026-07-07T07:47:29Z"
 }
