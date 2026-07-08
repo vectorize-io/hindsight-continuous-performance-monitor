@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "2e82edee14489c4b074f74583e683d834d26da1b",
+      "short_sha": "2e82edee",
+      "subject": "docs(oracle): document the required schema, dimension matching, and start-oracle re-run (#2615)",
+      "author": "DK09876",
+      "author_date": "2026-07-07T20:35:16-07:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/2e82edee14489c4b074f74583e683d834d26da1b",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2615",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/28923181837",
+      "data_file": "data/obs/20260708T073148Z-2e82edee.json",
+      "timestamp": "2026-07-08T07:31:43.819955+00:00",
+      "overall_duplication_rate": 0.013513513513513514,
+      "total_observations": 666
+    },
+    {
       "sha": "f00d3c7f666e560bb051c51fba3977b38885f46a",
       "short_sha": "f00d3c7f",
       "subject": "Blog: Eve automatic memory (hindsight-eve v0.2.0) (#2584)",
@@ -519,5 +533,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-07-07T07:47:29Z"
+  "updated_at": "2026-07-08T07:31:49Z"
 }
