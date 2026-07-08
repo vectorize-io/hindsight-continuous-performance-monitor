@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "2e82edee14489c4b074f74583e683d834d26da1b",
+      "short_sha": "2e82edee",
+      "subject": "docs(oracle): document the required schema, dimension matching, and start-oracle re-run (#2615)",
+      "author": "DK09876",
+      "author_date": "2026-07-07T20:35:16-07:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/2e82edee14489c4b074f74583e683d834d26da1b",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2615",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/28923181837",
+      "data_file": "data/20260708T073306Z-2e82edee.json",
+      "timestamp": "2026-07-08T06:48:25.771183+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "016b5f03639eb44f9f54ce1fd624d0f4792aac46",
       "short_sha": "016b5f03",
       "subject": "release(eve): v0.2.0",
@@ -846,5 +859,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-07-06T08:12:30Z"
+  "updated_at": "2026-07-08T07:33:06Z"
 }
