@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "2b5b47f97d7e6b6ecda9bbd5d1d87d24545d494b",
+      "short_sha": "2b5b47f9",
+      "subject": "Blog: Give Aider a Memory That Outlives the Session (#2642)",
+      "author": "Ben",
+      "author_date": "2026-07-09T15:59:35-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/2b5b47f97d7e6b6ecda9bbd5d1d87d24545d494b",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2642",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/29075577485",
+      "data_file": "data/20260710T074928Z-2b5b47f9.json",
+      "timestamp": "2026-07-10T07:05:11.449604+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "2e82edee14489c4b074f74583e683d834d26da1b",
       "short_sha": "2e82edee",
       "subject": "docs(oracle): document the required schema, dimension matching, and start-oracle re-run (#2615)",
@@ -859,5 +872,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-07-08T07:33:06Z"
+  "updated_at": "2026-07-10T07:49:29Z"
 }
