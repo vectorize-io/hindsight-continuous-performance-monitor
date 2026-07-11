@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "d2ca26afaff70110cab2ddbb79d50696e04a85aa",
+      "short_sha": "d2ca26af",
+      "subject": "Include cookbook and integration docs in docs skill (#2649)",
+      "author": "Parafee41",
+      "author_date": "2026-07-11T04:08:40+08:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/d2ca26afaff70110cab2ddbb79d50696e04a85aa",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2649",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/29143197333",
+      "data_file": "data/obs/20260711T072307Z-d2ca26af.json",
+      "timestamp": "2026-07-11T07:23:02.172784+00:00",
+      "overall_duplication_rate": 0.008169934640522876,
+      "total_observations": 612
+    },
+    {
       "sha": "2b5b47f97d7e6b6ecda9bbd5d1d87d24545d494b",
       "short_sha": "2b5b47f9",
       "subject": "Blog: Give Aider a Memory That Outlives the Session (#2642)",
@@ -547,5 +561,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-07-10T07:47:51Z"
+  "updated_at": "2026-07-11T07:23:08Z"
 }
