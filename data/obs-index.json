@@ -8,6 +8,20 @@
       "author_date": "2026-07-11T04:08:40+08:00",
       "commit_url": "https://github.com/vectorize-io/hindsight/commit/d2ca26afaff70110cab2ddbb79d50696e04a85aa",
       "pr_url": "https://github.com/vectorize-io/hindsight/pull/2649",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/29183221053",
+      "data_file": "data/obs/20260712T073056Z-d2ca26af.json",
+      "timestamp": "2026-07-12T07:30:53.279979+00:00",
+      "overall_duplication_rate": 0.01565217391304348,
+      "total_observations": 575
+    },
+    {
+      "sha": "d2ca26afaff70110cab2ddbb79d50696e04a85aa",
+      "short_sha": "d2ca26af",
+      "subject": "Include cookbook and integration docs in docs skill (#2649)",
+      "author": "Parafee41",
+      "author_date": "2026-07-11T04:08:40+08:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/d2ca26afaff70110cab2ddbb79d50696e04a85aa",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2649",
       "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/29143197333",
       "data_file": "data/obs/20260711T072307Z-d2ca26af.json",
       "timestamp": "2026-07-11T07:23:02.172784+00:00",
@@ -561,5 +575,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-07-11T07:23:08Z"
+  "updated_at": "2026-07-12T07:30:57Z"
 }

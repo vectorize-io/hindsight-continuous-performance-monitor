@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-07-12T07:30:53.279979+00:00",
+  "overall_duplication_rate": 0.01565217391304348,
+  "duplication_threshold": 0.97,
+  "total_observations": 575,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1625,
+      "facts_consolidated": 1625,
+      "facts_covered": 1467,
+      "facts_skipped": 158,
+      "observations": 575,
+      "avg_sources_per_obs": 3.0,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 9,
+          "redundant_observations": 9,
+          "duplication_rate": 0.01565217391304348
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 102,
+          "redundant_observations": 151,
+          "duplication_rate": 0.26260869565217393
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 575,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.01565217391304348,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 9
+      },
+      "0.92": {
+        "redundant_observations": 151
+      }
+    }
+  },
+  "commit": {
+    "sha": "d2ca26afaff70110cab2ddbb79d50696e04a85aa",
+    "short_sha": "d2ca26af",
+    "subject": "Include cookbook and integration docs in docs skill (#2649)",
+    "author": "Parafee41",
+    "author_date": "2026-07-11T04:08:40+08:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/d2ca26afaff70110cab2ddbb79d50696e04a85aa",
+    "pr_number": 2649,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/2649"
+  },
+  "workflow_run": {
+    "id": "29183221053",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/29183221053"
+  }
+}
