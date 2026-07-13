@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-07-13T07:40:13.458950+00:00",
+  "overall_duplication_rate": 0.016666666666666666,
+  "duplication_threshold": 0.97,
+  "total_observations": 660,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1770,
+      "facts_consolidated": 1770,
+      "facts_covered": 1602,
+      "facts_skipped": 168,
+      "observations": 660,
+      "avg_sources_per_obs": 2.8,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 10,
+          "redundant_observations": 11,
+          "duplication_rate": 0.016666666666666666
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 127,
+          "redundant_observations": 208,
+          "duplication_rate": 0.3151515151515151
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 660,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.016666666666666666,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 11
+      },
+      "0.92": {
+        "redundant_observations": 208
+      }
+    }
+  },
+  "commit": {
+    "sha": "d2ca26afaff70110cab2ddbb79d50696e04a85aa",
+    "short_sha": "d2ca26af",
+    "subject": "Include cookbook and integration docs in docs skill (#2649)",
+    "author": "Parafee41",
+    "author_date": "2026-07-11T04:08:40+08:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/d2ca26afaff70110cab2ddbb79d50696e04a85aa",
+    "pr_number": 2649,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/2649"
+  },
+  "workflow_run": {
+    "id": "29230560032",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/29230560032"
+  }
+}
