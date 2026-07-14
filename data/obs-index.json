@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "b6c7b2a2e94d5e6ea6aad4c3de8913d7059f0c58",
+      "short_sha": "b6c7b2a2",
+      "subject": "feat(devin-desktop): two-tier bank scoping + visible memory use (v0.2.0) (#2692)",
+      "author": "DK09876",
+      "author_date": "2026-07-13T15:52:21-07:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/b6c7b2a2e94d5e6ea6aad4c3de8913d7059f0c58",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2692",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/29311977103",
+      "data_file": "data/obs/20260714T072450Z-b6c7b2a2.json",
+      "timestamp": "2026-07-14T07:24:44.521704+00:00",
+      "overall_duplication_rate": 0.01,
+      "total_observations": 700
+    },
+    {
       "sha": "d2ca26afaff70110cab2ddbb79d50696e04a85aa",
       "short_sha": "d2ca26af",
       "subject": "Include cookbook and integration docs in docs skill (#2649)",
@@ -589,5 +603,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-07-13T07:40:17Z"
+  "updated_at": "2026-07-14T07:24:50Z"
 }

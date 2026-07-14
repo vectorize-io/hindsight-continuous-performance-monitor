@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-07-14T07:24:44.521704+00:00",
+  "overall_duplication_rate": 0.01,
+  "duplication_threshold": 0.97,
+  "total_observations": 700,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1835,
+      "facts_consolidated": 1835,
+      "facts_covered": 1624,
+      "facts_skipped": 211,
+      "observations": 700,
+      "avg_sources_per_obs": 2.7,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 5,
+          "redundant_observations": 7,
+          "duplication_rate": 0.01
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 131,
+          "redundant_observations": 218,
+          "duplication_rate": 0.31142857142857144
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 700,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.01,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 7
+      },
+      "0.92": {
+        "redundant_observations": 218
+      }
+    }
+  },
+  "commit": {
+    "sha": "b6c7b2a2e94d5e6ea6aad4c3de8913d7059f0c58",
+    "short_sha": "b6c7b2a2",
+    "subject": "feat(devin-desktop): two-tier bank scoping + visible memory use (v0.2.0) (#2692)",
+    "author": "DK09876",
+    "author_date": "2026-07-13T15:52:21-07:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/b6c7b2a2e94d5e6ea6aad4c3de8913d7059f0c58",
+    "pr_number": 2692,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/2692"
+  },
+  "workflow_run": {
+    "id": "29311977103",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/29311977103"
+  }
+}
