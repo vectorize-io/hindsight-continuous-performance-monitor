@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "395823f7b6611a08a777d3c03414a3270ec54d18",
+      "short_sha": "395823f7",
+      "subject": "release(claude-code): v0.7.5",
+      "author": "Ben",
+      "author_date": "2026-07-14T14:19:40-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/395823f7b6611a08a777d3c03414a3270ec54d18",
+      "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/29394839524",
+      "data_file": "data/20260715T072658Z-395823f7.json",
+      "timestamp": "2026-07-15T06:39:53.189044+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "b6c7b2a2e94d5e6ea6aad4c3de8913d7059f0c58",
       "short_sha": "b6c7b2a2",
       "subject": "feat(devin-desktop): two-tier bank scoping + visible memory use (v0.2.0) (#2692)",
@@ -924,5 +937,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-07-14T07:12:15Z"
+  "updated_at": "2026-07-15T07:26:58Z"
 }
