@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "15499870151bc381d29ed307aa8610764fdbb378",
+      "short_sha": "15499870",
+      "subject": "docs: Add Omnigent integration page (#2710)",
+      "author": "Ben",
+      "author_date": "2026-07-15T15:38:15-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/15499870151bc381d29ed307aa8610764fdbb378",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2710",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/29477581944",
+      "data_file": "data/obs/20260716T072438Z-15499870.json",
+      "timestamp": "2026-07-16T07:24:35.265048+00:00",
+      "overall_duplication_rate": 0.006329113924050633,
+      "total_observations": 632
+    },
+    {
       "sha": "395823f7b6611a08a777d3c03414a3270ec54d18",
       "short_sha": "395823f7",
       "subject": "release(claude-code): v0.7.5",
@@ -617,5 +631,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-07-15T07:19:29Z"
+  "updated_at": "2026-07-16T07:24:38Z"
 }
