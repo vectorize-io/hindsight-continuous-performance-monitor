@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "327aa05e80c89e2f02e9122123469f8b0bd91d0c",
+      "short_sha": "327aa05e",
+      "subject": "blog: The Fully Open Agent Memory Stack (Hermes + Hindsight) (#2771)",
+      "author": "Ben",
+      "author_date": "2026-07-17T15:05:50-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/327aa05e80c89e2f02e9122123469f8b0bd91d0c",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2771",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/29634215084",
+      "data_file": "data/obs/20260718T071349Z-327aa05e.json",
+      "timestamp": "2026-07-18T07:13:46.916784+00:00",
+      "overall_duplication_rate": 0.010769230769230769,
+      "total_observations": 650
+    },
+    {
       "sha": "9676fc1699c199175809285ea0e1095ab71115d0",
       "short_sha": "9676fc16",
       "subject": "fix(entity-resolver): keep every co-occurrence pair when canonicalising order (#2750)",
@@ -645,5 +659,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-07-17T07:28:52Z"
+  "updated_at": "2026-07-18T07:13:50Z"
 }

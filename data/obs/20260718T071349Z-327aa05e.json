@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-07-18T07:13:46.916784+00:00",
+  "overall_duplication_rate": 0.010769230769230769,
+  "duplication_threshold": 0.97,
+  "total_observations": 650,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1769,
+      "facts_consolidated": 1769,
+      "facts_covered": 1542,
+      "facts_skipped": 227,
+      "observations": 650,
+      "avg_sources_per_obs": 2.7,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 7,
+          "redundant_observations": 7,
+          "duplication_rate": 0.010769230769230769
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 116,
+          "redundant_observations": 191,
+          "duplication_rate": 0.29384615384615387
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 650,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.010769230769230769,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 7
+      },
+      "0.92": {
+        "redundant_observations": 191
+      }
+    }
+  },
+  "commit": {
+    "sha": "327aa05e80c89e2f02e9122123469f8b0bd91d0c",
+    "short_sha": "327aa05e",
+    "subject": "blog: The Fully Open Agent Memory Stack (Hermes + Hindsight) (#2771)",
+    "author": "Ben",
+    "author_date": "2026-07-17T15:05:50-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/327aa05e80c89e2f02e9122123469f8b0bd91d0c",
+    "pr_number": 2771,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/2771"
+  },
+  "workflow_run": {
+    "id": "29634215084",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/29634215084"
+  }
+}
