@@ -8,6 +8,20 @@
       "author_date": "2026-07-17T15:05:50-04:00",
       "commit_url": "https://github.com/vectorize-io/hindsight/commit/327aa05e80c89e2f02e9122123469f8b0bd91d0c",
       "pr_url": "https://github.com/vectorize-io/hindsight/pull/2771",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/29723097829",
+      "data_file": "data/obs/20260720T074126Z-327aa05e.json",
+      "timestamp": "2026-07-20T07:41:22.689950+00:00",
+      "overall_duplication_rate": 0.009615384615384616,
+      "total_observations": 624
+    },
+    {
+      "sha": "327aa05e80c89e2f02e9122123469f8b0bd91d0c",
+      "short_sha": "327aa05e",
+      "subject": "blog: The Fully Open Agent Memory Stack (Hermes + Hindsight) (#2771)",
+      "author": "Ben",
+      "author_date": "2026-07-17T15:05:50-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/327aa05e80c89e2f02e9122123469f8b0bd91d0c",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2771",
       "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/29676980539",
       "data_file": "data/obs/20260719T072238Z-327aa05e.json",
       "timestamp": "2026-07-19T07:22:36.158762+00:00",
@@ -673,5 +687,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-07-19T07:22:39Z"
+  "updated_at": "2026-07-20T07:41:26Z"
 }
