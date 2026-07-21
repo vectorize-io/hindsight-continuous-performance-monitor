@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-07-21T07:28:32.889784+00:00",
+  "overall_duplication_rate": 0.017107309486780714,
+  "duplication_threshold": 0.97,
+  "total_observations": 643,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1801,
+      "facts_consolidated": 1801,
+      "facts_covered": 1566,
+      "facts_skipped": 235,
+      "observations": 643,
+      "avg_sources_per_obs": 2.7,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 11,
+          "redundant_observations": 11,
+          "duplication_rate": 0.017107309486780714
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 126,
+          "redundant_observations": 201,
+          "duplication_rate": 0.31259720062208396
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 643,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.017107309486780714,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 11
+      },
+      "0.92": {
+        "redundant_observations": 201
+      }
+    }
+  },
+  "commit": {
+    "sha": "e07ca1bd0a24d5a717327ad53f7d9515434de371",
+    "short_sha": "e07ca1bd",
+    "subject": "blog: Persistent memory for ZCode (Z.ai GLM coding agent) (#2838)",
+    "author": "Ben",
+    "author_date": "2026-07-20T14:59:33-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/e07ca1bd0a24d5a717327ad53f7d9515434de371",
+    "pr_number": 2838,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/2838"
+  },
+  "workflow_run": {
+    "id": "29808062070",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/29808062070"
+  }
+}
