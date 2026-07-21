@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "e07ca1bd0a24d5a717327ad53f7d9515434de371",
+      "short_sha": "e07ca1bd",
+      "subject": "blog: Persistent memory for ZCode (Z.ai GLM coding agent) (#2838)",
+      "author": "Ben",
+      "author_date": "2026-07-20T14:59:33-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/e07ca1bd0a24d5a717327ad53f7d9515434de371",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2838",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/29808062070",
+      "data_file": "data/20260721T075709Z-e07ca1bd.json",
+      "timestamp": "2026-07-21T06:49:44.666109+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "327aa05e80c89e2f02e9122123469f8b0bd91d0c",
       "short_sha": "327aa05e",
       "subject": "blog: The Fully Open Agent Memory Stack (Hermes + Hindsight) (#2771)",
@@ -1002,5 +1015,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-07-20T07:44:05Z"
+  "updated_at": "2026-07-21T07:57:10Z"
 }
