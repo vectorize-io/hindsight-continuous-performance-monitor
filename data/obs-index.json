@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "dd6766c37d4d82712a61e62d30f4356f36ded2a6",
+      "short_sha": "dd6766c3",
+      "subject": "blog: Make Thinking Machines' Inkling your agent's memory (tutorial) (#2882)",
+      "author": "Ben",
+      "author_date": "2026-07-21T16:09:07-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/dd6766c37d4d82712a61e62d30f4356f36ded2a6",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2882",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/29897860781",
+      "data_file": "data/obs/20260722T073842Z-dd6766c3.json",
+      "timestamp": "2026-07-22T07:38:38.633559+00:00",
+      "overall_duplication_rate": 0.01155115511551155,
+      "total_observations": 606
+    },
+    {
       "sha": "e07ca1bd0a24d5a717327ad53f7d9515434de371",
       "short_sha": "e07ca1bd",
       "subject": "blog: Persistent memory for ZCode (Z.ai GLM coding agent) (#2838)",
@@ -701,5 +715,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-07-21T07:28:37Z"
+  "updated_at": "2026-07-22T07:38:43Z"
 }
