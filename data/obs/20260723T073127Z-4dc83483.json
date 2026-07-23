@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-07-23T07:31:24.374946+00:00",
+  "overall_duplication_rate": 0.00927357032457496,
+  "duplication_threshold": 0.97,
+  "total_observations": 647,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1864,
+      "facts_consolidated": 1864,
+      "facts_covered": 1619,
+      "facts_skipped": 245,
+      "observations": 647,
+      "avg_sources_per_obs": 2.9,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 6,
+          "redundant_observations": 6,
+          "duplication_rate": 0.00927357032457496
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 129,
+          "redundant_observations": 208,
+          "duplication_rate": 0.321483771251932
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 647,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.00927357032457496,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 6
+      },
+      "0.92": {
+        "redundant_observations": 208
+      }
+    }
+  },
+  "commit": {
+    "sha": "4dc8348348f3e0b50da9071357955a2995c4f0e0",
+    "short_sha": "4dc83483",
+    "subject": "blog: Your 1M-Token Context Window Is Not Memory (#2910)",
+    "author": "Ben",
+    "author_date": "2026-07-22T15:24:43-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/4dc8348348f3e0b50da9071357955a2995c4f0e0",
+    "pr_number": 2910,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/2910"
+  },
+  "workflow_run": {
+    "id": "29986039023",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/29986039023"
+  }
+}
