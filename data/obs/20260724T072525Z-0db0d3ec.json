@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-07-24T07:25:20.268088+00:00",
+  "overall_duplication_rate": 0.014900662251655629,
+  "duplication_threshold": 0.97,
+  "total_observations": 604,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1823,
+      "facts_consolidated": 1823,
+      "facts_covered": 1549,
+      "facts_skipped": 274,
+      "observations": 604,
+      "avg_sources_per_obs": 2.9,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 9,
+          "redundant_observations": 9,
+          "duplication_rate": 0.014900662251655629
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 108,
+          "redundant_observations": 183,
+          "duplication_rate": 0.3029801324503311
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 604,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.014900662251655629,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 9
+      },
+      "0.92": {
+        "redundant_observations": 183
+      }
+    }
+  },
+  "commit": {
+    "sha": "0db0d3ec93468ccaa3fa921b51ac486f33863108",
+    "short_sha": "0db0d3ec",
+    "subject": "blog: Give Roo Code a Memory So Every Task Builds on the Last (#2931)",
+    "author": "Ben",
+    "author_date": "2026-07-23T15:30:14-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/0db0d3ec93468ccaa3fa921b51ac486f33863108",
+    "pr_number": 2931,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/2931"
+  },
+  "workflow_run": {
+    "id": "30073226351",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/30073226351"
+  }
+}
