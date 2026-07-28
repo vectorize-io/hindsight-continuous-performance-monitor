@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "e57765e0123da0520b660b55f49d0b0147dbe3c0",
+      "short_sha": "e57765e0",
+      "subject": "feat(zapier): remove memoryDefenseTriggered trigger (gated capability) (#2994)",
+      "author": "Ben",
+      "author_date": "2026-07-27T16:46:59-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/e57765e0123da0520b660b55f49d0b0147dbe3c0",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2994",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/30335978287",
+      "data_file": "data/obs/20260728T072832Z-e57765e0.json",
+      "timestamp": "2026-07-28T07:28:28.974189+00:00",
+      "overall_duplication_rate": 0.01517706576728499,
+      "total_observations": 593
+    },
+    {
       "sha": "ed120a256d51d731085ec8aca724573a7f2f1e1c",
       "short_sha": "ed120a25",
       "subject": "blog: recall vs reflect (the two ways to read agent memory) (#2954)",
@@ -785,5 +799,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-07-27T07:37:22Z"
+  "updated_at": "2026-07-28T07:28:33Z"
 }
