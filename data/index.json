@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "2dc40f3bc787a4bcda74a1e8551b2d693fb7f40a",
+      "short_sha": "2dc40f3b",
+      "subject": "blog: How to move your agent's memory off a vector database (#3022)",
+      "author": "Ben",
+      "author_date": "2026-07-28T14:22:32-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/2dc40f3bc787a4bcda74a1e8551b2d693fb7f40a",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/3022",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/30429388017",
+      "data_file": "data/20260729T080308Z-2dc40f3b.json",
+      "timestamp": "2026-07-29T06:52:07.980163+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "e57765e0123da0520b660b55f49d0b0147dbe3c0",
       "short_sha": "e57765e0",
       "subject": "feat(zapier): remove memoryDefenseTriggered trigger (gated capability) (#2994)",
@@ -1106,5 +1119,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-07-28T07:39:02Z"
+  "updated_at": "2026-07-29T08:03:09Z"
 }
