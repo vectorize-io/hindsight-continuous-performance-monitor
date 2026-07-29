@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-07-29T07:32:56.826528+00:00",
+  "overall_duplication_rate": 0.00718132854578097,
+  "duplication_threshold": 0.97,
+  "total_observations": 557,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1845,
+      "facts_consolidated": 1845,
+      "facts_covered": 1576,
+      "facts_skipped": 269,
+      "observations": 557,
+      "avg_sources_per_obs": 3.1,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 4,
+          "redundant_observations": 4,
+          "duplication_rate": 0.00718132854578097
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 102,
+          "redundant_observations": 157,
+          "duplication_rate": 0.28186714542190305
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 557,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.00718132854578097,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 4
+      },
+      "0.92": {
+        "redundant_observations": 157
+      }
+    }
+  },
+  "commit": {
+    "sha": "2dc40f3bc787a4bcda74a1e8551b2d693fb7f40a",
+    "short_sha": "2dc40f3b",
+    "subject": "blog: How to move your agent's memory off a vector database (#3022)",
+    "author": "Ben",
+    "author_date": "2026-07-28T14:22:32-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/2dc40f3bc787a4bcda74a1e8551b2d693fb7f40a",
+    "pr_number": 3022,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/3022"
+  },
+  "workflow_run": {
+    "id": "30429388017",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/30429388017"
+  }
+}
