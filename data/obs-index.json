@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "083db61e0a3d50b84a7931fe44be25c100f24195",
+      "short_sha": "083db61e",
+      "subject": "feat(memories): pluggable memories store + cross-store txns + documents/chunks",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-07-28T18:01:36+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/083db61e0a3d50b84a7931fe44be25c100f24195",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2917",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/30464070604",
+      "data_file": "data/obs/20260729T155325Z-083db61e.json",
+      "timestamp": "2026-07-29T15:53:20.321078+00:00",
+      "overall_duplication_rate": 0.0035026269702276708,
+      "total_observations": 571
+    },
+    {
       "sha": "2dc40f3bc787a4bcda74a1e8551b2d693fb7f40a",
       "short_sha": "2dc40f3b",
       "subject": "blog: How to move your agent's memory off a vector database (#3022)",
@@ -813,5 +827,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-07-29T07:33:00Z"
+  "updated_at": "2026-07-29T15:53:26Z"
 }
