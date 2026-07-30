@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "cc1eaeeeba58ba7dad802cd456391df6a4708791",
+      "short_sha": "cc1eaeee",
+      "subject": "blog: Give GitHub Copilot CLI a memory of your codebase (#3055)",
+      "author": "Ben",
+      "author_date": "2026-07-29T16:01:37-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/cc1eaeeeba58ba7dad802cd456391df6a4708791",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/3055",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/30520688835",
+      "data_file": "data/obs/20260730T072729Z-cc1eaeee.json",
+      "timestamp": "2026-07-30T07:27:26.473027+00:00",
+      "overall_duplication_rate": 0.008802816901408451,
+      "total_observations": 568
+    },
+    {
       "sha": "083db61e0a3d50b84a7931fe44be25c100f24195",
       "short_sha": "083db61e",
       "subject": "feat(memories): pluggable memories store + cross-store txns + documents/chunks",
@@ -827,5 +841,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-07-29T15:53:26Z"
+  "updated_at": "2026-07-30T07:27:30Z"
 }
