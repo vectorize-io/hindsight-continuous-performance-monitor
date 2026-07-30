@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "f67985e1a6a5626e369a9ff1ba14f220e2f1d982",
+      "short_sha": "f67985e1",
+      "subject": "feat(memories): pluggable memories store + cross-store txns + documents/chunks",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-07-28T18:01:36+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/f67985e1a6a5626e369a9ff1ba14f220e2f1d982",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2917",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/30524298328",
+      "data_file": "data/20260730T075714Z-f67985e1.json",
+      "timestamp": "2026-07-30T07:51:41.003683+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "083db61e0a3d50b84a7931fe44be25c100f24195",
       "short_sha": "083db61e",
       "subject": "feat(memories): pluggable memories store + cross-store txns + documents/chunks",
@@ -1132,5 +1145,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-07-29T16:12:46Z"
+  "updated_at": "2026-07-30T07:57:15Z"
 }
