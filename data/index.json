@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "b5d8439c8f1b8aa158f4e8278334066792638543",
+      "short_sha": "b5d8439c",
+      "subject": "hindsight-coding-agents: harness-pluggable long-term memory for coding agents (#2522)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-07-31T22:15:21+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/b5d8439c8f1b8aa158f4e8278334066792638543",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/2522",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/30688348900",
+      "data_file": "data/20260801T075713Z-b5d8439c.json",
+      "timestamp": "2026-08-01T06:48:49.206057+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "a90f9223765af3c8ad5692ce2b9fa22efbb656ba",
       "short_sha": "a90f9223",
       "subject": "blog(github-copilot): redate to 2026-07-30 (#3087)",
@@ -1158,5 +1171,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-07-31T08:07:53Z"
+  "updated_at": "2026-08-01T07:57:13Z"
 }
