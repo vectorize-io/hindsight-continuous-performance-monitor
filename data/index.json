@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "b5548ac25cc3812b4e10d0107c2a4f5bfd91d3a9",
+      "short_sha": "b5548ac2",
+      "subject": "chore: update star history",
+      "author": "github-actions[bot]",
+      "author_date": "2026-08-04T04:25:24Z",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/b5548ac25cc3812b4e10d0107c2a4f5bfd91d3a9",
+      "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/30885199055",
+      "data_file": "data/20260804T075820Z-b5548ac2.json",
+      "timestamp": "2026-08-04T06:49:56.531032+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "b5d8439c8f1b8aa158f4e8278334066792638543",
       "short_sha": "b5d8439c",
       "subject": "hindsight-coding-agents: harness-pluggable long-term memory for coding agents (#2522)",
@@ -1197,5 +1210,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-08-03T08:11:05Z"
+  "updated_at": "2026-08-04T07:58:21Z"
 }
