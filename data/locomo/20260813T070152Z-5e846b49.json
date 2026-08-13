@@ -1,0 +1,133 @@
+{
+  "overall_accuracy": 88.80778588807786,
+  "total_correct": 365,
+  "total_questions": 411,
+  "total_invalid": 0,
+  "total_valid": 411,
+  "num_items": 3,
+  "model_config": {
+    "hindsight": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash-lite"
+    },
+    "answer_generation": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash"
+    },
+    "judge": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash-lite"
+    }
+  },
+  "item_results": [
+    {
+      "item_id": "conv-26",
+      "metrics": {
+        "accuracy": 91.44736842105263,
+        "correct": 139,
+        "total": 152,
+        "invalid": 0,
+        "valid_total": 152,
+        "category_stats": {
+          "4": {
+            "correct": 64,
+            "total": 70,
+            "invalid": 0
+          },
+          "2": {
+            "correct": 35,
+            "total": 37,
+            "invalid": 0
+          },
+          "3": {
+            "correct": 12,
+            "total": 13,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 28,
+            "total": 32,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 19
+    },
+    {
+      "item_id": "conv-30",
+      "metrics": {
+        "accuracy": 91.35802469135803,
+        "correct": 74,
+        "total": 81,
+        "invalid": 0,
+        "valid_total": 81,
+        "category_stats": {
+          "2": {
+            "correct": 26,
+            "total": 26,
+            "invalid": 0
+          },
+          "4": {
+            "correct": 38,
+            "total": 44,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 10,
+            "total": 11,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 19
+    },
+    {
+      "item_id": "conv-43",
+      "metrics": {
+        "accuracy": 85.39325842696628,
+        "correct": 152,
+        "total": 178,
+        "invalid": 0,
+        "valid_total": 178,
+        "category_stats": {
+          "1": {
+            "correct": 23,
+            "total": 31,
+            "invalid": 0
+          },
+          "2": {
+            "correct": 23,
+            "total": 26,
+            "invalid": 0
+          },
+          "4": {
+            "correct": 100,
+            "total": 107,
+            "invalid": 0
+          },
+          "3": {
+            "correct": 6,
+            "total": 14,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 29
+    }
+  ],
+  "timestamp": "2026-08-13T07:01:53Z",
+  "commit": {
+    "sha": "5e846b491792ebf6b4fca7b91461529c48eb37bb",
+    "short_sha": "5e846b49",
+    "subject": "chore: update star history",
+    "author": "github-actions[bot]",
+    "author_date": "2026-08-13T04:00:06Z",
+    "url": "https://github.com/vectorize-io/hindsight/commit/5e846b491792ebf6b4fca7b91461529c48eb37bb",
+    "pr_number": null,
+    "pr_url": null
+  },
+  "workflow_run": {
+    "id": "31673753659",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/31673753659"
+  }
+}
