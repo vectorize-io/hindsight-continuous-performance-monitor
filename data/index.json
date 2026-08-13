@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "5e846b491792ebf6b4fca7b91461529c48eb37bb",
+      "short_sha": "5e846b49",
+      "subject": "chore: update star history",
+      "author": "github-actions[bot]",
+      "author_date": "2026-08-13T04:00:06Z",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/5e846b491792ebf6b4fca7b91461529c48eb37bb",
+      "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/31673753659",
+      "data_file": "data/20260813T071755Z-5e846b49.json",
+      "timestamp": "2026-08-13T06:25:58.938329+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "4fa25f47d2b1d09cf6b6e458875c62f20871132f",
       "short_sha": "4fa25f47",
       "subject": "feat(coding-agents)!: drop retainEveryTurns; batching belongs on the server (#3415)",
@@ -1314,5 +1327,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-08-12T07:41:46Z"
+  "updated_at": "2026-08-13T07:17:57Z"
 }
