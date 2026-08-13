@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-08-13T07:11:10.576378+00:00",
+  "overall_duplication_rate": 0.013266998341625208,
+  "duplication_threshold": 0.97,
+  "total_observations": 603,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1841,
+      "facts_consolidated": 1841,
+      "facts_covered": 1567,
+      "facts_skipped": 274,
+      "observations": 603,
+      "avg_sources_per_obs": 3.1,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 7,
+          "redundant_observations": 8,
+          "duplication_rate": 0.013266998341625208
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 113,
+          "redundant_observations": 196,
+          "duplication_rate": 0.3250414593698176
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 603,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.013266998341625208,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 8
+      },
+      "0.92": {
+        "redundant_observations": 196
+      }
+    }
+  },
+  "commit": {
+    "sha": "5e846b491792ebf6b4fca7b91461529c48eb37bb",
+    "short_sha": "5e846b49",
+    "subject": "chore: update star history",
+    "author": "github-actions[bot]",
+    "author_date": "2026-08-13T04:00:06Z",
+    "url": "https://github.com/vectorize-io/hindsight/commit/5e846b491792ebf6b4fca7b91461529c48eb37bb",
+    "pr_number": null,
+    "pr_url": null
+  },
+  "workflow_run": {
+    "id": "31673753659",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/31673753659"
+  }
+}
