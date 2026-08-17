@@ -1,0 +1,565 @@
+{
+  "timestamp": "2026-08-17T06:06:31.021316+00:00",
+  "scale": "large",
+  "git_sha": "ec9cc70",
+  "suites": [
+    {
+      "name": "retain",
+      "duration_seconds": 246.018,
+      "success": true,
+      "error": null,
+      "retain": {
+        "total_items": 5000,
+        "total_duration_seconds": 246.018,
+        "throughput_items_per_sec": 20.32
+      },
+      "recall": null,
+      "consolidation": null,
+      "graph_maintenance": null,
+      "graph_contention": null,
+      "stats": null
+    },
+    {
+      "name": "recall",
+      "duration_seconds": 237.64,
+      "success": true,
+      "error": null,
+      "retain": null,
+      "recall": {
+        "bank_size": 5000,
+        "concurrency": 16,
+        "latency": {
+          "p50": 2.5695829329999924,
+          "p95": 3.613574129999961,
+          "p99": 3.7145530679999865,
+          "mean": 2.3763997182100023,
+          "min": 0.3983059189999949,
+          "max": 3.7145530679999865,
+          "count": 100
+        },
+        "throughput_queries_per_sec": 6.73,
+        "phase_timings": {
+          "backend_acquisition": {
+            "p50": 7.152557373046875E-7,
+            "p95": 0.000001430511474609375,
+            "p99": 0.00000286102294921875,
+            "mean": 6.961822509765625E-7,
+            "min": 4.76837158203125E-7,
+            "max": 0.00000286102294921875,
+            "count": 100
+          },
+          "generate_query_embedding": {
+            "p50": 0.46014857292175293,
+            "p95": 1.3893263339996338,
+            "p99": 1.3920061588287354,
+            "mean": 0.7697073435783386,
+            "min": 0.08979368209838867,
+            "max": 1.3920061588287354,
+            "count": 100
+          },
+          "parallel_retrieval": {
+            "p50": 1.6101431846618652,
+            "p95": 2.0603668689727783,
+            "p99": 2.5988359451293945,
+            "mean": 1.4809241700172424,
+            "min": 0.2579953670501709,
+            "max": 2.5988359451293945,
+            "count": 100
+          },
+          "retrieval_temporal_extraction": {
+            "p50": 0.012903213500976562,
+            "p95": 0.505033016204834,
+            "p99": 0.5053853988647461,
+            "mean": 0.060966956615448,
+            "min": 0.0003898143768310547,
+            "max": 0.5053853988647461,
+            "count": 100
+          },
+          "rrf_merge": {
+            "p50": 0.004002809524536133,
+            "p95": 0.010874509811401367,
+            "p99": 0.35593605041503906,
+            "mean": 0.008199694156646729,
+            "min": 0.0028548240661621094,
+            "max": 0.35593605041503906,
+            "count": 100
+          },
+          "reranking": {
+            "p50": 0.0005254745483398438,
+            "p95": 0.0013451576232910156,
+            "p99": 0.004004240036010742,
+            "mean": 0.0006934309005737305,
+            "min": 0.0004489421844482422,
+            "max": 0.004004240036010742,
+            "count": 100
+          },
+          "combined_scoring": {
+            "p50": 0.0031044483184814453,
+            "p95": 0.005743265151977539,
+            "p99": 0.012388467788696289,
+            "mean": 0.003631591796875,
+            "min": 0.002827167510986328,
+            "max": 0.012388467788696289,
+            "count": 100
+          },
+          "token_filtering": {
+            "p50": 0.002912759780883789,
+            "p95": 0.037725210189819336,
+            "p99": 0.3697690963745117,
+            "mean": 0.009527335166931153,
+            "min": 0.0027179718017578125,
+            "max": 0.3697690963745117,
+            "count": 100
+          },
+          "result_serialization": {
+            "p50": 0.00389862060546875,
+            "p95": 0.0069544315338134766,
+            "p99": 0.37322306632995605,
+            "mean": 0.008041603565216065,
+            "min": 0.003668546676635742,
+            "max": 0.37322306632995605,
+            "count": 100
+          },
+          "entity_build": {
+            "p50": 0.002185344696044922,
+            "p95": 0.004236459732055664,
+            "p99": 0.3678312301635742,
+            "mean": 0.006136162281036377,
+            "min": 0.0020112991333007812,
+            "max": 0.3678312301635742,
+            "count": 100
+          },
+          "semaphore_wait": {
+            "p50": 0.0000021457672119140625,
+            "p95": 0.0000045299530029296875,
+            "p99": 0.000007152557373046875,
+            "mean": 0.000002453327178955078,
+            "min": 0.0000016689300537109375,
+            "max": 0.000007152557373046875,
+            "count": 100
+          },
+          "trace_finalize": {
+            "p50": 0.009346961975097656,
+            "p95": 0.015797138214111328,
+            "p99": 0.38366246223449707,
+            "mean": 0.0207204270362854,
+            "min": 0.007909774780273438,
+            "max": 0.38366246223449707,
+            "count": 100
+          }
+        },
+        "sources_per_observation": null
+      },
+      "consolidation": null,
+      "graph_maintenance": null,
+      "graph_contention": null,
+      "stats": null
+    },
+    {
+      "name": "recall-with-observations",
+      "duration_seconds": 9248.8,
+      "success": true,
+      "error": null,
+      "retain": null,
+      "recall": {
+        "bank_size": 5000,
+        "concurrency": 16,
+        "latency": {
+          "p50": 6.40195446000007,
+          "p95": 555.5902402690001,
+          "p99": 560.9268733859999,
+          "mean": 92.48800085127999,
+          "min": 1.5378577070000574,
+          "max": 560.9268733859999,
+          "count": 100
+        },
+        "throughput_queries_per_sec": 0.17,
+        "phase_timings": {
+          "backend_acquisition": {
+            "p50": 4.76837158203125E-7,
+            "p95": 0.0000011920928955078125,
+            "p99": 0.0000016689300537109375,
+            "mean": 6.175041198730468E-7,
+            "min": 4.76837158203125E-7,
+            "max": 0.0000016689300537109375,
+            "count": 100
+          },
+          "generate_query_embedding": {
+            "p50": 0.3492424488067627,
+            "p95": 1.6145269870758057,
+            "p99": 1.697498083114624,
+            "mean": 0.8421237778663635,
+            "min": 0.08718037605285645,
+            "max": 1.697498083114624,
+            "count": 100
+          },
+          "parallel_retrieval": {
+            "p50": 4.740556001663208,
+            "p95": 554.7988314628601,
+            "p99": 559.5981850624084,
+            "mean": 91.42388267755508,
+            "min": 1.3726940155029297,
+            "max": 559.5981850624084,
+            "count": 100
+          },
+          "retrieval_temporal_extraction": {
+            "p50": 0.01091766357421875,
+            "p95": 0.0811455249786377,
+            "p99": 0.14475131034851074,
+            "mean": 0.02428583860397339,
+            "min": 0.0004968643188476562,
+            "max": 0.14475131034851074,
+            "count": 100
+          },
+          "rrf_merge": {
+            "p50": 0.00863027572631836,
+            "p95": 0.051650047302246094,
+            "p99": 0.38811445236206055,
+            "mean": 0.024502418041229247,
+            "min": 0.00653386116027832,
+            "max": 0.38811445236206055,
+            "count": 100
+          },
+          "reranking": {
+            "p50": 0.0011119842529296875,
+            "p95": 0.008951187133789062,
+            "p99": 0.019108057022094727,
+            "mean": 0.002117006778717041,
+            "min": 0.0008509159088134766,
+            "max": 0.019108057022094727,
+            "count": 100
+          },
+          "combined_scoring": {
+            "p50": 0.0039865970611572266,
+            "p95": 0.0251615047454834,
+            "p99": 0.027991771697998047,
+            "mean": 0.006034417152404785,
+            "min": 0.0032525062561035156,
+            "max": 0.027991771697998047,
+            "count": 100
+          },
+          "token_filtering": {
+            "p50": 0.0029625892639160156,
+            "p95": 0.01105046272277832,
+            "p99": 0.023253917694091797,
+            "mean": 0.004375178813934327,
+            "min": 0.0028247833251953125,
+            "max": 0.023253917694091797,
+            "count": 100
+          },
+          "result_serialization": {
+            "p50": 0.0039255619049072266,
+            "p95": 0.018781423568725586,
+            "p99": 0.03623819351196289,
+            "mean": 0.006205904483795166,
+            "min": 0.0037698745727539062,
+            "max": 0.03623819351196289,
+            "count": 100
+          },
+          "entity_build": {
+            "p50": 0.0022399425506591797,
+            "p95": 0.0099945068359375,
+            "p99": 0.01869988441467285,
+            "mean": 0.003507852554321289,
+            "min": 0.002035379409790039,
+            "max": 0.01869988441467285,
+            "count": 100
+          },
+          "semaphore_wait": {
+            "p50": 0.0000021457672119140625,
+            "p95": 0.0000045299530029296875,
+            "p99": 0.0000064373016357421875,
+            "mean": 0.000002446174621582031,
+            "min": 0.0000016689300537109375,
+            "max": 0.0000064373016357421875,
+            "count": 100
+          },
+          "trace_finalize": {
+            "p50": 0.013302326202392578,
+            "p95": 0.07348012924194336,
+            "p99": 0.08933782577514648,
+            "mean": 0.020137124061584473,
+            "min": 0.011157989501953125,
+            "max": 0.08933782577514648,
+            "count": 100
+          }
+        },
+        "sources_per_observation": 113
+      },
+      "consolidation": null,
+      "graph_maintenance": null,
+      "graph_contention": null,
+      "stats": null
+    },
+    {
+      "name": "recall-temporal",
+      "duration_seconds": 244.885,
+      "success": true,
+      "error": null,
+      "retain": null,
+      "recall": {
+        "bank_size": 5000,
+        "concurrency": 16,
+        "latency": {
+          "p50": 2.558163546999822,
+          "p95": 3.9533882230002746,
+          "p99": 4.153859472000022,
+          "mean": 2.448851473509994,
+          "min": 0.8043724259996452,
+          "max": 4.153859472000022,
+          "count": 100
+        },
+        "throughput_queries_per_sec": 6.53,
+        "phase_timings": {
+          "backend_acquisition": {
+            "p50": 4.76837158203125E-7,
+            "p95": 0.0000011920928955078125,
+            "p99": 0.0000016689300537109375,
+            "mean": 6.175041198730468E-7,
+            "min": 2.384185791015625E-7,
+            "max": 0.0000016689300537109375,
+            "count": 100
+          },
+          "generate_query_embedding": {
+            "p50": 0.31156229972839355,
+            "p95": 0.549433708190918,
+            "p99": 0.5545241832733154,
+            "mean": 0.39355629920959473,
+            "min": 0.10305595397949219,
+            "max": 0.5545241832733154,
+            "count": 100
+          },
+          "parallel_retrieval": {
+            "p50": 2.0082411766052246,
+            "p95": 3.249562978744507,
+            "p99": 3.5509135723114014,
+            "mean": 1.9406302237510682,
+            "min": 0.2884666919708252,
+            "max": 3.5509135723114014,
+            "count": 100
+          },
+          "retrieval_temporal_extraction": {
+            "p50": 1.3951857089996338,
+            "p95": 2.9264841079711914,
+            "p99": 3.0254592895507812,
+            "mean": 1.426809675693512,
+            "min": 0.028876066207885742,
+            "max": 3.0254592895507812,
+            "count": 100
+          },
+          "rrf_merge": {
+            "p50": 0.004611015319824219,
+            "p95": 0.006830453872680664,
+            "p99": 0.010397911071777344,
+            "mean": 0.0047722959518432615,
+            "min": 0.0030808448791503906,
+            "max": 0.010397911071777344,
+            "count": 100
+          },
+          "reranking": {
+            "p50": 0.0005588531494140625,
+            "p95": 0.0010378360748291016,
+            "p99": 0.0014781951904296875,
+            "mean": 0.0006117200851440429,
+            "min": 0.00046825408935546875,
+            "max": 0.0014781951904296875,
+            "count": 100
+          },
+          "combined_scoring": {
+            "p50": 0.00323486328125,
+            "p95": 0.004240751266479492,
+            "p99": 0.006059169769287109,
+            "mean": 0.0034065794944763183,
+            "min": 0.002938985824584961,
+            "max": 0.006059169769287109,
+            "count": 100
+          },
+          "token_filtering": {
+            "p50": 0.006493568420410156,
+            "p95": 0.00962686538696289,
+            "p99": 0.35807013511657715,
+            "mean": 0.009986464977264404,
+            "min": 0.0028543472290039062,
+            "max": 0.35807013511657715,
+            "count": 100
+          },
+          "result_serialization": {
+            "p50": 0.0038747787475585938,
+            "p95": 0.004811525344848633,
+            "p99": 0.005957126617431641,
+            "mean": 0.004099314212799072,
+            "min": 0.0036897659301757812,
+            "max": 0.005957126617431641,
+            "count": 100
+          },
+          "entity_build": {
+            "p50": 0.0022628307342529297,
+            "p95": 0.00330352783203125,
+            "p99": 0.3781619071960449,
+            "mean": 0.006162693500518799,
+            "min": 0.0020623207092285156,
+            "max": 0.3781619071960449,
+            "count": 100
+          },
+          "semaphore_wait": {
+            "p50": 0.0000021457672119140625,
+            "p95": 0.0000045299530029296875,
+            "p99": 0.000005245208740234375,
+            "mean": 0.0000024294853210449218,
+            "min": 0.0000016689300537109375,
+            "max": 0.000005245208740234375,
+            "count": 100
+          },
+          "trace_finalize": {
+            "p50": 0.009749889373779297,
+            "p95": 0.012048482894897461,
+            "p99": 0.3636941909790039,
+            "mean": 0.013503737449645996,
+            "min": 0.008489370346069336,
+            "max": 0.3636941909790039,
+            "count": 100
+          }
+        },
+        "sources_per_observation": null
+      },
+      "consolidation": null,
+      "graph_maintenance": null,
+      "graph_contention": null,
+      "stats": null
+    },
+    {
+      "name": "consolidation",
+      "duration_seconds": 10.059,
+      "success": true,
+      "error": null,
+      "retain": null,
+      "recall": null,
+      "consolidation": {
+        "total_items": 5000,
+        "memories_processed": 100,
+        "observations_created": 100,
+        "observations_updated": 0,
+        "observations_merged": 0,
+        "skipped": 0,
+        "total_duration_seconds": 10.059,
+        "throughput_memories_per_sec": 9.94
+      },
+      "graph_maintenance": null,
+      "graph_contention": null,
+      "stats": null
+    },
+    {
+      "name": "graph-maintenance",
+      "duration_seconds": 37.122,
+      "success": true,
+      "error": null,
+      "retain": null,
+      "recall": null,
+      "consolidation": null,
+      "graph_maintenance": {
+        "bank_size": 15000,
+        "deleted_units": 1500,
+        "victims_enqueued": 12887,
+        "relink_units_processed": 12887,
+        "relink_links_added": 888390,
+        "orphan_entities_pruned": 0,
+        "stale_cooccurrences_pruned": 199,
+        "total_duration_seconds": 37.122,
+        "throughput_units_per_sec": 347.15,
+        "ms_per_victim": 2.88,
+        "semantic_ann_seconds": 13.85,
+        "semantic_ann_calls": 258,
+        "temporal_seconds": 1.505,
+        "temporal_calls": 258
+      },
+      "graph_contention": null,
+      "stats": null
+    },
+    {
+      "name": "graph-maintenance-contention",
+      "duration_seconds": 351.89,
+      "success": true,
+      "error": null,
+      "retain": null,
+      "recall": null,
+      "consolidation": null,
+      "graph_maintenance": null,
+      "graph_contention": {
+        "contention_entities": 200,
+        "contention_pairs": 4000,
+        "upsert_workers": 16,
+        "sweep_workers": 2,
+        "total_upserts": 720,
+        "upsert_deadlocks": 0,
+        "sweep_passes_attempted": 99,
+        "sweep_deadlocks_observed": 0,
+        "sweep_passes_dropped": 0,
+        "sweep_passes_succeeded": 99,
+        "sweep_deadlock_escape_rate": 0.0,
+        "sweep_latency": {
+          "p50": 1.4658674309998787,
+          "p95": 6.590898926000136,
+          "p99": 226.89983888799998,
+          "mean": 5.496566437929278,
+          "min": 0.08582098400029281,
+          "max": 226.89983888799998,
+          "count": 99
+        },
+        "total_duration_seconds": 351.89
+      },
+      "stats": null
+    },
+    {
+      "name": "stats",
+      "duration_seconds": 58.414,
+      "success": true,
+      "error": null,
+      "retain": null,
+      "recall": null,
+      "consolidation": null,
+      "graph_maintenance": null,
+      "graph_contention": null,
+      "stats": {
+        "bank_size": 15000,
+        "concurrency": 16,
+        "total_units": 15100,
+        "total_links": 452856,
+        "total_entities": 1420,
+        "cold_latency": {
+          "p50": 0.6483137629998055,
+          "p95": 0.6906931349999468,
+          "p99": 0.7038136649998705,
+          "mean": 0.5841386945600334,
+          "min": 0.17363495200061152,
+          "max": 0.7038136649998705,
+          "count": 100
+        },
+        "cold_throughput_per_sec": 27.39,
+        "warm_latency": {
+          "p50": 0.000004108000211999752,
+          "p95": 0.0000067519995354814455,
+          "p99": 0.00002048799979093019,
+          "mean": 0.0000045843600219086514,
+          "min": 0.0000037770005292259157,
+          "max": 0.00002048799979093019,
+          "count": 100
+        },
+        "cache_speedup": 157817.4
+      }
+    }
+  ],
+  "commit": {
+    "sha": "ec9cc702ec55898bcac0db9c9e598305772ad7ad",
+    "short_sha": "ec9cc702",
+    "subject": "chore: update star history",
+    "author": "github-actions[bot]",
+    "author_date": "2026-08-17T03:35:25Z",
+    "url": "https://github.com/vectorize-io/hindsight/commit/ec9cc702ec55898bcac0db9c9e598305772ad7ad",
+    "pr_number": null,
+    "pr_url": null
+  },
+  "workflow_run": {
+    "id": "32000249592",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/32000249592"
+  }
+}
