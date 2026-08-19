@@ -1,6 +1,21 @@
 {
   "runs": [
     {
+      "sha": "9db22115a474482fda697f014d759b9d228119b1",
+      "short_sha": "9db22115",
+      "subject": "chore: update star history",
+      "author": "github-actions[bot]",
+      "author_date": "2026-08-19T03:33:48Z",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/9db22115a474482fda697f014d759b9d228119b1",
+      "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/32221932515",
+      "data_file": "data/locomo/20260819T062805Z-9db22115.json",
+      "timestamp": "2026-08-19T06:28:05Z",
+      "overall_accuracy": 88.56447688564477,
+      "num_items": 3,
+      "total_questions": 411
+    },
+    {
       "sha": "997f27f1bf8cd52aede4a78d84eb0a0580c95ea5",
       "short_sha": "997f27f1",
       "subject": "chore: update star history",
@@ -856,5 +871,5 @@
       "total_questions": 411
     }
   ],
-  "updated_at": "2026-08-18T06:24:40Z"
+  "updated_at": "2026-08-19T06:28:06Z"
 }
