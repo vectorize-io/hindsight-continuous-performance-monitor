@@ -1,6 +1,21 @@
 {
   "runs": [
     {
+      "sha": "cd8d4d39981f2fa25cfa29b25f18acf1c8451a75",
+      "short_sha": "cd8d4d39",
+      "subject": "feat(recall): add a per-bank enable_text_search toggle for pure vector recall (#3819)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-08-27T10:07:28+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/cd8d4d39981f2fa25cfa29b25f18acf1c8451a75",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/3819",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/33056319806",
+      "data_file": "data/locomo/20260827T094050Z-cd8d4d39.json",
+      "timestamp": "2026-08-27T09:40:50Z",
+      "overall_accuracy": 88.07785888077859,
+      "num_items": 3,
+      "total_questions": 411
+    },
+    {
       "sha": "fc30cf0e6fddeb31290f3f1955805b46b6bd9d56",
       "short_sha": "fc30cf0e",
       "subject": "chore: update star history",
@@ -976,5 +991,5 @@
       "total_questions": 411
     }
   ],
-  "updated_at": "2026-08-26T06:44:37Z"
+  "updated_at": "2026-08-27T09:40:51Z"
 }

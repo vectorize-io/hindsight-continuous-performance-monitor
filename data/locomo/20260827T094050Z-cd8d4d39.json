@@ -1,0 +1,133 @@
+{
+  "overall_accuracy": 88.07785888077859,
+  "total_correct": 362,
+  "total_questions": 411,
+  "total_invalid": 0,
+  "total_valid": 411,
+  "num_items": 3,
+  "model_config": {
+    "hindsight": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash-lite"
+    },
+    "answer_generation": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash"
+    },
+    "judge": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash-lite"
+    }
+  },
+  "item_results": [
+    {
+      "item_id": "conv-30",
+      "metrics": {
+        "accuracy": 92.5925925925926,
+        "correct": 75,
+        "total": 81,
+        "invalid": 0,
+        "valid_total": 81,
+        "category_stats": {
+          "4": {
+            "correct": 40,
+            "total": 44,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 10,
+            "total": 11,
+            "invalid": 0
+          },
+          "2": {
+            "correct": 25,
+            "total": 26,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 19
+    },
+    {
+      "item_id": "conv-26",
+      "metrics": {
+        "accuracy": 88.1578947368421,
+        "correct": 134,
+        "total": 152,
+        "invalid": 0,
+        "valid_total": 152,
+        "category_stats": {
+          "4": {
+            "correct": 64,
+            "total": 70,
+            "invalid": 0
+          },
+          "2": {
+            "correct": 35,
+            "total": 37,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 24,
+            "total": 32,
+            "invalid": 0
+          },
+          "3": {
+            "correct": 11,
+            "total": 13,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 19
+    },
+    {
+      "item_id": "conv-43",
+      "metrics": {
+        "accuracy": 85.95505617977528,
+        "correct": 153,
+        "total": 178,
+        "invalid": 0,
+        "valid_total": 178,
+        "category_stats": {
+          "4": {
+            "correct": 100,
+            "total": 107,
+            "invalid": 0
+          },
+          "2": {
+            "correct": 23,
+            "total": 26,
+            "invalid": 0
+          },
+          "1": {
+            "correct": 26,
+            "total": 31,
+            "invalid": 0
+          },
+          "3": {
+            "correct": 4,
+            "total": 14,
+            "invalid": 0
+          }
+        }
+      },
+      "num_sessions": 29
+    }
+  ],
+  "timestamp": "2026-08-27T09:40:50Z",
+  "commit": {
+    "sha": "cd8d4d39981f2fa25cfa29b25f18acf1c8451a75",
+    "short_sha": "cd8d4d39",
+    "subject": "feat(recall): add a per-bank enable_text_search toggle for pure vector recall (#3819)",
+    "author": "Nicolò Boschi",
+    "author_date": "2026-08-27T10:07:28+02:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/cd8d4d39981f2fa25cfa29b25f18acf1c8451a75",
+    "pr_number": 3819,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/3819"
+  },
+  "workflow_run": {
+    "id": "33056319806",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/33056319806"
+  }
+}
