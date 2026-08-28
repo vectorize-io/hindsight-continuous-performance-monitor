@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-08-28T09:56:52.068138+00:00",
+  "overall_duplication_rate": 0.01353637901861252,
+  "duplication_threshold": 0.97,
+  "total_observations": 591,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1775,
+      "facts_consolidated": 1775,
+      "facts_covered": 1546,
+      "facts_skipped": 229,
+      "observations": 591,
+      "avg_sources_per_obs": 2.9,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 7,
+          "redundant_observations": 8,
+          "duplication_rate": 0.01353637901861252
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 101,
+          "redundant_observations": 155,
+          "duplication_rate": 0.2622673434856176
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 591,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.01353637901861252,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 8
+      },
+      "0.92": {
+        "redundant_observations": 155
+      }
+    }
+  },
+  "commit": {
+    "sha": "4b01d02f42035c248c6bf863b9231b63007b448c",
+    "short_sha": "4b01d02f",
+    "subject": "docs: update retain extraction mode documentation",
+    "author": "Nicolò Boschi",
+    "author_date": "2026-08-28T10:37:35+02:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/4b01d02f42035c248c6bf863b9231b63007b448c",
+    "pr_number": 3838,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/3838"
+  },
+  "workflow_run": {
+    "id": "33157529955",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/33157529955"
+  }
+}

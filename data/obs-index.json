@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "4b01d02f42035c248c6bf863b9231b63007b448c",
+      "short_sha": "4b01d02f",
+      "subject": "docs: update retain extraction mode documentation",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-08-28T10:37:35+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/4b01d02f42035c248c6bf863b9231b63007b448c",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/3838",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/33157529955",
+      "data_file": "data/obs/20260828T095656Z-4b01d02f.json",
+      "timestamp": "2026-08-28T09:56:52.068138+00:00",
+      "overall_duplication_rate": 0.01353637901861252,
+      "total_observations": 591
+    },
+    {
       "sha": "cd8d4d39981f2fa25cfa29b25f18acf1c8451a75",
       "short_sha": "cd8d4d39",
       "subject": "feat(recall): add a per-bank enable_text_search toggle for pure vector recall (#3819)",
@@ -1233,5 +1247,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-08-27T09:45:36Z"
+  "updated_at": "2026-08-28T09:56:57Z"
 }
