@@ -1,6 +1,21 @@
 {
   "runs": [
     {
+      "sha": "00bea77a932fdfe9ff3fdb0fe1f148ff220c5e27",
+      "short_sha": "00bea77a",
+      "subject": "chore: update star history",
+      "author": "github-actions[bot]",
+      "author_date": "2026-08-29T03:29:33Z",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/00bea77a932fdfe9ff3fdb0fe1f148ff220c5e27",
+      "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/33237494935",
+      "data_file": "data/locomo/20260829T063611Z-00bea77a.json",
+      "timestamp": "2026-08-29T06:36:11Z",
+      "overall_accuracy": 87.8345498783455,
+      "num_items": 3,
+      "total_questions": 411
+    },
+    {
       "sha": "4b01d02f42035c248c6bf863b9231b63007b448c",
       "short_sha": "4b01d02f",
       "subject": "docs: update retain extraction mode documentation",
@@ -1006,5 +1021,5 @@
       "total_questions": 411
     }
   ],
-  "updated_at": "2026-08-28T09:40:37Z"
+  "updated_at": "2026-08-29T06:36:13Z"
 }
