@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "d2120b88b8cd9d3111fbd41da4f9abd2c0717c07",
+      "short_sha": "d2120b88",
+      "subject": "chore: update star history",
+      "author": "github-actions[bot]",
+      "author_date": "2026-09-09T03:32:09Z",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/d2120b88b8cd9d3111fbd41da4f9abd2c0717c07",
+      "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/34317284681",
+      "data_file": "data/obs/20260909T063758Z-d2120b88.json",
+      "timestamp": "2026-09-09T06:37:55.492467+00:00",
+      "overall_duplication_rate": 0.0322061191626409,
+      "total_observations": 621
+    },
+    {
       "sha": "137ed911bfae8de33913530dcc12d5e41800bfb3",
       "short_sha": "137ed911",
       "subject": "chore: update star history",
@@ -1401,5 +1415,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-09-08T06:34:55Z"
+  "updated_at": "2026-09-09T06:37:59Z"
 }
