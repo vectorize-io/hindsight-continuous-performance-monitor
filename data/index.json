@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "11e624325b130210dc9b8fc7c5a0ae6cbd94077f",
+      "short_sha": "11e62432",
+      "subject": "refactor(config): make HindsightConfig the only parser of HINDSIGHT_API_* env vars (#4260)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-09-09T18:40:13+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/11e624325b130210dc9b8fc7c5a0ae6cbd94077f",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/4260",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/34443446787",
+      "data_file": "data/20260910T063533Z-11e62432.json",
+      "timestamp": "2026-09-10T06:05:19.334557+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "d2120b88b8cd9d3111fbd41da4f9abd2c0717c07",
       "short_sha": "d2120b88",
       "subject": "chore: update star history",
@@ -1678,5 +1691,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-09-09T06:30:33Z"
+  "updated_at": "2026-09-10T06:35:34Z"
 }
