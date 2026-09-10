@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-09-10T06:36:16.909229+00:00",
+  "overall_duplication_rate": 0.029605263157894735,
+  "duplication_threshold": 0.97,
+  "total_observations": 608,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1641,
+      "facts_consolidated": 1641,
+      "facts_covered": 1429,
+      "facts_skipped": 212,
+      "observations": 608,
+      "avg_sources_per_obs": 2.9,
+      "exact_duplicate_groups": 5,
+      "exact_redundant": 8,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 14,
+          "redundant_observations": 18,
+          "duplication_rate": 0.029605263157894735
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 116,
+          "redundant_observations": 203,
+          "duplication_rate": 0.3338815789473684
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 608,
+    "total_exact_redundant": 8,
+    "overall_duplication_rate": 0.029605263157894735,
+    "overall_exact_rate": 0.013157894736842105,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 18
+      },
+      "0.92": {
+        "redundant_observations": 203
+      }
+    }
+  },
+  "commit": {
+    "sha": "11e624325b130210dc9b8fc7c5a0ae6cbd94077f",
+    "short_sha": "11e62432",
+    "subject": "refactor(config): make HindsightConfig the only parser of HINDSIGHT_API_* env vars (#4260)",
+    "author": "Nicolò Boschi",
+    "author_date": "2026-09-09T18:40:13+02:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/11e624325b130210dc9b8fc7c5a0ae6cbd94077f",
+    "pr_number": 4260,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/4260"
+  },
+  "workflow_run": {
+    "id": "34443446787",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/34443446787"
+  }
+}
