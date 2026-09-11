@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>System Evals · Hindsight perf</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <header id="page-header" class="bg-white border-b border-gray-200 px-6 py-3"></header>
+  <main id="main" class="max-w-7xl mx-auto px-6 py-8"></main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+  <script type="module">
+    import {
+      renderHeader, renderPageHeading, renderLatestBanner, lineChart, makeDataset, movingAverage,
+      fmtNumber, fmtDate, fmtDateTime, renderDelta, median, runsSummary, escapeHtml, emptyChartPlaceholder,
+    } from './assets/app.js';
+
+    document.getElementById('page-header').innerHTML = renderHeader('system-evals');
+    const main = document.getElementById('main');
+
+    const cacheBuster = () => 'ts=' + Date.now();
+    const pct = (rate) => (rate == null ? null : rate * 100);
+
+    async function loadManifest() {
+      const r = await fetch(`data/system-evals-index.json?${cacheBuster()}`);
+      if (!r.ok) throw new Error('Failed to load data/system-evals-index.json');
+      return r.json();
+    }
+    async function loadRun(file) {
+      const r = await fetch(`${file}?${cacheBuster()}`);
+      if (!r.ok) throw new Error('Failed to load ' + file);
+      return r.json();
+    }
+
+    (async () => {
+      let manifest;
+      try { manifest = await loadManifest(); }
+      catch (e) {
+        main.innerHTML = `<div class="text-center py-16 text-gray-500">No system-evals runs yet (${escapeHtml(e.message)}).</div>`;
+        return;
+      }
+      const entries = manifest.runs ?? [];
+      if (entries.length === 0) {
+        main.innerHTML = '<div class="text-center py-16 text-gray-500">No system-evals runs yet.</div>';
+        return;
+      }
+
+      const slice = entries.slice(0, 60);
+      const runs = await Promise.all(slice.map(e => loadRun(e.data_file)));
+      const latest = runs[0];
+
+      const curr = pct(latest.correct_rate);
+      // Noise-robust baseline: median of prior runs, since one eval run can flip.
+      const prior = runs.slice(1).map(r => pct(r.correct_rate));
+      const baseline = median(prior);
+      const priorN = prior.filter(v => v != null).length;
+      const traps = latest.trap_count ?? 0;
+
+      const bannerRun = {
+        timestamp: latest.timestamp,
+        scale: latest.mode ?? '—',
+        commit: latest.commit,
+        workflow_run: latest.workflow_run,
+      };
+
+      const ordered = runs.slice().reverse();
+      const ratePoints = ordered
+        .map((r, i) => (r.correct_rate != null ? { x: i, y: pct(r.correct_rate), run: r } : null))
+        .filter(Boolean);
+      const trapPoints = ordered.map((r, i) => ({ x: i, y: r.trap_count ?? 0, run: r }));
+
+      const headlineCard = `
+        <div class="bg-white border border-gray-200 rounded-xl p-5 min-w-0">
+          <h3 class="text-[10px] uppercase tracking-[0.08em] text-gray-400 font-semibold m-0 mb-2">
+            Evals correct <span class="text-gray-300 normal-case tracking-normal">(higher is better)</span>
+          </h3>
+          <div class="flex items-baseline gap-2 flex-wrap">
+            <span class="text-3xl font-semibold tabular-nums">${fmtNumber(curr)}</span>
+            <span class="text-gray-500 text-sm">%</span>
+            ${renderDelta(curr, baseline, true)}
+          </div>
+          <div class="text-gray-400 text-xs mt-1">
+            ${latest.correct ?? '—'} / ${latest.total ?? '—'} questions
+            · ${priorN > 0 ? `vs median of prior ${priorN} run${priorN === 1 ? '' : 's'}` : 'no prior runs'}
+          </div>
+        </div>
+      `;
+
+      // A trap is a page asserting the specific wrong answer — a stored falsehood
+      // every later reflect reads back as fact. It gets its own card, never averaged in.
+      const trapCard = `
+        <div class="bg-white border ${traps > 0 ? 'border-red-300' : 'border-gray-200'} rounded-xl p-5 min-w-0">
+          <h3 class="text-[10px] uppercase tracking-[0.08em] text-gray-400 font-semibold m-0 mb-2">
+            Wrong answers stored <span class="text-gray-300 normal-case tracking-normal">(must be 0)</span>
+          </h3>
+          <div class="text-3xl font-semibold tabular-nums ${traps > 0 ? 'text-red-600' : ''}">${traps}</div>
+          <div class="text-gray-400 text-xs mt-1">pages or answers asserting the baited wrong answer</div>
+        </div>
+      `;
+
+      const configCard = `
+        <div class="bg-white border border-gray-200 rounded-xl p-5 min-w-0">
+          <h3 class="text-[10px] uppercase tracking-[0.08em] text-gray-400 font-semibold m-0 mb-2">Config</h3>
+          <div class="grid grid-cols-1 gap-2 text-[13px]">
+            <div class="min-w-0">
+              <div class="text-[10px] uppercase tracking-[0.08em] text-gray-400">hindsight LLM</div>
+              <div class="font-mono text-xs truncate">${escapeHtml(latest.model_config?.hindsight?.provider ?? '—')}<span class="text-gray-400">/</span>${escapeHtml(latest.model_config?.hindsight?.model ?? '—')}</div>
+            </div>
+            <div class="min-w-0">
+              <div class="text-[10px] uppercase tracking-[0.08em] text-gray-400">judge</div>
+              <div class="font-mono text-xs truncate">${escapeHtml(latest.model_config?.judge?.model ?? '—')}</div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      const chartCard = (id, title, unit, points) => points.length < 2 ? `
+        <div class="bg-white border border-gray-200 rounded-xl p-5 mt-6 min-w-0">
+          <h3 class="text-[10px] uppercase tracking-[0.08em] text-gray-400 font-semibold m-0 mb-2">${title} <span class="text-gray-300 normal-case tracking-normal">(${unit})</span></h3>
+          <div class="chart-container large">${emptyChartPlaceholder(title)}</div>
+        </div>` : `
+        <div class="bg-white border border-gray-200 rounded-xl p-5 mt-6 min-w-0">
+          <h3 class="text-[10px] uppercase tracking-[0.08em] text-gray-400 font-semibold m-0 mb-2">${title} <span class="text-gray-300 normal-case tracking-normal">(${unit})</span></h3>
+          <div class="chart-container large"><canvas id="${id}"></canvas></div>
+        </div>`;
+
+      const items = latest.items ?? [];
+      const itemsTable = items.length > 0 ? `
+        <div class="bg-white border border-gray-200 rounded-xl p-5 mt-6">
+          <h3 class="text-[10px] uppercase tracking-[0.08em] text-gray-400 font-semibold m-0 mb-3">Latest run · per question</h3>
+          <div class="overflow-x-auto">
+            <table class="min-w-full text-[13px]">
+              <thead class="bg-gray-50/80 text-[10px] uppercase tracking-[0.08em] text-gray-400">
+                <tr>
+                  <th class="px-3 py-2.5 text-left font-medium">Suite</th>
+                  <th class="px-3 py-2.5 text-left font-medium">Question</th>
+                  <th class="px-3 py-2.5 text-left font-medium">Category</th>
+                  <th class="px-3 py-2.5 text-center font-medium">Correct</th>
+                  <th class="px-3 py-2.5 text-center font-medium">Wrong answer</th>
+                  <th class="px-3 py-2.5 text-right font-medium">Size by wave</th>
+                  <th class="px-3 py-2.5 text-left font-medium">Judge</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${items.map(it => `
+                  <tr class="border-t border-gray-100 hover:bg-gray-50/70 ${it.hit_trap ? 'bg-red-50/60' : ''}">
+                    <td class="px-3 py-2.5 whitespace-nowrap text-gray-600">${it.kind === 'reflect' ? 'reflect' : 'knowledge page'}</td>
+                    <td class="px-3 py-2.5 font-mono whitespace-nowrap">${escapeHtml(it.question_id)}</td>
+                    <td class="px-3 py-2.5 whitespace-nowrap text-gray-600">${escapeHtml(it.category)}</td>
+                    <td class="px-3 py-2.5 text-center">${it.correct ? '✓' : '<span class="text-red-600">✗</span>'}</td>
+                    <td class="px-3 py-2.5 text-center">${it.hit_trap ? '<span class="text-red-600 font-semibold">yes</span>' : '—'}</td>
+                    <td class="px-3 py-2.5 text-right font-mono tabular-nums whitespace-nowrap">${(it.sizes ?? []).length ? it.sizes.join(' → ') : '—'}</td>
+                    <td class="px-3 py-2.5 max-w-[32rem] truncate text-gray-500" title="${escapeHtml(it.reason ?? '')}">${escapeHtml(it.reason ?? '')}</td>
+                  </tr>`).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      ` : '';
+
+      const rowsHtml = entries.slice(0, 25).map(entry => {
+        const prCell = entry.pr_url
+          ? `<a href="${entry.pr_url}" target="_blank" class="text-indigo-600 hover:underline">#${entry.pr_url.split('/').pop()}</a>`
+          : '<span class="text-gray-300">—</span>';
+        const runCell = entry.run_url
+          ? `<a href="${entry.run_url}" target="_blank" class="text-indigo-600 hover:underline" title="View workflow run">↗</a>`
+          : '<span class="text-gray-300">—</span>';
+        return `
+          <tr class="border-t border-gray-100 hover:bg-gray-50/70 transition-colors">
+            <td class="px-3 py-2.5 whitespace-nowrap text-gray-600" title="Run executed ${fmtDateTime(entry.timestamp)} · commit authored ${fmtDate(entry.author_date)}">${fmtDate(entry.timestamp)}</td>
+            <td class="px-3 py-2.5 font-mono whitespace-nowrap"><a href="${entry.commit_url}" target="_blank" class="text-indigo-600 hover:underline">${entry.short_sha}</a></td>
+            <td class="px-3 py-2.5 max-w-[28rem] truncate" title="${escapeHtml(entry.subject)}">${escapeHtml(entry.subject)}</td>
+            <td class="px-3 py-2.5 whitespace-nowrap">${prCell}</td>
+            <td class="px-3 py-2.5 whitespace-nowrap text-center">${runCell}</td>
+            <td class="px-3 py-2.5 text-right font-mono tabular-nums whitespace-nowrap">${fmtNumber(pct(entry.correct_rate))}%</td>
+            <td class="px-3 py-2.5 text-right font-mono tabular-nums whitespace-nowrap ${(entry.trap_count ?? 0) > 0 ? 'text-red-600 font-semibold' : 'text-gray-500'}">${entry.trap_count ?? '—'}</td>
+            <td class="px-3 py-2.5 whitespace-nowrap text-gray-500">${escapeHtml(entry.mode ?? '')}</td>
+          </tr>`;
+      }).join('');
+
+      const runsTable = `
+        <h2 class="text-base font-semibold mt-8 mb-3">Runs</h2>
+        <div class="bg-white border border-gray-200 rounded-xl overflow-x-auto">
+          <table class="min-w-full text-[13px]">
+            <thead class="bg-gray-50/80 text-[10px] uppercase tracking-[0.08em] text-gray-400">
+              <tr>
+                <th class="px-3 py-2.5 text-left font-medium">Date</th>
+                <th class="px-3 py-2.5 text-left font-medium">Commit</th>
+                <th class="px-3 py-2.5 text-left font-medium">Subject</th>
+                <th class="px-3 py-2.5 text-left font-medium">PR</th>
+                <th class="px-3 py-2.5 text-center font-medium">Run</th>
+                <th class="px-3 py-2.5 text-right font-medium">Correct</th>
+                <th class="px-3 py-2.5 text-right font-medium">Wrong stored</th>
+                <th class="px-3 py-2.5 text-left font-medium">Mode</th>
+              </tr>
+            </thead>
+            <tbody>${rowsHtml}</tbody>
+          </table>
+        </div>
+      `;
+
+      main.innerHTML = `
+        ${renderPageHeading('System Evals', `Knowledge-page convergence and reflect answers, judged · ${runsSummary(slice, null, 0)}`)}
+        ${renderLatestBanner(bannerRun)}
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">${headlineCard}${trapCard}${configCard}</div>
+        ${chartCard('chart-rate', 'Evals correct', '%', ratePoints)}
+        ${chartCard('chart-traps', 'Wrong answers stored', 'count', trapPoints)}
+        ${itemsTable}
+        ${runsTable}
+      `;
+
+      if (ratePoints.length >= 2) {
+        const datasets = [makeDataset('evals correct', ratePoints, 0)];
+        if (ratePoints.length >= 5) {
+          datasets.push(makeDataset('5-run MA', movingAverage(ratePoints, 5), 0, {
+            borderColor: '#6366f1', borderDash: [6, 4], borderWidth: 1.5, pointRadius: 0, order: -1,
+          }));
+        }
+        lineChart(document.getElementById('chart-rate'), datasets, { unit: '%', legend: ratePoints.length >= 5, beginAtZero: true });
+      }
+      if (trapPoints.length >= 2) {
+        lineChart(document.getElementById('chart-traps'), [makeDataset('wrong answers stored', trapPoints, 0)], { unit: '', beginAtZero: true });
+      }
+    })();
+  </script>
+</body>
+</html>

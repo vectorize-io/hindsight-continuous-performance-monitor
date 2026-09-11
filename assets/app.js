@@ -323,6 +323,7 @@ export function renderHeader(activePage = '') {
     { href: 'graph-maintenance.html',        label: 'Graph Maint',   id: 'graph-maintenance' },
     { href: 'locomo.html',                   label: 'LoComo',        id: 'locomo' },
     { href: 'obs.html',                      label: 'Obs Dedup',     id: 'obs' },
+    { href: 'system-evals.html',             label: 'System Evals',  id: 'system-evals' },
   ];
   // Meta links read as distinct "pills" (bordered, slightly bolder); suite
   // links are lighter plain tabs. Active state is indigo in both.
