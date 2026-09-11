@@ -1,6 +1,21 @@
 {
   "runs": [
     {
+      "sha": "5be9ad9156b8c02896b9c522671d516aeefc5cd4",
+      "short_sha": "5be9ad91",
+      "subject": "perf(recall): account for a recall's time per phase, and fix the three things that showed up (#4299)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-09-10T17:48:15+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/5be9ad9156b8c02896b9c522671d516aeefc5cd4",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/4299",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/34568218691",
+      "data_file": "data/locomo/20260911T062659Z-5be9ad91.json",
+      "timestamp": "2026-09-11T06:26:59Z",
+      "overall_accuracy": 0.0,
+      "num_items": 3,
+      "total_questions": 411
+    },
+    {
       "sha": "11e624325b130210dc9b8fc7c5a0ae6cbd94077f",
       "short_sha": "11e62432",
       "subject": "refactor(config): make HindsightConfig the only parser of HINDSIGHT_API_* env vars (#4260)",
@@ -1201,5 +1216,5 @@
       "total_questions": 411
     }
   ],
-  "updated_at": "2026-09-10T06:36:00Z"
+  "updated_at": "2026-09-11T06:27:00Z"
 }
