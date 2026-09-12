@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "4cc131c0b238c8f206def60804d7b6591f6a45e7",
+      "short_sha": "4cc131c0",
+      "subject": "release(coding-agents): v0.6.0",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-09-11T18:36:48+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/4cc131c0b238c8f206def60804d7b6591f6a45e7",
+      "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/34677056621",
+      "data_file": "data/obs/20260912T064412Z-4cc131c0.json",
+      "timestamp": "2026-09-12T06:44:10.019332+00:00",
+      "overall_duplication_rate": 0.029513888888888888,
+      "total_observations": 576
+    },
+    {
       "sha": "5be9ad9156b8c02896b9c522671d516aeefc5cd4",
       "short_sha": "5be9ad91",
       "subject": "perf(recall): account for a recall's time per phase, and fix the three things that showed up (#4299)",
@@ -1443,5 +1457,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-09-11T06:36:16Z"
+  "updated_at": "2026-09-12T06:44:13Z"
 }
