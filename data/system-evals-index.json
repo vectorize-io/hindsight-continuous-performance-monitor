@@ -1,0 +1,21 @@
+{
+  "runs": [
+    {
+      "sha": "4cc131c0b238c8f206def60804d7b6591f6a45e7",
+      "short_sha": "4cc131c0",
+      "subject": "release(coding-agents): v0.6.0",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-09-11T18:36:48+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/4cc131c0b238c8f206def60804d7b6591f6a45e7",
+      "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/34677056621",
+      "data_file": "data/system-evals/20260912T060808Z-4cc131c0.json",
+      "timestamp": "2026-09-12T06:08:06+00:00",
+      "correct_rate": 0.7857142857142857,
+      "trap_count": 2,
+      "total": 14,
+      "mode": "full"
+    }
+  ],
+  "updated_at": "2026-09-12T06:08:09Z"
+}
