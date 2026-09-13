@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "bde55237f53bf55aacd048b01e29d7dc23b83a85",
+      "short_sha": "bde55237",
+      "subject": "chore(deps): update adm-zip in the zapier integration (#4322)",
+      "author": "Chris Bartholomew",
+      "author_date": "2026-09-12T11:38:16-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/bde55237f53bf55aacd048b01e29d7dc23b83a85",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/4322",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/34741746058",
+      "data_file": "data/obs/20260913T064129Z-bde55237.json",
+      "timestamp": "2026-09-13T06:41:27.180642+00:00",
+      "overall_duplication_rate": 0.015358361774744027,
+      "total_observations": 586
+    },
+    {
       "sha": "4cc131c0b238c8f206def60804d7b6591f6a45e7",
       "short_sha": "4cc131c0",
       "subject": "release(coding-agents): v0.6.0",
@@ -1457,5 +1471,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-09-12T06:44:13Z"
+  "updated_at": "2026-09-13T06:41:30Z"
 }
