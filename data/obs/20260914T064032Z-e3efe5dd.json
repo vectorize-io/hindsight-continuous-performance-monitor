@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-09-14T06:40:29.234276+00:00",
+  "overall_duplication_rate": 0.03508771929824561,
+  "duplication_threshold": 0.97,
+  "total_observations": 570,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1670,
+      "facts_consolidated": 1670,
+      "facts_covered": 1438,
+      "facts_skipped": 232,
+      "observations": 570,
+      "avg_sources_per_obs": 3.2,
+      "exact_duplicate_groups": 4,
+      "exact_redundant": 5,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 17,
+          "redundant_observations": 20,
+          "duplication_rate": 0.03508771929824561
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 114,
+          "redundant_observations": 185,
+          "duplication_rate": 0.32456140350877194
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 570,
+    "total_exact_redundant": 5,
+    "overall_duplication_rate": 0.03508771929824561,
+    "overall_exact_rate": 0.008771929824561403,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 20
+      },
+      "0.92": {
+        "redundant_observations": 185
+      }
+    }
+  },
+  "commit": {
+    "sha": "e3efe5dd8b070d00129c5186d111c0bc5f992363",
+    "short_sha": "e3efe5dd",
+    "subject": "chore(deps): update js-yaml and vitest in the nemoclaw integration (#4265)",
+    "author": "Chris Bartholomew",
+    "author_date": "2026-09-13T10:20:09-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/e3efe5dd8b070d00129c5186d111c0bc5f992363",
+    "pr_number": 4265,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/4265"
+  },
+  "workflow_run": {
+    "id": "34811803375",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/34811803375"
+  }
+}
