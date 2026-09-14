@@ -1,6 +1,22 @@
 {
   "runs": [
     {
+      "sha": "e3efe5dd8b070d00129c5186d111c0bc5f992363",
+      "short_sha": "e3efe5dd",
+      "subject": "chore(deps): update js-yaml and vitest in the nemoclaw integration (#4265)",
+      "author": "Chris Bartholomew",
+      "author_date": "2026-09-13T10:20:09-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/e3efe5dd8b070d00129c5186d111c0bc5f992363",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/4265",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/34811803375",
+      "data_file": "data/system-evals/20260914T060751Z-e3efe5dd.json",
+      "timestamp": "2026-09-14T06:07:49+00:00",
+      "correct_rate": 0.7857142857142857,
+      "trap_count": 3,
+      "total": 14,
+      "mode": "full"
+    },
+    {
       "sha": "bde55237f53bf55aacd048b01e29d7dc23b83a85",
       "short_sha": "bde55237",
       "subject": "chore(deps): update adm-zip in the zapier integration (#4322)",
@@ -33,5 +49,5 @@
       "mode": "full"
     }
   ],
-  "updated_at": "2026-09-13T06:06:52Z"
+  "updated_at": "2026-09-14T06:07:52Z"
 }

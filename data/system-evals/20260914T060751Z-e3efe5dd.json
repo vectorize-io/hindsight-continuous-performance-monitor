@@ -1,0 +1,222 @@
+{
+  "timestamp": "2026-09-14T06:07:49+00:00",
+  "suite": "system-evals",
+  "mode": "full",
+  "model_config": {
+    "hindsight": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash-lite"
+    },
+    "judge": {
+      "provider": null,
+      "model": "gemini-2.5-flash"
+    }
+  },
+  "total": 14,
+  "correct": 11,
+  "correct_rate": 0.7857142857142857,
+  "trap_count": 3,
+  "by_kind": {
+    "knowledge_page": {
+      "total": 7,
+      "correct": 4,
+      "trap_count": 2
+    },
+    "reflect": {
+      "total": 7,
+      "correct": 7,
+      "trap_count": 1
+    }
+  },
+  "items": [
+    {
+      "kind": "knowledge_page",
+      "question_id": "hq-release-prod",
+      "category": "precision_discrimination",
+      "correct": false,
+      "hit_trap": false,
+      "bank_id": "syseval-3f2aa19613",
+      "reason": "3/3 judges agree: The answer identifies release 0.9.2 deployed on 2026-03-16, not release 0.9.3 deployed on 2026-03-18 as required by the criterion.",
+      "page_id": "kp-e7ed9f16c93c43d49ff40e07a63875c6",
+      "sizes": [
+        56,
+        56
+      ]
+    },
+    {
+      "kind": "knowledge_page",
+      "question_id": "hq-count-billing",
+      "category": "counting",
+      "correct": false,
+      "hit_trap": true,
+      "bank_id": "syseval-ba29819009",
+      "reason": "The answer states that 4 customers reported a billing error, which is a number other than seven.",
+      "page_id": "kp-4d8c57de7af54b05ab4665f5342a02f0",
+      "sizes": [
+        248,
+        319
+      ]
+    },
+    {
+      "kind": "knowledge_page",
+      "question_id": "hq-owner-latest",
+      "category": "supersession",
+      "correct": false,
+      "hit_trap": true,
+      "bank_id": "syseval-210bed109b",
+      "reason": "The answer explicitly states that the search guild now owns the ranking service, which satisfies the criterion.",
+      "page_id": "kp-0d47312d78f64659b693470d03200251",
+      "sizes": [
+        210,
+        196
+      ]
+    },
+    {
+      "kind": "knowledge_page",
+      "question_id": "hq-entity-port",
+      "category": "entity_confusion",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-00a299018f",
+      "reason": "The answer explicitly states that the payments-api service listens on port 8443.",
+      "page_id": "kp-8344606c9f8e4d8c8af1fe55af43b317",
+      "sizes": [
+        516,
+        516
+      ]
+    },
+    {
+      "kind": "knowledge_page",
+      "question_id": "hq-scoped-2fa",
+      "category": "scoped_truth",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-8ea7c89edd",
+      "reason": "The answer correctly states that 2FA is mandatory for EU accounts, optional for US accounts, and mandatory for UK accounts starting in 2026, which aligns with the specified regional qualifications.",
+      "page_id": "kp-eeed43aab6e44ac08396fab714cca168",
+      "sizes": [
+        232,
+        288
+      ]
+    },
+    {
+      "kind": "knowledge_page",
+      "question_id": "hq-absent-2024",
+      "category": "absence_dense",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-a98090e04e",
+      "reason": "The answer explicitly states that the data does not contain information about the engineering headcount for 2024 and correctly cites 2025 figures without presenting them as 2024 numbers.",
+      "page_id": "kp-a9b0963fad244815b9264c7512432064",
+      "sizes": [
+        431,
+        441
+      ]
+    },
+    {
+      "kind": "knowledge_page",
+      "question_id": "hq-numeric-outage",
+      "category": "numeric_precision",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-ea94275274",
+      "reason": "The answer explicitly states that the April 2026 outage was caused by connection pool exhaustion, occurred at a limit of 200 connections, and lasted 47 minutes.",
+      "page_id": "kp-2eb38ca1a0f94903899b20501d3be802",
+      "sizes": [
+        527,
+        1561
+      ]
+    },
+    {
+      "kind": "reflect",
+      "question_id": "hq-absent-2024",
+      "category": "absence_dense",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-864e43b58d",
+      "reason": "The answer explicitly states that the data does not contain the engineering headcount for the end of 2024 and does not provide or estimate one, while still citing 2025/2026 figures as context without presenting them as 2024 numbers.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "reflect",
+      "question_id": "hq-release-prod",
+      "category": "precision_discrimination",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-9cfb23a912",
+      "reason": "The answer correctly identifies release 0.9.3 as deployed to production on 18 March 2026, matching the criterion exactly.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "reflect",
+      "question_id": "hq-owner-latest",
+      "category": "supersession",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-42488fa7a2",
+      "reason": "The answer explicitly states that the core infra team currently owns the ranking service and correctly lists previous owners as historical information.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "reflect",
+      "question_id": "hq-count-billing",
+      "category": "counting",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-c768da9798",
+      "reason": "The answer explicitly states that a total of 7 customers reported a billing error in the second quarter of 2026, which directly matches the criterion.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "reflect",
+      "question_id": "hq-entity-port",
+      "category": "entity_confusion",
+      "correct": true,
+      "hit_trap": true,
+      "bank_id": "syseval-9f00820170",
+      "reason": "The answer explicitly states that the payments-api service listens on port 8444.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "reflect",
+      "question_id": "hq-scoped-2fa",
+      "category": "scoped_truth",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-fcb2223b1f",
+      "reason": "The answer correctly specifies 2FA as mandatory for EU accounts, optional for US accounts, and mandatory for UK accounts from 2026, aligning with all regional qualifications outlined in the criterion.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "reflect",
+      "question_id": "hq-numeric-outage",
+      "category": "numeric_precision",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-8b5805abb1",
+      "reason": "The answer explicitly states connection pool exhaustion, a connection limit of 200, and a duration of 47 minutes.",
+      "page_id": "",
+      "sizes": []
+    }
+  ],
+  "commit": {
+    "sha": "e3efe5dd8b070d00129c5186d111c0bc5f992363",
+    "short_sha": "e3efe5dd",
+    "subject": "chore(deps): update js-yaml and vitest in the nemoclaw integration (#4265)",
+    "author": "Chris Bartholomew",
+    "author_date": "2026-09-13T10:20:09-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/e3efe5dd8b070d00129c5186d111c0bc5f992363",
+    "pr_number": 4265,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/4265"
+  },
+  "workflow_run": {
+    "id": "34811803375",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/34811803375"
+  }
+}
