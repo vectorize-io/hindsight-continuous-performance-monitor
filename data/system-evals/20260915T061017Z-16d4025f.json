@@ -1,0 +1,222 @@
+{
+  "timestamp": "2026-09-15T06:10:15+00:00",
+  "suite": "system-evals",
+  "mode": "full",
+  "model_config": {
+    "hindsight": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash-lite"
+    },
+    "judge": {
+      "provider": null,
+      "model": "gemini-2.5-flash"
+    }
+  },
+  "total": 14,
+  "correct": 12,
+  "correct_rate": 0.8571428571428571,
+  "trap_count": 2,
+  "by_kind": {
+    "knowledge_page": {
+      "total": 7,
+      "correct": 5,
+      "trap_count": 2
+    },
+    "reflect": {
+      "total": 7,
+      "correct": 7,
+      "trap_count": 0
+    }
+  },
+  "items": [
+    {
+      "kind": "knowledge_page",
+      "question_id": "hq-release-prod",
+      "category": "precision_discrimination",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-f05d43ce08",
+      "reason": "The answer explicitly states that Release 0.9.3 was deployed to production on 18 March 2026, which matches the criterion.",
+      "page_id": "kp-c6555cb83a74435598f40f933247ed4a",
+      "sizes": [
+        162,
+        102
+      ]
+    },
+    {
+      "kind": "knowledge_page",
+      "question_id": "hq-count-billing",
+      "category": "counting",
+      "correct": false,
+      "hit_trap": true,
+      "bank_id": "syseval-ed4dff3ebd",
+      "reason": "The answer states that 4 customers reported a billing error, which is a number other than seven.",
+      "page_id": "kp-1f5268fc076045b4b078144a1134d6e1",
+      "sizes": [
+        307,
+        337
+      ]
+    },
+    {
+      "kind": "knowledge_page",
+      "question_id": "hq-owner-latest",
+      "category": "supersession",
+      "correct": false,
+      "hit_trap": true,
+      "bank_id": "syseval-9e07ae83fb",
+      "reason": "The answer states that ownership transitioned to the search guild in April 2024, which implies they currently own it as the November 2024 transfer is in the future.",
+      "page_id": "kp-470fc3f443b048b492bc69926a9f2f00",
+      "sizes": [
+        209,
+        267
+      ]
+    },
+    {
+      "kind": "knowledge_page",
+      "question_id": "hq-entity-port",
+      "category": "entity_confusion",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-3f364619cb",
+      "reason": "The answer explicitly states that the payments-api service listens on port 8443.",
+      "page_id": "kp-d69dccf9619141a39c62d63adbe66491",
+      "sizes": [
+        120,
+        120
+      ]
+    },
+    {
+      "kind": "knowledge_page",
+      "question_id": "hq-scoped-2fa",
+      "category": "scoped_truth",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-8931e63eb5",
+      "reason": "The answer correctly specifies 2FA as mandatory for EU accounts, optional for US accounts, and accurately addresses the UK situation by stating it's mandatory from 2026, fulfilling all aspects of the criterion.",
+      "page_id": "kp-e03e22a9c9444ba5a5ba643311d7159c",
+      "sizes": [
+        250,
+        312
+      ]
+    },
+    {
+      "kind": "knowledge_page",
+      "question_id": "hq-absent-2024",
+      "category": "absence_dense",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-a2be95ad8f",
+      "reason": "The answer explicitly states that the data does not contain information for 2024 and does not provide or estimate a 2024 figure, while correctly citing 2025 figures as context without misrepresenting them.",
+      "page_id": "kp-84d6875fd9204e329b4ba369bc7ce758",
+      "sizes": [
+        349,
+        327
+      ]
+    },
+    {
+      "kind": "knowledge_page",
+      "question_id": "hq-numeric-outage",
+      "category": "numeric_precision",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-dd5de3561a",
+      "reason": "The answer explicitly states 'Connection pool exhaustion' as the cause, '200 connections' as the limit, and '47 minutes' as the duration for the April 2026 outage.",
+      "page_id": "kp-5cef82032c25403e8bfa08aa968dbbe2",
+      "sizes": [
+        1255,
+        1604
+      ]
+    },
+    {
+      "kind": "reflect",
+      "question_id": "hq-absent-2024",
+      "category": "absence_dense",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-cf2adc313c",
+      "reason": "The answer explicitly states that the data does not contain the 2024 headcount and does not provide or estimate one, while appropriately citing 2025/2026 figures as context without presenting them as the 2024 number.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "reflect",
+      "question_id": "hq-release-prod",
+      "category": "precision_discrimination",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-0a932166ee",
+      "reason": "The answer correctly identifies release 0.9.3 as being deployed on 18 March 2026, matching the criterion exactly.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "reflect",
+      "question_id": "hq-owner-latest",
+      "category": "supersession",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-aa541c0f1f",
+      "reason": "The answer clearly states that the core infra team currently owns the ranking service and lists previous owners as historical context, which aligns with the criterion.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "reflect",
+      "question_id": "hq-count-billing",
+      "category": "counting",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-013fcfef93",
+      "reason": "The answer explicitly states that 7 customers reported a billing error in Q2 2026.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "reflect",
+      "question_id": "hq-entity-port",
+      "category": "entity_confusion",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-6dbabd9e01",
+      "reason": "The answer explicitly states that the payments-api service listens on port 8443, directly fulfilling the criterion.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "reflect",
+      "question_id": "hq-scoped-2fa",
+      "category": "scoped_truth",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-9ea6ac5638",
+      "reason": "The answer correctly specifies that 2FA is mandatory for EU accounts, optional for US accounts, and accurately states it will be mandatory for UK accounts starting in 2026.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "reflect",
+      "question_id": "hq-numeric-outage",
+      "category": "numeric_precision",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-3f203cb1c9",
+      "reason": "The answer explicitly states connection pool exhaustion, a limit of 200 connections, and a duration of 47 minutes.",
+      "page_id": "",
+      "sizes": []
+    }
+  ],
+  "commit": {
+    "sha": "16d4025f882ba232a2d4c72abd1eb47420e68e17",
+    "short_sha": "16d4025f",
+    "subject": "blog: Onboarding an Engineer vs. Onboarding an Agent (#4100)",
+    "author": "Ben",
+    "author_date": "2026-09-14T15:49:45-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/16d4025f882ba232a2d4c72abd1eb47420e68e17",
+    "pr_number": 4100,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/4100"
+  },
+  "workflow_run": {
+    "id": "34935147612",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/34935147612"
+  }
+}
