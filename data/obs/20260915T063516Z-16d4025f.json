@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-09-15T06:35:13.214531+00:00",
+  "overall_duplication_rate": 0.02617801047120419,
+  "duplication_threshold": 0.97,
+  "total_observations": 573,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1609,
+      "facts_consolidated": 1609,
+      "facts_covered": 1461,
+      "facts_skipped": 148,
+      "observations": 573,
+      "avg_sources_per_obs": 3.2,
+      "exact_duplicate_groups": 1,
+      "exact_redundant": 4,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 11,
+          "redundant_observations": 15,
+          "duplication_rate": 0.02617801047120419
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 107,
+          "redundant_observations": 175,
+          "duplication_rate": 0.3054101221640489
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 573,
+    "total_exact_redundant": 4,
+    "overall_duplication_rate": 0.02617801047120419,
+    "overall_exact_rate": 0.006980802792321117,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 15
+      },
+      "0.92": {
+        "redundant_observations": 175
+      }
+    }
+  },
+  "commit": {
+    "sha": "16d4025f882ba232a2d4c72abd1eb47420e68e17",
+    "short_sha": "16d4025f",
+    "subject": "blog: Onboarding an Engineer vs. Onboarding an Agent (#4100)",
+    "author": "Ben",
+    "author_date": "2026-09-14T15:49:45-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/16d4025f882ba232a2d4c72abd1eb47420e68e17",
+    "pr_number": 4100,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/4100"
+  },
+  "workflow_run": {
+    "id": "34935147612",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/34935147612"
+  }
+}
