@@ -1,6 +1,21 @@
 {
   "runs": [
     {
+      "sha": "16d4025f882ba232a2d4c72abd1eb47420e68e17",
+      "short_sha": "16d4025f",
+      "subject": "blog: Onboarding an Engineer vs. Onboarding an Agent (#4100)",
+      "author": "Ben",
+      "author_date": "2026-09-14T15:49:45-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/16d4025f882ba232a2d4c72abd1eb47420e68e17",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/4100",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/34935147612",
+      "data_file": "data/locomo/20260915T063720Z-16d4025f.json",
+      "timestamp": "2026-09-15T06:37:20Z",
+      "overall_accuracy": 0.0,
+      "num_items": 3,
+      "total_questions": 411
+    },
+    {
       "sha": "e3efe5dd8b070d00129c5186d111c0bc5f992363",
       "short_sha": "e3efe5dd",
       "subject": "chore(deps): update js-yaml and vitest in the nemoclaw integration (#4265)",
@@ -1261,5 +1276,5 @@
       "total_questions": 411
     }
   ],
-  "updated_at": "2026-09-14T06:20:08Z"
+  "updated_at": "2026-09-15T06:37:22Z"
 }
