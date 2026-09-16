@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "be0e93997a35d517250181c4dfb2d86c2dd95bc1",
+      "short_sha": "be0e9399",
+      "subject": "fix(recall): cache and reuse observation source memory IDs across pipeline (#4370)",
+      "author": "Sanderhoff-alt",
+      "author_date": "2026-09-16T00:34:57+08:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/be0e93997a35d517250181c4dfb2d86c2dd95bc1",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/4370",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/35061899312",
+      "data_file": "data/obs/20260916T063926Z-be0e9399.json",
+      "timestamp": "2026-09-16T06:39:21.522993+00:00",
+      "overall_duplication_rate": 0.02782608695652174,
+      "total_observations": 575
+    },
+    {
       "sha": "16d4025f882ba232a2d4c72abd1eb47420e68e17",
       "short_sha": "16d4025f",
       "subject": "blog: Onboarding an Engineer vs. Onboarding an Agent (#4100)",
@@ -1499,5 +1513,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-09-15T06:35:17Z"
+  "updated_at": "2026-09-16T06:39:26Z"
 }
