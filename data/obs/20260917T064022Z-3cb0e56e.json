@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-09-17T06:40:18.055422+00:00",
+  "overall_duplication_rate": 0.008532423208191127,
+  "duplication_threshold": 0.97,
+  "total_observations": 586,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1666,
+      "facts_consolidated": 1666,
+      "facts_covered": 1511,
+      "facts_skipped": 155,
+      "observations": 586,
+      "avg_sources_per_obs": 3.3,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 5,
+          "redundant_observations": 5,
+          "duplication_rate": 0.008532423208191127
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 110,
+          "redundant_observations": 174,
+          "duplication_rate": 0.29692832764505117
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 586,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.008532423208191127,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 5
+      },
+      "0.92": {
+        "redundant_observations": 174
+      }
+    }
+  },
+  "commit": {
+    "sha": "3cb0e56e97dea64c6d0d41dd9b045a452aa93d6a",
+    "short_sha": "3cb0e56e",
+    "subject": "blog: What It Takes to Put a Screenshot in an Agent's Memory (#4454)",
+    "author": "Ben",
+    "author_date": "2026-09-16T16:49:06-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/3cb0e56e97dea64c6d0d41dd9b045a452aa93d6a",
+    "pr_number": 4454,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/4454"
+  },
+  "workflow_run": {
+    "id": "35188083295",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/35188083295"
+  }
+}
