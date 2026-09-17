@@ -1,6 +1,22 @@
 {
   "runs": [
     {
+      "sha": "3cb0e56e97dea64c6d0d41dd9b045a452aa93d6a",
+      "short_sha": "3cb0e56e",
+      "subject": "blog: What It Takes to Put a Screenshot in an Agent's Memory (#4454)",
+      "author": "Ben",
+      "author_date": "2026-09-16T16:49:06-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/3cb0e56e97dea64c6d0d41dd9b045a452aa93d6a",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/4454",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/35188083295",
+      "data_file": "data/system-evals/20260917T061201Z-3cb0e56e.json",
+      "timestamp": "2026-09-17T06:11:58+00:00",
+      "correct_rate": 0.6578947368421053,
+      "trap_count": 10,
+      "total": 38,
+      "mode": "full"
+    },
+    {
       "sha": "be0e93997a35d517250181c4dfb2d86c2dd95bc1",
       "short_sha": "be0e9399",
       "subject": "fix(recall): cache and reuse observation source memory IDs across pipeline (#4370)",
@@ -81,5 +97,5 @@
       "mode": "full"
     }
   ],
-  "updated_at": "2026-09-16T06:11:30Z"
+  "updated_at": "2026-09-17T06:12:02Z"
 }
