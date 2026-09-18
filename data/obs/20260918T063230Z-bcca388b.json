@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-09-18T06:32:26.546410+00:00",
+  "overall_duplication_rate": 0.018518518518518517,
+  "duplication_threshold": 0.97,
+  "total_observations": 540,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1551,
+      "facts_consolidated": 1551,
+      "facts_covered": 1391,
+      "facts_skipped": 160,
+      "observations": 540,
+      "avg_sources_per_obs": 3.0,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 10,
+          "redundant_observations": 10,
+          "duplication_rate": 0.018518518518518517
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 98,
+          "redundant_observations": 157,
+          "duplication_rate": 0.29074074074074074
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 540,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.018518518518518517,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 10
+      },
+      "0.92": {
+        "redundant_observations": 157
+      }
+    }
+  },
+  "commit": {
+    "sha": "bcca388b3a1125896d3f0b78578b798968e1f29c",
+    "short_sha": "bcca388b",
+    "subject": "test(transfer): read an archived fact's document through the memories store (#4484)",
+    "author": "Nicolò Boschi",
+    "author_date": "2026-09-17T20:41:52+02:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/bcca388b3a1125896d3f0b78578b798968e1f29c",
+    "pr_number": 4484,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/4484"
+  },
+  "workflow_run": {
+    "id": "35313136197",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/35313136197"
+  }
+}
