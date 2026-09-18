@@ -1,6 +1,22 @@
 {
   "runs": [
     {
+      "sha": "bcca388b3a1125896d3f0b78578b798968e1f29c",
+      "short_sha": "bcca388b",
+      "subject": "test(transfer): read an archived fact's document through the memories store (#4484)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-09-17T20:41:52+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/bcca388b3a1125896d3f0b78578b798968e1f29c",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/4484",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/35313136197",
+      "data_file": "data/system-evals/20260918T060901Z-bcca388b.json",
+      "timestamp": "2026-09-18T06:08:59+00:00",
+      "correct_rate": 0.7368421052631579,
+      "trap_count": 8,
+      "total": 38,
+      "mode": "full"
+    },
+    {
       "sha": "3cb0e56e97dea64c6d0d41dd9b045a452aa93d6a",
       "short_sha": "3cb0e56e",
       "subject": "blog: What It Takes to Put a Screenshot in an Agent's Memory (#4454)",
@@ -97,5 +113,5 @@
       "mode": "full"
     }
   ],
-  "updated_at": "2026-09-17T06:12:02Z"
+  "updated_at": "2026-09-18T06:09:02Z"
 }
