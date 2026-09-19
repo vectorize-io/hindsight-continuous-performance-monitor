@@ -1,6 +1,22 @@
 {
   "runs": [
     {
+      "sha": "79a2fb152f17ad03e94882e9cb6b8b25049f38c0",
+      "short_sha": "79a2fb15",
+      "subject": "fix(storage): object-store backends must return native bytes from retrieve() (#4524)",
+      "author": "Chris Bartholomew",
+      "author_date": "2026-09-18T18:08:27-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/79a2fb152f17ad03e94882e9cb6b8b25049f38c0",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/4524",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/35425503735",
+      "data_file": "data/system-evals/20260919T061229Z-79a2fb15.json",
+      "timestamp": "2026-09-19T06:12:27+00:00",
+      "correct_rate": 0.7073170731707317,
+      "trap_count": 11,
+      "total": 41,
+      "mode": "full"
+    },
+    {
       "sha": "bcca388b3a1125896d3f0b78578b798968e1f29c",
       "short_sha": "bcca388b",
       "subject": "test(transfer): read an archived fact's document through the memories store (#4484)",
@@ -113,5 +129,5 @@
       "mode": "full"
     }
   ],
-  "updated_at": "2026-09-18T06:09:02Z"
+  "updated_at": "2026-09-19T06:12:30Z"
 }
