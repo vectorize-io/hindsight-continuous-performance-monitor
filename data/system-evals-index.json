@@ -1,6 +1,22 @@
 {
   "runs": [
     {
+      "sha": "0a58d695adee239c8990ef30eacf66ebca54094f",
+      "short_sha": "0a58d695",
+      "subject": "chore(deps): bump anyio to 4.14.2 in uv.lock (#4538)",
+      "author": "Chris Bartholomew",
+      "author_date": "2026-09-19T10:30:36-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/0a58d695adee239c8990ef30eacf66ebca54094f",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/4538",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/35493145949",
+      "data_file": "data/system-evals/20260920T061158Z-0a58d695.json",
+      "timestamp": "2026-09-20T06:11:57+00:00",
+      "correct_rate": 0.7560975609756098,
+      "trap_count": 9,
+      "total": 41,
+      "mode": "full"
+    },
+    {
       "sha": "79a2fb152f17ad03e94882e9cb6b8b25049f38c0",
       "short_sha": "79a2fb15",
       "subject": "fix(storage): object-store backends must return native bytes from retrieve() (#4524)",
@@ -129,5 +145,5 @@
       "mode": "full"
     }
   ],
-  "updated_at": "2026-09-19T06:12:30Z"
+  "updated_at": "2026-09-20T06:11:59Z"
 }
