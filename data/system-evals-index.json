@@ -1,6 +1,22 @@
 {
   "runs": [
     {
+      "sha": "63da8d7111566815e34e6b41168f3b3e288d204a",
+      "short_sha": "63da8d71",
+      "subject": "chore(deps): bump anyio to 4.14.2 in hindsight-integrations/dify/uv.lock (#4551)",
+      "author": "Chris Bartholomew",
+      "author_date": "2026-09-20T10:04:33-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/63da8d7111566815e34e6b41168f3b3e288d204a",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/4551",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/35566777312",
+      "data_file": "data/system-evals/20260921T061128Z-63da8d71.json",
+      "timestamp": "2026-09-21T06:11:25+00:00",
+      "correct_rate": 0.7804878048780488,
+      "trap_count": 8,
+      "total": 41,
+      "mode": "full"
+    },
+    {
       "sha": "0a58d695adee239c8990ef30eacf66ebca54094f",
       "short_sha": "0a58d695",
       "subject": "chore(deps): bump anyio to 4.14.2 in uv.lock (#4538)",
@@ -145,5 +161,5 @@
       "mode": "full"
     }
   ],
-  "updated_at": "2026-09-20T06:11:59Z"
+  "updated_at": "2026-09-21T06:11:28Z"
 }
