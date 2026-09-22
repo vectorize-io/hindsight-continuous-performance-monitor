@@ -1,6 +1,22 @@
 {
   "runs": [
     {
+      "sha": "680406b3dd9cca2108c7f0e204820a09b4e30906",
+      "short_sha": "680406b3",
+      "subject": "blog: What's New in Hindsight Cloud (0.10.0), plus three stale-line fixes (#4583)",
+      "author": "Ben",
+      "author_date": "2026-09-21T15:27:52-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/680406b3dd9cca2108c7f0e204820a09b4e30906",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/4583",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/35693043031",
+      "data_file": "data/system-evals/20260922T061159Z-680406b3.json",
+      "timestamp": "2026-09-22T06:11:58+00:00",
+      "correct_rate": 0.7560975609756098,
+      "trap_count": 11,
+      "total": 41,
+      "mode": "full"
+    },
+    {
       "sha": "63da8d7111566815e34e6b41168f3b3e288d204a",
       "short_sha": "63da8d71",
       "subject": "chore(deps): bump anyio to 4.14.2 in hindsight-integrations/dify/uv.lock (#4551)",
@@ -161,5 +177,5 @@
       "mode": "full"
     }
   ],
-  "updated_at": "2026-09-21T06:11:28Z"
+  "updated_at": "2026-09-22T06:12:00Z"
 }
