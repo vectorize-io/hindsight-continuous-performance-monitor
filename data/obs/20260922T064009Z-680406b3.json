@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-09-22T06:40:04.591431+00:00",
+  "overall_duplication_rate": 0.014311270125223614,
+  "duplication_threshold": 0.97,
+  "total_observations": 559,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1627,
+      "facts_consolidated": 1627,
+      "facts_covered": 1414,
+      "facts_skipped": 213,
+      "observations": 559,
+      "avg_sources_per_obs": 3.1,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 8,
+          "redundant_observations": 8,
+          "duplication_rate": 0.014311270125223614
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 93,
+          "redundant_observations": 149,
+          "duplication_rate": 0.26654740608228983
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 559,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.014311270125223614,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 8
+      },
+      "0.92": {
+        "redundant_observations": 149
+      }
+    }
+  },
+  "commit": {
+    "sha": "680406b3dd9cca2108c7f0e204820a09b4e30906",
+    "short_sha": "680406b3",
+    "subject": "blog: What's New in Hindsight Cloud (0.10.0), plus three stale-line fixes (#4583)",
+    "author": "Ben",
+    "author_date": "2026-09-21T15:27:52-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/680406b3dd9cca2108c7f0e204820a09b4e30906",
+    "pr_number": 4583,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/4583"
+  },
+  "workflow_run": {
+    "id": "35693043031",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/35693043031"
+  }
+}
