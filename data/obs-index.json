@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "12f2d54f643baddacb98cd547c89b1a50c5c3dcc",
+      "short_sha": "12f2d54f",
+      "subject": "blog: A Bank Is Now Something You Can Pick Up (#4624)",
+      "author": "Ben",
+      "author_date": "2026-09-22T15:40:58-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/12f2d54f643baddacb98cd547c89b1a50c5c3dcc",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/4624",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/35824878686",
+      "data_file": "data/obs/20260923T063954Z-12f2d54f.json",
+      "timestamp": "2026-09-23T06:39:50.582541+00:00",
+      "overall_duplication_rate": 0.015332197614991482,
+      "total_observations": 587
+    },
+    {
       "sha": "680406b3dd9cca2108c7f0e204820a09b4e30906",
       "short_sha": "680406b3",
       "subject": "blog: What's New in Hindsight Cloud (0.10.0), plus three stale-line fixes (#4583)",
@@ -1597,5 +1611,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-09-22T06:40:10Z"
+  "updated_at": "2026-09-23T06:39:55Z"
 }

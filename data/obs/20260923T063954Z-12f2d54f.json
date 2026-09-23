@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-09-23T06:39:50.582541+00:00",
+  "overall_duplication_rate": 0.015332197614991482,
+  "duplication_threshold": 0.97,
+  "total_observations": 587,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1590,
+      "facts_consolidated": 1590,
+      "facts_covered": 1450,
+      "facts_skipped": 140,
+      "observations": 587,
+      "avg_sources_per_obs": 3.1,
+      "exact_duplicate_groups": 1,
+      "exact_redundant": 1,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 9,
+          "redundant_observations": 9,
+          "duplication_rate": 0.015332197614991482
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 115,
+          "redundant_observations": 187,
+          "duplication_rate": 0.3185689948892675
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 587,
+    "total_exact_redundant": 1,
+    "overall_duplication_rate": 0.015332197614991482,
+    "overall_exact_rate": 0.0017035775127768314,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 9
+      },
+      "0.92": {
+        "redundant_observations": 187
+      }
+    }
+  },
+  "commit": {
+    "sha": "12f2d54f643baddacb98cd547c89b1a50c5c3dcc",
+    "short_sha": "12f2d54f",
+    "subject": "blog: A Bank Is Now Something You Can Pick Up (#4624)",
+    "author": "Ben",
+    "author_date": "2026-09-22T15:40:58-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/12f2d54f643baddacb98cd547c89b1a50c5c3dcc",
+    "pr_number": 4624,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/4624"
+  },
+  "workflow_run": {
+    "id": "35824878686",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/35824878686"
+  }
+}
