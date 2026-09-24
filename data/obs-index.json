@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "f00ad1fe993a86779682067b8a0e9883aba580d2",
+      "short_sha": "f00ad1fe",
+      "subject": "Add blog post: Bring the Facts, Not the Beliefs (#4692)",
+      "author": "Ben",
+      "author_date": "2026-09-23T15:36:47-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/f00ad1fe993a86779682067b8a0e9883aba580d2",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/4692",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/35962581839",
+      "data_file": "data/obs/20260924T063801Z-f00ad1fe.json",
+      "timestamp": "2026-09-24T06:37:56.368208+00:00",
+      "overall_duplication_rate": 0.017513134851138354,
+      "total_observations": 571
+    },
+    {
       "sha": "12f2d54f643baddacb98cd547c89b1a50c5c3dcc",
       "short_sha": "12f2d54f",
       "subject": "blog: A Bank Is Now Something You Can Pick Up (#4624)",
@@ -1611,5 +1625,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-09-23T06:39:55Z"
+  "updated_at": "2026-09-24T06:38:03Z"
 }
