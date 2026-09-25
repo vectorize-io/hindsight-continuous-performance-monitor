@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "32e66293bd4a0593275354814bd4053e4d9ce162",
+      "short_sha": "32e66293",
+      "subject": "Add blog post: We Added Jev as a Reranker. Here's What We Learned. (#4736)",
+      "author": "Ben",
+      "author_date": "2026-09-24T16:49:27-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/32e66293bd4a0593275354814bd4053e4d9ce162",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/4736",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/36101044411",
+      "data_file": "data/20260925T063320Z-32e66293.json",
+      "timestamp": "2026-09-25T06:05:05.987056+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "f00ad1fe993a86779682067b8a0e9883aba580d2",
       "short_sha": "f00ad1fe",
       "subject": "Add blog post: Bring the Facts, Not the Beliefs (#4692)",
@@ -1873,5 +1886,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-09-24T06:27:27Z"
+  "updated_at": "2026-09-25T06:33:20Z"
 }
