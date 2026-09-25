@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-09-25T06:36:14.376898+00:00",
+  "overall_duplication_rate": 0.017857142857142856,
+  "duplication_threshold": 0.97,
+  "total_observations": 560,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1518,
+      "facts_consolidated": 1518,
+      "facts_covered": 1367,
+      "facts_skipped": 151,
+      "observations": 560,
+      "avg_sources_per_obs": 2.8,
+      "exact_duplicate_groups": 1,
+      "exact_redundant": 1,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 9,
+          "redundant_observations": 10,
+          "duplication_rate": 0.017857142857142856
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 100,
+          "redundant_observations": 169,
+          "duplication_rate": 0.30178571428571427
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 560,
+    "total_exact_redundant": 1,
+    "overall_duplication_rate": 0.017857142857142856,
+    "overall_exact_rate": 0.0017857142857142857,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 10
+      },
+      "0.92": {
+        "redundant_observations": 169
+      }
+    }
+  },
+  "commit": {
+    "sha": "32e66293bd4a0593275354814bd4053e4d9ce162",
+    "short_sha": "32e66293",
+    "subject": "Add blog post: We Added Jev as a Reranker. Here's What We Learned. (#4736)",
+    "author": "Ben",
+    "author_date": "2026-09-24T16:49:27-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/32e66293bd4a0593275354814bd4053e4d9ce162",
+    "pr_number": 4736,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/4736"
+  },
+  "workflow_run": {
+    "id": "36101044411",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/36101044411"
+  }
+}
