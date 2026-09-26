@@ -1,6 +1,22 @@
 {
   "runs": [
     {
+      "sha": "a921929a0e0ea82fb49da1daa0ca3e152e41fcc1",
+      "short_sha": "a921929a",
+      "subject": "docs(hermes): fix the --ref example and document the install prompts (#4795)",
+      "author": "Ben",
+      "author_date": "2026-09-25T16:14:12-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/a921929a0e0ea82fb49da1daa0ca3e152e41fcc1",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/4795",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/36222523987",
+      "data_file": "data/system-evals/20260926T063336Z-a921929a.json",
+      "timestamp": "2026-09-26T06:33:34+00:00",
+      "correct_rate": 0.7916666666666666,
+      "trap_count": 10,
+      "total": 48,
+      "mode": "full"
+    },
+    {
       "sha": "32e66293bd4a0593275354814bd4053e4d9ce162",
       "short_sha": "32e66293",
       "subject": "Add blog post: We Added Jev as a Reranker. Here's What We Learned. (#4736)",
@@ -225,5 +241,5 @@
       "mode": "full"
     }
   ],
-  "updated_at": "2026-09-25T06:33:56Z"
+  "updated_at": "2026-09-26T06:33:36Z"
 }
