@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-09-27T06:37:18.921865+00:00",
+  "overall_duplication_rate": 0.015410958904109588,
+  "duplication_threshold": 0.97,
+  "total_observations": 584,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1553,
+      "facts_consolidated": 1553,
+      "facts_covered": 1395,
+      "facts_skipped": 158,
+      "observations": 584,
+      "avg_sources_per_obs": 2.9,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 9,
+          "redundant_observations": 9,
+          "duplication_rate": 0.015410958904109588
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 115,
+          "redundant_observations": 171,
+          "duplication_rate": 0.2928082191780822
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 584,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.015410958904109588,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 9
+      },
+      "0.92": {
+        "redundant_observations": 171
+      }
+    }
+  },
+  "commit": {
+    "sha": "ccfe85b4851957ac2adf88b4a9ddf9668b2882f1",
+    "short_sha": "ccfe85b4",
+    "subject": "chore(deps): bump pipecat-ai to 1.12.0 in pipecat integration lockfile (#4814)",
+    "author": "Chris Bartholomew",
+    "author_date": "2026-09-26T10:14:44-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/ccfe85b4851957ac2adf88b4a9ddf9668b2882f1",
+    "pr_number": 4814,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/4814"
+  },
+  "workflow_run": {
+    "id": "36298902689",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/36298902689"
+  }
+}

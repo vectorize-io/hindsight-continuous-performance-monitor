@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "ccfe85b4851957ac2adf88b4a9ddf9668b2882f1",
+      "short_sha": "ccfe85b4",
+      "subject": "chore(deps): bump pipecat-ai to 1.12.0 in pipecat integration lockfile (#4814)",
+      "author": "Chris Bartholomew",
+      "author_date": "2026-09-26T10:14:44-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/ccfe85b4851957ac2adf88b4a9ddf9668b2882f1",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/4814",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/36298902689",
+      "data_file": "data/obs/20260927T063722Z-ccfe85b4.json",
+      "timestamp": "2026-09-27T06:37:18.921865+00:00",
+      "overall_duplication_rate": 0.015410958904109588,
+      "total_observations": 584
+    },
+    {
       "sha": "a921929a0e0ea82fb49da1daa0ca3e152e41fcc1",
       "short_sha": "a921929a",
       "subject": "docs(hermes): fix the --ref example and document the install prompts (#4795)",
@@ -1653,5 +1667,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-09-26T06:33:46Z"
+  "updated_at": "2026-09-27T06:37:23Z"
 }
