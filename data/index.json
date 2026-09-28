@@ -8,6 +8,19 @@
       "author_date": "2026-09-26T10:14:44-04:00",
       "commit_url": "https://github.com/vectorize-io/hindsight/commit/ccfe85b4851957ac2adf88b4a9ddf9668b2882f1",
       "pr_url": "https://github.com/vectorize-io/hindsight/pull/4814",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/36384539671",
+      "data_file": "data/20260928T063046Z-ccfe85b4.json",
+      "timestamp": "2026-09-28T06:03:27.344295+00:00",
+      "scale": "large"
+    },
+    {
+      "sha": "ccfe85b4851957ac2adf88b4a9ddf9668b2882f1",
+      "short_sha": "ccfe85b4",
+      "subject": "chore(deps): bump pipecat-ai to 1.12.0 in pipecat integration lockfile (#4814)",
+      "author": "Chris Bartholomew",
+      "author_date": "2026-09-26T10:14:44-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/ccfe85b4851957ac2adf88b4a9ddf9668b2882f1",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/4814",
       "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/36298902689",
       "data_file": "data/20260927T063715Z-ccfe85b4.json",
       "timestamp": "2026-09-27T06:05:55.625058+00:00",
@@ -1912,5 +1925,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-09-27T06:37:15Z"
+  "updated_at": "2026-09-28T06:30:47Z"
 }
