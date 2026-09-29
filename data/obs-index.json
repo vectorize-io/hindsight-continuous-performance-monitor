@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "1e427025b4d4c01e8ad6385dd04e02102886a5c4",
+      "short_sha": "1e427025",
+      "subject": "Add blog post: I Gave Meta's AI Assistant My Entire Memory (#4887)",
+      "author": "Ben",
+      "author_date": "2026-09-28T15:14:02-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/1e427025b4d4c01e8ad6385dd04e02102886a5c4",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/4887",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/36528992877",
+      "data_file": "data/obs/20260929T063458Z-1e427025.json",
+      "timestamp": "2026-09-29T06:34:55.492715+00:00",
+      "overall_duplication_rate": 0.018018018018018018,
+      "total_observations": 555
+    },
+    {
       "sha": "ccfe85b4851957ac2adf88b4a9ddf9668b2882f1",
       "short_sha": "ccfe85b4",
       "subject": "chore(deps): bump pipecat-ai to 1.12.0 in pipecat integration lockfile (#4814)",
@@ -1681,5 +1695,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-09-28T06:42:57Z"
+  "updated_at": "2026-09-29T06:34:59Z"
 }
