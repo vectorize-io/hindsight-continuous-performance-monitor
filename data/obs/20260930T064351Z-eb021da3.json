@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-09-30T06:43:48.883060+00:00",
+  "overall_duplication_rate": 0.00992063492063492,
+  "duplication_threshold": 0.97,
+  "total_observations": 504,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1564,
+      "facts_consolidated": 1564,
+      "facts_covered": 1404,
+      "facts_skipped": 160,
+      "observations": 504,
+      "avg_sources_per_obs": 3.1,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 5,
+          "redundant_observations": 5,
+          "duplication_rate": 0.00992063492063492
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 84,
+          "redundant_observations": 137,
+          "duplication_rate": 0.2718253968253968
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 504,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.00992063492063492,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 5
+      },
+      "0.92": {
+        "redundant_observations": 137
+      }
+    }
+  },
+  "commit": {
+    "sha": "eb021da3b2501911e4b57c82b3de1123572a200e",
+    "short_sha": "eb021da3",
+    "subject": "fix(hermes): start the embedded daemon from a child without our PYTHONPATH (#4946)",
+    "author": "Nicolò Boschi",
+    "author_date": "2026-09-29T19:05:35+02:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/eb021da3b2501911e4b57c82b3de1123572a200e",
+    "pr_number": 4946,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/4946"
+  },
+  "workflow_run": {
+    "id": "36676154617",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/36676154617"
+  }
+}
