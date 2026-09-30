@@ -1,6 +1,22 @@
 {
   "runs": [
     {
+      "sha": "eb021da3b2501911e4b57c82b3de1123572a200e",
+      "short_sha": "eb021da3",
+      "subject": "fix(hermes): start the embedded daemon from a child without our PYTHONPATH (#4946)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-09-29T19:05:35+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/eb021da3b2501911e4b57c82b3de1123572a200e",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/4946",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/36676154617",
+      "data_file": "data/system-evals/20260930T063129Z-eb021da3.json",
+      "timestamp": "2026-09-30T06:31:27+00:00",
+      "correct_rate": 0.7959183673469388,
+      "trap_count": 10,
+      "total": 49,
+      "mode": "full"
+    },
+    {
       "sha": "1e427025b4d4c01e8ad6385dd04e02102886a5c4",
       "short_sha": "1e427025",
       "subject": "Add blog post: I Gave Meta's AI Assistant My Entire Memory (#4887)",
@@ -289,5 +305,5 @@
       "mode": "full"
     }
   ],
-  "updated_at": "2026-09-29T06:32:12Z"
+  "updated_at": "2026-09-30T06:31:30Z"
 }
