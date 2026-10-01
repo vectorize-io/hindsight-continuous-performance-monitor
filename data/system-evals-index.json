@@ -1,6 +1,22 @@
 {
   "runs": [
     {
+      "sha": "ec39e10900c6a971f1a73cd37402228d5cccaa25",
+      "short_sha": "ec39e109",
+      "subject": "docs(blog): contents list + Cloud CTA on the left, Back to top on the right (#5020)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-10-01T06:38:39+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/ec39e10900c6a971f1a73cd37402228d5cccaa25",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/5020",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/36822652814",
+      "data_file": "data/system-evals/20261001T064336Z-ec39e109.json",
+      "timestamp": "2026-10-01T06:43:35+00:00",
+      "correct_rate": 0.7708333333333334,
+      "trap_count": 11,
+      "total": 48,
+      "mode": "full"
+    },
+    {
       "sha": "eb021da3b2501911e4b57c82b3de1123572a200e",
       "short_sha": "eb021da3",
       "subject": "fix(hermes): start the embedded daemon from a child without our PYTHONPATH (#4946)",
@@ -305,5 +321,5 @@
       "mode": "full"
     }
   ],
-  "updated_at": "2026-09-30T06:31:30Z"
+  "updated_at": "2026-10-01T06:43:37Z"
 }
