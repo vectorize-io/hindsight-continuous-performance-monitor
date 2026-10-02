@@ -1,0 +1,723 @@
+{
+  "timestamp": "2026-10-02T06:02:37.224356+00:00",
+  "scale": "large",
+  "git_sha": "0be6c02",
+  "suites": [
+    {
+      "name": "retain",
+      "duration_seconds": 107.231,
+      "success": true,
+      "error": null,
+      "retain": {
+        "total_items": 5000,
+        "total_duration_seconds": 107.231,
+        "throughput_items_per_sec": 46.63
+      },
+      "recall": null,
+      "consolidation": null,
+      "graph_maintenance": null,
+      "graph_contention": null,
+      "stats": null,
+      "obs_hubs": null
+    },
+    {
+      "name": "recall",
+      "duration_seconds": 208.323,
+      "success": true,
+      "error": null,
+      "retain": null,
+      "recall": {
+        "bank_size": 5000,
+        "concurrency": 16,
+        "latency": {
+          "p50": 2.087443932000042,
+          "p95": 3.2026012119999905,
+          "p99": 3.370626891000029,
+          "mean": 2.0832328908899997,
+          "min": 0.6913141599999904,
+          "max": 3.370626891000029,
+          "count": 100
+        },
+        "throughput_queries_per_sec": 7.68,
+        "phase_timings": {
+          "backend_acquisition": {
+            "p50": 7.152557373046875E-7,
+            "p95": 9.5367431640625E-7,
+            "p99": 9.5367431640625E-7,
+            "mean": 6.341934204101563E-7,
+            "min": 4.76837158203125E-7,
+            "max": 9.5367431640625E-7,
+            "count": 100
+          },
+          "generate_query_embedding": {
+            "p50": 0.34807682037353516,
+            "p95": 1.4869706630706787,
+            "p99": 1.4912443161010742,
+            "mean": 0.7199890756607056,
+            "min": 0.0853264331817627,
+            "max": 1.4912443161010742,
+            "count": 100
+          },
+          "store_recall": {
+            "p50": 1.1734349727630615,
+            "p95": 1.73417067527771,
+            "p99": 2.014376163482666,
+            "mean": 1.2123782277107238,
+            "min": 0.501136064529419,
+            "max": 2.014376163482666,
+            "count": 100
+          },
+          "parallel_retrieval": {
+            "p50": 1.2258594036102295,
+            "p95": 1.808750867843628,
+            "p99": 2.1303508281707764,
+            "mean": 1.263062334060669,
+            "min": 0.5038862228393555,
+            "max": 2.1303508281707764,
+            "count": 100
+          },
+          "retrieval_temporal_extraction": {
+            "p50": 0.012287139892578125,
+            "p95": 0.14479708671569824,
+            "p99": 0.4072265625,
+            "mean": 0.04979573965072632,
+            "min": 0.00048661231994628906,
+            "max": 0.4072265625,
+            "count": 100
+          },
+          "retrieval_store_recall": {
+            "p50": 1.1734349727630615,
+            "p95": 1.73417067527771,
+            "p99": 2.014376163482666,
+            "mean": 1.2123782277107238,
+            "min": 0.501136064529419,
+            "max": 2.014376163482666,
+            "count": 100
+          },
+          "rrf_merge": {
+            "p50": 0.005239963531494141,
+            "p95": 0.009963274002075195,
+            "p99": 0.35011982917785645,
+            "mean": 0.0121832537651062,
+            "min": 0.003603696823120117,
+            "max": 0.35011982917785645,
+            "count": 100
+          },
+          "rerank_prefilter": {
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "count": 100
+          },
+          "hydrate_results": {
+            "p50": 0.000019073486328125,
+            "p95": 0.00003528594970703125,
+            "p99": 0.00005245208740234375,
+            "mean": 0.000021462440490722655,
+            "min": 0.000014066696166992188,
+            "max": 0.00005245208740234375,
+            "count": 100
+          },
+          "reranking": {
+            "p50": 0.0008056163787841797,
+            "p95": 0.0014348030090332031,
+            "p99": 0.001661062240600586,
+            "mean": 0.0008820676803588867,
+            "min": 0.0006618499755859375,
+            "max": 0.001661062240600586,
+            "count": 100
+          },
+          "combined_scoring": {
+            "p50": 0.0034494400024414062,
+            "p95": 0.0064792633056640625,
+            "p99": 0.015483617782592773,
+            "mean": 0.0039008665084838867,
+            "min": 0.0030448436737060547,
+            "max": 0.015483617782592773,
+            "count": 100
+          },
+          "token_filtering": {
+            "p50": 0.0008432865142822266,
+            "p95": 0.03950095176696777,
+            "p99": 0.07408761978149414,
+            "mean": 0.004446365833282471,
+            "min": 0.0007147789001464844,
+            "max": 0.07408761978149414,
+            "count": 100
+          },
+          "result_serialization": {
+            "p50": 0.003360271453857422,
+            "p95": 0.006064891815185547,
+            "p99": 0.010328292846679688,
+            "mean": 0.0036906003952026367,
+            "min": 0.0030672550201416016,
+            "max": 0.010328292846679688,
+            "count": 100
+          },
+          "entity_build": {
+            "p50": 0.002313375473022461,
+            "p95": 0.004354238510131836,
+            "p99": 0.3141496181488037,
+            "mean": 0.00890937089920044,
+            "min": 0.0019750595092773438,
+            "max": 0.3141496181488037,
+            "count": 100
+          },
+          "semaphore_wait": {
+            "p50": 0.00000286102294921875,
+            "p95": 0.00000476837158203125,
+            "p99": 0.00002384185791015625,
+            "mean": 0.0000031757354736328126,
+            "min": 0.0000019073486328125,
+            "max": 0.00002384185791015625,
+            "count": 100
+          },
+          "trace_finalize": {
+            "p50": 0.009565591812133789,
+            "p95": 0.01842808723449707,
+            "p99": 0.3239736557006836,
+            "mean": 0.019170255661010743,
+            "min": 0.007639646530151367,
+            "max": 0.3239736557006836,
+            "count": 100
+          }
+        },
+        "sources_per_observation": null
+      },
+      "consolidation": null,
+      "graph_maintenance": null,
+      "graph_contention": null,
+      "stats": null,
+      "obs_hubs": null
+    },
+    {
+      "name": "recall-with-observations",
+      "duration_seconds": 805.182,
+      "success": true,
+      "error": null,
+      "retain": null,
+      "recall": {
+        "bank_size": 5000,
+        "concurrency": 16,
+        "latency": {
+          "p50": 9.844210591999968,
+          "p95": 12.992838714999948,
+          "p99": 13.099717510999994,
+          "mean": 8.051821399619998,
+          "min": 0.43118881899999906,
+          "max": 13.099717510999994,
+          "count": 100
+        },
+        "throughput_queries_per_sec": 1.99,
+        "phase_timings": {
+          "backend_acquisition": {
+            "p50": 7.152557373046875E-7,
+            "p95": 0.0000011920928955078125,
+            "p99": 0.0000019073486328125,
+            "mean": 6.818771362304687E-7,
+            "min": 4.76837158203125E-7,
+            "max": 0.0000019073486328125,
+            "count": 100
+          },
+          "generate_query_embedding": {
+            "p50": 0.3821389675140381,
+            "p95": 1.4325623512268066,
+            "p99": 1.525541067123413,
+            "mean": 0.7188338851928711,
+            "min": 0.08759903907775879,
+            "max": 1.525541067123413,
+            "count": 100
+          },
+          "store_recall": {
+            "p50": 8.871789455413818,
+            "p95": 11.946173906326294,
+            "p99": 12.260011911392212,
+            "mean": 7.013925585746765,
+            "min": 0.2808976173400879,
+            "max": 12.260011911392212,
+            "count": 100
+          },
+          "parallel_retrieval": {
+            "p50": 8.880028247833252,
+            "p95": 11.95035719871521,
+            "p99": 12.26396894454956,
+            "mean": 7.043460252285004,
+            "min": 0.28241872787475586,
+            "max": 12.26396894454956,
+            "count": 100
+          },
+          "retrieval_temporal_extraction": {
+            "p50": 0.010229825973510742,
+            "p95": 0.16540288925170898,
+            "p99": 0.1680915355682373,
+            "mean": 0.02750192642211914,
+            "min": 0.0004642009735107422,
+            "max": 0.1680915355682373,
+            "count": 100
+          },
+          "retrieval_store_recall": {
+            "p50": 8.871789455413818,
+            "p95": 11.946173906326294,
+            "p99": 12.260011911392212,
+            "mean": 7.013925585746765,
+            "min": 0.2808976173400879,
+            "max": 12.260011911392212,
+            "count": 100
+          },
+          "rrf_merge": {
+            "p50": 0.011543989181518555,
+            "p95": 0.06279253959655762,
+            "p99": 0.34659719467163086,
+            "mean": 0.024498536586761474,
+            "min": 0.006456136703491211,
+            "max": 0.34659719467163086,
+            "count": 100
+          },
+          "rerank_prefilter": {
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "count": 100
+          },
+          "hydrate_results": {
+            "p50": 0.0000247955322265625,
+            "p95": 0.00005459785461425781,
+            "p99": 0.00013113021850585938,
+            "mean": 0.000028214454650878907,
+            "min": 0.0000152587890625,
+            "max": 0.00013113021850585938,
+            "count": 100
+          },
+          "reranking": {
+            "p50": 0.001630544662475586,
+            "p95": 0.00892329216003418,
+            "p99": 0.01145482063293457,
+            "mean": 0.0026999831199645994,
+            "min": 0.001020193099975586,
+            "max": 0.01145482063293457,
+            "count": 100
+          },
+          "combined_scoring": {
+            "p50": 0.004526853561401367,
+            "p95": 0.024784088134765625,
+            "p99": 1.7036142349243164,
+            "mean": 0.02493990182876587,
+            "min": 0.0033702850341796875,
+            "max": 1.7036142349243164,
+            "count": 100
+          },
+          "token_filtering": {
+            "p50": 0.0010755062103271484,
+            "p95": 0.010255575180053711,
+            "p99": 0.0666048526763916,
+            "mean": 0.002999446392059326,
+            "min": 0.0007288455963134766,
+            "max": 0.0666048526763916,
+            "count": 100
+          },
+          "result_serialization": {
+            "p50": 0.004123687744140625,
+            "p95": 0.024722576141357422,
+            "p99": 0.3298070430755615,
+            "mean": 0.010310332775115966,
+            "min": 0.0031363964080810547,
+            "max": 0.3298070430755615,
+            "count": 100
+          },
+          "entity_build": {
+            "p50": 0.0029273033142089844,
+            "p95": 0.0229799747467041,
+            "p99": 1.3580255508422852,
+            "mean": 0.018743674755096435,
+            "min": 0.0020351409912109375,
+            "max": 1.3580255508422852,
+            "count": 100
+          },
+          "semaphore_wait": {
+            "p50": 0.00000286102294921875,
+            "p95": 0.0000054836273193359375,
+            "p99": 0.00009918212890625,
+            "mean": 0.0000040912628173828125,
+            "min": 0.0000021457672119140625,
+            "max": 0.00009918212890625,
+            "count": 100
+          },
+          "trace_finalize": {
+            "p50": 0.015018701553344727,
+            "p95": 0.33600783348083496,
+            "p99": 1.964369535446167,
+            "mean": 0.06593103408813476,
+            "min": 0.010214805603027344,
+            "max": 1.964369535446167,
+            "count": 100
+          }
+        },
+        "sources_per_observation": 2
+      },
+      "consolidation": null,
+      "graph_maintenance": null,
+      "graph_contention": null,
+      "stats": null,
+      "obs_hubs": null
+    },
+    {
+      "name": "recall-temporal",
+      "duration_seconds": 224.198,
+      "success": true,
+      "error": null,
+      "retain": null,
+      "recall": {
+        "bank_size": 5000,
+        "concurrency": 16,
+        "latency": {
+          "p50": 2.309350734000077,
+          "p95": 3.60552329799998,
+          "p99": 3.9071475630000805,
+          "mean": 2.2419824382,
+          "min": 0.6493290419999767,
+          "max": 3.9071475630000805,
+          "count": 100
+        },
+        "throughput_queries_per_sec": 7.14,
+        "phase_timings": {
+          "backend_acquisition": {
+            "p50": 4.76837158203125E-7,
+            "p95": 9.5367431640625E-7,
+            "p99": 9.5367431640625E-7,
+            "mean": 5.936622619628907E-7,
+            "min": 4.76837158203125E-7,
+            "max": 9.5367431640625E-7,
+            "count": 100
+          },
+          "generate_query_embedding": {
+            "p50": 0.3147401809692383,
+            "p95": 0.5245356559753418,
+            "p99": 0.528480052947998,
+            "mean": 0.376927969455719,
+            "min": 0.09325647354125977,
+            "max": 0.528480052947998,
+            "count": 100
+          },
+          "store_recall": {
+            "p50": 0.42216968536376953,
+            "p95": 0.724078893661499,
+            "p99": 0.9327256679534912,
+            "mean": 0.4747149658203125,
+            "min": 0.16945791244506836,
+            "max": 0.9327256679534912,
+            "count": 100
+          },
+          "parallel_retrieval": {
+            "p50": 1.7592041492462158,
+            "p95": 3.0379679203033447,
+            "p99": 3.1384308338165283,
+            "mean": 1.767864806652069,
+            "min": 0.19989371299743652,
+            "max": 3.1384308338165283,
+            "count": 100
+          },
+          "retrieval_temporal_extraction": {
+            "p50": 1.281867265701294,
+            "p95": 2.5665061473846436,
+            "p99": 2.798391103744507,
+            "mean": 1.2922092270851135,
+            "min": 0.029636383056640625,
+            "max": 2.798391103744507,
+            "count": 100
+          },
+          "retrieval_store_recall": {
+            "p50": 0.42216968536376953,
+            "p95": 0.724078893661499,
+            "p99": 0.9327256679534912,
+            "mean": 0.4747149658203125,
+            "min": 0.16945791244506836,
+            "max": 0.9327256679534912,
+            "count": 100
+          },
+          "rrf_merge": {
+            "p50": 0.0053217411041259766,
+            "p95": 0.01000356674194336,
+            "p99": 0.3064706325531006,
+            "mean": 0.008769636154174804,
+            "min": 0.003694772720336914,
+            "max": 0.3064706325531006,
+            "count": 100
+          },
+          "rerank_prefilter": {
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "count": 100
+          },
+          "hydrate_results": {
+            "p50": 0.000017404556274414062,
+            "p95": 0.000026941299438476562,
+            "p99": 0.000039577484130859375,
+            "mean": 0.000018723011016845703,
+            "min": 0.000014066696166992188,
+            "max": 0.000039577484130859375,
+            "count": 100
+          },
+          "reranking": {
+            "p50": 0.0007545948028564453,
+            "p95": 0.0012884140014648438,
+            "p99": 0.0017311573028564453,
+            "mean": 0.000798330307006836,
+            "min": 0.0006403923034667969,
+            "max": 0.0017311573028564453,
+            "count": 100
+          },
+          "combined_scoring": {
+            "p50": 0.0033369064331054688,
+            "p95": 0.0047168731689453125,
+            "p99": 0.005769252777099609,
+            "mean": 0.0035190391540527344,
+            "min": 0.003075838088989258,
+            "max": 0.005769252777099609,
+            "count": 100
+          },
+          "token_filtering": {
+            "p50": 0.0023238658905029297,
+            "p95": 0.0040740966796875,
+            "p99": 0.004774570465087891,
+            "mean": 0.0023091840744018555,
+            "min": 0.0007154941558837891,
+            "max": 0.004774570465087891,
+            "count": 100
+          },
+          "result_serialization": {
+            "p50": 0.003203153610229492,
+            "p95": 0.0041866302490234375,
+            "p99": 0.0065419673919677734,
+            "mean": 0.003407583236694336,
+            "min": 0.003004312515258789,
+            "max": 0.0065419673919677734,
+            "count": 100
+          },
+          "entity_build": {
+            "p50": 0.0022029876708984375,
+            "p95": 0.003281831741333008,
+            "p99": 0.00382232666015625,
+            "mean": 0.0024139881134033203,
+            "min": 0.0018901824951171875,
+            "max": 0.00382232666015625,
+            "count": 100
+          },
+          "semaphore_wait": {
+            "p50": 0.00000286102294921875,
+            "p95": 0.000005245208740234375,
+            "p99": 0.00019598007202148438,
+            "mean": 0.000005359649658203125,
+            "min": 0.000002384185791015625,
+            "max": 0.00019598007202148438,
+            "count": 100
+          },
+          "trace_finalize": {
+            "p50": 0.00893545150756836,
+            "p95": 0.3081700801849365,
+            "p99": 0.3309814929962158,
+            "mean": 0.02724350929260254,
+            "min": 0.007647991180419922,
+            "max": 0.3309814929962158,
+            "count": 100
+          }
+        },
+        "sources_per_observation": null
+      },
+      "consolidation": null,
+      "graph_maintenance": null,
+      "graph_contention": null,
+      "stats": null,
+      "obs_hubs": null
+    },
+    {
+      "name": "consolidation",
+      "duration_seconds": 7.007,
+      "success": true,
+      "error": null,
+      "retain": null,
+      "recall": null,
+      "consolidation": {
+        "total_items": 5000,
+        "memories_processed": 100,
+        "observations_created": 100,
+        "observations_updated": 0,
+        "observations_merged": 0,
+        "skipped": 0,
+        "total_duration_seconds": 7.007,
+        "throughput_memories_per_sec": 14.27
+      },
+      "graph_maintenance": null,
+      "graph_contention": null,
+      "stats": null,
+      "obs_hubs": null
+    },
+    {
+      "name": "graph-maintenance",
+      "duration_seconds": 39.601,
+      "success": true,
+      "error": null,
+      "retain": null,
+      "recall": null,
+      "consolidation": null,
+      "graph_maintenance": {
+        "bank_size": 15000,
+        "deleted_units": 1500,
+        "victims_enqueued": 12851,
+        "relink_units_processed": 12851,
+        "relink_links_added": 886081,
+        "orphan_entities_pruned": 83,
+        "stale_cooccurrences_pruned": 2234,
+        "total_duration_seconds": 39.601,
+        "throughput_units_per_sec": 324.51,
+        "ms_per_victim": 3.08,
+        "semantic_ann_seconds": 15.812,
+        "semantic_ann_calls": 258,
+        "temporal_seconds": 1.574,
+        "temporal_calls": 258
+      },
+      "graph_contention": null,
+      "stats": null,
+      "obs_hubs": null
+    },
+    {
+      "name": "graph-maintenance-contention",
+      "duration_seconds": 324.271,
+      "success": true,
+      "error": null,
+      "retain": null,
+      "recall": null,
+      "consolidation": null,
+      "graph_maintenance": null,
+      "graph_contention": {
+        "contention_entities": 200,
+        "contention_pairs": 4000,
+        "upsert_workers": 16,
+        "sweep_workers": 2,
+        "total_upserts": 720,
+        "upsert_deadlocks": 0,
+        "sweep_passes_attempted": 102,
+        "sweep_deadlocks_observed": 0,
+        "sweep_passes_dropped": 0,
+        "sweep_passes_succeeded": 102,
+        "sweep_deadlock_escape_rate": 0.0,
+        "sweep_latency": {
+          "p50": 1.418320951999931,
+          "p95": 23.442512201,
+          "p99": 83.02314478100016,
+          "mean": 5.050795186156863,
+          "min": 0.7936929449999752,
+          "max": 98.84777882100002,
+          "count": 102
+        },
+        "total_duration_seconds": 324.271
+      },
+      "stats": null,
+      "obs_hubs": null
+    },
+    {
+      "name": "stats",
+      "duration_seconds": 59.206,
+      "success": true,
+      "error": null,
+      "retain": null,
+      "recall": null,
+      "consolidation": null,
+      "graph_maintenance": null,
+      "graph_contention": null,
+      "stats": {
+        "bank_size": 15000,
+        "concurrency": 16,
+        "total_units": 15300,
+        "total_links": 453715,
+        "total_entities": 12262,
+        "cold_latency": {
+          "p50": 0.645545932999994,
+          "p95": 0.696954273000074,
+          "p99": 0.7018289330001153,
+          "mean": 0.5920569283699956,
+          "min": 0.18757700399987698,
+          "max": 0.7018289330001153,
+          "count": 100
+        },
+        "cold_throughput_per_sec": 27.02,
+        "warm_latency": {
+          "p50": 0.000009928000054060249,
+          "p95": 0.000017582999817022937,
+          "p99": 0.00005361000012271688,
+          "mean": 0.000011256889990818308,
+          "min": 0.000008877000027496251,
+          "max": 0.00005361000012271688,
+          "count": 100
+        },
+        "cache_speedup": 65022.8
+      },
+      "obs_hubs": null
+    },
+    {
+      "name": "observation-hubs",
+      "duration_seconds": 5.327,
+      "success": true,
+      "error": null,
+      "retain": null,
+      "recall": null,
+      "consolidation": null,
+      "graph_maintenance": null,
+      "graph_contention": null,
+      "stats": null,
+      "obs_hubs": {
+        "units": 54000,
+        "observations": 10000,
+        "links": 1680000,
+        "max_hub_degree": 27600,
+        "seed_sources": 94.375,
+        "connected_sources": 16768,
+        "latency": {
+          "p50": 0.3593266020000101,
+          "p95": 0.6490066510000361,
+          "p99": 0.6490066510000361,
+          "mean": 0.33294220993751367,
+          "min": 0.11067928299985397,
+          "max": 0.6490066510000361,
+          "count": 16
+        },
+        "concurrency": 8,
+        "concurrent_wall_seconds": 0.65,
+        "timeouts": 0,
+        "result_digests": [
+          "b0c436d91287aee1bbf634349eab58b7",
+          "94feec1b9f6bde70b7a5bf151198e146",
+          "cd122c7754adc1a79bb805eda6cb946c",
+          "caa7b6e8e948584c9e537d25868f7ddd",
+          "3eb74afcd276926147fe9af3df43403b",
+          "9aaceadbd5e4cea3338427b35ef53a3c",
+          "a8f00ac6785d0fe8dd75dedd0a4c2c17",
+          "a9c07d48958c64aa606a49eef4291e00"
+        ]
+      }
+    }
+  ],
+  "commit": {
+    "sha": "0be6c02b2aafc2b6bdb188ef1842ac507e0cfa2b",
+    "short_sha": "0be6c02b",
+    "subject": "Add blog post: What Changes Now That Hindsight Is a Hermes Plugin (#4879)",
+    "author": "Ben",
+    "author_date": "2026-10-01T15:01:22-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/0be6c02b2aafc2b6bdb188ef1842ac507e0cfa2b",
+    "pr_number": 4879,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/4879"
+  },
+  "workflow_run": {
+    "id": "36971613734",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/36971613734"
+  }
+}

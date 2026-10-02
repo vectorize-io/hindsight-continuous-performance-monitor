@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "0be6c02b2aafc2b6bdb188ef1842ac507e0cfa2b",
+      "short_sha": "0be6c02b",
+      "subject": "Add blog post: What Changes Now That Hindsight Is a Hermes Plugin (#4879)",
+      "author": "Ben",
+      "author_date": "2026-10-01T15:01:22-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/0be6c02b2aafc2b6bdb188ef1842ac507e0cfa2b",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/4879",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/36971613734",
+      "data_file": "data/20261002T063321Z-0be6c02b.json",
+      "timestamp": "2026-10-02T06:02:37.224356+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "ec39e10900c6a971f1a73cd37402228d5cccaa25",
       "short_sha": "ec39e109",
       "subject": "docs(blog): contents list + Cloud CTA on the left, Back to top on the right (#5020)",
@@ -1964,5 +1977,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-10-01T06:31:30Z"
+  "updated_at": "2026-10-02T06:33:21Z"
 }
