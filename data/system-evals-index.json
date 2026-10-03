@@ -1,6 +1,22 @@
 {
   "runs": [
     {
+      "sha": "f7dd3f4fd7420f7beec60c32c965e5e5cf7be066",
+      "short_sha": "f7dd3f4f",
+      "subject": "feat(metrics): opt-in memories_backend label on operation and recall-phase metrics (#5129)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-10-02T18:52:39+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/f7dd3f4fd7420f7beec60c32c965e5e5cf7be066",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/5129",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/37101861783",
+      "data_file": "data/system-evals/20261003T062549Z-f7dd3f4f.json",
+      "timestamp": "2026-10-03T06:25:48+00:00",
+      "correct_rate": 0.8125,
+      "trap_count": 9,
+      "total": 48,
+      "mode": "full"
+    },
+    {
       "sha": "0be6c02b2aafc2b6bdb188ef1842ac507e0cfa2b",
       "short_sha": "0be6c02b",
       "subject": "Add blog post: What Changes Now That Hindsight Is a Hermes Plugin (#4879)",
@@ -337,5 +353,5 @@
       "mode": "full"
     }
   ],
-  "updated_at": "2026-10-02T06:28:53Z"
+  "updated_at": "2026-10-03T06:25:50Z"
 }
