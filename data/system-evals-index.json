@@ -8,6 +8,22 @@
       "author_date": "2026-10-02T18:52:39+02:00",
       "commit_url": "https://github.com/vectorize-io/hindsight/commit/f7dd3f4fd7420f7beec60c32c965e5e5cf7be066",
       "pr_url": "https://github.com/vectorize-io/hindsight/pull/5129",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/37186837373",
+      "data_file": "data/system-evals/20261004T082000Z-f7dd3f4f.json",
+      "timestamp": "2026-10-04T08:19:58+00:00",
+      "correct_rate": 0.7551020408163265,
+      "trap_count": 12,
+      "total": 49,
+      "mode": "full"
+    },
+    {
+      "sha": "f7dd3f4fd7420f7beec60c32c965e5e5cf7be066",
+      "short_sha": "f7dd3f4f",
+      "subject": "feat(metrics): opt-in memories_backend label on operation and recall-phase metrics (#5129)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-10-02T18:52:39+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/f7dd3f4fd7420f7beec60c32c965e5e5cf7be066",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/5129",
       "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/37101861783",
       "data_file": "data/system-evals/20261003T062549Z-f7dd3f4f.json",
       "timestamp": "2026-10-03T06:25:48+00:00",
@@ -353,5 +369,5 @@
       "mode": "full"
     }
   ],
-  "updated_at": "2026-10-03T06:25:50Z"
+  "updated_at": "2026-10-04T08:20:00Z"
 }

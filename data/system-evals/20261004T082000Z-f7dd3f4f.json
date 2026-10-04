@@ -1,0 +1,617 @@
+{
+  "timestamp": "2026-10-04T08:19:58+00:00",
+  "suite": "system-evals",
+  "mode": "full",
+  "model_config": {
+    "hindsight": {
+      "provider": "vertexai",
+      "model": "google/gemini-2.5-flash-lite"
+    },
+    "judge": {
+      "provider": null,
+      "model": "gemini-2.5-flash"
+    }
+  },
+  "total": 49,
+  "correct": 37,
+  "correct_rate": 0.7551020408163265,
+  "trap_count": 12,
+  "by_kind": {
+    "knowledge_page": {
+      "total": 7,
+      "correct": 3,
+      "trap_count": 2
+    },
+    "reflect": {
+      "total": 9,
+      "correct": 8,
+      "trap_count": 1
+    },
+    "retain": {
+      "total": 27,
+      "correct": 20,
+      "trap_count": 7
+    },
+    "source_priority": {
+      "total": 6,
+      "correct": 6,
+      "trap_count": 2
+    }
+  },
+  "items": [
+    {
+      "kind": "knowledge_page",
+      "question_id": "hq-release-prod",
+      "category": "precision_discrimination",
+      "correct": false,
+      "hit_trap": false,
+      "bank_id": "syseval-dca3c4d50b",
+      "reason": "3/3 judges agree: The answer states that no release was deployed to production on 2026-03-18, which contradicts the criterion that release 0.9.3 was deployed.",
+      "page_id": "kp-ea923dcf825041ce875f0db1764c9d28",
+      "sizes": [
+        56,
+        104
+      ]
+    },
+    {
+      "kind": "knowledge_page",
+      "question_id": "hq-count-billing",
+      "category": "counting",
+      "correct": false,
+      "hit_trap": true,
+      "bank_id": "syseval-0e37205330",
+      "reason": "The answer states that 'four customers reported billing errors', and four is a number other than seven.",
+      "page_id": "kp-37f9a334d70047b487cc89f203b7e186",
+      "sizes": [
+        192,
+        208
+      ]
+    },
+    {
+      "kind": "knowledge_page",
+      "question_id": "hq-owner-latest",
+      "category": "supersession",
+      "correct": false,
+      "hit_trap": true,
+      "bank_id": "syseval-eb238361d5",
+      "reason": "The answer explicitly states that the ownership of the ranking service was transferred to the search guild in April 2024, which is one of the teams listed in the criterion.",
+      "page_id": "kp-f39db675c40145dd93b4d1f86c887780",
+      "sizes": [
+        201,
+        262
+      ]
+    },
+    {
+      "kind": "knowledge_page",
+      "question_id": "hq-entity-port",
+      "category": "entity_confusion",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-41fe699fee",
+      "reason": "The answer explicitly states that the payments-api service listens on port 8443.",
+      "page_id": "kp-09f074c27ef04adcaf254ba6eb4d2180",
+      "sizes": [
+        225,
+        225
+      ]
+    },
+    {
+      "kind": "knowledge_page",
+      "question_id": "hq-scoped-2fa",
+      "category": "scoped_truth",
+      "correct": false,
+      "hit_trap": false,
+      "bank_id": "syseval-a9865e4b79",
+      "reason": "3/3 judges agree: The answer correctly addresses US and UK accounts but omits the mandatory status for EU accounts, which is a required regional qualification.",
+      "page_id": "kp-c7ba2ef8138442be8d57920686a2495d",
+      "sizes": [
+        170,
+        165
+      ]
+    },
+    {
+      "kind": "knowledge_page",
+      "question_id": "hq-absent-2024",
+      "category": "absence_dense",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-d0b833c04f",
+      "reason": "The answer explicitly states that the provided data does not contain information about the engineering headcount at the end of 2024 and does not give or estimate a figure for 2024, while appropriately mentioning 2025/2026 data as context.",
+      "page_id": "kp-00626aa0d7f7421e8a7989d8a94b381e",
+      "sizes": [
+        326,
+        301
+      ]
+    },
+    {
+      "kind": "knowledge_page",
+      "question_id": "hq-numeric-outage",
+      "category": "numeric_precision",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-5a8dbeb98f",
+      "reason": "The answer explicitly states 'connection pool exhaustion', '200 connections', and '47 minutes', fulfilling all three required elements of the criterion.",
+      "page_id": "kp-b26f271dd9514e1fa801d5a63ec0a92f",
+      "sizes": [
+        632,
+        127
+      ]
+    },
+    {
+      "kind": "reflect",
+      "question_id": "hq-absent-2024",
+      "category": "absence_dense",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-d7509f3010",
+      "reason": "The answer explicitly states that the data does not contain the 2024 headcount and clarifies that figures are only available for 2025 and 2026, without presenting those as the 2024 number.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "reflect",
+      "question_id": "hq-release-prod",
+      "category": "precision_discrimination",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-62029f3c3b",
+      "reason": "The answer correctly identifies 'Release 0.9.3' and the date 'March 18, 2026' as specified in the criterion.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "reflect",
+      "question_id": "hq-owner-latest",
+      "category": "supersession",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-39f5a3d41b",
+      "reason": "The answer explicitly states that the core infra team currently owns the ranking service and lists previous owners as historical context, which aligns with the criterion.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "reflect",
+      "question_id": "hq-count-billing",
+      "category": "counting",
+      "correct": false,
+      "hit_trap": true,
+      "bank_id": "syseval-bb16911268",
+      "reason": "The answer states that 2 customers reported a billing error, and 2 is a number other than seven.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "reflect",
+      "question_id": "hq-entity-port",
+      "category": "entity_confusion",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-0885852571",
+      "reason": "The answer explicitly states that the payments-api service listens on port 8443, which directly satisfies the criterion.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "reflect",
+      "question_id": "hq-scoped-2fa",
+      "category": "scoped_truth",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-2ca0d77ae9",
+      "reason": "The answer correctly qualifies the mandatory status of two-factor authentication by region, stating it is mandatory for EU accounts, optional for US accounts, and accurately addresses UK accounts as mandatory from 2026, which aligns with the criterion.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "reflect",
+      "question_id": "hq-numeric-outage",
+      "category": "numeric_precision",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-ae644f199f",
+      "reason": "The answer explicitly states 'connection pool exhaustion', 'a connection limit of 200', and 'lasted for 47 minutes', fulfilling all three required points.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "en-coding-session-0",
+      "category": "language:English",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-7cbf64d19c",
+      "reason": "3/3 judges agree: All main sentences in the provided answer are written in English.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "en-coding-session-1",
+      "category": "language:English",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-7cbf64d19c",
+      "reason": "3/3 judges agree: All main sentences in the provided answer are written in English.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "en-coding-session-2",
+      "category": "language:English",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-7cbf64d19c",
+      "reason": "3/3 judges agree: All main sentences in the provided answer are written in English.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "en-coding-session-3",
+      "category": "language:English",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-7cbf64d19c",
+      "reason": "3/3 judges agree: All main sentences in the provided answer are written in English.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "en-coding-session-4",
+      "category": "language:English",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-7cbf64d19c",
+      "reason": "3/3 judges agree: All main sentences in the provided answer are written in English.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "en-coding-session-5",
+      "category": "language:English",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-7cbf64d19c",
+      "reason": "3/3 judges agree: All main sentences are written in English.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "en-git-commit-0",
+      "category": "language:English",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-dedd13ac53",
+      "reason": "3/3 judges agree: The main sentence 'Initialize Codex git baseline' is entirely in English, even after ignoring proper nouns and identifiers.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "en-git-commit-1",
+      "category": "language:English",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-dedd13ac53",
+      "reason": "3/3 judges agree: The main sentence 'Initialize Codex git baseline' is written in English.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "en-git-commit-2",
+      "category": "language:English",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-dedd13ac53",
+      "reason": "3/3 judges agree: The main sentence 'Initialize Codex git baseline' is entirely in English, even after ignoring proper nouns and identifiers.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "en-git-commit-3",
+      "category": "language:English",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-dedd13ac53",
+      "reason": "3/3 judges agree: The main sentence 'Initialize Codex git baseline' is written in English, and there are no other facts provided to check.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "en-git-commit-4",
+      "category": "language:English",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-dedd13ac53",
+      "reason": "3/3 judges agree: The main sentence 'Initialize Codex git baseline' is entirely in English, even after ignoring proper nouns and identifiers.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "en-git-commit-5",
+      "category": "language:English",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-dedd13ac53",
+      "reason": "3/3 judges agree: The main sentence 'Initialize Codex git baseline' is entirely in English, even after ignoring proper nouns and identifiers.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "it-coding-session-0",
+      "category": "language:Italian",
+      "correct": false,
+      "hit_trap": true,
+      "bank_id": "syseval-45b5e8e693",
+      "reason": "The main sentence of the first fact, 'Assistant corrected five whitespace-only issues and updated the deploy log.', is written in English, not Italian.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "it-coding-session-1",
+      "category": "language:Italian",
+      "correct": false,
+      "hit_trap": true,
+      "bank_id": "syseval-45b5e8e693",
+      "reason": "The main sentence 'Assistant corrected five space-only issues and updated the deploy log.' is written in English, which is a language other than Italian.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "it-coding-session-2",
+      "category": "language:Italian",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-45b5e8e693",
+      "reason": "3/3 judges agree: All main sentences, after ignoring specified elements, are written in Italian.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "it-coding-session-3",
+      "category": "language:Italian",
+      "correct": false,
+      "hit_trap": true,
+      "bank_id": "syseval-45b5e8e693",
+      "reason": "The main sentence of the fact is entirely in English, which is a language other than Italian.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "it-coding-session-4",
+      "category": "language:Italian",
+      "correct": false,
+      "hit_trap": true,
+      "bank_id": "syseval-45b5e8e693",
+      "reason": "The main sentence 'Assistant completed validation. Server: 230 tests passed, 52 skipped. Production build of the portal succeeded, with 55 portal tests passing. The build was re-run with the latest Node runtime because the initial build used Node 17 from the shell. 17 shared native security checks and 9 client security checks passed. Five whitespace-only issues were corrected, and the deploy log was updated.' is entirely in English, which is not Italian.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "it-coding-session-5",
+      "category": "language:Italian",
+      "correct": false,
+      "hit_trap": true,
+      "bank_id": "syseval-45b5e8e693",
+      "reason": "All main sentences in the answer are written in English, which is a language other than Italian.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "ja-personal-note-0",
+      "category": "language:Japanese",
+      "correct": false,
+      "hit_trap": true,
+      "bank_id": "syseval-e33ffff578",
+      "reason": "All main sentences are written in English, which is a language other than Japanese.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "ja-personal-note-1",
+      "category": "language:Japanese",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-e33ffff578",
+      "reason": "3/3 judges agree: All main sentences in the provided answer are written in Japanese.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "ja-personal-note-2",
+      "category": "language:Japanese",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-e33ffff578",
+      "reason": "3/3 judges agree: All main sentences are written in Japanese, with no discernible parts in another language after ignoring proper nouns and other specified elements.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "ja-personal-note-3",
+      "category": "language:Japanese",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-e33ffff578",
+      "reason": "3/3 judges agree: All main sentences in the provided answer are written in Japanese.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "ja-personal-note-4",
+      "category": "language:Japanese",
+      "correct": false,
+      "hit_trap": true,
+      "bank_id": "syseval-e33ffff578",
+      "reason": "All main sentences are written in English, which is a language other than Japanese.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "ja-personal-note-5",
+      "category": "language:Japanese",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-e33ffff578",
+      "reason": "3/3 judges agree: All main sentences in the provided answer are written in Japanese.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "date-borrowed-from-nearby-subject",
+      "category": "fabricated_when",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-84000a1411",
+      "reason": "The answer explicitly states 'Customer notifications must be completed before fieldwork begins.', which directly matches the criterion.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "owner-borrowed-from-nearby-subject",
+      "category": "fabricated_who",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-9a8a86cf20",
+      "reason": "One of the bullet points in the answer explicitly states, 'The connection-pool limit still needs to be raised before launch,' which directly matches the criterion.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "retain",
+      "question_id": "place-borrowed-from-nearby-subject",
+      "category": "fabricated_where",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-d2616a0948",
+      "reason": "The answer explicitly states 'Night-shift handovers are now recorded in writing', which matches the criterion.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "reflect",
+      "question_id": "hq-release-prod-from-page",
+      "category": "precision_discrimination",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-5419b11e36",
+      "reason": "page tools used: ['search_mental_models', 'read_mental_models'] — The answer accurately reflects all facts, figures, and dates provided in the source page, with no additional information asserted.",
+      "page_id": "kp-5602fdad8b734c6292e69e6ed899bd78",
+      "sizes": []
+    },
+    {
+      "kind": "reflect",
+      "question_id": "hq-count-billing-from-page",
+      "category": "counting",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-1490dfb0a8",
+      "reason": "page tools used: ['search_mental_models'] — The answer accurately restates all the facts, figures, and dates provided in the source text without adding any new information or making assertions not present in the page.",
+      "page_id": "kp-179b32708c16454fa071ab57e04896ab",
+      "sizes": []
+    },
+    {
+      "kind": "source_priority",
+      "question_id": "sp-datastore",
+      "category": "authority_conflict",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-5c45941398",
+      "reason": "The answer explicitly states that PostgreSQL should be used as the primary datastore and clarifies that Redis is only for caching, not as a system of record.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "source_priority",
+      "question_id": "sp-approvals",
+      "category": "authority_conflict",
+      "correct": true,
+      "hit_trap": true,
+      "bank_id": "syseval-7a1abafe59",
+      "reason": "The answer states that a small pull request is an exception and only requires one approval, which aligns with the criterion's allowance for one approval for small pull requests.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "source_priority",
+      "question_id": "sp-postmortem",
+      "category": "guide_only",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-0ab3aa4f12",
+      "reason": "The answer explicitly states that the incident commander writes the postmortem and that it is due within five working days of the incident being resolved, directly matching the criterion.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "source_priority",
+      "question_id": "sp-upgrade-owner",
+      "category": "conversation_only",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-c6409ddc0d",
+      "reason": "The answer explicitly names Farid as the person who volunteered to run the PostgreSQL 16 upgrade for the payments database, directly satisfying the criterion.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "source_priority",
+      "question_id": "sp-rotation",
+      "category": "decision_supersedes",
+      "correct": true,
+      "hit_trap": false,
+      "bank_id": "syseval-d88a670c84",
+      "reason": "The answer correctly states that production credentials are now rotated every 30 days following a decision on March 9, 2026, and notes that the handbook has not yet been updated, aligning with all aspects of the criterion.",
+      "page_id": "",
+      "sizes": []
+    },
+    {
+      "kind": "source_priority",
+      "question_id": "sp-friday-deploy",
+      "category": "policy_plus_exception",
+      "correct": true,
+      "hit_trap": true,
+      "bank_id": "syseval-54f97a1310",
+      "reason": "The answer states that the 'standard procedure for production deployments is Monday through Thursday,' which asserts that, as currently true, the payments team may not deploy on a Friday under normal circumstances.",
+      "page_id": "",
+      "sizes": []
+    }
+  ],
+  "commit": {
+    "sha": "f7dd3f4fd7420f7beec60c32c965e5e5cf7be066",
+    "short_sha": "f7dd3f4f",
+    "subject": "feat(metrics): opt-in memories_backend label on operation and recall-phase metrics (#5129)",
+    "author": "Nicolò Boschi",
+    "author_date": "2026-10-02T18:52:39+02:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/f7dd3f4fd7420f7beec60c32c965e5e5cf7be066",
+    "pr_number": 5129,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/5129"
+  },
+  "workflow_run": {
+    "id": "37186837373",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/37186837373"
+  }
+}
