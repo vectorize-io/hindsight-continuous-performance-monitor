@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-10-06T06:43:01.601299+00:00",
+  "overall_duplication_rate": 0.010330578512396695,
+  "duplication_threshold": 0.97,
+  "total_observations": 484,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1573,
+      "facts_consolidated": 1573,
+      "facts_covered": 1415,
+      "facts_skipped": 158,
+      "observations": 484,
+      "avg_sources_per_obs": 3.3,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 5,
+          "redundant_observations": 5,
+          "duplication_rate": 0.010330578512396695
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 81,
+          "redundant_observations": 129,
+          "duplication_rate": 0.2665289256198347
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 484,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.010330578512396695,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 5
+      },
+      "0.92": {
+        "redundant_observations": 129
+      }
+    }
+  },
+  "commit": {
+    "sha": "b89ce287464fe10790d67ba86bfabe29d8926253",
+    "short_sha": "b89ce287",
+    "subject": "blog: Your Paperclip Org Chart Has a Memory Boundary (#5265)",
+    "author": "Ben",
+    "author_date": "2026-10-05T16:31:04-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/b89ce287464fe10790d67ba86bfabe29d8926253",
+    "pr_number": 5265,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/5265"
+  },
+  "workflow_run": {
+    "id": "37421537123",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/37421537123"
+  }
+}
