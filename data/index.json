@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "b89ce287464fe10790d67ba86bfabe29d8926253",
+      "short_sha": "b89ce287",
+      "subject": "blog: Your Paperclip Org Chart Has a Memory Boundary (#5265)",
+      "author": "Ben",
+      "author_date": "2026-10-05T16:31:04-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/b89ce287464fe10790d67ba86bfabe29d8926253",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/5265",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/37421537123",
+      "data_file": "data/20261006T063614Z-b89ce287.json",
+      "timestamp": "2026-10-06T06:05:25.509569+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "f7dd3f4fd7420f7beec60c32c965e5e5cf7be066",
       "short_sha": "f7dd3f4f",
       "subject": "feat(metrics): opt-in memories_backend label on operation and recall-phase metrics (#5129)",
@@ -2016,5 +2029,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-10-05T06:38:46Z"
+  "updated_at": "2026-10-06T06:36:14Z"
 }
