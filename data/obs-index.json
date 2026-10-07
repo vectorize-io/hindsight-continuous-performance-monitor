@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "9269b88417ed263e5a8350f2e416ca2b322756b1",
+      "short_sha": "9269b884",
+      "subject": "chore(deps): bump sharp and shell-quote in root lockfile (#5361)",
+      "author": "Chris Bartholomew",
+      "author_date": "2026-10-06T12:21:45-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/9269b88417ed263e5a8350f2e416ca2b322756b1",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/5361",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/37579277981",
+      "data_file": "data/obs/20261007T063027Z-9269b884.json",
+      "timestamp": "2026-10-07T06:30:24.575025+00:00",
+      "overall_duplication_rate": 0.015306122448979591,
+      "total_observations": 392
+    },
+    {
       "sha": "b89ce287464fe10790d67ba86bfabe29d8926253",
       "short_sha": "b89ce287",
       "subject": "blog: Your Paperclip Org Chart Has a Memory Boundary (#5265)",
@@ -1793,5 +1807,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-10-06T06:43:05Z"
+  "updated_at": "2026-10-07T06:30:28Z"
 }
