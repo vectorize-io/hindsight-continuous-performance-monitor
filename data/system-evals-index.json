@@ -1,6 +1,22 @@
 {
   "runs": [
     {
+      "sha": "9269b88417ed263e5a8350f2e416ca2b322756b1",
+      "short_sha": "9269b884",
+      "subject": "chore(deps): bump sharp and shell-quote in root lockfile (#5361)",
+      "author": "Chris Bartholomew",
+      "author_date": "2026-10-06T12:21:45-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/9269b88417ed263e5a8350f2e416ca2b322756b1",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/5361",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/37579277981",
+      "data_file": "data/system-evals/20261007T063913Z-9269b884.json",
+      "timestamp": "2026-10-07T06:39:10+00:00",
+      "correct_rate": 0.7755102040816326,
+      "trap_count": 9,
+      "total": 49,
+      "mode": "full"
+    },
+    {
       "sha": "f7dd3f4fd7420f7beec60c32c965e5e5cf7be066",
       "short_sha": "f7dd3f4f",
       "subject": "feat(metrics): opt-in memories_backend label on operation and recall-phase metrics (#5129)",
@@ -385,5 +401,5 @@
       "mode": "full"
     }
   ],
-  "updated_at": "2026-10-05T06:40:10Z"
+  "updated_at": "2026-10-07T06:39:14Z"
 }
