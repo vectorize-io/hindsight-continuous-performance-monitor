@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-10-08T06:28:20.366638+00:00",
+  "overall_duplication_rate": 0.0024449877750611247,
+  "duplication_threshold": 0.97,
+  "total_observations": 409,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1548,
+      "facts_consolidated": 1548,
+      "facts_covered": 1379,
+      "facts_skipped": 169,
+      "observations": 409,
+      "avg_sources_per_obs": 3.6,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 1,
+          "redundant_observations": 1,
+          "duplication_rate": 0.0024449877750611247
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 59,
+          "redundant_observations": 86,
+          "duplication_rate": 0.21026894865525672
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 409,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.0024449877750611247,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 1
+      },
+      "0.92": {
+        "redundant_observations": 86
+      }
+    }
+  },
+  "commit": {
+    "sha": "fb11ddfeac4d5fe9e9ffd96ce144a5284ad7f5a5",
+    "short_sha": "fb11ddfe",
+    "subject": "fix(consolidation): read a response's sources together before applying it (#5421)",
+    "author": "Nicolò Boschi",
+    "author_date": "2026-10-08T01:14:25+02:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/fb11ddfeac4d5fe9e9ffd96ce144a5284ad7f5a5",
+    "pr_number": null,
+    "pr_url": null
+  },
+  "workflow_run": {
+    "id": "37735390446",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/37735390446"
+  }
+}

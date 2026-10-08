@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "fb11ddfeac4d5fe9e9ffd96ce144a5284ad7f5a5",
+      "short_sha": "fb11ddfe",
+      "subject": "fix(consolidation): read a response's sources together before applying it (#5421)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-10-08T01:14:25+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/fb11ddfeac4d5fe9e9ffd96ce144a5284ad7f5a5",
+      "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/37735390446",
+      "data_file": "data/obs/20261008T062823Z-fb11ddfe.json",
+      "timestamp": "2026-10-08T06:28:20.366638+00:00",
+      "overall_duplication_rate": 0.0024449877750611247,
+      "total_observations": 409
+    },
+    {
       "sha": "9269b88417ed263e5a8350f2e416ca2b322756b1",
       "short_sha": "9269b884",
       "subject": "chore(deps): bump sharp and shell-quote in root lockfile (#5361)",
@@ -1807,5 +1821,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-10-07T06:30:28Z"
+  "updated_at": "2026-10-08T06:28:24Z"
 }
