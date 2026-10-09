@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "6d8b096786df335fc2cc1e5d6662092f0e1b8694",
+      "short_sha": "6d8b0967",
+      "subject": "docs: fix the home page link preview (real description, uncropped social card) (#5441)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-10-08T18:05:33+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/6d8b096786df335fc2cc1e5d6662092f0e1b8694",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/5441",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/37891454355",
+      "data_file": "data/20261009T063654Z-6d8b0967.json",
+      "timestamp": "2026-10-09T06:05:37.114466+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "fb11ddfeac4d5fe9e9ffd96ce144a5284ad7f5a5",
       "short_sha": "fb11ddfe",
       "subject": "fix(consolidation): read a response's sources together before applying it (#5421)",
@@ -2055,5 +2068,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-10-08T06:33:28Z"
+  "updated_at": "2026-10-09T06:36:55Z"
 }
