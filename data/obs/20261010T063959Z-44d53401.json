@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-10-10T06:39:56.871436+00:00",
+  "overall_duplication_rate": 0.012594458438287154,
+  "duplication_threshold": 0.97,
+  "total_observations": 397,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1502,
+      "facts_consolidated": 1502,
+      "facts_covered": 1341,
+      "facts_skipped": 161,
+      "observations": 397,
+      "avg_sources_per_obs": 3.8,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 5,
+          "redundant_observations": 5,
+          "duplication_rate": 0.012594458438287154
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 63,
+          "redundant_observations": 85,
+          "duplication_rate": 0.2141057934508816
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 397,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.012594458438287154,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 5
+      },
+      "0.92": {
+        "redundant_observations": 85
+      }
+    }
+  },
+  "commit": {
+    "sha": "44d5340148fd47efb34e184d61f87ab5e2d8d1e2",
+    "short_sha": "44d53401",
+    "subject": "blog: Grok Bot Can Read What Your Other AI Tools Already Learned (#5461)",
+    "author": "Ben",
+    "author_date": "2026-10-09T14:39:32-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/44d5340148fd47efb34e184d61f87ab5e2d8d1e2",
+    "pr_number": 5461,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/5461"
+  },
+  "workflow_run": {
+    "id": "38029527263",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/38029527263"
+  }
+}
