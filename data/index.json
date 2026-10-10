@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "sha": "44d5340148fd47efb34e184d61f87ab5e2d8d1e2",
+      "short_sha": "44d53401",
+      "subject": "blog: Grok Bot Can Read What Your Other AI Tools Already Learned (#5461)",
+      "author": "Ben",
+      "author_date": "2026-10-09T14:39:32-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/44d5340148fd47efb34e184d61f87ab5e2d8d1e2",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/5461",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/38029527263",
+      "data_file": "data/20261010T063642Z-44d53401.json",
+      "timestamp": "2026-10-10T06:05:38.906335+00:00",
+      "scale": "large"
+    },
+    {
       "sha": "6d8b096786df335fc2cc1e5d6662092f0e1b8694",
       "short_sha": "6d8b0967",
       "subject": "docs: fix the home page link preview (real description, uncropped social card) (#5441)",
@@ -2068,5 +2081,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-10-09T06:36:55Z"
+  "updated_at": "2026-10-10T06:36:42Z"
 }
