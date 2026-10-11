@@ -1,6 +1,22 @@
 {
   "runs": [
     {
+      "sha": "a9eeed77f9bce99d8f97d39a30d3281747300824",
+      "short_sha": "a9eeed77",
+      "subject": "chore(deps): bump handlebars to 4.7.10 in root lockfile (#5481)",
+      "author": "Chris Bartholomew",
+      "author_date": "2026-10-10T10:24:47-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/a9eeed77f9bce99d8f97d39a30d3281747300824",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/5481",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/38116713652",
+      "data_file": "data/system-evals/20261011T062427Z-a9eeed77.json",
+      "timestamp": "2026-10-11T06:24:23+00:00",
+      "correct_rate": 0.7346938775510204,
+      "trap_count": 11,
+      "total": 49,
+      "mode": "full"
+    },
+    {
       "sha": "44d5340148fd47efb34e184d61f87ab5e2d8d1e2",
       "short_sha": "44d53401",
       "subject": "blog: Grok Bot Can Read What Your Other AI Tools Already Learned (#5461)",
@@ -449,5 +465,5 @@
       "mode": "full"
     }
   ],
-  "updated_at": "2026-10-10T06:32:32Z"
+  "updated_at": "2026-10-11T06:24:28Z"
 }
