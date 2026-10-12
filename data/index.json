@@ -8,6 +8,19 @@
       "author_date": "2026-10-10T10:24:47-04:00",
       "commit_url": "https://github.com/vectorize-io/hindsight/commit/a9eeed77f9bce99d8f97d39a30d3281747300824",
       "pr_url": "https://github.com/vectorize-io/hindsight/pull/5481",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/38210859091",
+      "data_file": "data/20261012T063340Z-a9eeed77.json",
+      "timestamp": "2026-10-12T06:06:14.147016+00:00",
+      "scale": "large"
+    },
+    {
+      "sha": "a9eeed77f9bce99d8f97d39a30d3281747300824",
+      "short_sha": "a9eeed77",
+      "subject": "chore(deps): bump handlebars to 4.7.10 in root lockfile (#5481)",
+      "author": "Chris Bartholomew",
+      "author_date": "2026-10-10T10:24:47-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/a9eeed77f9bce99d8f97d39a30d3281747300824",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/5481",
       "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/38116713652",
       "data_file": "data/20261011T062509Z-a9eeed77.json",
       "timestamp": "2026-10-11T06:04:01.231025+00:00",
@@ -2094,5 +2107,5 @@
       "scale": "large"
     }
   ],
-  "updated_at": "2026-10-11T06:25:10Z"
+  "updated_at": "2026-10-12T06:33:41Z"
 }
