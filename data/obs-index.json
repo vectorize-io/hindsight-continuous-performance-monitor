@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "f843f173bb41f001e322cc83c917371639e47fbf",
+      "short_sha": "f843f173",
+      "subject": "release(hermes): v1.2.2",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-10-12T17:59:54+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/f843f173bb41f001e322cc83c917371639e47fbf",
+      "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/38354630325",
+      "data_file": "data/obs/20261013T070517Z-f843f173.json",
+      "timestamp": "2026-10-13T07:05:13.761631+00:00",
+      "overall_duplication_rate": 0.05620608899297424,
+      "total_observations": 427
+    },
+    {
       "sha": "a9eeed77f9bce99d8f97d39a30d3281747300824",
       "short_sha": "a9eeed77",
       "subject": "chore(deps): bump handlebars to 4.7.10 in root lockfile (#5481)",
@@ -1877,5 +1891,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-10-12T06:56:28Z"
+  "updated_at": "2026-10-13T07:05:18Z"
 }
