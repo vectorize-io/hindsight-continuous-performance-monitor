@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "d5b1d4282f3325116c06f76ce3e79dce5ea4e22c",
+      "short_sha": "d5b1d428",
+      "subject": "feat(control-plane): identify dataplane requests with a hindsight-control-plane User-Agent (#5536)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-10-14T17:50:23+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/d5b1d4282f3325116c06f76ce3e79dce5ea4e22c",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/5536",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/38690035125",
+      "data_file": "data/obs/20261015T062400Z-d5b1d428.json",
+      "timestamp": "2026-10-15T06:23:56.737423+00:00",
+      "overall_duplication_rate": 0.007633587786259542,
+      "total_observations": 393
+    },
+    {
       "sha": "610c135b6f2d0d8b972da94146ae635943f36271",
       "short_sha": "610c135b",
       "subject": "docs: v1.0.0 changelog, Memlake launch post, and version-1.0 docs snapshot (#5550)",
@@ -1905,5 +1919,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-10-14T06:29:57Z"
+  "updated_at": "2026-10-15T06:24:01Z"
 }
