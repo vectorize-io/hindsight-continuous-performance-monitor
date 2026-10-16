@@ -1,6 +1,22 @@
 {
   "runs": [
     {
+      "sha": "9a499b1759084a86598eff8af30ed59f7354e76c",
+      "short_sha": "9a499b17",
+      "subject": "refactor(recall): rank with one decision-model pass, tell it the question date (#5632)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-10-15T19:12:09+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/9a499b1759084a86598eff8af30ed59f7354e76c",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/5632",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/38858923442",
+      "data_file": "data/system-evals/20261016T064551Z-9a499b17.json",
+      "timestamp": "2026-10-16T06:45:48+00:00",
+      "correct_rate": 0.6911764705882353,
+      "trap_count": 16,
+      "total": 68,
+      "mode": "full"
+    },
+    {
       "sha": "d5b1d4282f3325116c06f76ce3e79dce5ea4e22c",
       "short_sha": "d5b1d428",
       "subject": "feat(control-plane): identify dataplane requests with a hindsight-control-plane User-Agent (#5536)",
@@ -529,5 +545,5 @@
       "mode": "full"
     }
   ],
-  "updated_at": "2026-10-15T06:38:13Z"
+  "updated_at": "2026-10-16T06:45:52Z"
 }
