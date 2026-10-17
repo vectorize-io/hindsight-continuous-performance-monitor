@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "5331da2f4db369528bb122075341a7de9c3df6df",
+      "short_sha": "5331da2f",
+      "subject": "blog: four things to build with Vercel Eve and Hindsight (#5699)",
+      "author": "Ben",
+      "author_date": "2026-10-16T15:58:40-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/5331da2f4db369528bb122075341a7de9c3df6df",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/5699",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/39008383983",
+      "data_file": "data/obs/20261017T064244Z-5331da2f.json",
+      "timestamp": "2026-10-17T06:42:41.170219+00:00",
+      "overall_duplication_rate": 0.016091954022988506,
+      "total_observations": 435
+    },
+    {
       "sha": "9a499b1759084a86598eff8af30ed59f7354e76c",
       "short_sha": "9a499b17",
       "subject": "refactor(recall): rank with one decision-model pass, tell it the question date (#5632)",
@@ -1933,5 +1947,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-10-16T06:33:39Z"
+  "updated_at": "2026-10-17T06:42:45Z"
 }
