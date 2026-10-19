@@ -8,6 +8,20 @@
       "author_date": "2026-10-16T15:58:40-04:00",
       "commit_url": "https://github.com/vectorize-io/hindsight/commit/5331da2f4db369528bb122075341a7de9c3df6df",
       "pr_url": "https://github.com/vectorize-io/hindsight/pull/5699",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/39207672192",
+      "data_file": "data/obs/20261019T063046Z-5331da2f.json",
+      "timestamp": "2026-10-19T06:30:42.744524+00:00",
+      "overall_duplication_rate": 0.03164556962025317,
+      "total_observations": 474
+    },
+    {
+      "sha": "5331da2f4db369528bb122075341a7de9c3df6df",
+      "short_sha": "5331da2f",
+      "subject": "blog: four things to build with Vercel Eve and Hindsight (#5699)",
+      "author": "Ben",
+      "author_date": "2026-10-16T15:58:40-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/5331da2f4db369528bb122075341a7de9c3df6df",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/5699",
       "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/39102579752",
       "data_file": "data/obs/20261018T063059Z-5331da2f.json",
       "timestamp": "2026-10-18T06:30:56.725432+00:00",
@@ -1961,5 +1975,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-10-18T06:31:00Z"
+  "updated_at": "2026-10-19T06:30:47Z"
 }

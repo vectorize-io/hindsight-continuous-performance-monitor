@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-10-19T06:30:42.744524+00:00",
+  "overall_duplication_rate": 0.03164556962025317,
+  "duplication_threshold": 0.97,
+  "total_observations": 474,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1562,
+      "facts_consolidated": 1562,
+      "facts_covered": 1555,
+      "facts_skipped": 7,
+      "observations": 474,
+      "avg_sources_per_obs": 4.4,
+      "exact_duplicate_groups": 1,
+      "exact_redundant": 1,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 11,
+          "redundant_observations": 15,
+          "duplication_rate": 0.03164556962025317
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 80,
+          "redundant_observations": 138,
+          "duplication_rate": 0.2911392405063291
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 474,
+    "total_exact_redundant": 1,
+    "overall_duplication_rate": 0.03164556962025317,
+    "overall_exact_rate": 0.002109704641350211,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 15
+      },
+      "0.92": {
+        "redundant_observations": 138
+      }
+    }
+  },
+  "commit": {
+    "sha": "5331da2f4db369528bb122075341a7de9c3df6df",
+    "short_sha": "5331da2f",
+    "subject": "blog: four things to build with Vercel Eve and Hindsight (#5699)",
+    "author": "Ben",
+    "author_date": "2026-10-16T15:58:40-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/5331da2f4db369528bb122075341a7de9c3df6df",
+    "pr_number": 5699,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/5699"
+  },
+  "workflow_run": {
+    "id": "39207672192",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/39207672192"
+  }
+}
