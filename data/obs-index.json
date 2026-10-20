@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "c5f585f8f8568ed0677eb2e70fe830c4c483e2a2",
+      "short_sha": "c5f585f8",
+      "subject": "docs(api): runbook for splitting a memory bank in place (#5803)",
+      "author": "Ben",
+      "author_date": "2026-10-19T15:48:17-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/c5f585f8f8568ed0677eb2e70fe830c4c483e2a2",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/5803",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/39378070271",
+      "data_file": "data/obs/20261020T064531Z-c5f585f8.json",
+      "timestamp": "2026-10-20T06:45:28.464778+00:00",
+      "overall_duplication_rate": 0.020361990950226245,
+      "total_observations": 442
+    },
+    {
       "sha": "5331da2f4db369528bb122075341a7de9c3df6df",
       "short_sha": "5331da2f",
       "subject": "blog: four things to build with Vercel Eve and Hindsight (#5699)",
@@ -1975,5 +1989,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-10-19T06:30:47Z"
+  "updated_at": "2026-10-20T06:45:32Z"
 }

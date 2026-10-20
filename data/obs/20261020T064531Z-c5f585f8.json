@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-10-20T06:45:28.464778+00:00",
+  "overall_duplication_rate": 0.020361990950226245,
+  "duplication_threshold": 0.97,
+  "total_observations": 442,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1571,
+      "facts_consolidated": 1571,
+      "facts_covered": 1565,
+      "facts_skipped": 6,
+      "observations": 442,
+      "avg_sources_per_obs": 4.3,
+      "exact_duplicate_groups": 0,
+      "exact_redundant": 0,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 9,
+          "redundant_observations": 9,
+          "duplication_rate": 0.020361990950226245
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 77,
+          "redundant_observations": 128,
+          "duplication_rate": 0.2895927601809955
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 442,
+    "total_exact_redundant": 0,
+    "overall_duplication_rate": 0.020361990950226245,
+    "overall_exact_rate": 0.0,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 9
+      },
+      "0.92": {
+        "redundant_observations": 128
+      }
+    }
+  },
+  "commit": {
+    "sha": "c5f585f8f8568ed0677eb2e70fe830c4c483e2a2",
+    "short_sha": "c5f585f8",
+    "subject": "docs(api): runbook for splitting a memory bank in place (#5803)",
+    "author": "Ben",
+    "author_date": "2026-10-19T15:48:17-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/c5f585f8f8568ed0677eb2e70fe830c4c483e2a2",
+    "pr_number": 5803,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/5803"
+  },
+  "workflow_run": {
+    "id": "39378070271",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/39378070271"
+  }
+}
