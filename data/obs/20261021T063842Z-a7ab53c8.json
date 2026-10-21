@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-10-21T06:38:39.407905+00:00",
+  "overall_duplication_rate": 0.031578947368421054,
+  "duplication_threshold": 0.97,
+  "total_observations": 475,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1552,
+      "facts_consolidated": 1552,
+      "facts_covered": 1523,
+      "facts_skipped": 29,
+      "observations": 475,
+      "avg_sources_per_obs": 4.0,
+      "exact_duplicate_groups": 1,
+      "exact_redundant": 2,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 13,
+          "redundant_observations": 15,
+          "duplication_rate": 0.031578947368421054
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 78,
+          "redundant_observations": 127,
+          "duplication_rate": 0.2673684210526316
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 475,
+    "total_exact_redundant": 2,
+    "overall_duplication_rate": 0.031578947368421054,
+    "overall_exact_rate": 0.004210526315789474,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 15
+      },
+      "0.92": {
+        "redundant_observations": 127
+      }
+    }
+  },
+  "commit": {
+    "sha": "a7ab53c84a847664d3377dfb7987d3e6bbaf4b17",
+    "short_sha": "a7ab53c8",
+    "subject": "chore(deps): bump vite in nemoclaw lockfile (#5907)",
+    "author": "Chris Bartholomew",
+    "author_date": "2026-10-20T17:56:56-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/a7ab53c84a847664d3377dfb7987d3e6bbaf4b17",
+    "pr_number": 5907,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/5907"
+  },
+  "workflow_run": {
+    "id": "39552936138",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/39552936138"
+  }
+}

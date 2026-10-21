@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "a7ab53c84a847664d3377dfb7987d3e6bbaf4b17",
+      "short_sha": "a7ab53c8",
+      "subject": "chore(deps): bump vite in nemoclaw lockfile (#5907)",
+      "author": "Chris Bartholomew",
+      "author_date": "2026-10-20T17:56:56-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/a7ab53c84a847664d3377dfb7987d3e6bbaf4b17",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/5907",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/39552936138",
+      "data_file": "data/obs/20261021T063842Z-a7ab53c8.json",
+      "timestamp": "2026-10-21T06:38:39.407905+00:00",
+      "overall_duplication_rate": 0.031578947368421054,
+      "total_observations": 475
+    },
+    {
       "sha": "c5f585f8f8568ed0677eb2e70fe830c4c483e2a2",
       "short_sha": "c5f585f8",
       "subject": "docs(api): runbook for splitting a memory bank in place (#5803)",
@@ -1989,5 +2003,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-10-20T06:45:32Z"
+  "updated_at": "2026-10-21T06:38:43Z"
 }
