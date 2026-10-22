@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "5ecc639c275b8bd3df9f50a29d5cc96965fe8183",
+      "short_sha": "5ecc639c",
+      "subject": "docs(blog): use the ChatGPT sign-in recording for v1.1.0 providers (#5939)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-10-21T18:32:24+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/5ecc639c275b8bd3df9f50a29d5cc96965fe8183",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/5939",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/39731430124",
+      "data_file": "data/obs/20261022T064008Z-5ecc639c.json",
+      "timestamp": "2026-10-22T06:40:05.008749+00:00",
+      "overall_duplication_rate": 0.01079913606911447,
+      "total_observations": 463
+    },
+    {
       "sha": "a7ab53c84a847664d3377dfb7987d3e6bbaf4b17",
       "short_sha": "a7ab53c8",
       "subject": "chore(deps): bump vite in nemoclaw lockfile (#5907)",
@@ -2003,5 +2017,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-10-21T06:38:43Z"
+  "updated_at": "2026-10-22T06:40:09Z"
 }
