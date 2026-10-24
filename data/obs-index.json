@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "b4a0da1e9fd2dfd052843e4f95fcf368301f6a73",
+      "short_sha": "b4a0da1e",
+      "subject": "fix(coding-agents): launch the codebase survey on Windows and stop retrying forever (#6054)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-10-23T18:50:02+02:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/b4a0da1e9fd2dfd052843e4f95fcf368301f6a73",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6054",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/40068579744",
+      "data_file": "data/obs/20261024T065956Z-b4a0da1e.json",
+      "timestamp": "2026-10-24T06:59:53.352579+00:00",
+      "overall_duplication_rate": 0.020100502512562814,
+      "total_observations": 398
+    },
+    {
       "sha": "0691b504a88480844b2db53384b8c81971b7cf1e",
       "short_sha": "0691b504",
       "subject": "test(system): model call extension story allows a recall with no rerank call (#5978)",
@@ -2031,5 +2045,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-10-23T06:54:35Z"
+  "updated_at": "2026-10-24T06:59:57Z"
 }
