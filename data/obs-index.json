@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "4822d66e093dadfd6b2b80186fd0395ef80926ca",
+      "short_sha": "4822d66e",
+      "subject": "chore(deps): bump opentelemetry-api/-sdk in google-adk lockfile (#6066)",
+      "author": "Chris Bartholomew",
+      "author_date": "2026-10-24T10:21:06-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/4822d66e093dadfd6b2b80186fd0395ef80926ca",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6066",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/40167630531",
+      "data_file": "data/obs/20261025T065031Z-4822d66e.json",
+      "timestamp": "2026-10-25T06:50:27.545513+00:00",
+      "overall_duplication_rate": 0.019230769230769232,
+      "total_observations": 364
+    },
+    {
       "sha": "b4a0da1e9fd2dfd052843e4f95fcf368301f6a73",
       "short_sha": "b4a0da1e",
       "subject": "fix(coding-agents): launch the codebase survey on Windows and stop retrying forever (#6054)",
@@ -2045,5 +2059,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-10-24T06:59:57Z"
+  "updated_at": "2026-10-25T06:50:31Z"
 }
