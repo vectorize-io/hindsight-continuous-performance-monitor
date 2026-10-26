@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-10-26T07:08:50.692426+00:00",
+  "overall_duplication_rate": 0.02077922077922078,
+  "duplication_threshold": 0.97,
+  "total_observations": 385,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1535,
+      "facts_consolidated": 1535,
+      "facts_covered": 1517,
+      "facts_skipped": 18,
+      "observations": 385,
+      "avg_sources_per_obs": 6.3,
+      "exact_duplicate_groups": 1,
+      "exact_redundant": 1,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 8,
+          "redundant_observations": 8,
+          "duplication_rate": 0.02077922077922078
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 56,
+          "redundant_observations": 88,
+          "duplication_rate": 0.22857142857142856
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 385,
+    "total_exact_redundant": 1,
+    "overall_duplication_rate": 0.02077922077922078,
+    "overall_exact_rate": 0.0025974025974025974,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 8
+      },
+      "0.92": {
+        "redundant_observations": 88
+      }
+    }
+  },
+  "commit": {
+    "sha": "fa359876bcf5ed652c001dac5d40bfcc51d1d41d",
+    "short_sha": "fa359876",
+    "subject": "chore(deps): bump strands-agents in strands lockfile (#6089)",
+    "author": "Chris Bartholomew",
+    "author_date": "2026-10-25T10:41:07-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/fa359876bcf5ed652c001dac5d40bfcc51d1d41d",
+    "pr_number": 6089,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/6089"
+  },
+  "workflow_run": {
+    "id": "40277508383",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/40277508383"
+  }
+}

@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "fa359876bcf5ed652c001dac5d40bfcc51d1d41d",
+      "short_sha": "fa359876",
+      "subject": "chore(deps): bump strands-agents in strands lockfile (#6089)",
+      "author": "Chris Bartholomew",
+      "author_date": "2026-10-25T10:41:07-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/fa359876bcf5ed652c001dac5d40bfcc51d1d41d",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6089",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/40277508383",
+      "data_file": "data/obs/20261026T070854Z-fa359876.json",
+      "timestamp": "2026-10-26T07:08:50.692426+00:00",
+      "overall_duplication_rate": 0.02077922077922078,
+      "total_observations": 385
+    },
+    {
       "sha": "4822d66e093dadfd6b2b80186fd0395ef80926ca",
       "short_sha": "4822d66e",
       "subject": "chore(deps): bump opentelemetry-api/-sdk in google-adk lockfile (#6066)",
@@ -2059,5 +2073,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-10-25T06:50:31Z"
+  "updated_at": "2026-10-26T07:08:54Z"
 }
