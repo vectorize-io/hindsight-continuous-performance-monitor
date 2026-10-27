@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "5a672f0cdb89f4a3b841770cce2036a5b28b799d",
+      "short_sha": "5a672f0c",
+      "subject": "feat(decision-model): count the request ceiling and recall's caps in the model's own vocabulary (#6115)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-10-26T18:55:08+01:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/5a672f0cdb89f4a3b841770cce2036a5b28b799d",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6115",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/40458714546",
+      "data_file": "data/obs/20261027T070401Z-5a672f0c.json",
+      "timestamp": "2026-10-27T07:03:58.344257+00:00",
+      "overall_duplication_rate": 0.02925531914893617,
+      "total_observations": 376
+    },
+    {
       "sha": "fa359876bcf5ed652c001dac5d40bfcc51d1d41d",
       "short_sha": "fa359876",
       "subject": "chore(deps): bump strands-agents in strands lockfile (#6089)",
@@ -2073,5 +2087,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-10-26T07:08:54Z"
+  "updated_at": "2026-10-27T07:04:02Z"
 }
