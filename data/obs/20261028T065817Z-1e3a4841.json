@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-10-28T06:58:12.997405+00:00",
+  "overall_duplication_rate": 0.015306122448979591,
+  "duplication_threshold": 0.97,
+  "total_observations": 392,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1519,
+      "facts_consolidated": 1519,
+      "facts_covered": 1501,
+      "facts_skipped": 18,
+      "observations": 392,
+      "avg_sources_per_obs": 7.0,
+      "exact_duplicate_groups": 1,
+      "exact_redundant": 1,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 6,
+          "redundant_observations": 6,
+          "duplication_rate": 0.015306122448979591
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 50,
+          "redundant_observations": 101,
+          "duplication_rate": 0.2576530612244898
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 392,
+    "total_exact_redundant": 1,
+    "overall_duplication_rate": 0.015306122448979591,
+    "overall_exact_rate": 0.002551020408163265,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 6
+      },
+      "0.92": {
+        "redundant_observations": 101
+      }
+    }
+  },
+  "commit": {
+    "sha": "1e3a4841a7eed5d76e796d2f31e5f0a13e78e5cf",
+    "short_sha": "1e3a4841",
+    "subject": "blog: what's new in Hindsight Cloud, October 2026 (#6141)",
+    "author": "Ben",
+    "author_date": "2026-10-27T13:37:18-04:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/1e3a4841a7eed5d76e796d2f31e5f0a13e78e5cf",
+    "pr_number": 6141,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/6141"
+  },
+  "workflow_run": {
+    "id": "40641335121",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/40641335121"
+  }
+}

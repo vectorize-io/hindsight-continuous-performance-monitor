@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "1e3a4841a7eed5d76e796d2f31e5f0a13e78e5cf",
+      "short_sha": "1e3a4841",
+      "subject": "blog: what's new in Hindsight Cloud, October 2026 (#6141)",
+      "author": "Ben",
+      "author_date": "2026-10-27T13:37:18-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/1e3a4841a7eed5d76e796d2f31e5f0a13e78e5cf",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6141",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/40641335121",
+      "data_file": "data/obs/20261028T065817Z-1e3a4841.json",
+      "timestamp": "2026-10-28T06:58:12.997405+00:00",
+      "overall_duplication_rate": 0.015306122448979591,
+      "total_observations": 392
+    },
+    {
       "sha": "5a672f0cdb89f4a3b841770cce2036a5b28b799d",
       "short_sha": "5a672f0c",
       "subject": "feat(decision-model): count the request ceiling and recall's caps in the model's own vocabulary (#6115)",
@@ -2087,5 +2101,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-10-27T07:04:02Z"
+  "updated_at": "2026-10-28T06:58:17Z"
 }
