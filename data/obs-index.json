@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "8e8e9dc9cde79c4053befae35d84119d6b3b7cde",
+      "short_sha": "8e8e9dc9",
+      "subject": "blog: OpenBot integration, shared memory over MCP (#6188)",
+      "author": "Ben",
+      "author_date": "2026-10-29T14:52:57-04:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/8e8e9dc9cde79c4053befae35d84119d6b3b7cde",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6188",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/41011638572",
+      "data_file": "data/obs/20261030T062827Z-8e8e9dc9.json",
+      "timestamp": "2026-10-30T06:28:24.423093+00:00",
+      "overall_duplication_rate": 0.0375,
+      "total_observations": 480
+    },
+    {
       "sha": "6decc291bc0b9f99568ad53cb0501f75128c6d7b",
       "short_sha": "6decc291",
       "subject": "feat(recall): name the serving reranker in the trace (opt-in) and tag recall log lines with one id (#6154)",
@@ -2115,5 +2129,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-10-29T07:07:40Z"
+  "updated_at": "2026-10-30T06:28:27Z"
 }
