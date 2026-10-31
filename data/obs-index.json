@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "bc5ea195a0fed1346ff171a5780bbb72a38c89c8",
+      "short_sha": "bc5ea195",
+      "subject": "fix(reflect): the decision model's cut and verdict are retried on a rate limit (#6237)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-10-31T00:40:41+01:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/bc5ea195a0fed1346ff171a5780bbb72a38c89c8",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6237",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/41174843012",
+      "data_file": "data/obs/20261031T063026Z-bc5ea195.json",
+      "timestamp": "2026-10-31T06:30:22.188226+00:00",
+      "overall_duplication_rate": 0.0273972602739726,
+      "total_observations": 511
+    },
+    {
       "sha": "8e8e9dc9cde79c4053befae35d84119d6b3b7cde",
       "short_sha": "8e8e9dc9",
       "subject": "blog: OpenBot integration, shared memory over MCP (#6188)",
@@ -2129,5 +2143,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-10-30T06:28:27Z"
+  "updated_at": "2026-10-31T06:30:26Z"
 }

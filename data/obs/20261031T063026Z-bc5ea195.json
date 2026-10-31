@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-10-31T06:30:22.188226+00:00",
+  "overall_duplication_rate": 0.0273972602739726,
+  "duplication_threshold": 0.97,
+  "total_observations": 511,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1485,
+      "facts_consolidated": 1485,
+      "facts_covered": 1437,
+      "facts_skipped": 48,
+      "observations": 511,
+      "avg_sources_per_obs": 3.9,
+      "exact_duplicate_groups": 9,
+      "exact_redundant": 12,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 11,
+          "redundant_observations": 14,
+          "duplication_rate": 0.0273972602739726
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 57,
+          "redundant_observations": 79,
+          "duplication_rate": 0.15459882583170254
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 511,
+    "total_exact_redundant": 12,
+    "overall_duplication_rate": 0.0273972602739726,
+    "overall_exact_rate": 0.023483365949119372,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 14
+      },
+      "0.92": {
+        "redundant_observations": 79
+      }
+    }
+  },
+  "commit": {
+    "sha": "bc5ea195a0fed1346ff171a5780bbb72a38c89c8",
+    "short_sha": "bc5ea195",
+    "subject": "fix(reflect): the decision model's cut and verdict are retried on a rate limit (#6237)",
+    "author": "Nicolò Boschi",
+    "author_date": "2026-10-31T00:40:41+01:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/bc5ea195a0fed1346ff171a5780bbb72a38c89c8",
+    "pr_number": 6237,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/6237"
+  },
+  "workflow_run": {
+    "id": "41174843012",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/41174843012"
+  }
+}
