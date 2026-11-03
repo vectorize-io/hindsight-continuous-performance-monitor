@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "7038c00291880a866c7a895eb5805e7c78f582b1",
+      "short_sha": "7038c002",
+      "subject": "fix(api): answer 4xx, not 500, for malformed ids, priorities and unstorable text (#6276)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-11-02T18:46:08+01:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/7038c00291880a866c7a895eb5805e7c78f582b1",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6276",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/41587263613",
+      "data_file": "data/obs/20261103T062647Z-7038c002.json",
+      "timestamp": "2026-11-03T06:26:44.370557+00:00",
+      "overall_duplication_rate": 0.015283842794759825,
+      "total_observations": 458
+    },
+    {
       "sha": "bc5ea195a0fed1346ff171a5780bbb72a38c89c8",
       "short_sha": "bc5ea195",
       "subject": "fix(reflect): the decision model's cut and verdict are retried on a rate limit (#6237)",
@@ -2171,5 +2185,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-11-02T06:30:19Z"
+  "updated_at": "2026-11-03T06:26:48Z"
 }
