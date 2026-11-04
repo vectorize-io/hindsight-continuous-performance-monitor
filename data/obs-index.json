@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "f14cc1eb5624b0374cb4d82768eb2e0b9c21ae24",
+      "short_sha": "f14cc1eb",
+      "subject": "release(hermes): v1.2.4",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-11-03T16:26:23+01:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/f14cc1eb5624b0374cb4d82768eb2e0b9c21ae24",
+      "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/41782764846",
+      "data_file": "data/obs/20261104T063137Z-f14cc1eb.json",
+      "timestamp": "2026-11-04T06:31:34.434282+00:00",
+      "overall_duplication_rate": 0.022494887525562373,
+      "total_observations": 489
+    },
+    {
       "sha": "7038c00291880a866c7a895eb5805e7c78f582b1",
       "short_sha": "7038c002",
       "subject": "fix(api): answer 4xx, not 500, for malformed ids, priorities and unstorable text (#6276)",
@@ -2185,5 +2199,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-11-03T06:26:48Z"
+  "updated_at": "2026-11-04T06:31:38Z"
 }
