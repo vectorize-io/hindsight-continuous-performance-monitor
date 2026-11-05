@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "1a37e009cbe9b8cd76b2c5d5b6c5745374e19507",
+      "short_sha": "1a37e009",
+      "subject": "perf(db): run every pool connection with JIT off, so recall stops compiling its observation lookup (#6306) (#6317)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-11-04T17:28:01+01:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/1a37e009cbe9b8cd76b2c5d5b6c5745374e19507",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6317",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/41977627860",
+      "data_file": "data/obs/20261105T064921Z-1a37e009.json",
+      "timestamp": "2026-11-05T06:49:18.013976+00:00",
+      "overall_duplication_rate": 0.017241379310344827,
+      "total_observations": 464
+    },
+    {
       "sha": "f14cc1eb5624b0374cb4d82768eb2e0b9c21ae24",
       "short_sha": "f14cc1eb",
       "subject": "release(hermes): v1.2.4",
@@ -2199,5 +2213,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-11-04T06:31:38Z"
+  "updated_at": "2026-11-05T06:49:21Z"
 }
