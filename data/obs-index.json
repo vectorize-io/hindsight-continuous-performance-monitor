@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "eb963cb5a929d92c081371df64c2d5c2fe3351af",
+      "short_sha": "eb963cb5",
+      "subject": "perf(entities): a scoped name search or detail reads only the entities it asks for (#6330) (#6410)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-11-06T15:54:27+01:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/eb963cb5a929d92c081371df64c2d5c2fe3351af",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6410",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/42345098937",
+      "data_file": "data/obs/20261107T062726Z-eb963cb5.json",
+      "timestamp": "2026-11-07T06:27:24.050107+00:00",
+      "overall_duplication_rate": 0.03333333333333333,
+      "total_observations": 480
+    },
+    {
       "sha": "30d547ba00989297057a9679f2d59f30a554b240",
       "short_sha": "30d547ba",
       "subject": "fix(retain): an append chunks its body the way the next append re-chunks it (#6293) (#6354)",
@@ -2227,5 +2241,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-11-06T06:27:14Z"
+  "updated_at": "2026-11-07T06:27:27Z"
 }
