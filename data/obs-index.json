@@ -8,6 +8,20 @@
       "author_date": "2026-11-07T12:27:45+01:00",
       "commit_url": "https://github.com/vectorize-io/hindsight/commit/0bd55015393d224deec1073d63b24bcc0faad164",
       "pr_url": "https://github.com/vectorize-io/hindsight/pull/6411",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/42570561076",
+      "data_file": "data/obs/20261109T062645Z-0bd55015.json",
+      "timestamp": "2026-11-09T06:26:41.769582+00:00",
+      "overall_duplication_rate": 0.03640256959314775,
+      "total_observations": 467
+    },
+    {
+      "sha": "0bd55015393d224deec1073d63b24bcc0faad164",
+      "short_sha": "0bd55015",
+      "subject": "feat(api): add_tags / remove_tags on the document PATCH (#6339) (#6411)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-11-07T12:27:45+01:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/0bd55015393d224deec1073d63b24bcc0faad164",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6411",
       "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/42452983096",
       "data_file": "data/obs/20261108T062808Z-0bd55015.json",
       "timestamp": "2026-11-08T06:28:04.995492+00:00",
@@ -2255,5 +2269,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-11-08T06:28:08Z"
+  "updated_at": "2026-11-09T06:26:45Z"
 }
