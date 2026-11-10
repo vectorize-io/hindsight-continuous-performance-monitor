@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "85ab32ebe4301e59c173c4dc775e01b1e6d43a71",
+      "short_sha": "85ab32eb",
+      "subject": "chore(deps): bump oauthlib to 4.0.1 in crewai integration lockfile (#6479)",
+      "author": "Chris Bartholomew",
+      "author_date": "2026-11-09T19:55:00-05:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/85ab32ebe4301e59c173c4dc775e01b1e6d43a71",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6479",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/42765692605",
+      "data_file": "data/obs/20261110T062918Z-85ab32eb.json",
+      "timestamp": "2026-11-10T06:29:15.423151+00:00",
+      "overall_duplication_rate": 0.02079002079002079,
+      "total_observations": 481
+    },
+    {
       "sha": "0bd55015393d224deec1073d63b24bcc0faad164",
       "short_sha": "0bd55015",
       "subject": "feat(api): add_tags / remove_tags on the document PATCH (#6339) (#6411)",
@@ -2269,5 +2283,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-11-09T06:26:45Z"
+  "updated_at": "2026-11-10T06:29:19Z"
 }

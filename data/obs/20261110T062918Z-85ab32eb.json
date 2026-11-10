@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-11-10T06:29:15.423151+00:00",
+  "overall_duplication_rate": 0.02079002079002079,
+  "duplication_threshold": 0.97,
+  "total_observations": 481,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1542,
+      "facts_consolidated": 1542,
+      "facts_covered": 1483,
+      "facts_skipped": 59,
+      "observations": 481,
+      "avg_sources_per_obs": 4.2,
+      "exact_duplicate_groups": 2,
+      "exact_redundant": 3,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 8,
+          "redundant_observations": 10,
+          "duplication_rate": 0.02079002079002079
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 51,
+          "redundant_observations": 59,
+          "duplication_rate": 0.12266112266112267
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 481,
+    "total_exact_redundant": 3,
+    "overall_duplication_rate": 0.02079002079002079,
+    "overall_exact_rate": 0.006237006237006237,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 10
+      },
+      "0.92": {
+        "redundant_observations": 59
+      }
+    }
+  },
+  "commit": {
+    "sha": "85ab32ebe4301e59c173c4dc775e01b1e6d43a71",
+    "short_sha": "85ab32eb",
+    "subject": "chore(deps): bump oauthlib to 4.0.1 in crewai integration lockfile (#6479)",
+    "author": "Chris Bartholomew",
+    "author_date": "2026-11-09T19:55:00-05:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/85ab32ebe4301e59c173c4dc775e01b1e6d43a71",
+    "pr_number": 6479,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/6479"
+  },
+  "workflow_run": {
+    "id": "42765692605",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/42765692605"
+  }
+}
