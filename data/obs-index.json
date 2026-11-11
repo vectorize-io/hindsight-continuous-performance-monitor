@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "289fb421bdb438861480720e947874551ac42ff7",
+      "short_sha": "289fb421",
+      "subject": "feat(knowledge-banks): multimodal document banks, hidden behind a feature flag (#6478)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-11-10T18:14:29+01:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/289fb421bdb438861480720e947874551ac42ff7",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6478",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/42969488662",
+      "data_file": "data/obs/20261111T063254Z-289fb421.json",
+      "timestamp": "2026-11-11T06:32:50.810629+00:00",
+      "overall_duplication_rate": 0.028629856850715747,
+      "total_observations": 489
+    },
+    {
       "sha": "85ab32ebe4301e59c173c4dc775e01b1e6d43a71",
       "short_sha": "85ab32eb",
       "subject": "chore(deps): bump oauthlib to 4.0.1 in crewai integration lockfile (#6479)",
@@ -2283,5 +2297,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-11-10T06:29:19Z"
+  "updated_at": "2026-11-11T06:32:55Z"
 }
