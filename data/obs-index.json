@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "7cec128b8fdb0a696366d888e63be71fe1d52338",
+      "short_sha": "7cec128b",
+      "subject": "fix(api): a redirected stdout on Windows no longer stops the server at start-up (#6458) (#6508)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-11-11T18:59:36+01:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/7cec128b8fdb0a696366d888e63be71fe1d52338",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6508",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/43165201097",
+      "data_file": "data/obs/20261112T062843Z-7cec128b.json",
+      "timestamp": "2026-11-12T06:28:40.020671+00:00",
+      "overall_duplication_rate": 0.029469548133595286,
+      "total_observations": 509
+    },
+    {
       "sha": "289fb421bdb438861480720e947874551ac42ff7",
       "short_sha": "289fb421",
       "subject": "feat(knowledge-banks): multimodal document banks, hidden behind a feature flag (#6478)",
@@ -2297,5 +2311,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-11-11T06:32:55Z"
+  "updated_at": "2026-11-12T06:28:43Z"
 }
