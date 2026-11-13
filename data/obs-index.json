@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "9a730fa95a6453785341adaa436a9453ed5ebf7e",
+      "short_sha": "9a730fa9",
+      "subject": "blog: announce the Hindsight app in OpenBot, correct the marketplace path (#6517)",
+      "author": "Ben",
+      "author_date": "2026-11-12T14:42:59-05:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/9a730fa95a6453785341adaa436a9453ed5ebf7e",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6517",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/43375760793",
+      "data_file": "data/obs/20261113T063734Z-9a730fa9.json",
+      "timestamp": "2026-11-13T06:37:31.010213+00:00",
+      "overall_duplication_rate": 0.04780876494023904,
+      "total_observations": 502
+    },
+    {
       "sha": "7cec128b8fdb0a696366d888e63be71fe1d52338",
       "short_sha": "7cec128b",
       "subject": "fix(api): a redirected stdout on Windows no longer stops the server at start-up (#6458) (#6508)",
@@ -2311,5 +2325,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-11-12T06:28:43Z"
+  "updated_at": "2026-11-13T06:37:34Z"
 }
