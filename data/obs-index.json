@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "0b3f09229bc13820f961244238ca885fda674076",
+      "short_sha": "0b3f0922",
+      "subject": "fix(control-plane): reflect trace shows the loop in the order it really ran (#6539)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-11-13T16:54:06+01:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/0b3f09229bc13820f961244238ca885fda674076",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6539",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/43564251383",
+      "data_file": "data/obs/20261114T062814Z-0b3f0922.json",
+      "timestamp": "2026-11-14T06:28:11.486247+00:00",
+      "overall_duplication_rate": 0.02511415525114155,
+      "total_observations": 438
+    },
+    {
       "sha": "9a730fa95a6453785341adaa436a9453ed5ebf7e",
       "short_sha": "9a730fa9",
       "subject": "blog: announce the Hindsight app in OpenBot, correct the marketplace path (#6517)",
@@ -2325,5 +2339,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-11-13T06:37:34Z"
+  "updated_at": "2026-11-14T06:28:15Z"
 }
