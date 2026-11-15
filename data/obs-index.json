@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "5318be8ea572aa00ceae636c71c1d8d334f805b6",
+      "short_sha": "5318be8e",
+      "subject": "feat(knowledge-banks): search baseline for benchmarks — keywords in every language, capped results, search trace, reflect on the real search (#6542)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-11-14T10:16:49+01:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/5318be8ea572aa00ceae636c71c1d8d334f805b6",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6542",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/43683508431",
+      "data_file": "data/obs/20261115T062657Z-5318be8e.json",
+      "timestamp": "2026-11-15T06:26:54.671594+00:00",
+      "overall_duplication_rate": 0.034858387799564274,
+      "total_observations": 459
+    },
+    {
       "sha": "0b3f09229bc13820f961244238ca885fda674076",
       "short_sha": "0b3f0922",
       "subject": "fix(control-plane): reflect trace shows the loop in the order it really ran (#6539)",
@@ -2339,5 +2353,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-11-14T06:28:15Z"
+  "updated_at": "2026-11-15T06:26:58Z"
 }
