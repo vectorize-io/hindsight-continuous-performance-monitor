@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-11-16T06:27:13.564370+00:00",
+  "overall_duplication_rate": 0.027600849256900213,
+  "duplication_threshold": 0.97,
+  "total_observations": 471,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1527,
+      "facts_consolidated": 1527,
+      "facts_covered": 1499,
+      "facts_skipped": 28,
+      "observations": 471,
+      "avg_sources_per_obs": 4.4,
+      "exact_duplicate_groups": 10,
+      "exact_redundant": 10,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 13,
+          "redundant_observations": 13,
+          "duplication_rate": 0.027600849256900213
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 43,
+          "redundant_observations": 55,
+          "duplication_rate": 0.11677282377919321
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 471,
+    "total_exact_redundant": 10,
+    "overall_duplication_rate": 0.027600849256900213,
+    "overall_exact_rate": 0.021231422505307854,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 13
+      },
+      "0.92": {
+        "redundant_observations": 55
+      }
+    }
+  },
+  "commit": {
+    "sha": "5318be8ea572aa00ceae636c71c1d8d334f805b6",
+    "short_sha": "5318be8e",
+    "subject": "feat(knowledge-banks): search baseline for benchmarks — keywords in every language, capped results, search trace, reflect on the real search (#6542)",
+    "author": "Nicolò Boschi",
+    "author_date": "2026-11-14T10:16:49+01:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/5318be8ea572aa00ceae636c71c1d8d334f805b6",
+    "pr_number": 6542,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/6542"
+  },
+  "workflow_run": {
+    "id": "43813974140",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/43813974140"
+  }
+}

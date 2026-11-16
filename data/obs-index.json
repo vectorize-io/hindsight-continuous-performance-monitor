@@ -8,6 +8,20 @@
       "author_date": "2026-11-14T10:16:49+01:00",
       "commit_url": "https://github.com/vectorize-io/hindsight/commit/5318be8ea572aa00ceae636c71c1d8d334f805b6",
       "pr_url": "https://github.com/vectorize-io/hindsight/pull/6542",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/43813974140",
+      "data_file": "data/obs/20261116T062716Z-5318be8e.json",
+      "timestamp": "2026-11-16T06:27:13.564370+00:00",
+      "overall_duplication_rate": 0.027600849256900213,
+      "total_observations": 471
+    },
+    {
+      "sha": "5318be8ea572aa00ceae636c71c1d8d334f805b6",
+      "short_sha": "5318be8e",
+      "subject": "feat(knowledge-banks): search baseline for benchmarks — keywords in every language, capped results, search trace, reflect on the real search (#6542)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-11-14T10:16:49+01:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/5318be8ea572aa00ceae636c71c1d8d334f805b6",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6542",
       "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/43683508431",
       "data_file": "data/obs/20261115T062657Z-5318be8e.json",
       "timestamp": "2026-11-15T06:26:54.671594+00:00",
@@ -2353,5 +2367,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-11-15T06:26:58Z"
+  "updated_at": "2026-11-16T06:27:17Z"
 }
