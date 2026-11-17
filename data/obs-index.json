@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "b92ceb180e349a456d2b5454575067b6ff0f6306",
+      "short_sha": "b92ceb18",
+      "subject": "Knowledge-bank post-operation validator hooks for metering (#6594)",
+      "author": "Ben",
+      "author_date": "2026-11-16T16:05:11-05:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/b92ceb180e349a456d2b5454575067b6ff0f6306",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6594",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/44028120967",
+      "data_file": "data/obs/20261117T063056Z-b92ceb18.json",
+      "timestamp": "2026-11-17T06:30:53.108092+00:00",
+      "overall_duplication_rate": 0.044989775051124746,
+      "total_observations": 489
+    },
+    {
       "sha": "5318be8ea572aa00ceae636c71c1d8d334f805b6",
       "short_sha": "5318be8e",
       "subject": "feat(knowledge-banks): search baseline for benchmarks — keywords in every language, capped results, search trace, reflect on the real search (#6542)",
@@ -2367,5 +2381,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-11-16T06:27:17Z"
+  "updated_at": "2026-11-17T06:30:56Z"
 }
