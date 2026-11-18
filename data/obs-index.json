@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "9fb28dbd724dc1ce4da7cb4c49008e601db76c5f",
+      "short_sha": "9fb28dbd",
+      "subject": "Knowledge-bank per-document content-token count for metering (#6616)",
+      "author": "Ben",
+      "author_date": "2026-11-17T16:45:55-05:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/9fb28dbd724dc1ce4da7cb4c49008e601db76c5f",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6616",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/44248281950",
+      "data_file": "data/obs/20261118T063109Z-9fb28dbd.json",
+      "timestamp": "2026-11-18T06:31:05.838114+00:00",
+      "overall_duplication_rate": 0.026004728132387706,
+      "total_observations": 423
+    },
+    {
       "sha": "b92ceb180e349a456d2b5454575067b6ff0f6306",
       "short_sha": "b92ceb18",
       "subject": "Knowledge-bank post-operation validator hooks for metering (#6594)",
@@ -2381,5 +2395,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-11-17T06:30:56Z"
+  "updated_at": "2026-11-18T06:31:10Z"
 }

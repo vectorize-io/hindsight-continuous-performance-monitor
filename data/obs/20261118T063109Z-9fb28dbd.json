@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-11-18T06:31:05.838114+00:00",
+  "overall_duplication_rate": 0.026004728132387706,
+  "duplication_threshold": 0.97,
+  "total_observations": 423,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1519,
+      "facts_consolidated": 1519,
+      "facts_covered": 1477,
+      "facts_skipped": 42,
+      "observations": 423,
+      "avg_sources_per_obs": 4.7,
+      "exact_duplicate_groups": 8,
+      "exact_redundant": 8,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 11,
+          "redundant_observations": 11,
+          "duplication_rate": 0.026004728132387706
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 35,
+          "redundant_observations": 40,
+          "duplication_rate": 0.09456264775413711
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 423,
+    "total_exact_redundant": 8,
+    "overall_duplication_rate": 0.026004728132387706,
+    "overall_exact_rate": 0.018912529550827423,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 11
+      },
+      "0.92": {
+        "redundant_observations": 40
+      }
+    }
+  },
+  "commit": {
+    "sha": "9fb28dbd724dc1ce4da7cb4c49008e601db76c5f",
+    "short_sha": "9fb28dbd",
+    "subject": "Knowledge-bank per-document content-token count for metering (#6616)",
+    "author": "Ben",
+    "author_date": "2026-11-17T16:45:55-05:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/9fb28dbd724dc1ce4da7cb4c49008e601db76c5f",
+    "pr_number": 6616,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/6616"
+  },
+  "workflow_run": {
+    "id": "44248281950",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/44248281950"
+  }
+}
