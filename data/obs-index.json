@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "acbff031e2142b053b49b461242c9a56d0f6bb88",
+      "short_sha": "acbff031",
+      "subject": "feat(kb): rerank a search by an image with the picture as the query (#6655)",
+      "author": "Andrew Neeser",
+      "author_date": "2026-11-18T16:58:24-05:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/acbff031e2142b053b49b461242c9a56d0f6bb88",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6655",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/44469123737",
+      "data_file": "data/obs/20261119T062814Z-acbff031.json",
+      "timestamp": "2026-11-19T06:28:10.639267+00:00",
+      "overall_duplication_rate": 0.030162412993039442,
+      "total_observations": 431
+    },
+    {
       "sha": "9fb28dbd724dc1ce4da7cb4c49008e601db76c5f",
       "short_sha": "9fb28dbd",
       "subject": "Knowledge-bank per-document content-token count for metering (#6616)",
@@ -2395,5 +2409,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-11-18T06:31:10Z"
+  "updated_at": "2026-11-19T06:28:15Z"
 }
