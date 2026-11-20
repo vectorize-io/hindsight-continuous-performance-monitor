@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-11-20T06:34:17.474301+00:00",
+  "overall_duplication_rate": 0.045081967213114756,
+  "duplication_threshold": 0.97,
+  "total_observations": 488,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1535,
+      "facts_consolidated": 1535,
+      "facts_covered": 1475,
+      "facts_skipped": 60,
+      "observations": 488,
+      "avg_sources_per_obs": 4.2,
+      "exact_duplicate_groups": 12,
+      "exact_redundant": 13,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 20,
+          "redundant_observations": 22,
+          "duplication_rate": 0.045081967213114756
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 53,
+          "redundant_observations": 58,
+          "duplication_rate": 0.11885245901639344
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 488,
+    "total_exact_redundant": 13,
+    "overall_duplication_rate": 0.045081967213114756,
+    "overall_exact_rate": 0.02663934426229508,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 22
+      },
+      "0.92": {
+        "redundant_observations": 58
+      }
+    }
+  },
+  "commit": {
+    "sha": "55dde528ce978d1d583056275c96825274079a88",
+    "short_sha": "55dde528",
+    "subject": "docs: changelog for v1.2.3 (#6714)",
+    "author": "Nicolò Boschi",
+    "author_date": "2026-11-19T23:28:35+01:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/55dde528ce978d1d583056275c96825274079a88",
+    "pr_number": 6714,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/6714"
+  },
+  "workflow_run": {
+    "id": "44684847905",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/44684847905"
+  }
+}

@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "55dde528ce978d1d583056275c96825274079a88",
+      "short_sha": "55dde528",
+      "subject": "docs: changelog for v1.2.3 (#6714)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-11-19T23:28:35+01:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/55dde528ce978d1d583056275c96825274079a88",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6714",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/44684847905",
+      "data_file": "data/obs/20261120T063421Z-55dde528.json",
+      "timestamp": "2026-11-20T06:34:17.474301+00:00",
+      "overall_duplication_rate": 0.045081967213114756,
+      "total_observations": 488
+    },
+    {
       "sha": "acbff031e2142b053b49b461242c9a56d0f6bb88",
       "short_sha": "acbff031",
       "subject": "feat(kb): rerank a search by an image with the picture as the query (#6655)",
@@ -2409,5 +2423,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-11-19T06:28:15Z"
+  "updated_at": "2026-11-20T06:34:21Z"
 }
