@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "80bd005fc2be5c9604a1a0c9741ea93d5ac85156",
+      "short_sha": "80bd005f",
+      "subject": "fix(kb): a PDF page is its own document in the rerank; drop the page regex rules (#6746)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-11-20T22:45:57+01:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/80bd005fc2be5c9604a1a0c9741ea93d5ac85156",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6746",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/44873519258",
+      "data_file": "data/obs/20261121T063256Z-80bd005f.json",
+      "timestamp": "2026-11-21T06:32:51.243417+00:00",
+      "overall_duplication_rate": 0.00847457627118644,
+      "total_observations": 472
+    },
+    {
       "sha": "55dde528ce978d1d583056275c96825274079a88",
       "short_sha": "55dde528",
       "subject": "docs: changelog for v1.2.3 (#6714)",
@@ -2423,5 +2437,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-11-20T06:34:21Z"
+  "updated_at": "2026-11-21T06:32:56Z"
 }
