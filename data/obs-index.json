@@ -8,6 +8,20 @@
       "author_date": "2026-11-21T13:20:30+01:00",
       "commit_url": "https://github.com/vectorize-io/hindsight/commit/62a03bfc96f175e9ac155acc72f292bed9ac4449",
       "pr_url": "https://github.com/vectorize-io/hindsight/pull/6757",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/45121360100",
+      "data_file": "data/obs/20261123T062729Z-62a03bfc.json",
+      "timestamp": "2026-11-23T06:27:26.200028+00:00",
+      "overall_duplication_rate": 0.03275109170305677,
+      "total_observations": 458
+    },
+    {
+      "sha": "62a03bfc96f175e9ac155acc72f292bed9ac4449",
+      "short_sha": "62a03bfc",
+      "subject": "fix(knowledge): PDF calls queued when the pool is killed are retried, not cancelled (#6757)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-11-21T13:20:30+01:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/62a03bfc96f175e9ac155acc72f292bed9ac4449",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6757",
       "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/44991832895",
       "data_file": "data/obs/20261122T062557Z-62a03bfc.json",
       "timestamp": "2026-11-22T06:25:54.083801+00:00",
@@ -2451,5 +2465,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-11-22T06:25:57Z"
+  "updated_at": "2026-11-23T06:27:29Z"
 }
