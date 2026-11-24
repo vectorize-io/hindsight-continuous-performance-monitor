@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "535eb6d708c95b531162b08a959f162fe891b3bc",
+      "short_sha": "535eb6d7",
+      "subject": "Keep knowledge banks out of the memory-bank list's store-ordered page (#6842)",
+      "author": "Ben",
+      "author_date": "2026-11-23T21:30:00-05:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/535eb6d708c95b531162b08a959f162fe891b3bc",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6842",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/45337326293",
+      "data_file": "data/obs/20261124T063040Z-535eb6d7.json",
+      "timestamp": "2026-11-24T06:30:37.466108+00:00",
+      "overall_duplication_rate": 0.022670025188916875,
+      "total_observations": 397
+    },
+    {
       "sha": "62a03bfc96f175e9ac155acc72f292bed9ac4449",
       "short_sha": "62a03bfc",
       "subject": "fix(knowledge): PDF calls queued when the pool is killed are retried, not cancelled (#6757)",
@@ -2465,5 +2479,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-11-23T06:27:29Z"
+  "updated_at": "2026-11-24T06:30:40Z"
 }

@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-11-24T06:30:37.466108+00:00",
+  "overall_duplication_rate": 0.022670025188916875,
+  "duplication_threshold": 0.97,
+  "total_observations": 397,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1550,
+      "facts_consolidated": 1550,
+      "facts_covered": 1475,
+      "facts_skipped": 75,
+      "observations": 397,
+      "avg_sources_per_obs": 4.8,
+      "exact_duplicate_groups": 7,
+      "exact_redundant": 7,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 9,
+          "redundant_observations": 9,
+          "duplication_rate": 0.022670025188916875
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 35,
+          "redundant_observations": 38,
+          "duplication_rate": 0.09571788413098237
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 397,
+    "total_exact_redundant": 7,
+    "overall_duplication_rate": 0.022670025188916875,
+    "overall_exact_rate": 0.017632241813602016,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 9
+      },
+      "0.92": {
+        "redundant_observations": 38
+      }
+    }
+  },
+  "commit": {
+    "sha": "535eb6d708c95b531162b08a959f162fe891b3bc",
+    "short_sha": "535eb6d7",
+    "subject": "Keep knowledge banks out of the memory-bank list's store-ordered page (#6842)",
+    "author": "Ben",
+    "author_date": "2026-11-23T21:30:00-05:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/535eb6d708c95b531162b08a959f162fe891b3bc",
+    "pr_number": 6842,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/6842"
+  },
+  "workflow_run": {
+    "id": "45337326293",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/45337326293"
+  }
+}
