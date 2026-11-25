@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "550ef5e304623be2a456913acbac1b1a834fb2c3",
+      "short_sha": "550ef5e3",
+      "subject": "release(openclaw): v1.2.1",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-11-24T17:29:36+01:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/550ef5e304623be2a456913acbac1b1a834fb2c3",
+      "pr_url": null,
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/45557539328",
+      "data_file": "data/obs/20261125T063001Z-550ef5e3.json",
+      "timestamp": "2026-11-25T06:29:58.768070+00:00",
+      "overall_duplication_rate": 0.04859335038363171,
+      "total_observations": 391
+    },
+    {
       "sha": "535eb6d708c95b531162b08a959f162fe891b3bc",
       "short_sha": "535eb6d7",
       "subject": "Keep knowledge banks out of the memory-bank list's store-ordered page (#6842)",
@@ -2479,5 +2493,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-11-24T06:30:40Z"
+  "updated_at": "2026-11-25T06:30:02Z"
 }
