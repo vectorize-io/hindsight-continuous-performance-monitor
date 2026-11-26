@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "00c9d19e2d9386a54d84a9a12b9fc385df7009e1",
+      "short_sha": "00c9d19e",
+      "subject": "fix(retain): an order for the task at hand is stored as a decision, not a standing preference (#6909)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-11-25T18:22:18+01:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/00c9d19e2d9386a54d84a9a12b9fc385df7009e1",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6909",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/45765324543",
+      "data_file": "data/obs/20261126T062858Z-00c9d19e.json",
+      "timestamp": "2026-11-26T06:28:54.429282+00:00",
+      "overall_duplication_rate": 0.05013192612137203,
+      "total_observations": 379
+    },
+    {
       "sha": "550ef5e304623be2a456913acbac1b1a834fb2c3",
       "short_sha": "550ef5e3",
       "subject": "release(openclaw): v1.2.1",
@@ -2493,5 +2507,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-11-25T06:30:02Z"
+  "updated_at": "2026-11-26T06:28:58Z"
 }
