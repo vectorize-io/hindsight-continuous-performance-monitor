@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "9f471cdb99b5de4a87cc279b39eb97ec4d4545a9",
+      "short_sha": "9f471cdb",
+      "subject": "docs: support building the docs site for another host or under a path prefix (#6959)",
+      "author": "Chris Bartholomew",
+      "author_date": "2026-11-26T17:41:54-05:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/9f471cdb99b5de4a87cc279b39eb97ec4d4545a9",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/6959",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/45949211832",
+      "data_file": "data/obs/20261127T062847Z-9f471cdb.json",
+      "timestamp": "2026-11-27T06:28:42.303480+00:00",
+      "overall_duplication_rate": 0.02927927927927928,
+      "total_observations": 444
+    },
+    {
       "sha": "00c9d19e2d9386a54d84a9a12b9fc385df7009e1",
       "short_sha": "00c9d19e",
       "subject": "fix(retain): an order for the task at hand is stored as a decision, not a standing preference (#6909)",
@@ -2507,5 +2521,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-11-26T06:28:58Z"
+  "updated_at": "2026-11-27T06:28:47Z"
 }
