@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "sha": "c828c7e41527d0c4916cac0ba2b56334fed4a79d",
+      "short_sha": "c828c7e4",
+      "subject": "fix(deps): raise av floor to 18.1.1, PyPI yanked 18.1.0 (double free decoding audio) (#7014)",
+      "author": "Nicolò Boschi",
+      "author_date": "2026-11-27T18:40:16+01:00",
+      "commit_url": "https://github.com/vectorize-io/hindsight/commit/c828c7e41527d0c4916cac0ba2b56334fed4a79d",
+      "pr_url": "https://github.com/vectorize-io/hindsight/pull/7014",
+      "run_url": "https://github.com/vectorize-io/hindsight/actions/runs/46114668356",
+      "data_file": "data/obs/20261128T063129Z-c828c7e4.json",
+      "timestamp": "2026-11-28T06:31:26.039767+00:00",
+      "overall_duplication_rate": 0.03879310344827586,
+      "total_observations": 464
+    },
+    {
       "sha": "9f471cdb99b5de4a87cc279b39eb97ec4d4545a9",
       "short_sha": "9f471cdb",
       "subject": "docs: support building the docs site for another host or under a path prefix (#6959)",
@@ -2521,5 +2535,5 @@
       "total_observations": 11
     }
   ],
-  "updated_at": "2026-11-27T06:28:47Z"
+  "updated_at": "2026-11-28T06:31:29Z"
 }

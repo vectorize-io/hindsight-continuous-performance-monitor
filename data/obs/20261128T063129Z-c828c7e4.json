@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-11-28T06:31:26.039767+00:00",
+  "overall_duplication_rate": 0.03879310344827586,
+  "duplication_threshold": 0.97,
+  "total_observations": 464,
+  "config": {
+    "llm_provider": "vertexai",
+    "llm_model": "google/gemini-2.5-flash-lite",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "near_thresholds": [
+      0.97,
+      0.92
+    ],
+    "fraction": 1.0
+  },
+  "documents": [
+    {
+      "name": "hermes_session_2026-05-15_en.txt",
+      "facts": 1696,
+      "facts_consolidated": 1696,
+      "facts_covered": 1615,
+      "facts_skipped": 81,
+      "observations": 464,
+      "avg_sources_per_obs": 4.6,
+      "exact_duplicate_groups": 14,
+      "exact_redundant": 14,
+      "near": [
+        {
+          "threshold": 0.97,
+          "duplicate_clusters": 17,
+          "redundant_observations": 18,
+          "duplication_rate": 0.03879310344827586
+        },
+        {
+          "threshold": 0.92,
+          "duplicate_clusters": 58,
+          "redundant_observations": 64,
+          "duplication_rate": 0.13793103448275862
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_observations": 464,
+    "total_exact_redundant": 14,
+    "overall_duplication_rate": 0.03879310344827586,
+    "overall_exact_rate": 0.03017241379310345,
+    "by_threshold": {
+      "0.97": {
+        "redundant_observations": 18
+      },
+      "0.92": {
+        "redundant_observations": 64
+      }
+    }
+  },
+  "commit": {
+    "sha": "c828c7e41527d0c4916cac0ba2b56334fed4a79d",
+    "short_sha": "c828c7e4",
+    "subject": "fix(deps): raise av floor to 18.1.1, PyPI yanked 18.1.0 (double free decoding audio) (#7014)",
+    "author": "Nicolò Boschi",
+    "author_date": "2026-11-27T18:40:16+01:00",
+    "url": "https://github.com/vectorize-io/hindsight/commit/c828c7e41527d0c4916cac0ba2b56334fed4a79d",
+    "pr_number": 7014,
+    "pr_url": "https://github.com/vectorize-io/hindsight/pull/7014"
+  },
+  "workflow_run": {
+    "id": "46114668356",
+    "url": "https://github.com/vectorize-io/hindsight/actions/runs/46114668356"
+  }
+}
